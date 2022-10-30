@@ -21,7 +21,7 @@ LI0='U V W X Y Z _ _ _ ef';   clear;cat BIEN_CLAV;
 >$F/ECHO;>$F/ECHOL;>$F/xx;>$F/ECHOL2x;>$F/ECHOL3x;>$F/ECHOL2;>$F/ECHOL3; 
 # echo -n `cat $LI0 $LI1 $LI2 $LI3` # tentative acceleration en Cache ??
 en;for n in 0 1 2 3;do DX=1;DY=`expr $POSYC - $n \* $DTY` #Touch Clavier
-l1=LI$n;l2=\$$l1;eval l3=$l2;if test $n != 0;then sleep 1;fi 
+l1=LI$n;l2=\$$l1;eval l3=$l2;if test $n != 0;then sleep 0.1;fi 
 for j in $l3;do DX=`expr $DX + 150`; case $C in
 M) ff $j $DX $DY ;;
 X) XX $j $DX $DY ;;
@@ -29,7 +29,7 @@ esac; done
 if test $n != 3; then sleep 1 ;fi;done;
 en;bb $BB;bb `expr $BB + $DTY`;bb `expr $BB + 2 \* $DTY`
 
-while true;do $S;en;done & # le kill de EE est trop violent et tue xclip ::
+while true;do sleep 0.1;en;done & # le kill de EE est trop violent et tue xclip ::
 # xclip est relance artificiellement chaque sec le temps de la procedure cla 
 echo $! > TMP/traceXclip
 
