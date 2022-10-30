@@ -1,0 +1,10 @@
+
+TERMI="mate-terminal"; 
+#TERMI=xterm
+F=TMP #'.' #TMP #TERMI=tilix
+echo `ps -ef |grep "$TERMI"|grep -v grep` |cut -d ' ' -f 2 > $F/termPID
+rm ../F; > ../$F/clafUP; echo 4 > $F/RselF; echo 3 > $F/ECHO
+kill `cat ../$F/ulPID $F/termPID`
+
+sleep 2; cd ..; exec /home/marco/TL   # & ou pas !!??
+

@@ -1,0 +1,326 @@
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 sept.09 ?      00:00:05 /sbin/init splash
+root           2       0  0 sept.09 ?      00:00:00 [kthreadd]
+root           3       2  0 sept.09 ?      00:00:00 [rcu_gp]
+root           4       2  0 sept.09 ?      00:00:00 [rcu_par_gp]
+root           6       2  0 sept.09 ?      00:00:00 [kworker/0:0H-events_highpri]
+root           9       2  0 sept.09 ?      00:00:00 [mm_percpu_wq]
+root          10       2  0 sept.09 ?      00:00:00 [rcu_tasks_rude_]
+root          11       2  0 sept.09 ?      00:00:00 [rcu_tasks_trace]
+root          12       2  0 sept.09 ?      00:00:00 [ksoftirqd/0]
+root          13       2  0 sept.09 ?      00:00:23 [rcu_sched]
+root          14       2  0 sept.09 ?      00:00:00 [migration/0]
+root          15       2  0 sept.09 ?      00:00:00 [idle_inject/0]
+root          16       2  0 sept.09 ?      00:00:00 [cpuhp/0]
+root          17       2  0 sept.09 ?      00:00:00 [cpuhp/1]
+root          18       2  0 sept.09 ?      00:00:00 [idle_inject/1]
+root          19       2  0 sept.09 ?      00:00:00 [migration/1]
+root          20       2  0 sept.09 ?      00:00:00 [ksoftirqd/1]
+root          22       2  0 sept.09 ?      00:00:00 [kworker/1:0H-kblockd]
+root          23       2  0 sept.09 ?      00:00:00 [cpuhp/2]
+root          24       2  0 sept.09 ?      00:00:00 [idle_inject/2]
+root          25       2  0 sept.09 ?      00:00:00 [migration/2]
+root          26       2  0 sept.09 ?      00:00:02 [ksoftirqd/2]
+root          28       2  0 sept.09 ?      00:00:00 [kworker/2:0H-events_highpri]
+root          29       2  0 sept.09 ?      00:00:00 [cpuhp/3]
+root          30       2  0 sept.09 ?      00:00:00 [idle_inject/3]
+root          31       2  0 sept.09 ?      00:00:00 [migration/3]
+root          32       2  0 sept.09 ?      00:00:00 [ksoftirqd/3]
+root          34       2  0 sept.09 ?      00:00:00 [kworker/3:0H-events_highpri]
+root          35       2  0 sept.09 ?      00:00:00 [cpuhp/4]
+root          36       2  0 sept.09 ?      00:00:00 [idle_inject/4]
+root          37       2  0 sept.09 ?      00:00:00 [migration/4]
+root          38       2  0 sept.09 ?      00:00:00 [ksoftirqd/4]
+root          40       2  0 sept.09 ?      00:00:00 [kworker/4:0H-kblockd]
+root          41       2  0 sept.09 ?      00:00:00 [cpuhp/5]
+root          42       2  0 sept.09 ?      00:00:00 [idle_inject/5]
+root          43       2  0 sept.09 ?      00:00:00 [migration/5]
+root          44       2  0 sept.09 ?      00:00:00 [ksoftirqd/5]
+root          46       2  0 sept.09 ?      00:00:00 [kworker/5:0H-events_highpri]
+root          47       2  0 sept.09 ?      00:00:00 [cpuhp/6]
+root          48       2  0 sept.09 ?      00:00:00 [idle_inject/6]
+root          49       2  0 sept.09 ?      00:00:00 [migration/6]
+root          50       2  0 sept.09 ?      00:00:01 [ksoftirqd/6]
+root          52       2  0 sept.09 ?      00:00:00 [kworker/6:0H-events_highpri]
+root          53       2  0 sept.09 ?      00:00:00 [cpuhp/7]
+root          54       2  0 sept.09 ?      00:00:00 [idle_inject/7]
+root          55       2  0 sept.09 ?      00:00:00 [migration/7]
+root          56       2  0 sept.09 ?      00:00:00 [ksoftirqd/7]
+root          58       2  0 sept.09 ?      00:00:00 [kworker/7:0H-kblockd]
+root          59       2  0 sept.09 ?      00:00:00 [cpuhp/8]
+root          60       2  0 sept.09 ?      00:00:00 [idle_inject/8]
+root          61       2  0 sept.09 ?      00:00:00 [migration/8]
+root          62       2  0 sept.09 ?      00:00:00 [ksoftirqd/8]
+root          64       2  0 sept.09 ?      00:00:00 [kworker/8:0H-events_highpri]
+root          65       2  0 sept.09 ?      00:00:00 [cpuhp/9]
+root          66       2  0 sept.09 ?      00:00:00 [idle_inject/9]
+root          67       2  0 sept.09 ?      00:00:00 [migration/9]
+root          68       2  0 sept.09 ?      00:00:00 [ksoftirqd/9]
+root          70       2  0 sept.09 ?      00:00:00 [kworker/9:0H-kblockd]
+root          71       2  0 sept.09 ?      00:00:00 [cpuhp/10]
+root          72       2  0 sept.09 ?      00:00:00 [idle_inject/10]
+root          73       2  0 sept.09 ?      00:00:00 [migration/10]
+root          74       2  0 sept.09 ?      00:00:00 [ksoftirqd/10]
+root          76       2  0 sept.09 ?      00:00:00 [kworker/10:0H-events_highpri]
+root          77       2  0 sept.09 ?      00:00:00 [cpuhp/11]
+root          78       2  0 sept.09 ?      00:00:00 [idle_inject/11]
+root          79       2  0 sept.09 ?      00:00:00 [migration/11]
+root          80       2  0 sept.09 ?      00:00:00 [ksoftirqd/11]
+root          82       2  0 sept.09 ?      00:00:00 [kworker/11:0H-kblockd]
+root          83       2  0 sept.09 ?      00:00:00 [kdevtmpfs]
+root          84       2  0 sept.09 ?      00:00:00 [netns]
+root          85       2  0 sept.09 ?      00:00:00 [inet_frag_wq]
+root          86       2  0 sept.09 ?      00:00:00 [kauditd]
+root          90       2  0 sept.09 ?      00:00:00 [khungtaskd]
+root          91       2  0 sept.09 ?      00:00:00 [oom_reaper]
+root          92       2  0 sept.09 ?      00:00:00 [writeback]
+root          93       2  0 sept.09 ?      00:00:03 [kcompactd0]
+root          94       2  0 sept.09 ?      00:00:00 [ksmd]
+root          95       2  0 sept.09 ?      00:00:00 [khugepaged]
+root         143       2  0 sept.09 ?      00:00:00 [kintegrityd]
+root         144       2  0 sept.09 ?      00:00:00 [kblockd]
+root         145       2  0 sept.09 ?      00:00:00 [blkcg_punt_bio]
+root         146       2  0 sept.09 ?      00:00:00 [tpm_dev_wq]
+root         147       2  0 sept.09 ?      00:00:00 [ata_sff]
+root         148       2  0 sept.09 ?      00:00:00 [md]
+root         149       2  0 sept.09 ?      00:00:00 [edac-poller]
+root         150       2  0 sept.09 ?      00:00:00 [devfreq_wq]
+root         151       2  0 sept.09 ?      00:00:00 [watchdogd]
+root         153       2  0 sept.09 ?      00:00:00 [kworker/0:1H-kblockd]
+root         155       2  0 sept.09 ?      00:00:00 [irq/25-AMD-Vi]
+root         157       2  0 sept.09 ?      00:01:38 [kswapd0]
+root         158       2  0 sept.09 ?      00:00:00 [ecryptfs-kthrea]
+root         160       2  0 sept.09 ?      00:00:00 [kthrotld]
+root         161       2  0 sept.09 ?      00:00:00 [irq/26-aerdrv]
+root         162       2  0 sept.09 ?      00:00:00 [irq/27-aerdrv]
+root         163       2  0 sept.09 ?      00:00:00 [irq/29-aerdrv]
+root         171       2  0 sept.09 ?      00:00:00 [acpi_thermal_pm]
+root         175       2  0 sept.09 ?      00:00:00 [vfio-irqfd-clea]
+root         176       2  0 sept.09 ?      00:00:00 [ipv6_addrconf]
+root         185       2  0 sept.09 ?      00:00:00 [kstrp]
+root         188       2  0 sept.09 ?      00:00:00 [zswap-shrink]
+root         189       2  0 sept.09 ?      00:00:00 [kworker/u65:0]
+root         194       2  0 sept.09 ?      00:00:00 [charger_manager]
+root         223       2  0 sept.09 ?      00:00:00 [kworker/3:1H-kblockd]
+root         260       2  0 sept.09 ?      00:00:00 [kworker/2:1H-kblockd]
+root         262       2  0 sept.09 ?      00:00:00 [scsi_eh_0]
+root         263       2  0 sept.09 ?      00:00:00 [scsi_tmf_0]
+root         265       2  0 sept.09 ?      00:00:00 [scsi_eh_1]
+root         266       2  0 sept.09 ?      00:00:00 [scsi_tmf_1]
+root         267       2  0 sept.09 ?      00:00:00 [scsi_eh_2]
+root         268       2  0 sept.09 ?      00:00:00 [scsi_tmf_2]
+root         269       2  0 sept.09 ?      00:00:00 [scsi_eh_3]
+root         270       2  0 sept.09 ?      00:00:00 [scsi_tmf_3]
+root         271       2  0 sept.09 ?      00:00:00 [scsi_eh_4]
+root         272       2  0 sept.09 ?      00:00:00 [scsi_tmf_4]
+root         273       2  0 sept.09 ?      00:00:00 [scsi_eh_5]
+root         274       2  0 sept.09 ?      00:00:00 [scsi_tmf_5]
+root         275       2  0 sept.09 ?      00:00:00 [scsi_eh_6]
+root         276       2  0 sept.09 ?      00:00:00 [scsi_tmf_6]
+root         277       2  0 sept.09 ?      00:00:00 [scsi_eh_7]
+root         278       2  0 sept.09 ?      00:00:00 [scsi_tmf_7]
+root         286       2  0 sept.09 ?      00:00:00 [scsi_eh_8]
+root         287       2  0 sept.09 ?      00:00:00 [scsi_tmf_8]
+root         291       2  0 sept.09 ?      00:00:00 [kworker/6:1H-kblockd]
+root         292       2  0 sept.09 ?      00:00:00 [kworker/5:1H-kblockd]
+root         299       2  0 sept.09 ?      00:00:00 [kworker/10:1H-kblockd]
+root         318       2  0 sept.09 ?      00:00:00 [kworker/11:1H-kblockd]
+root         319       2  0 sept.09 ?      00:00:03 [jbd2/sdb3-8]
+root         320       2  0 sept.09 ?      00:00:00 [ext4-rsv-conver]
+root         321       2  0 sept.09 ?      00:00:00 [kworker/1:1H-kblockd]
+root         330       2  0 sept.09 ?      00:00:00 [kworker/4:1H-kblockd]
+root         361       1  0 sept.09 ?      00:00:04 /lib/systemd/systemd-journald
+root         375       2  0 sept.09 ?      00:00:00 [kworker/7:1H-kblockd]
+root         393       2  0 sept.09 ?      00:00:00 [loop0]
+root         395       2  0 sept.09 ?      00:00:00 [loop1]
+root         398       2  0 sept.09 ?      00:00:00 [loop2]
+root         400       2  0 sept.09 ?      00:00:00 [kworker/8:1H-kblockd]
+root         406       1  0 sept.09 ?      00:00:01 /lib/systemd/systemd-udevd
+root         407       2  0 sept.09 ?      00:00:00 [loop3]
+root         408       2  0 sept.09 ?      00:00:00 [loop4]
+root         409       2  0 sept.09 ?      00:00:00 [loop5]
+root         410       2  0 sept.09 ?      00:00:00 [loop6]
+root         411       2  0 sept.09 ?      00:00:00 [loop7]
+root         413       2  0 sept.09 ?      00:00:00 [loop8]
+root         414       2  0 sept.09 ?      00:00:00 [kworker/9:1H-kblockd]
+root         458       2  0 sept.09 ?      00:00:00 [loop9]
+root         459       2  0 sept.09 ?      00:00:00 [cryptd]
+root         460       2  0 sept.09 ?      00:00:00 [ccp-1-q2]
+root         461       2  0 sept.09 ?      00:00:00 [ccp-1-q3]
+root         462       2  0 sept.09 ?      00:00:00 [ccp-1-q4]
+root         465       2  0 sept.09 ?      00:00:00 [loop10]
+root         557       2  0 sept.09 ?      00:00:00 [nvkm-disp]
+root         572       2  0 sept.09 ?      00:00:00 [ttm_swap]
+root         573       2  0 sept.09 ?      00:00:00 [card0-crtc0]
+root         574       2  0 sept.09 ?      00:00:00 [card0-crtc1]
+systemd+     759       1  0 sept.09 ?      00:00:09 /lib/systemd/systemd-resolved
+systemd+     760       1  0 sept.09 ?      00:00:00 /lib/systemd/systemd-timesyncd
+root         783       1  0 sept.09 ?      00:00:02 /usr/lib/accountsservice/accounts-daemon
+root         784       1  0 sept.09 ?      00:00:02 /usr/sbin/acpid
+avahi        787       1  0 sept.09 ?      00:00:00 avahi-daemon: running [marco-AB350M-HD3.local]
+root         788       1  0 sept.09 ?      00:00:00 /usr/sbin/cron -f -P
+message+     789       1  0 sept.09 ?      00:00:11 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         790       1  0 sept.09 ?      00:00:38 /usr/sbin/NetworkManager --no-daemon
+root         796       1  0 sept.09 ?      00:00:11 /usr/sbin/irqbalance --foreground
+root         800       1  0 sept.09 ?      00:00:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         801       1  0 sept.09 ?      00:00:14 /usr/libexec/polkitd --no-debug
+root         803       1  0 sept.09 ?      00:00:00 /usr/libexec/power-profiles-daemon
+syslog       805       1  0 sept.09 ?      00:00:00 /usr/sbin/rsyslogd -n -iNONE
+root         806       1  0 sept.09 ?      00:00:32 /usr/lib/snapd/snapd
+root         807       1  0 sept.09 ?      00:00:00 /usr/libexec/switcheroo-control
+root         808       1  0 sept.09 ?      00:00:01 /lib/systemd/systemd-logind
+root         824       1  0 sept.09 ?      00:00:45 /usr/libexec/udisks2/udisksd
+root         825       1  0 sept.09 ?      00:00:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+avahi        834     787  0 sept.09 ?      00:00:00 avahi-daemon: chroot helper
+root         892       1  0 sept.09 ?      00:00:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root         895       1  0 sept.09 ?      00:00:00 /usr/sbin/ModemManager
+root         905       1  0 sept.09 ?      00:00:00 /usr/sbin/lircd --nodaemon
+root         909     905  0 sept.09 ?      00:00:00 [sh] <defunct>
+root         916       1  0 sept.09 ?      00:00:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+colord       927       1  0 sept.09 ?      00:00:00 /usr/libexec/colord
+root         930       1  0 sept.09 ?      00:00:00 /usr/sbin/xrdp-sesman
+root         936       1  0 sept.09 ?      00:00:00 /usr/sbin/gdm3
+xrdp         962       1  0 sept.09 ?      00:00:00 /usr/sbin/xrdp
+rtkit       1021       1  0 sept.09 ?      00:00:01 /usr/libexec/rtkit-daemon
+whoopsie    1162       1  0 sept.09 ?      00:00:00 /usr/bin/whoopsie -f
+kernoops    1164       1  0 sept.09 ?      00:00:00 /usr/sbin/kerneloops --test
+kernoops    1166       1  0 sept.09 ?      00:00:00 /usr/sbin/kerneloops
+root        1221       1  0 sept.09 ?      00:00:00 /usr/libexec/upowerd
+root        1361       1  0 sept.09 ?      00:00:19 /usr/libexec/packagekitd
+root        3062       2  0 sept.09 ?      00:00:00 [ext4-rsv-conver]
+root       13476       2  0 sept.10 ?      00:00:00 [uas]
+root       37833       1  0 sept.10 tty2   00:00:00 /sbin/agetty -o -p -- \u --noclear tty2 linux
+root       40869       1  0 sept.10 tty3   00:00:00 /sbin/agetty -o -p -- \u --noclear tty3 linux
+root       44576       1  0 sept.10 tty4   00:00:00 /sbin/agetty -o -p -- \u --noclear tty4 linux
+root       46905       1  0 sept.10 tty5   00:00:00 /sbin/agetty -o -p -- \u --noclear tty5 linux
+root       47235     936  0 sept.10 ?      00:00:00 gdm-session-worker [pam/gdm-password]
+marco      47240       1  0 sept.10 ?      00:00:00 /lib/systemd/systemd --user
+marco      47241   47240  0 sept.10 ?      00:00:00 (sd-pam)
+marco      47247   47240  0 sept.10 ?      00:00:00 /usr/bin/pipewire
+marco      47248   47240  0 sept.10 ?      00:00:00 /usr/bin/pipewire-media-session
+marco      47249   47240  0 sept.10 ?      00:00:39 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+marco      47251   47240  0 sept.10 ?      00:00:00 /usr/libexec/tracker-miner-fs
+marco      47254   47240  0 sept.10 ?      00:00:08 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+marco      47259       1  0 sept.10 ?      00:00:01 /usr/bin/gnome-keyring-daemon --daemonize --login
+marco      47274   47240  0 sept.10 ?      00:00:00 /usr/libexec/gvfsd
+marco      47279   47240  0 sept.10 ?      00:00:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+marco      47283   47240  0 sept.10 ?      00:00:02 /usr/libexec/gvfs-udisks2-volume-monitor
+marco      47295   47240  0 sept.10 ?      00:00:00 /usr/libexec/gvfs-mtp-volume-monitor
+marco      47299   47240  0 sept.10 ?      00:00:01 /usr/libexec/gvfs-afc-volume-monitor
+marco      47304   47240  0 sept.10 ?      00:00:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+marco      47308   47240  0 sept.10 ?      00:00:00 /usr/libexec/gvfs-goa-volume-monitor
+marco      47312   47240  0 sept.10 ?      00:00:00 /usr/libexec/goa-daemon
+marco      47321   47240  0 sept.10 ?      00:00:00 /usr/libexec/goa-identity-service
+marco      47337   47235  0 sept.10 tty7   00:00:00 /usr/libexec/gdm-wayland-session env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --session=ubuntu
+marco      47340   47337  0 sept.10 tty7   00:00:00 /usr/libexec/gnome-session-binary --systemd --session=ubuntu
+marco      47377   47240  0 sept.10 ?      00:00:00 /usr/libexec/gnome-session-ctl --monitor
+marco      47386   47240  0 sept.10 ?      00:00:01 /usr/libexec/gnome-session-binary --systemd-service --session=ubuntu
+marco      47404   47240  0 sept.10 ?      00:12:54 /usr/bin/gnome-shell
+marco      47405   47386  0 sept.10 ?      00:00:00 /usr/libexec/at-spi-bus-launcher --launch-immediately
+marco      47412   47405  0 sept.10 ?      00:00:01 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+marco      47437   47404  0 sept.10 ?      00:01:29 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.9PUJ90 -listen 4 -listen 5 -displayfd 6 -initfd 7
+marco      47461   47240  0 sept.10 ?      00:00:00 /usr/libexec/xdg-permission-store
+marco      47466   47240  0 sept.10 ?      00:00:00 /usr/libexec/gnome-shell-calendar-server
+marco      47472   47240  0 sept.10 ?      00:00:00 /usr/libexec/evolution-source-registry
+marco      47479   47240  0 sept.10 ?      00:00:00 /usr/libexec/evolution-calendar-factory
+marco      47488   47240  0 sept.10 ?      00:00:00 /usr/libexec/dconf-service
+marco      47490   47240  0 sept.10 ?      00:00:00 /usr/libexec/evolution-addressbook-factory
+marco      47510   47240  0 sept.10 ?      00:00:01 /usr/libexec/at-spi2-registryd --use-gnome-session
+marco      47511   47240  0 sept.10 ?      00:00:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell.Notifications
+marco      47527   47274  0 sept.10 ?      00:00:01 /usr/libexec/gvfsd-trash --spawner :1.3 /org/gtk/gvfs/exec_spaw/0
+marco      47538   47240  0 sept.10 ?      00:00:00 /usr/libexec/gsd-a11y-settings
+marco      47539   47240  0 sept.10 ?      00:00:01 /usr/libexec/gsd-color
+marco      47540   47240  0 sept.10 ?      00:00:00 /usr/libexec/gsd-datetime
+marco      47541   47240  0 sept.10 ?      00:00:03 /usr/libexec/gsd-housekeeping
+marco      47543   47240  0 sept.10 ?      00:00:00 /usr/libexec/gsd-keyboard
+marco      47546   47240  0 sept.10 ?      00:00:01 /usr/libexec/gsd-media-keys
+marco      47547   47240  0 sept.10 ?      00:00:00 /usr/libexec/gsd-power
+marco      47548   47240  0 sept.10 ?      00:00:00 /usr/libexec/gsd-print-notifications
+marco      47549   47240  0 sept.10 ?      00:00:00 /usr/libexec/gsd-rfkill
+marco      47551   47240  0 sept.10 ?      00:00:00 /usr/libexec/gsd-screensaver-proxy
+marco      47553   47240  0 sept.10 ?      00:00:01 /usr/libexec/gsd-sharing
+marco      47555   47240  0 sept.10 ?      00:00:00 /usr/libexec/gsd-smartcard
+marco      47557   47240  0 sept.10 ?      00:00:00 /usr/libexec/gsd-sound
+marco      47560   47240  0 sept.10 ?      00:00:00 /usr/libexec/gsd-wacom
+marco      47615   47386  0 sept.10 ?      00:00:00 /usr/libexec/gsd-disk-utility-notify
+marco      47628   47386  0 sept.10 ?      00:00:05 /usr/lib/x86_64-linux-gnu/libexec/kdeconnectd
+marco      47630   47240  0 sept.10 ?      00:00:00 /usr/libexec/gsd-printer
+marco      47635   47386  0 sept.10 ?      00:00:00 /usr/libexec/evolution-data-server/evolution-alarm-notify
+marco      47674   47240  0 sept.10 ?      00:00:15 /snap/snap-store/547/usr/bin/snap-store --gapplication-service
+marco      47706   47240  0 sept.10 ?      00:00:01 /usr/libexec/xdg-document-portal
+root       47710   47706  0 sept.10 ?      00:00:00 fusermount -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc
+marco      47784   47240  0 sept.10 ?      00:00:03 /usr/libexec/xdg-desktop-portal
+marco      47788   47240  0 sept.10 ?      00:00:05 /usr/libexec/xdg-desktop-portal-gtk
+marco      47823   47404  0 sept.10 ?      00:01:14 ibus-daemon --panel disable -r --xim
+marco      47829   47240  0 sept.10 ?      00:00:01 /usr/libexec/gsd-xsettings
+marco      47832   47823  0 sept.10 ?      00:00:00 /usr/libexec/ibus-memconf
+marco      47833   47823  0 sept.10 ?      00:00:10 /usr/libexec/ibus-extension-gtk3
+marco      47835   47240  0 sept.10 ?      00:00:00 /usr/libexec/ibus-x11 --kill-daemon
+marco      47837   47240  0 sept.10 ?      00:00:01 /usr/libexec/ibus-portal
+marco      47869   47823  0 sept.10 ?      00:00:15 /usr/libexec/ibus-engine-simple
+marco      47908   47404  0 sept.10 ?      00:00:00 gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com -M 0 -D 72:34:1848:1046:1
+marco      48200   47908  0 sept.10 ?      00:00:00 /usr/bin/python3 /usr/bin/gnome-terminal --wait
+marco      48201   48200  0 sept.10 ?      00:00:00 /usr/bin/gnome-terminal.real --wait
+marco      48209   47240  0 sept.10 ?      00:03:25 /usr/libexec/gnome-terminal-server
+marco      48214   48209  0 sept.10 pts/0  00:00:00 bash
+marco      48240   47240  0 sept.10 ?      00:00:00 /usr/libexec/gvfsd-metadata
+marco      48243   47386  0 sept.10 ?      00:00:01 update-notifier
+marco      53425   47274  0 sept.11 ?      00:00:00 /usr/libexec/gvfsd-network --spawner :1.3 /org/gtk/gvfs/exec_spaw/1
+marco      53440   47274  0 sept.11 ?      00:00:00 /usr/libexec/gvfsd-dnssd --spawner :1.3 /org/gtk/gvfs/exec_spaw/3
+marco      54554   48209  0 sept.11 pts/1  00:00:00 bash
+marco      55149   48209  0 sept.11 pts/2  00:00:00 bash
+marco      61835   48209  0 sept.11 pts/3  00:00:00 bash
+root       61842   61835  0 sept.11 pts/3  00:00:00 su
+root       61843   61842  0 sept.11 pts/3  00:00:00 bash
+marco      70484   47240  0 sept.11 ?      00:00:18 /usr/lib/x86_64-linux-gnu/libexec/kactivitymanagerd
+marco      70494   47240  0 sept.11 ?      00:00:02 /usr/bin/kglobalaccel5
+root       95812       2  0 sept.11 ?      00:00:01 [kworker/2:2-events]
+root       95892       2  0 sept.11 ?      00:00:01 [kworker/6:2-rcu_gp]
+root       96931       2  0 sept.11 ?      00:00:00 [kworker/11:1-rcu_gp]
+root       97575       2  0 sept.11 ?      00:00:00 [kworker/7:0-rcu_gp]
+root       97615       2  0 sept.11 ?      00:00:01 [kworker/9:0-events]
+root       97772       2  0 sept.11 ?      00:00:00 [kworker/8:1-rcu_gp]
+root       97832       2  0 00:00 ?        00:00:00 [kworker/4:2-events]
+root       97846       1  0 00:00 ?        00:00:00 /usr/sbin/cupsd -l
+root       97848       1  0 00:00 ?        00:00:00 /usr/sbin/cups-browsed
+proftpd    97860       1  0 00:00 ?        00:00:00 proftpd: (accepting connections)
+root       97867       2  0 00:00 ?        00:00:02 [kworker/10:2-events]
+marco      98818   47240  1 05:44 ?        00:02:12 /usr/lib/firefox/firefox -new-window
+marco      98909   98818  0 05:44 ?        00:00:09 /usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 1 -prefMapSize 246577 -jsInit 285716 -parentBuildID 20210903235534 -appdir /usr/lib/firefox/browser 98818 true tab
+marco      98965   98818  0 05:44 ?        00:00:02 /usr/lib/firefox/firefox -contentproc -childID 2 -isForBrowser -prefsLen 5162 -prefMapSize 246577 -jsInit 285716 -parentBuildID 20210903235534 -appdir /usr/lib/firefox/browser 98818 true tab
+marco      99023   98818  0 05:44 ?        00:00:08 /usr/lib/firefox/firefox -contentproc -childID 3 -isForBrowser -prefsLen 5886 -prefMapSize 246577 -jsInit 285716 -parentBuildID 20210903235534 -appdir /usr/lib/firefox/browser 98818 true tab
+marco      99125   98818  0 05:45 ?        00:00:09 /usr/lib/firefox/firefox -contentproc -parentBuildID 20210903235534 -prefsLen 8761 -prefMapSize 246577 -appdir /usr/lib/firefox/browser 98818 true rdd
+root       99223       2  0 05:52 ?        00:00:00 [kworker/4:1-events]
+root       99227       2  0 05:52 ?        00:00:00 [kworker/3:1-events]
+root       99228       2  0 05:52 ?        00:00:00 [kworker/5:2-mm_percpu_wq]
+marco      99672   98818  0 06:30 ?        00:00:00 /usr/lib/firefox/firefox -contentproc -childID 11 -isForBrowser -prefsLen 9185 -prefMapSize 246577 -jsInit 285716 -parentBuildID 20210903235534 -appdir /usr/lib/firefox/browser 98818 true tab
+root       99699       2  0 06:31 ?        00:00:00 [kworker/1:1-rcu_gp]
+root       99703       2  0 06:31 ?        00:00:00 [kworker/0:0-rcu_gp]
+root       99705       2  0 06:31 ?        00:00:00 [kworker/5:0]
+root       99829       1  0 06:51 ?        00:00:00 /usr/libexec/fwupd/fwupd
+root       99830       2  0 06:51 ?        00:00:00 [kworker/1:0-mm_percpu_wq]
+root       99831       2  0 06:51 ?        00:00:00 [kworker/2:1-events]
+root       99832       2  0 06:51 ?        00:00:00 [kworker/6:0-events]
+root       99833       2  0 06:51 ?        00:00:00 [kworker/7:2-events]
+root       99834       2  0 06:51 ?        00:00:00 [kworker/8:0-events]
+root       99835       2  0 06:51 ?        00:00:00 [kworker/0:1-mm_percpu_wq]
+root      100360       2  0 06:52 ?        00:00:00 [kworker/9:2-events]
+root      100365       2  0 06:52 ?        00:00:00 [kworker/10:1-mm_percpu_wq]
+root      100366       2  0 06:52 ?        00:00:00 [kworker/11:2-events]
+root      100566       2  1 07:04 ?        00:00:48 [kworker/u64:2-events_unbound]
+root      101275       2  1 07:22 ?        00:00:25 [kworker/u64:3-events_unbound]
+root      103828       2  0 07:36 ?        00:00:04 [kworker/u64:0-events_power_efficient]
+root      104163       2  0 07:37 ?        00:00:00 [kworker/3:0-cgroup_destroy]
+root      104984       2  0 07:43 ?        00:00:02 [kworker/u64:1-events_power_efficient]
+root      105070       2  0 07:44 ?        00:00:00 [kworker/11:0-events]
+root      105080       2  0 07:44 ?        00:00:00 [kworker/2:0]
+marco     105299   47240  0 07:46 pts/0    00:00:00 xclip
+marco     105451   48214  0 07:47 pts/0    00:00:00 bash
+marco     105496   47240  0 07:47 pts/0    00:00:00 bash
+marco     105497  105451  3 07:47 pts/0    00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco     105518  105496  5 07:47 pts/0    00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco     105530   47240  0 07:47 pts/0    00:00:00 /bin/sh ./frap A
+marco     105535  105530  5 07:47 pts/0    00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco     105553   47240  0 07:47 pts/0    00:00:00 /bin/sh ./frap B
+marco     105558  105553  8 07:47 pts/0    00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco     105569  105451  0 07:47 pts/0    00:00:00 ps -ef

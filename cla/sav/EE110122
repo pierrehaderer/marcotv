@@ -1,0 +1,16 @@
+##### # PARAM Pi4
+#echo 'kill `cat PID`;echo >FINAL' >K; chmod 777 K
+#echo `ps -ef|grep ' less'|grep -v root`|cut -d ' ' -f 2 >PID
+#$TE --$G=80x9+50+750 --$Z=$Z2 $PARTE "cat msg_cherchLess;read r;./K"
+
+TE='mate-terminal';H='hide-menubar'; G=geometry; Z=zoom; Z1=1.7; 
+XmsgE=1045; YmsgE=810 # PARAM 1600
+L=`tail -1 ECHO` ; if test "$L" = "E";then 
+l=`wc -l ECHO|cut -d ' ' -f 1`;h=`expr "$l" - 2` 
+head -n "$h" ECHO > ECHO1;cp ECHO1 ECHO;fi
+echo `cat ECHO` > ECHOL
+
+echo 'kill `cat PID`;echo >FINAL' >K; chmod 777 K
+echo `ps -ef|grep ' less'|grep -v root`|cut -d ' ' -f 2 >PID
+
+$TE --$G=48x6+$XmsgE+$YmsgE  --$H --$Z=$Z1 -- sh -c "cat msgE ECHOL > FF; less -Ps FF; echo >FINAL;./K" 

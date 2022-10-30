@@ -1,0 +1,5 @@
+
+ls -1 /m > lism
+mate-terminal --zoom=2.5 -- sh -c "pr -m -T -J  Uniq3- lism | less" 
+#pr -m -T -J  ../Uniq3- ../zl |less 
+#pr -m -T -J  --width=9 ../Uniq3- ../zl |less 

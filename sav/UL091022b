@@ -1,0 +1,128 @@
+#----- U :: PROCEDURE DE RECHERCHE ET DE LANCEMENT DU FILM -------------
+C=`~/TERM`  # choix de la Console Graphique
+
+Init () { echo; }
+F=TMP;>$F/ECHO;>$F/ECHO2;>$F/ECHOL;>$F/lism4;>$F/PP; >$F/ulPID ; >$F/clafUP
+TM='mate-terminal';TX=xterm;G=geometry;T=title;H='hide-menubar';Z=zoom; R4K=0;
+PARTE="--$T= --$H -- sh -c";SE=0;Tcach=1;TP2='tput bold';TP1="tput civis;$TP2"
+PARX='-fa default -fg green'; PARTX="$PARX -fs 50 -b 15"; S=sleep
+x () { $TX -$G 1x1+$Xpos+$1 $PARTX -e "$TP1;echo -n ' ' $2;read r" &
+echo $! >> $F/claXpid; } # appel :: x 300 7 
+D=`cat $F/BOOTDEV`;if test $D = a;then DEV=b;else DEV=a;fi
+
+# choix de la Console graphique Mate M, ou Xterm X, (ou gnome G, ou kconsole K)
+TE=$TM;  #C=M    # ou C=X TE=$TX ; ou C=G; TE=$TG; ou C=K; TE=$TK
+# un 1er mate-term en &, "collectera" tous les suivants en &, dont seuls les
+# cmd du "sh -c" apparaitront en ps -ef :: il n'y aura qu'1 seul mate-term !!!
+en () { echo -e -n "\n" |xclip; }
+ee () { echo -e -n "q\n" |xclip ; }
+eq () { echo -e -n "q" |xclip ; }
+ul () { echo $! >> $F/ulPID; }
+UL () { echo $! >> $F/$1; }
+PS () { ps -ef|grep $1|grep -v grep; }
+KI () { kill `cat $F/$1`; }
+CU () { cut -d ' ' -f 2 >> $F/$1; }
+temp () { if test $C = M; 
+then $TM --$G=35x9+251+250 --zoom=2.5 $PARTE "cat MSG/$1;read r" &
+else echo autre Console ; fi; p2=$!;sleep 5; kill $p2; } # autoefface
+ee;clear; xrandr|grep current|grep 3840;if test $? -eq 0;then R4K=1;fi
+
+claDir=claMate; # claDir=claXterm si xterm ??
+#if test $C = M;then claDir=claMate; else echo; fi; 
+# ------------------------- AFFICHER LE MENU avec sel ---------------------
+if test -e $F/F;then rm $F/F
+else >$F/F #ZOOM x 2 ??::xrandr --output HDMI-1 --scale 0.5x0.5 --pos ?x?
+ ls /dev/sd$DEV;LS=$?;if test "$LS" -ne 0;then echo _____PAS_DEV;exit;fi
+cd $claDir;ee;./sel MSG/msg_MENU;cp $F/ECHO2 ../$F;cd ..;fi; SE=`cat $F/ECHO2`;
+
+#-------------------------- 1ere ENTREE DU MENU --------------------------
+#AFFICHER TOUS LES FILMS DE LA COLLECTION, et recuperer le film choisi x,y
+if test "$SE" = 1;then G1='58x17+251+40';CM1='less -Ps --mouse zl';case $C in
+M) echo mate ; $TM --$G=$G1 --$Z=2.0 $PARTE "$CM1" & ;;
+X) echo xterm ; $TX -$G $G1 -fs 30 $PARX -e "$CM1" & ;;
+*) echo autre console ;;
+esac;ul
+echo `ps -ef|grep 'less '|grep -v grep|grep xterm`|cut -d ' ' -f 2 >> $F/zlPID
+(sleep 2; G2='63x5+250+850';CM2='cat MSG/msg_choix;read r'; case $C in
+M) $TM --$G=$G2 --$Z=1.8 $PARTE "$CM2";ul ;;
+X) $TX -$G $G2 -fs 30 $PARX -e "$CM2";ul ;;
+*) echo autre console ;;
+esac ) &
+ul;rm $F/OUI $F/NON $F/FINIOUINON # -----------> AFFICHER LES TOUCHES OUI/NON
+CM3="tput rev;echo -n O;read r;echo oui >$F/OUI;";G3='200+850'; case $C in
+M) en;$TM --$G=1x1+$G3 --$Z=2.9 $PARTE "$CM3" & ;;
+X) en;$TX -$G 1x1+$G3 -fs 50 $PARX -e "tput bold;$CM3" & ;;
+*) echo autre Console ;;
+esac;ul;sleep 1;
+G4='200+950';CM4="tput rev;echo -n N;read r;echo non >$F/NON"; case $C in
+M) en;$TM --$G=1x1+$G4 --$Z=2.9 $PARTE "$CM4" & ;;
+X) en;$TX -$G 1x1+$G4 -fs 50 $PARX -e "tput bold;$CM4" & ;;
+*) echo autre Console ;;
+esac;ul;sleep 2; 
+# ------------------> RESET precable sur MOLETTE ::
+G6='1x1-1+1';CMDR2="echo `cat 0` >>$F/ECHO;./Rtou";CMDR3="echo -n 0;read r"
+CMDR0="tput civis;$CMDR3";CMDR1="tput bold;tput rev;$CMDR3";  
+if test $C = M ;then en; $TM --$G=$G6 --$Z=2.9 $PARTE "$CMDR0;$CMDR2" &
+else $TX -$G $G6 -fs 50 $PARX -e "$CMDR1;$CMDR2" &
+fi # ------------------> ATTENTE Reponse OUI/NON ::
+while true;do sleep 1;  if test -s $F/OUI;then break;fi
+if test -s $F/NON;then >$F/clafUP;sleep 1;break;fi #break ou exit ??   
+if test -s $F/FINIOUINON;then KI ulPID; exit ;fi;   done
+KI ulPID; KI zlPID; KI choiPID; >$F/FINISYL; 
+# ------------------> Reponse OUI :: (lancer clavier alfa)
+if test -s $F/OUI; then 
+echo `PS $G`|cut -d ' ' -f 2 >> $F/geoPID;KI geoPID; 
+echo `PS choix`|cut -d ' ' -f 2 >> $F/choiPID;KI choiPID;
+echo >$F/clafUP;cd claM*/alfa; ./claf; ee
+cp $F/ECHOL $F/ECHO2 ~/$F;cd ~; R=`cat $F/ECHOL` ; >$F/ulPID
+
+G8='80x5+10+750'; CM2='cat MSG/msg_cherchLess;read r;./Rtou'; case $C in
+M) $TE --$G=$G8 --$Z=1.8 $PARTE "$CM2" & ;;
+X) $TX -$G $G8 -fs 30 $PARX -e "$CM2" &  ;;
+       *) echo autre Console ;; esac;ul # ----------------> Selection du Film
+echo "echo -e -n \"\\n\"|xclip " > $F/L;en;ch=\'+\&$R\'
+G9='90x18+60+60'; case $C in
+M) echo "$TE --$G=$G9 --$Z=1.5 -- sh -c \"less -I $ch zl\" & "  >> $F/L ;;
+X) echo "$TX -$G $G9 -fs 20 $PARX -e \"less -I $ch zl\" & "  >> $F/L ;;
+      *) echo autre Console ;; esac;chmod 777 $F/L; sleep 2;
+./$F/L ;  ul #echo $! > $F/ulPID
+# ----------------------> MENAGE !!
+echo `PS 'less '`|grep zl|cut -d ' ' -f 2 >$F/ulPID2
+>$F/FINISYL;while test ! -s $F/FINISYL; do sleep 1; done; >$F/clafUP
+echo `PS $G`|cut -d ' ' -f 2 >> $F/geoPID ; KI geoPID; KI ulPID2;
+else # -----------------> Touche NON :: pas de recherche alfa 
+echo `PS $G`|cut -d ' ' -f 2 >> $F/geoPID; KI geoPID; fi
+
+#------------------------ 2eme ENTREE DU MENU ------------------------------
+# le Scroll souris dans less suffirait, SI on savait OU on en est !!!???
+else # LISTE des films de CETTE !! MicroCarte
+if test "$SE" = 2;then 
+cd claM*/num;ls -1 /m > $F/lism;pr -m -T -J Uniq3- $F/lism > $F/lism2
+en;./cla $F/lism2;cp $F/ECHO2 $F/PP ~/$F;cd ; fi #affich clav Num 1-9 avec cla
+
+if test "$SE" = 2;then grep `cat $F/ECHOL|tr -d ' '` $F/lism2 >$F/lism3;
+echo `cat $F/lism3`|cut -d ' ' -f 2 >$F/lism4; FI=`cat $F/lism4`;
+if test $FI != _ ;then #nice -20 #cp /m/$FI /dev/null & # charge film < 10s : 
+#Si sautille au debut, proposer Arret, puis Relecture !!! : il sera en Cache
+echo `PS xterm`|CU termPID3;KI termPID3 #echo `PS xterm`|CU termPID3
+echo>$F/mpvUP;$S 2;G11='70x20+250+50';CM11="$TP2;cat MSG/msg_mpv"; case $C in
+M) en;$TE --$G=70x20+250+50 --$Z=1.8 $PARTE "$CM11;read r" ;;
+X) en;$TX -$G $G11 -fs 25 $PARX -e "$CM11;read r" ;;
+      *) echo autre Console ;; esac;     R4K=0; # pour test 2K vers 4K !!!
+
+if test $R4K = 0;then #forcer 2K au System,et lancer mpv en 4K sans --fs ???
+sleep $Tcach;nice -20 mpv --fs /m/$FI # --cache=yes sautille !!
+else echo #on est en 4K !!;xrandr --size 1920x1080#mpv --fs /m/${}.hevc.mkv 
+fi; rm F #xrandr -s 0 # COPIER/COLLER xclip MARCHE PAS POUR SORTIR mpv !?
+>$F/mpvUP;$S 1;G12='70x10+290+150';CM12="$TP2;cat MSG/msg_retir";case $C in
+M) $TE --$G=$G12 --$Z=1.8 $PARTE "$CM12;read r" & 
+UL termPID3 ;;
+X) $TX -$G $G12 -fs 25 $PARX -e "$CM12;read r" & 
+UL termPID3 ;;
+       *) echo autre Console ;; esac;
+echo `PS xterm`|CU termPID3;KI termPID3;   fi;  #echo `PS xterm`|CU termPID3
+echo `PS xterm`|CU termPID3;KI termPID3 #echo `PS xterm`|CU termPID3
+if test "$r" = 0;then sudo #umount /m; #Demonter la microsd ...
+rm $F/SD_UNMOUNTED;fi;fi;fi
+#------------------ ENTREES NON ENCORE IMPLEMENTEES ----------------------
+rm F; ts=0;ts="$SE"; if test "$ts" -gt 2 ; then temp msg_nonImplem ;fi

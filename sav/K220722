@@ -1,0 +1,5 @@
+F=TMP; 
+ps -ef|grep '+&'|grep -v grep|grep -v erm|grep -v 'sh -c' > $F/lignePS
+#ps -ef|grep less|grep -v 'less 0'|grep -v grep|grep -v erm|grep -v 'sh -c' > $F/lignePS
+echo `cat $F/lignePS` |cut -d ' ' -f 2 > $F/ulPID4
+kill `cat $F/ulPID $F/ulPID2 $F/ulPID4`; echo >$F/FINISYL

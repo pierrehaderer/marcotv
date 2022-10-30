@@ -1,0 +1,31 @@
+# FABRICATION des fichiers .desktop necessaires au fonctionnement
+# de YAD comme clavier virtuel ..., touche par touche  ::
+# frap ... est la procedure qui s'execute, quand on double-click
+# sur une touche ... :: le fichier .png est l'image de la touche
+
+l=$1
+DIR=CLA
+SIZ=60
+
+(echo;echo $l;echo) > $l.txt
+convert -trim -border 9 -pointsize $SIZ  text:$l.txt tempo.png
+mv temp* $l.png
+
+echo "
+[Desktop Entry]
+
+Encoding=UTF-8
+
+Version=1.0
+
+Type=Application
+
+Terminal=false
+
+Exec=./frap $l
+
+Name=""
+
+Icon=./$DIR/$l.png
+" > $l.desktop
+

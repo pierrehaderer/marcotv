@@ -1,0 +1,10 @@
+DEV=b;     ROOT=home/marco;ST=0;MEGB=$1; MEG=`expr $MEGB / 1000000`
+INDX=`cat INDEX`;ST=`tail --lines=1 microsd/$INDX/testSDcur` 
+
+SK=0;SK=$ST; while test "$SK" -le $MEG;do INDX=`cat INDEX`
+sudo dd if=/dev/sd$DEV of=/dev/null bs=1M count=100 skip=$SK # 2>/dev/null
+if test "$?" -ne 0 ;then  # sav bad position, and GO ON, quand taille depassee
+echo $SK `date +%d%m%y` >> microsd/$INDX/ddError; exit; fi
+SK=`expr $SK + 100`;echo  $SK >> microsd/$INDX/testSDcur
+exit # testSD est lance en bgd &, par T, pour 1 seul test a la fois
+done ; echo 10 >microsd/$INDX/testSDcur

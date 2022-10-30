@@ -1,0 +1,25 @@
+#------ Kdia12 :: PROCEDURE DE RECHERCHE DU FILM AU CLAVIER VIRTUEL --------
+yesno() { # fonction Shell pour afficher l'icone de Choix :: OUI/NON
+(((sleep 2;kdialog --geometry 900x100+1610+940  --yesno ""; echo $? > YESNO; \
+kill `cat KPID`) &);  sleep 3; echo `ps -ef|grep imgbox|grep -v grep`|\
+cut -d ' ' -f 2 >> KPID; )& 
+}
+>KPID; >PSLIS; >recher; >KPIDALL; list=$1 #GNOX=500 ;GNOY=500 ;MOLY=700 ; # X86
+ GNOX=50 ;GNOY=50 ;MOLY=700 ; # ARM
+
+while true;do yesno;kdialog --geometry 900x100+450+800 --imgbox I-mocletitr.jpg
+if test `cat YESNO` -eq 1 ; then echo NON ; exit; fi
+kdialog --geometry 900x100+450+800  --imgbox I-saisiClav.jpg &
+# yad affiche touches avec largeur de la + large !!! # dans mon cas 'suppr'
+yad --icons --item-width 40 --title="DOUBLE-CLICKEZ SUR CHAQUE CARACTERE SUCCESSIF CHOISI ..., puis VALIDEZ en bas" --width=1850 --height=600 --read-dir="./CLA" ./CLA/*.desktop; ps -ef|grep geometry |grep -v grep >> PSLIS 
+while read -r L;do M=`echo $L`;echo $M |cut -d ' ' -f 2 >> KPIDALL;done < PSLIS
+echo `cat KPIDALL` > KPIDALL2;kill -9 `cat KPIDALL2`
+kdialog --geometry 900x100+400+570  --imgbox I-IDfilm.jpg 
+R=`cat recher` ;echo -e  -n "\r" |xclip
+gnome-terminal --geometry=70x15+$GNOX+$GNOY --zoom=1.5 -- sh -c "less -I '+&${R}\
+' $list"
+echo `ps -ef|grep less|grep -v grep|grep -v root`|cut -d ' ' -f 2 >PID
+kdialog --geometry 900x100+450+$MOLY --imgbox I-mollet2.jpg; kill `cat PID`
+yesno;kdialog --geometry 900x100+450+800  --imgbox I-cartCredi.jpg
+if test `cat YESNO` -eq 1; then echo PAS TROUVE;else exit; fi
+done

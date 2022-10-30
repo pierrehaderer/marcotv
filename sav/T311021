@@ -1,0 +1,39 @@
+# ------ T :: PROCEDURE CYCLIQUE DE SURVEILLANCE DE LA MICROSD -----------
+SP=a; ROOT=home/marco #ajouter a fstab :: /dev/sda1 /m ntfs user,nofail,ro
+kdialog --geometry 1000x900+400+10 --imgbox /$ROOT/Intro8.jpg
+DELTA=200000 # SEEKIDX=61000000 a calculer par rapport a la fin de la sd 
+while true;do sleep 2 # la boucle s'arrete pendant l'affichage MENU 
+
+if test `ls /dev/sd$SP`;then echo -n + >> /$ROOT/SPECIAL # microsd Exist !
+PARTED=`sudo parted /dev/sd$SP 'unit B print' | grep sd$SP | cut -d ':' -f 2 `
+echo `expr ${PARTED%B} - $DELTA` > /$ROOT/Parted # taille pour INDEX microsd
+SEEKIDX=`cat /$ROOT/Parted` # que faire si KO ?? tester autre endroit -400000
+sudo dd if=/dev/sd$SP of=/$ROOT/INDEX bs=1 skip=$SEEKIDX count=4 2>/dev/null
+# ID=`cat /$ROOT/INDEX`
+# if test "${ID:0:1}" != '_'; then echo BUG microsd; 
+# SEEKIDX=`expr $SEEKIDX - 200000`;
+# sudo dd if=/dev/sd$SP of=/$ROOT/INDEX bs=1 skip=$SEEKIDX count=4 2>/dev/null
+# fi
+#------INDEX RECUPERE--------------------------------------------------
+df|grep '/dev/sda1' ; GS=$?; # test MOUNT microsd ... SI !! sd demontee ... !!
+if test $GS -eq 1;then N=`expr $N + 1` # boucle attente Nx2s test MOUNT
+ if test $N -eq 30; then N=0; sudo mount /dev/sd${SP}1 /n; MS=$?; #MOUNTable ?
+  if test $MS -eq 0; then echo -n _$MS >> /$ROOT/FATOK ;sudo umount /n; # Yes
+  else echo -n $MS >> /$ROOT/FATNOK; IDX=`cat /$ROOT/INDEX`
+  # sudo dd if=/$ROOT/microsd/$IDX/FAT$IDX of=/dev/sd$SP bs=1M
+  fi # BAD FAT ?? Recopie FAT sur sd !!!??
+ fi 
+fi; 
+else echo microsd KO; # envoyer Mail P+J avec reference sd (IDX+proprio)
+# ping -c 2 8.8.8.8; P=$?; if test $P -eq 0; then mail; fi
+fi #--------REGENERATION SILICIUM-------------------------------------
+CHKdd=`ps -ef |grep ' dd '|grep -v grep|wc -l` # test surface partiel
+if test $CHKdd -ne 2;then /$ROOT/testSD &
+fi # KO si un ; suit le & !!! ----------------------------------------------
+if test -e /dev/sda1 -a -e /$ROOT/SD_UNMOUNTED;then sudo mount /dev/sda1 /m
+# echo message si MENU apparait pas, alors retirer et reinserer la microsd
+CHKU=`ps -ef |grep zenity|wc -l` # T en attente fin de U du MENU
+  if test $CHKU -eq 1;then echo -n U >> /$ROOT/zenit;/$ROOT/U;fi # lancer U
+else sudo umount /m; # rm /$ROOT/INDEX;
+if test -e /dev/sda1;then echo;else > /$ROOT/SD_UNMOUNTED;fi
+fi;done

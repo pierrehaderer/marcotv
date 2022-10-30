@@ -1,0 +1,42 @@
+
+yesno() { # fonction Shell pour afficher l'icone de Choix :: OUI/NON
+(((sleep 1;kdialog --geometry 900x100+1610+940  --yesno ""; echo $? > YESNO; \
+kill `cat KPID`) &);  sleep 2; echo `ps -ef|grep imgbox|grep -v grep`|\
+cut -d ' ' -f 2 >> KPID; )& 
+}
+
+>KPID; >PSLIS; >recher; >KPIDALL
+GNOX=300; GNOY=100
+
+yesno #_______ TEST OUI/NON ______________________________
+kdialog --geometry 900x100+450+800  --imgbox I-motcletitr.jpg 
+if test `cat YESNO` -eq 1 ; then 
+echo NON ; exit; fi
+
+kdialog --geometry 900x100+450+800  --imgbox I-saisiClav.jpg &
+
+yad --icons --item-width 60 --title="DOUBLE-CLICKEZ SUR CHAQUE CARACTERE SUCCESSIF CHOISI ..., puis VALIDEZ en bas" --width=1850 --height=600 --read-dir="./CLA" ./CLA/*.desktop
+
+ps -ef|grep geometry |grep -v grep >> PSLIS   # ./KILL PSLIS
+while read -r L;do
+M=`echo $L`;echo $M | cut -d ' ' -f 2 >> KPIDALL;
+done < PSLIS
+echo `cat KPIDALL` > KPIDALL2;kill -9 `cat KPIDALL2`
+
+kdialog --geometry 900x100+400+570  --imgbox I-IDfilm.jpg 
+
+kdialog --geometry 900x100+450+700  --imgbox I-mollet3.jpg 
+R=`cat recher` 
+echo -e  -n "\r" |xclip
+gnome-terminal --geometry=70x15+$GNOX+$GNOY --zoom=1.5 -- sh -c "less -I '+&${R}\
+' zl1"
+
+echo `ps -ef|grep less|grep -v grep|grep -v root`|cut -d ' ' -f 2 >PID
+kdialog --geometry 900x100+450+800  --imgbox I-mollet3.jpg
+kill `cat PID`
+
+yesno #_________ TEST OUI/NON ____________________________
+kdialog --geometry 900x100+450+800  --imgbox I-cartCredi.jpg
+if test `cat YESNO` -eq 1; then 
+echo PAS TROUVE;exit;fi
+

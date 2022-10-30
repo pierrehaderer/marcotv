@@ -1,0 +1,53 @@
+#----- UL :: PROCEDURE DE RECHERCHE ET DE LANCEMENT DU FILM -------------
+C=`~/TERM`  # choix de la Console Graphique
+F=TMP;>$F/ECHO;>$F/ECHO2;>$F/ECHOL;>$F/lism4;>$F/PP; >$F/ulPID ; >$F/clafUP
+>$F/termPID3;claDir=cla ; S21='echo S21'
+TM='mate-terminal';TX=xterm;G=geometry;T=title;H='hide-menubar';Z=zoom; R4K=0;
+PARTE="--$T= --$H -- sh -c";SE=0;Tcach=1;TP2='tput bold';TP1="tput civis;$TP2"
+PARX='-fa default -fg green'; PARTX="$PARX -fs 50 -b 15"; S=sleep
+en () { echo -e -n "\n" |xclip; }
+ee () { echo -e -n "q\n" |xclip ; }
+ee;clear; D=`cat $F/BOOTDEV`;if test $D = a;then DEV=b;else DEV=a;fi
+
+# ------------------------- AFFICHER LE MENU avec sel ---------------------
+if test -e $F/F;then rm $F/F
+else >$F/F;ls /dev/sd$DEV;LS=$?;if test "$LS" -ne 0;then echo paDEV;exit;fi
+cd $claDir;ee;./sel MSG/msg_MENU;cp $F/ECHO2 ../$F;cd ..;fi; 
+
+SE=`cat $F/ECHO2`; case $SE in
+1) #------------------------ 1ere ENTREE MENU1 ---------------------
+# AFFICHER TOUS LES FILMS DE LA COLLECTION, et recuperer le film choisi x,y
+~/MENU1 ;; # lancer MENU1 !!
+
+2) #------------------------ 2eme ENTREE MENU2 ---------------------
+# LISTE des films de CETTE !! MicroCarte
+# le Scroll souris dans less suffirait, SI on savait OU on en est !!!???
+cd cla/num;ls -1 /m > $F/lism; LIG=`wc -l TMP/lism|cut -d ' ' -f 1`;en
+pr -m -T -J Uniq3- $F/lism >$F/lism2;./cla $F/lism2;cp $F/ECHO2 $F/PP ~/$F
+cd; grep `cat $F/ECHOL|tr -d ' '|cut -c 1-3` $F/lism2 >$F/lism3;
+echo `cat $F/lism3`|cut -d ' ' -f 2 >$F/lism4; 
+FI=`cat $F/lism4`; ~/KIL S21; #cp /m/$FI /dev/null & # ? charge film<10s : 
+
+## partie specifique PLAYER ... a isoler ??
+##Si sautille au debut, proposer Arret, puis Relecture !!! : il sera en Cache
+~/PLAYER
+#echo>$F/mpvUP;$S 2;G11='70x20+250+50';CM11="$TP2;cat MSG/msg_mpv"; case $C in
+#M) en;$TM --$G=$G11 --$Z=1.8 $PARTE "$CM11;read r" ;;
+#X) en;xterm -$G $G11 -fs 25 $PARX -e "$CM11;read r" ;;
+#      *) echo autre Console ;; esac;     
+#R4K=0; # pour test 2K vers 4K !!!
+#xrandr|grep current|grep 3840;if test $? -eq 0;then R4K=1;fi
+#if test $R4K = 0;then #forcer 2K au System,et lancer mpv en 4K sans --fs ???
+#sleep $Tcach;nice -20 mpv --fs /m/$FI # --cache=yes MPV sautille !!
+#else echo #on est en 4K !!;xrandr --size 1920x1080#mpv --fs /m/${}.hevc.mkv 
+#fi; rm F #xrandr -s 0 # COPIER/COLLER xclip MARCHE PAS POUR SORTIR mpv !?
+##ZOOM x 2 ??::xrandr --output HDMI-1 --scale 0.5x0.5 --pos ?x?
+## fin du PLAYER specifique
+
+>$F/mpvUP;$S 1;G12='70x10+290+150';CM12="$TP2;cat MSG/msg_retir";case $C in
+M) $TM --$G=$G12 --$Z=1.8 $PARTE "$CM12;read r" &  ;; 
+X) xterm -$G $G12 -fs 25 $PARX -e "$CM12;read r" ;; 
+       *) echo autre Console ;; esac; 
+if test "$r" = 0;then sudo #umount /m; #Demonter la microsd ...
+rm $F/SD_UNMOUNTED; fi ;; 
+*) rm F ;; esac; # ENTREES NON ENCORE IMPLEMENTEES 

@@ -1,0 +1,32 @@
+SP=a; ROOT=home/marco #ajouter a fstab :: /dev/sda1 /m ntfs user,nofail,ro
+kdialog --geometry 1000x900+400+10 --imgbox /$ROOT/Intro8.jpg
+
+/$ROOT/testSD &
+
+while true;do sleep 2 # REPARATION microsd ??
+if test `ls /dev/sd$SP`;then echo -n + >> /$ROOT/SPECIAL # microsd Exist !
+sudo dd if=/dev/sd$SP of=/$ROOT/INDX bs=1 skip=61000000 count=4 2>/dev/null
+IDX=`cat /$ROOT/INDX`
+# test /dev/sda1 exist ET est mountable ..., SI elle n'est PAS deja montee !! 
+df|grep '/dev/sda1' ; GS=$?;  
+if test $GS -eq 1;then N=`expr $N + 1`
+ if test $N -eq 30; then N=0; sudo mount /dev/sd${SP}1 /n; MS=$?;
+  if test $MS -eq 0; then echo -n _$MS >> /$ROOT/FATOK ;sudo umount /n;
+  else echo -n $MS >> /$ROOT/FATNOK; fi #BAD FAT ??
+ fi 
+fi
+#else echo # $? >> /$ROOT/FATNOK;  # microsd NON detectee .. KO Electriq ??
+fi
+
+CHKsd=`ps -ef |grep ' dd '|grep -v grep|wc -l`
+if test $CHKsd -ne 2;then /$ROOT/testSD;fi
+
+if test -e /dev/sda1 -a -e /$ROOT/SD_UNMOUNTED;then sudo mount /dev/sda1 /m
+# echo message si menu apparait pas, alors retirer et reinserer la microsd
+CHKU=`ps -ef |grep zenity|wc -l`
+if test $CHKU -eq 1;then echo -n U >> /$ROOT/zenit;/$ROOT/U;fi
+
+else sudo umount /m; # rm /$ROOT/INDX;
+if test -e /dev/sda1;then echo;else > /$ROOT/SD_UNMOUNTED;fi
+fi
+done

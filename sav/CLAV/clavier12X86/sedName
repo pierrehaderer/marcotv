@@ -1,0 +1,3 @@
+
+i=$1
+sed -e 's/Name=Name/Name=/' $i.desktop  > ../ess/$i.desktop

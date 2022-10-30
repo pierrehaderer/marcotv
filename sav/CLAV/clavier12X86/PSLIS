@@ -1,0 +1,3 @@
+marco       3444    3421  5 19:15 pts/0    00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco       3462    3457  6 19:15 pts/0    00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco       3472    3467 13 19:15 pts/0    00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png

@@ -1,0 +1,45 @@
+F=TMP #'.'; #../TMP;
+POSXC=1; Z2=1.8; ZBB=0.28 ; rm $F/clafPID ../$F/clafUP #PARAM Pi4
+Z1=2.9;DTX=150;DTY=160;LI=497;POSYC=650;BB=275;YHEAD=577;YTRAIL=110 #Pi4 LARG
+# Z1=2.4;DTX=127;DTY=140;LI=420;POSYC=700 #Pi4 ETROI
+TE='mate-terminal';G=geometry;T=title;H='hide-menubar';Z=zoom;FE=0; 
+PARTE="--$T= --$H -- sh -c"; PARG="--$G=1x1+"; CLA=_____CLAVIER_____
+#variante ?? :: "less $j" et "q" ... avec echo|xclip; "echo -n $j;read r"
+#variante ?? :: xterm -$G 1x2+90+50 -fa default -fs 43 -e "less -Ps A" 
+# ou # less --prompt=chaine
+
+#ini () { echo; } # generer les fichiers Characteres et messages }
+ee () { echo -e -n "q" |xclip ; }
+#sl () { b=0; while test $b -lt $1; do b=`expr $b + 1`; done; }
+ff () { #while test $v -lt $RATE;do v=`expr $v + 1`;done
+#$TE ${PARG}$2+$3 --$Z=$Z1 $PARTE "less $1;echo $1 >>$F/ECHO;./EF $2 $3" & }
+$TE ${PARG}$2+$3 --$Z=$Z1 $PARTE "less $1;echo `cat $1` >>$F/ECHO;./EF $2 $3" &
+echo $! >> $F/clafPID; }
+#$TE ${PARG}$2+$3 --$Z=$Z1 $PARTE "less $1;echo `cat $1` >>$F/ECHO;./EF $2 $3"; & }
+#$TE ${PARG}$2+$3 --$Z=$Z1 $PARTE "less $1;    echo ________ >> TRACE;
+#echo CLAF:$1 >> TRACE; echo ----CLAF-$F/ECHO: >>TRACE;cat $F/ECHO >> TRACE; ...
+# Espace avant >> imperatif si un chiffre precede !! sinon rediction en +
+bb () { $TE --$G=${LI}x1+151+$1 --$Z=$ZBB $PARTE "less -Ps $F/xx" & }
+LI3='1 2 3 4 5 6 7 8 9 0';LI2='A B C D E F G H I J';LI1='K L M N O P Q R S T'
+LI0='U V W X Y Z _ _ _ ef';   
+clear;cat BIEN_CLAV;>$F/ECHO;>$F/ECHOL;>$F/xx;>$F/ECHOL2x;>$F/ECHOL3x;>$F/ECHOL2;>$F/ECHOL3; #>TRACE
+# echo -n `cat $LI0 $LI1 $LI2 $LI3` # tentative acceleration en Cache ??
+
+#bb;
+ee;for n in 0 1 2 3;do DX=$POSXC;DY=`expr $POSYC - $n \* $DTY` #Touch Clavier
+l1=LI$n;l2=\$$l1;eval l3=$l2;if test $n != 0;then sleep 1;fi #echo $l2,$l3
+for j in $l3;do DX=`expr $DX + $DTX`;ff $j $DX $DY; done;if test $n != 3; 
+then sleep 1 ;fi; done; bb $BB;bb `expr $BB + $DTY`;bb `expr $BB + 2 \* $DTY` 
+
+sleep 1;N=`expr $POSYC - $YHEAD`; # puis Messages HEAD et TRAIL ::
+$TE --$G=79x2+1+$N --$T=$CLA --$Z=$Z2 --$H -- sh -c "less -Ps MSG/msg_HEAD" &
+$TE --$G=79x5+1+`expr $POSYC + $YTRAIL` --$Z=$Z2 $PARTE "less -Ps MSG/msg_TRAIL;echo> $F/FINI" & 
+$TE --$G=1x1+1800+1 --$Z=2.9 $PARTE "less 0;echo `cat 0` >>$F/ECHO;./Rclaf" &
+$TE --$G=1x1+1800-1 --$Z=2.9 $PARTE "cat 0;read r;./Rclaf" &
+
+
+echo > ../$F/clafUP
+echo `ps -ef|grep ' less'|grep -v zl`|sed 's/marco/\n/g'|cut -d ' ' -f 2 > $F/LPID;
+> $F/FINI;while true;do sleep 1; if test -s $F/FINI;then break;fi;done #read r; 
+kill `cat $F/clafPID`; cat $F/ECHOL
+#kill `cat LPID`; cat $F/ECHOL

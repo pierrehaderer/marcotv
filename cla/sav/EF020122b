@@ -1,0 +1,38 @@
+eff=EFx;POSXC=1; Z2=1.8 ; x=$1; y=$2 #PARAM Pi4
+Z1=2.9;DTX=150;DTY=160;LI=497;POSYC=650;BB=275;YHEAD=580;YTRAIL=110 #Pi4 LARG
+# Z1=2.4;DTX=127;DTY=140;LI=420;POSYC=700 #Pi4 ETROI
+TE='mate-terminal';H='hide-menubar'; G=geometry; Z=zoom; T=title 
+PARTE="--$T= --$H -- sh -c"; PARG="--$G=1x1+"; CLA=_____CLAVIER_____
+ee () { echo -e -n "q" |xclip ; }
+bb () { $TE --$G=${LI}x1+148+$1 --$Z=0.28 $PARTE "less -Ps xx" & }
+
+L=`tail -1 ECHO` ; l=`wc -l ECHO|cut -d ' ' -f 1`;sleep 1; 
+#echo EF_TAIL:$L,$l: >>TRACE;echo --ECHO APRES EF--: >>TRACE;cat ECHO >>TRACE
+if test "$L" != ""; then # Touche a retablir sur l'ecran 1 couche 
+#$TE ${PARG}$x+$y --$Z=$Z1 $PARTE "less $L;echo $L >>ECHO;./$eff $x $y" &  
+$TE ${PARG}$x+$y --$Z=$Z1 $PARTE "less $L;echo `cat $L` >>ECHO;./$eff $x $y" &  
+#$TE ${PARG}$x+$y --$Z=$Z1 $PARTE "less $L;echo EF:`cat ECHO` >> TRACE; ...
+# ... echo `cat $L` >>ECHO;./$eff $x $y" &  
+#(sleep 1;bb $BB;bb `expr $BB + $DTY`;bb `expr $BB + 2 \* $DTY`
+#$TE --$G=85x2+1+68 --$Z=$Z2 --$T=$CLA --$H -- sh -c "less -Ps HEAD"  & ) &
+#echo -n `cat $L` >> ECHOL;fi # puis afficher ECHO complet ... ::
+fi
+if test "$L" = "e";then # quand "ef" Efface, aligner l'Echo complet en Trailer
+$TE ${PARG}$x+$y --$Z=$Z1 $PARTE "less ef ;   ./$eff $x $y" & #re-afficher "ef"
+# ... echo EFe:$L: >>TRACE;echo ----ECHO EF----: >>TRACE;cat ECHO >>TRACE; ...
+#(sleep 1;bb `expr $BB + 2 \* $DTY`;) &
+#l=`wc -l ECHO|cut -d ' ' -f 1`;
+h=`expr "$l" - 2`; head -n "$h" ECHO > ECHO1 ;echo -n `cat ECHO1`|tr -d ' ' > ECHOL;
+cp ECHO1 ECHO
+
+else echo -n `cat $L` >> ECHOL; fi # puis afficher ECHO complet ... ::
+M=`expr $POSYC + $YTRAIL + 1`;N=`expr $POSYC + $YTRAIL + 99`
+#echo -n `cat TRAIL1` > FFL; echo `cat ECHOL` >> FFL; cat TRAIL2 >> FFL;
+#echo `ps -ef|grep ' less'|grep -v zl`|sed 's/marco/\n/g'|cut -d ' ' -f 2 >>LPID;
+$TE --$G=43x2+146+$M --$Z=$Z1 $PARTE "less -Ps ECHOL;"
+$TE --$G=85x3+1+$N --$Z=$Z2 $PARTE "less -Ps TRAIL2; echo > FINI"
+#$TE --$G=85x6+1+$N --$Z=$Z2 $PARTE "less -Ps FFL; echo > FINI"
+#./pp & #kill `cat LPID`; #echo "${C:1:1}"  ??
+#C=`cat ECHOL`;  echo `expr substr $C 0 1` > ECHOL2; 
+#for k in 1 2 3 4 5 6 7 8 9; do echo `expr substr $C $k 1` >> ECHOL2;done
+#grep -m 9 '\S' ECHOL2 >ECHOL3 #>ECHO? #cp ECHOL3 ECHO #echo ----- >>ECHO

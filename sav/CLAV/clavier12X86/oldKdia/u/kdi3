@@ -1,0 +1,11 @@
+#b="<big><big><big>"
+#e="</big></big></big>"
+TEXT="${b}azerty--we$e";echo $TEXT
+
+IMG=`ls FI*.jpg`
+
+(((kdialog --geometry 900x100+900+900  --yesno ""; echo $? > YESNO; \
+kill `cat PID`) &);  sleep 3; echo `ps -ef|grep imgbox|grep -v grep`|\
+cut -d ' ' -f 2 >PID; )& 
+sleep 1;kdialog --geometry 900x100+500+800  --imgbox "$IMG"  
+

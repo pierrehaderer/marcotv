@@ -1,0 +1,1 @@
+cat TMP/ECHOL MSG/msg_Trail2 >TMP/FF; kill 20362

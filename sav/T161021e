@@ -1,0 +1,25 @@
+s="<big><big>";e="</big></big>"; SP=a
+kdialog --geometry 1000x900+400+10 --imgbox Intro8.jpg
+#ajouter a fstab :: /dev/sda1 /m ntfs user,nofail,ro
+
+while true;do sleep 2 #if test -e /dev/sdb1 ?? + REPARATION microsd ??
+
+if test `ls /dev/sd$SP`;then echo -n + >> /home/marco/SPECIAL # microsd Exist !
+sudo dd if=/dev/sd$SP of=/home/marco/INDX bs=1 skip=61000000 count=4 2>/dev/null
+IDX=`cat /home/marco/INDX`
+# mount /dev/sd${SP}1 /n;echo $? >> /home/marco/FATOK ;umount /n
+else echo $? >> /home/marco/FATNOK; fi # microsd NON detectee .. KO Electriq ??
+
+if test -e /dev/sda1 -a -e SD_UNMOUNTED;then
+sudo mount /dev/sda1 /m
+CHKU=`ps -ef |grep zenity|wc -l`
+if test $CHKU -eq 1;then echo -n U >> /home/marco/zenit;/home/marco/U
+fi
+
+else
+sudo umount /m
+if test -e /dev/sda1;then echo
+else >SD_UNMOUNTED
+fi
+fi
+done

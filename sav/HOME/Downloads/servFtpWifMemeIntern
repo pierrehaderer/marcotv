@@ -1,0 +1,12 @@
+drwx------   3 user group            0 May  6 07:26 Android
+drwx------   3 user group            0 Jun  1  2020 Apps_backup_reinstall
+drwx------   3 user group            0 Dec 31  2020 DCIM
+drwx------   3 user group            0 May 26  2020 Download
+drwx------   3 user group            0 Oct 14  2019 MIUI
+drwx------   3 user group            0 May 27 17:35 Pictures
+drwx------   3 user group            0 Mar 19  2020 WhatsApp
+drwx------   3 user group            0 May 20  2019 Xiaomi
+drwx------   3 user group            0 Dec 31  2008 fac_sources
+drwx------   3 user group            0 Oct 14  2019 mipush
+-rw-------   1 user group            0 Sep 17  2019 .fe_tmp
+-rw-------   1 user group     24942920 Jun 29 13:32 w270621.gpg

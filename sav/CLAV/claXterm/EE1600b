@@ -1,0 +1,7 @@
+
+ZOOM=1.0; XmsgE=1045; YmsgE=810
+L=`tail -1 ECHO` ; if test "$L" = "E";then 
+l=`wc -l ECHO|cut -d ' ' -f 1`;h=`expr "$l" - 2` 
+head -n "$h" ECHO > ECHO1;cp ECHO1 ECHO;fi
+echo `cat ECHO` > ECHOL
+mate-terminal --geometry=48x6+$XmsgE+$YmsgE  --hide-menubar --zoom=$ZOOM -- sh -c "cat msgE ECHOL > FF; less -Ps FF" 

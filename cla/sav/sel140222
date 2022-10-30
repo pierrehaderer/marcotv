@@ -1,0 +1,34 @@
+Init () {
+# selPID pour futur RESET
+echo;
+} # ... } doit etre isole, sinon plante ??
+MOD=2 #1=minNoWm2K 2=maxWm2K 3=minNoWm4K 4=maxWm4K 5=YadZenity ??
+# tous les Menus sont ecrits pour du 1080p, meme sur un ecran 4K
+# seul mpv affichera en 4K ...
+ZTOU=2.8; ZMENU=1.90; ZTRAIL=1.7; POSY=10; POSX=560; C=49 
+TE='mate-terminal';G=geometry;H='hide-menubar'; Z=zoom; T=title
+PARTE="--$T= --$H -- sh -c"; PARG="--$G=1x1+"; PARH="--$H -- sh -c";
+ee () { echo -e -n "q" |xclip; } #pr -m -T --width=50 Nuniq3- zl >zlNum
+t () { $TE $PARG$POSX+$1 --$Z=$ZTOU $PARTE "less _;echo `cat $2` >>ECHO;" &
+echo $! >> selPID; }
+>ECHO;clear; rm selPID; menu=$1 ; >FF;>TT;>LPID; >RselF
+ee;$TE --$G=55x20+$POSX+$POSY --$Z=$ZTRAIL $PARTE "less -Ps msg_Init"
+
+#  Touches blanches :: pas besoin de EE en fin de $TE car 1 seul choix # 
+YT=830;for j in 9 8 7 6 5 4 3 2 1;do t $YT $j; YT=`expr $YT - 90`;done
+
+# CADRE ECHO + LISTE FILMS ----- ET BOUTON "RESET"
+sleep 1;$TE --$G=${C}x19+600+70 --$Z=$ZMENU --$T='MENU' $PARH "less -Ps $menu" &
+echo $! >> selPID;
+$TE --$G=${C}x3+600+925 --$Z=$ZTRAIL $PARTE "less -Ps msg_selTrail" &
+echo $! >> selPID;
+$TE --$G=1x1+1800+50 --$Z=2.9 $PARTE "less 0;echo `cat 0` >>ECHO;./Rsel" &
+$TE --$G=1x1+1800+990 --$Z=2.9 $PARTE "cat 0;read r;./Rsel" &
+
+# ----------- TRAVAIL ECHO ----------------- #|sed 's/marco/\n/g' 
+while test ! -s RselF; do sleep 1; L=`wc -l ECHO|cut -d ' ' -f 1`
+if test $L -eq 1;then LA=`tail -1 ECHO`
+  if test $LA != E; then kill `cat selPID`;
+  head -n 3 ECHO > ECHO2; cp ECHO2 ECHO; break; fi
+fi;done 
+> RselF

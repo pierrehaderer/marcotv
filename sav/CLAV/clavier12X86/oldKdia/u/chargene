@@ -1,0 +1,26 @@
+
+l=$1
+
+(echo;echo $l;echo) > $l.txt
+convert -trim -border 9 -pointsize 80  text:$l.txt tempo.png
+mv temp* $l.png
+echo "echo -n $l >> recher" > ess$l
+chmod 777 ess$l
+echo "
+[Desktop Entry]
+
+Encoding=UTF-8
+
+Version=1.0
+
+Type=Application
+
+Terminal=false
+
+Exec=./ess$l
+
+Name=Name
+
+Icon=/m/projetX/clavier/$l.png
+" > $l.desktop
+

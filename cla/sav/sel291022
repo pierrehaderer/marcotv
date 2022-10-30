@@ -1,0 +1,44 @@
+# PROCEDURE AFFICHAGE MENU ... ::
+C=`~/TERM`; menu=$1; clear; rm TMP/selPID; >TMP/ECHO; >TMP/RselF
+TE='mate-terminal';G=geometry;H='hide-menubar'; Z=zoom; T=title; F=TMP #'.' 
+TX=xterm;TP1="tput rev"; S=sleep; TP2="tput bold";TP3="tput civis"
+PARH="--$H -- sh -c"; PARTE="--$T= $PARH"; PARG="--$G=1x1+"; 
+PARX='-fa default -fg green'; PARTX="$PARX -fs 20 -b 15"; S01='echo S01'
+en () { echo -e -n "\n" |xclip; } 
+V () { echo $1; }
+D1='1x1+560'; D2="$TP1;$TP3;echo -n _;read r;echo" 
+t () { $TE "$PARG"560+$1 --$Z=2.8 $PARTE "$S01;$D2 `cat $2` >> $F/ECHO;" & } 
+#t () { $TE "$PARG"560+$1 --$Z=2.8 $PARTE "V S01;$D2 `cat $2` >> $F/ECHO;" & } 
+x () { xterm -$G $D1+$1 $PARX -fs 35 -e "$S01;$D2 `cat $2` >> $F/ECHO;" & } 
+#x () { xterm -$G $D1+$1 $PARX -fs 35 -e "V S01;$D2 `cat $2` >> $F/ECHO;" & } 
+
+en;B1='55x20+600+10';case $C in
+M) $TE --$G=$B1 --$Z=1.7 $PARTE "PS1='';$TP2;cat MSG/msg_Init;read r;" 
+en;$TE --$G=1x1+1-1 --$Z=2.9 $PARTE "V S01;$TP3;echo -n I;read r;./Rini" &  ;;
+X) $TX -$G $B1 $PARTX -e "$TP2;cat MSG/msg_Init;read r" 
+$TX -$G 2x1+1-1 $PARX -fs 45 -e "V S01;$TP2;$TP3;echo -n I;read r;./Rini" & ;;
+esac
+while true;do $S 1;en;done & # le kill de EE est trop violent et tue xclip ::
+# xclip est relance artificiellt chaque sec le temps de la procedure cla 
+echo $! > TMP/traceXclip
+
+case $C in #Touches blanches::pas besoin Proc en fin de $TE car 1 seul choix
+M) YT=830;for j in 9 8 7 6 5 4 3 2 1;do t $YT $j; YT=`expr $YT - 90`;done ;;
+X) YT=830;for j in 9 8 7 6 5 4 3 2 1;do x $YT $j; YT=`expr $YT - 90`;done ;;
+esac
+# CADRE ECHO + LISTE FILMS ----- ET BOUTON "RESET"; sleep pour retard MENU
+$S 2;ee; A1='x19+600+70'; A2='less -Ps --mouse'; A3='1x1+1800+50';case $C in
+M) $TE --$G=49$A1 --$Z=1.9 --$T='MENU' $PARH "V S01;$A2 $menu" & 
+$TE --$G=50x3+600+925 --$Z=1.7 $PARTE "V S01;cat MSG/msg_selTrail;read r" &
+en;$TE --$G=$A3 --$Z=2.9 $PARTE "V S01;$TP3;echo -n \" 0\";read r;./Rsel" & ;;
+X) $TX -$G 50$A1 $PARX -fs '28,5' -e "V S01;$TP2;$A2 $menu" & 
+en;$TX -$G 50x3+600+925 $PARTX -e "V S01;$TP2;cat MSG/msg_selTrail;read r" &
+$TX -$G 2x1-1+1 $PARX -fs 45 -e "V S01;$TP2;$TP3;echo -n 0;read r;./Rsel" & ;;
+esac;  kill `cat TMP/traceXclip`; 
+
+# ----------- TRAVAIL ECHO ----------------- #|sed 's/marco/\n/g' 
+while test ! -s $F/RselF; do sleep 1; L=`wc -l $F/ECHO|cut -d ' ' -f 1`
+if test $L -eq 1;then LA=`tail -1 $F/ECHO`
+  if test $LA != E; then ~/KIL S01     #kill `cat $F/selPID`;
+  head -n 1 $F/ECHO > $F/ECHO2; cp $F/ECHO2 $F/ECHO; break; fi # -n 3 ??
+fi;done;     > $F/RselF;kill `cat TMP/traceXclip`

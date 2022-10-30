@@ -1,0 +1,41 @@
+C=`~/TERM` ; F=TMP;Xm=715;S="sleep 1"; S21='echo S21'
+TM='mate-terminal';G=geometry;H='hide-menubar'; Z=zoom; T=title; rm $F/claPID
+PARTE="--$T= --$H -- sh -c"; >$F/ECHO;>$F/FF;>$F/TT;>$F/LPID;vg='grep -v grep'
+>$F/FINAL; PARX='-fa default -fg green'; TP1='tput bold'; TP2='tput civis';
+TP3='tput rev'; >$F/EEPID; > $F/ECHOL; #pr -m -T --width=50 Nuniq3- zl >zlNum
+en () { echo -e -n "\n" |xclip; } 
+T () { $TM --$G=1x1+650+$1 --$Z='2.4' $PARTE "$S21;PS1='';$TP1;$TP2;$TP3;echo -n $2;read r;echo `cat $2` >>$F/ECHO;./EE;en" & } 
+x () { xterm -$G 1x1+660+$1 $PARX -fs 40 -e "$S21; $TP1;echo -n $2;read r;echo `cat $2` >>$F/ECHO;./EE $2;~/KIL xterm;en" & }
+y () { xterm -$G 1x1+660+$1 $PARX -fs 40 -e "$S21; $TP1;echo -n $2;read r;echo `cat $2` >>$F/ECHO;./EE $2;~/KIL xterm;en" &
+echo -n `ps -ef|grep "\-n $2"|$vg|tail -1`|cut -d ' ' -f 2 >TMP/touchPID$2; } 
+LISNUM=$1;en;clear;for n in 1 2 3 4 5; do case $C in # TOUCHE ERASE "E" MULTIPLE 
+M) T 900 E ;;
+X) x 900 E ;;
+esac;done ; case $C in
+M) T 810 9; # ----------------- TOUCHES NUMERIQUES X 2 COUCHES ---
+en;T 810 9;$S;T 720 8;T 630 7;T 540 6;$S;T 450 5;T 360 4;T 270 3;T 180 2;T 90 1
+en;T 720 8;T 630 7;T 540 6;$S;T 450 5;T 360 4;T 270 3;T 180 2;T 90 1;$S ;;
+X) x 810 9; y 810 9;
+en;x 720 8;x 630 7;x 540 6;$S;x 450 5;x 360 4;x 270 3;x 180 2;x 90 1;$S; 
+en;y 720 8;y 630 7;y 540 6;$S;y 450 5;y 360 4;y 270 3;y 180 2; y 90 1; $S ;;
+esac 
+LIG=`wc -l TMP/lism|cut -d ' ' -f 1`;head -n $LIG TMP/lism2 >TMP/LISNUMb
+MS='cat MSG/msg_Trail'; case $C in
+M) en;$S;$TM --$G=48x18+$Xm+80 --$Z='1.7' $PARTE "$S21;less -Ps $LISNUM" &
+$TM --$G=48x5+$Xm+830 --$Z='1.7' $PARTE "$S21;$MS >$F/TT;cat $F/TT;read r" & ;;
+X) $S;xterm -$G 48x15+$Xm+80 -fs 30 $PARX -e "$S21;clear;tput civis;cat TMP/LISNUMb;read r" & 
+#le less pourrait etre conserve, pour scroll a partir du debut ..
+#X) $S;xterm -$G 48x18+$Xm+80 -fs 30 $PARX -e "$S21;less -Ps --mouse TMP/LISNUMb" &
+xterm -$G 48x5+$Xm+830 -fs 30 $PARX -e "$S21;$MS >$F/TT;cat $F/TT;read r" & ;;
+       *) echo autre Console ;; esac 
+
+while true;do $S;en;done & # le kill de EE est trop violent et tue xclip ::
+# xclip est relance artificiellement chaque 2s le temps de la procedure cla ...
+echo $! > TMP/traceXclip 
+# ----------- TRAVAIL ECHO -----------------
+while test ! -s $F/FINAL; do sleep 1; L=`wc -l $F/ECHO|cut -d ' ' -f 1`
+if test $L -eq 4;then LA=`tail -1 $F/ECHO`
+ if test $LA != E; then ~/KIL S21; 
+ head -n 3 $F/ECHO > $F/ECHO2; cp $F/ECHO2 $F/ECHO; break; fi
+fi;done # ----------- REFAIRE CHOIX -----------------------------------
+echo `cat $F/ECHO`|tr -d ' '|cut -c 1-3 > $F/PP;~/KIL S21;

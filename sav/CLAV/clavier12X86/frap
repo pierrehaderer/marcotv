@@ -1,0 +1,18 @@
+
+if test $1 = suppr
+then
+echo ZZZ
+L=`cat recher`
+l=`expr ${#L} - 1`
+#echo LEN :: $l
+#eval echo SUBSTR :: ${L:0:$l} 
+#sh -c "echo -n ${L:0:$l} > recher"
+#echo RECHER :: `expr substr $L 1 $l`
+echo -n `expr substr $L 1 $l` > recher
+else
+echo -n $1 >> recher
+fi
+convert -trim -border 10 -pointsize 60 -page 700x300 text:recher tempo.png
+#./chargeneTXT recher
+#./kdiaTxtjpg tempo.png
+kdialog --geometry 1400x70+450+750  --imgbox tempo.png 

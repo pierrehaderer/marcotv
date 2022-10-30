@@ -1,0 +1,48 @@
+C=`~/TERM` ; F=TMP;Xm=715;S="sleep 1"
+TM='mate-terminal';G=geometry;H='hide-menubar'; Z=zoom; T=title; rm $F/claPID
+PARTE="--$T= --$H -- sh -c"; >$F/ECHO;>$F/FF;>$F/TT;>$F/LPID;
+>$F/FINAL; PARX='-fa default -fg green'; TP1='tput bold'; TP2='tput civis';
+TP3='tput rev'; >$F/EEPID; > $F/ECHOL; #pr -m -T --width=50 Nuniq3- zl >zlNum
+ee () { echo -e -n "q" |xclip; } 
+er () { echo -e -n "\r\n" |xclip; }
+en () { echo -e -n "\n" |xclip; } 
+pp () { echo $! >> TMP/claPID; }
+T () { $TM --$G=1x1+650+$1 --$Z='2.4' $PARTE "PS1='';$TP1;$TP2;$TP3;echo -n $2;read r;echo `cat $2` >>$F/ECHO;./EE;en" &
+pp; }
+x () { xterm -$G 1x1+660+$1 $PARX -fs 40 -e "$TP1;echo -n $2;read r;echo `cat $2` >> $F/ECHO;./EE $2;~/KIL xterm;en" &
+pp; echo -n `ps -ef|grep "\-n $2"|grep -v grep|tail -1`|cut -d ' ' -f 2 >TMP/touchPID$2; }  # |grep 'tput bold'
+LISNUM=$1 #  ------ TOUCHE ERASE "E" MULTIPLE ---------
+en;clear;for n in 1 2 3 4 5; do case $C in
+M) T 900 E ;;
+X) x 900 E ;;
+       *) echo autre Console ;;
+esac;done ; case $C in
+M) T 810 9; # ----------------- TOUCHES NUMERIQUES X 2 COUCHES ---
+en;T 810 9;$S;T 720 8;T 630 7;T 540 6;$S;T 450 5;T 360 4;T 270 3;T 180 2;T 90 1
+en;T 720 8;T 630 7;T 540 6;$S;T 450 5;T 360 4;T 270 3;T 180 2;T 90 1;$S ;;
+X) x 810 9; x 810 9;
+en;x 720 8;x 630 7;x 540 6;$S;x 450 5;x 360 4;x 270 3;x 180 2;x 90 1;$S; 
+en;x 720 8;x 630 7;x 540 6;$S;x 450 5;x 360 4;x 270 3;x 180 2; x 90 1; $S ;;
+       *) echo autre Console ;; esac #C=M #test Console
+MS='cat MSG/msg_Trail'; case $C in
+M) en;$S;$TM --$G=48x18+$Xm+80 --$Z='1.7' $PARTE "less -Ps $LISNUM" &
+en;$TM --$G=48x5+$Xm+830 --$Z='1.7' $PARTE "$MS >$F/TT;cat $F/TT;read r" & 
+pp ;;
+X) en;$S;xterm -$G 48x18+$Xm+80 -fs 30 $PARX -e "less -Ps --mouse $LISNUM" &
+pp; en;xterm -$G 48x5+$Xm+830 -fs 30 $PARX -e "$MS >$F/TT;cat $F/TT;read r" & 
+pp ;;
+       *) echo autre Console ;; esac #C=M #test Console
+#$TM --$G=1x1+1800+1 --$Z=2.9 $PARTE "less 0;echo `cat 0` >>$F/ECHO;./Rcla" &
+#$TM --$G=1x1+1800-1 --$Z=2.9 $PARTE "cat 0;read r;./Rcla" &
+
+while true;do $S;en;done & # le kill de EE est trop violent et tue xclip ::
+# xclip est relance artificiellement chaque 2s le temps de la procedure cla ...
+echo $! > TMP/traceXclip #sed 's/marco/\n/g' 
+# ----------- TRAVAIL ECHO -----------------
+while test ! -s $F/FINAL; do sleep 1; L=`wc -l $F/ECHO|cut -d ' ' -f 1`
+if test $L -eq 4;then LA=`tail -1 $F/ECHO`
+ if test $LA != E; then kill `cat $F/claPID`;
+ head -n 3 $F/ECHO > $F/ECHO2; cp $F/ECHO2 $F/ECHO; break; fi
+fi;done # ----------- REFAIRE CHOIX -----------------------------------
+echo `cat $F/ECHO`|tr -d ' '|cut -c 1-3 > $F/PP
+kill `cat TMP/traceXclip`;kill `cat TMP/claPID`; ~/KIL ECHOL

@@ -1,0 +1,8 @@
+marco       3964    3317 25 15:59 pts/0    00:00:01 mate-terminal --geometry=42x4+715+81 --zoom=1.7 --title= --hide-menubar -- sh -c less -Ps M_
+marco       3985    3964  0 15:59 pts/1    00:00:00 sh -c less -Ps M_
+marco       3986    3985  0 15:59 pts/1    00:00:00 less -Ps M_
+marco       3987    3964  0 15:59 pts/2    00:00:00 sh -c less O; echo oui > OUI
+marco       3990    3987  0 15:59 pts/2    00:00:00 less O
+marco       4025    3964  0 15:59 pts/4    00:00:00 sh -c less -Ps choix
+marco       4026    4025  0 15:59 pts/4    00:00:00 less -Ps choix
+marco       4035    3317  0 15:59 pts/0    00:00:00 grep  less

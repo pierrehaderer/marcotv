@@ -1,0 +1,482 @@
+marco 55277 55254 2 09:14 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 55288 55274 2 09:14 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 55329 55306 5 09:14 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 55341 55326 6 09:14 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 55277 55254 2 09:14 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 55288 55274 2 09:14 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 55329 55306 5 09:14 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 55341 55326 6 09:14 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 55646 55623 1 09:15 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 55657 55643 2 09:15 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 55698 55675 2 09:15 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 55709 55695 3 09:15 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 55646 55623 1 09:15 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 55657 55643 2 09:15 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 55698 55675 2 09:15 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 55709 55695 3 09:15 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 56028 56005 1 09:17 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 56039 56025 1 09:17 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 56080 56057 1 09:17 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 56091 56077 1 09:17 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 56028 56005 1 09:17 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 56039 56025 1 09:17 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 56080 56057 1 09:17 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 56091 56077 1 09:17 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 56775 56752 3 09:30 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 56786 56772 4 09:30 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 56827 56804 6 09:30 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 56838 56824 8 09:30 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 56775 56752 3 09:30 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 56786 56772 4 09:30 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 56827 56804 6 09:30 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 56838 56824 8 09:30 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 71570 71553 3 14:33 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 71600 71583 6 14:33 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 71570 71553 3 14:33 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 71600 71583 6 14:33 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 71948 71931 3 14:36 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 71977 71960 8 14:36 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 71948 71931 3 14:36 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 71977 71960 8 14:36 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 75980 75970 2 15:40 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 76003 75983 2 15:40 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 76025 76015 3 15:40 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 75980 75970 2 15:40 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 76003 75983 2 15:40 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 76025 76015 3 15:40 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 76672 76662 2 15:44 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 76694 76684 3 15:44 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 76672 76662 2 15:44 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 76694 76684 3 15:44 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 76966 76923 0 15:45 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox saisieClavier.jpg
+marco 77003 76993 1 15:46 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 77025 77015 8 15:46 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 76966 76923 0 15:45 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox saisieClavier.jpg
+marco 77003 76993 1 15:46 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 77025 77015 8 15:46 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 77752 77742 1 15:50 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 77775 77765 3 15:50 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 77752 77742 1 15:50 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 77775 77765 3 15:50 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 78401 78358 1 15:59 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 78432 78422 3 15:59 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 78454 78444 8 15:59 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 78401 78358 1 15:59 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 78432 78422 3 15:59 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 78454 78444 8 15:59 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 78785 78775 1 16:01 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 78807 78797 1 16:01 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 78785 78775 1 16:01 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 78807 78797 1 16:01 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 79153 79143 3 16:04 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 79175 79165 6 16:04 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 79153 79143 3 16:04 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 79175 79165 6 16:04 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 79524 79514 2 16:06 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 79548 79536 6 16:06 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 79524 79514 2 16:06 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 79548 79536 6 16:06 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 80126 80115 3 16:15 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 80150 80139 8 16:15 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 80126 80115 3 16:15 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 80150 80139 8 16:15 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 80611 80588 0 16:23 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 80611 80588 0 16:23 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 80905 80897 2 16:24 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 80925 80917 6 16:24 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 80905 80897 2 16:24 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 80925 80917 6 16:24 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 81366 81358 3 16:28 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 81386 81378 8 16:28 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 81366 81358 3 16:28 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 81386 81378 8 16:28 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 81739 81731 3 16:30 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 81759 81751 6 16:30 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 81739 81731 3 16:30 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 81759 81751 6 16:30 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 82112 82104 5 16:31 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 82132 82124 8 16:31 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 82112 82104 5 16:31 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 82132 82124 8 16:31 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 82498 82490 5 16:33 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 82518 82510 8 16:33 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 82498 82490 5 16:33 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 82518 82510 8 16:33 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 82874 82866 4 16:35 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 82894 82886 6 16:35 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 82874 82866 4 16:35 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 82894 82886 6 16:35 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 83254 83246 4 16:36 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 83274 83266 6 16:36 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 83254 83246 4 16:36 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 83274 83266 6 16:36 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 83631 83623 5 16:37 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 83651 83643 13 16:37 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 83631 83623 5 16:37 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 83651 83643 13 16:37 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 84009 84001 4 16:39 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 84029 84021 8 16:39 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 84009 84001 4 16:39 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 84029 84021 8 16:39 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 84378 84370 3 16:40 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 84398 84390 6 16:40 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 84378 84370 3 16:40 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 84398 84390 6 16:40 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 84754 84746 4 16:41 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 84774 84766 8 16:41 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 84754 84746 4 16:41 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 84774 84766 8 16:41 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 85226 85218 3 16:48 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 85246 85238 8 16:48 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 85226 85218 3 16:48 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 85246 85238 8 16:48 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 85285 85276 3 16:48 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 85285 85276 3 16:48 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 85618 85610 6 16:53 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 85638 85630 13 16:53 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 85618 85610 6 16:53 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 85638 85630 13 16:53 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 85985 85977 4 16:54 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 86005 85997 8 16:54 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 85985 85977 4 16:54 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 86005 85997 8 16:54 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 86299 86253 1 16:55 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 86348 86340 3 16:55 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 86368 86360 8 16:56 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 86299 86253 1 16:55 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 86348 86340 3 16:55 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 86368 86360 8 16:56 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 86724 86716 4 16:57 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 86744 86736 12 16:57 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 86724 86716 4 16:57 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 86744 86736 12 16:57 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 100650 100603 0 07:16 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 100675 100651 0 07:17 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 100701 100693 3 07:17 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 100722 100714 6 07:17 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 100650 100603 0 07:16 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 100675 100651 0 07:17 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 100701 100693 3 07:17 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 100722 100714 6 07:17 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 101047 101001 1 07:22 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 101068 101046 1 07:22 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 101094 101086 2 07:22 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 101114 101106 8 07:22 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 101047 101001 1 07:22 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 101068 101046 1 07:22 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 101094 101086 2 07:22 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 101114 101106 8 07:22 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 101430 101384 1 07:24 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 101451 101429 1 07:24 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 101477 101469 2 07:24 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 101497 101489 2 07:24 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 101430 101384 1 07:24 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 101451 101429 1 07:24 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 101477 101469 2 07:24 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 101497 101489 2 07:24 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 101796 101750 1 07:26 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 101817 101795 1 07:26 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 101843 101835 1 07:26 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 101863 101855 3 07:26 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 101796 101750 1 07:26 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 101817 101795 1 07:26 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 101843 101835 1 07:26 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 101863 101855 3 07:26 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 102208 102194 1 07:28 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 102208 102194 1 07:28 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 102530 102522 1 07:29 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 102530 102522 1 07:29 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 102833 102787 1 07:33 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 102854 102832 1 07:33 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 102879 102872 1 07:33 pts/0 00:00:00 kdialog --geometry 700x70+450+800 --imgbox tempo.png
+marco 102898 102891 5 07:33 pts/0 00:00:00 kdialog --geometry 700x70+450+800 --imgbox tempo.png
+marco 102833 102787 1 07:33 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 102854 102832 1 07:33 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 102879 102872 1 07:33 pts/0 00:00:00 kdialog --geometry 700x70+450+800 --imgbox tempo.png
+marco 102898 102891 5 07:33 pts/0 00:00:00 kdialog --geometry 700x70+450+800 --imgbox tempo.png
+marco 103195 103150 2 07:35 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 103217 103196 2 07:35 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 103195 103150 2 07:35 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 103217 103196 2 07:35 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 103518 103471 2 07:36 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 103539 103517 3 07:36 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 103518 103471 2 07:36 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 103539 103517 3 07:36 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 103837 103790 1 07:36 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 103859 103838 1 07:36 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 103876 103871 1 07:36 pts/0 00:00:00 kdialog --geometry 700x70+450+750 --imgbox tempo.png
+marco 103901 103896 2 07:36 pts/0 00:00:00 kdialog --geometry 700x70+450+750 --imgbox tempo.png
+marco 103918 103913 2 07:37 pts/0 00:00:00 kdialog --geometry 700x70+450+750 --imgbox tempo.png
+marco 103935 103930 5 07:37 pts/0 00:00:00 kdialog --geometry 700x70+450+750 --imgbox tempo.png
+marco 103837 103790 1 07:36 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 103859 103838 1 07:36 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 103876 103871 1 07:36 pts/0 00:00:00 kdialog --geometry 700x70+450+750 --imgbox tempo.png
+marco 103901 103896 2 07:36 pts/0 00:00:00 kdialog --geometry 700x70+450+750 --imgbox tempo.png
+marco 103918 103913 2 07:37 pts/0 00:00:00 kdialog --geometry 700x70+450+750 --imgbox tempo.png
+marco 103935 103930 5 07:37 pts/0 00:00:00 kdialog --geometry 700x70+450+750 --imgbox tempo.png
+marco 104280 104234 1 07:37 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 104302 104281 2 07:37 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 104280 104234 1 07:37 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 104302 104281 2 07:37 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 104600 104554 1 07:38 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 104621 104599 1 07:38 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 104647 104642 1 07:38 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 104664 104659 6 07:38 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 104600 104554 1 07:38 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 104621 104599 1 07:38 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 104647 104642 1 07:38 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 104664 104659 6 07:38 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 105139 105092 1 07:45 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 105160 105138 2 07:45 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 105183 105178 2 07:46 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 105200 105195 3 07:46 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 105139 105092 1 07:45 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 105160 105138 2 07:45 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 105183 105178 2 07:46 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 105200 105195 3 07:46 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 105497 105451 3 07:47 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 105518 105496 5 07:47 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 105535 105530 5 07:47 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 105558 105553 8 07:47 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 105497 105451 3 07:47 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 105518 105496 5 07:47 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 105535 105530 5 07:47 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 105558 105553 8 07:47 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 105996 105950 2 07:52 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 106017 105995 2 07:52 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 106040 106035 4 07:52 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 106057 106052 8 07:52 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 105996 105950 2 07:52 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 106017 105995 2 07:52 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 106040 106035 4 07:52 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 106057 106052 8 07:52 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 106358 106311 2 07:58 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 106379 106357 2 07:58 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 106402 106397 3 07:58 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 106419 106414 7 07:58 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 106358 106311 2 07:58 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 106379 106357 2 07:58 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 106402 106397 3 07:58 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 106419 106414 7 07:58 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 106730 106683 3 07:59 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 106751 106729 3 07:59 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 106774 106769 4 07:59 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 106791 106786 7 07:59 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 106730 106683 3 07:59 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 106751 106729 3 07:59 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 106774 106769 4 07:59 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 106791 106786 7 07:59 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 107095 107049 2 08:00 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 107116 107094 2 08:00 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 107139 107134 3 08:00 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 107156 107151 6 08:00 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 107095 107049 2 08:00 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 107116 107094 2 08:00 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 107139 107134 3 08:00 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 107156 107151 6 08:00 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 107461 107412 3 08:01 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 107482 107460 4 08:01 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 107505 107500 5 08:01 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 107522 107517 7 08:01 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 107461 107412 3 08:01 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 107482 107460 4 08:01 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 107505 107500 5 08:01 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 107522 107517 7 08:01 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 107828 107782 2 08:03 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 107849 107827 3 08:03 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 107872 107867 2 08:03 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 107889 107884 5 08:03 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 107828 107782 2 08:03 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 107849 107827 3 08:03 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 107872 107867 2 08:03 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 107889 107884 5 08:03 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 108200 108154 2 08:05 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 108222 108201 3 08:05 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 108245 108240 3 08:05 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 108262 108257 5 08:05 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 108200 108154 2 08:05 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 108222 108201 3 08:05 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 108245 108240 3 08:05 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 108262 108257 5 08:05 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 108575 108525 3 08:06 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 108596 108574 4 08:06 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 108619 108614 5 08:06 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 108636 108631 7 08:06 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 108575 108525 3 08:06 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 108596 108574 4 08:06 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 108619 108614 5 08:06 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 108636 108631 7 08:06 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 108944 108898 3 08:08 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 108965 108943 4 08:08 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 108982 108977 5 08:08 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 109005 109000 6 08:08 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 108944 108898 3 08:08 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 108965 108943 4 08:08 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 108982 108977 5 08:08 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 109005 109000 6 08:08 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 109304 109258 2 08:09 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 109330 109305 3 08:09 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 109347 109342 3 08:10 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 109370 109365 5 08:10 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 109304 109258 2 08:09 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 109330 109305 3 08:09 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 109347 109342 3 08:10 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 109370 109365 5 08:10 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 109703 109656 2 08:30 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 109724 109702 2 08:30 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 109747 109742 3 08:30 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 109764 109759 5 08:30 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 109703 109656 2 08:30 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 109724 109702 2 08:30 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 109747 109742 3 08:30 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 109764 109759 5 08:30 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 110075 110028 2 08:32 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 110096 110074 2 08:32 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 110119 110114 3 08:32 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 110136 110131 5 08:32 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 110075 110028 2 08:32 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 110096 110074 2 08:32 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 110119 110114 3 08:32 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 110136 110131 5 08:32 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 110413 110367 2 08:33 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 110434 110412 2 08:33 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 110457 110452 5 08:33 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 110474 110469 7 08:33 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 110413 110367 2 08:33 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 110434 110412 2 08:33 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 110457 110452 5 08:33 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 110474 110469 7 08:33 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 110724 110678 0 08:34 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 110745 110723 1 08:34 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 110770 110765 2 08:34 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 110787 110782 3 08:34 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 110724 110678 0 08:34 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 110745 110723 1 08:34 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 110770 110765 2 08:34 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 110787 110782 3 08:34 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 111022 111005 1 08:36 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 111046 111001 1 08:36 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 111067 111045 1 08:36 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 111090 111085 3 08:36 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 111107 111102 4 08:36 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 111022 111005 1 08:36 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 111046 111001 1 08:36 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 111067 111045 1 08:36 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 111090 111085 3 08:36 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 111107 111102 4 08:36 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 111371 111329 2 08:38 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 111399 111394 3 08:38 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 111416 111411 6 08:38 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 111371 111329 2 08:38 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 111399 111394 3 08:38 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 111416 111411 6 08:38 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 111639 111594 1 08:39 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 111664 111659 4 08:39 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 111681 111676 11 08:39 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 111639 111594 1 08:39 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 111664 111659 4 08:39 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 111681 111676 11 08:39 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 112031 111991 1 08:44 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 112060 112055 3 08:45 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 112077 112072 5 08:45 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 112031 111991 1 08:44 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 112060 112055 3 08:45 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 112077 112072 5 08:45 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 112282 112239 2 08:47 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 112307 112302 4 08:47 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 112324 112319 7 08:47 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 112282 112239 2 08:47 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 112307 112302 4 08:47 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 112324 112319 7 08:47 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 112520 112477 4 08:48 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 112545 112540 7 08:48 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 112562 112557 11 08:48 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 112520 112477 4 08:48 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 112545 112540 7 08:48 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 112562 112557 11 08:48 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 112799 112759 2 08:49 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 112825 112820 2 08:49 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 112842 112837 3 08:49 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 112799 112759 2 08:49 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 112825 112820 2 08:49 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 112842 112837 3 08:49 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 113060 113055 3 08:50 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 113078 113073 7 08:50 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 113060 113055 3 08:50 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 113078 113073 7 08:50 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 113301 113296 5 08:52 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 113318 113313 8 08:52 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 113301 113296 5 08:52 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 113318 113313 8 08:52 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 113529 113524 6 08:53 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 113546 113541 11 08:53 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 113529 113524 6 08:53 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 113546 113541 11 08:53 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 113748 113705 2 08:54 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 113773 113768 3 08:54 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 113790 113785 8 08:54 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 113748 113705 2 08:54 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 113773 113768 3 08:54 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 113790 113785 8 08:54 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 114032 114027 6 08:55 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 114049 114044 12 08:55 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 114032 114027 6 08:55 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 114049 114044 12 08:55 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 114253 114209 3 08:57 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 114278 114273 6 08:57 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 114295 114290 12 08:57 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 114253 114209 3 08:57 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 114278 114273 6 08:57 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 114295 114290 12 08:57 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 114536 114531 5 08:59 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 114553 114548 8 08:59 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 114536 114531 5 08:59 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 114553 114548 8 08:59 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 114791 114786 5 09:03 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 114808 114803 13 09:03 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 114791 114786 5 09:03 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 114808 114803 13 09:03 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 115006 114965 4 09:04 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 115031 115026 6 09:04 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 115048 115043 13 09:04 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 115006 114965 4 09:04 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 115031 115026 6 09:04 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 115048 115043 13 09:04 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 115295 115290 4 09:06 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 115312 115307 12 09:06 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 115295 115290 4 09:06 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 115312 115307 12 09:06 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 115509 115466 4 09:07 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 115534 115529 7 09:07 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 115551 115546 22 09:07 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 115751 115708 2 09:10 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 115776 115771 5 09:10 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 115793 115788 5 09:10 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 115993 115950 3 09:11 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 116018 116013 6 09:11 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 116035 116030 8 09:11 pts/0 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 116427 116422 5 09:23 pts/2 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 116444 116439 9 09:23 pts/2 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 116632 116590 3 09:24 pts/2 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 116658 116652 4 09:24 pts/2 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 116678 116673 11 09:25 pts/2 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 116910 116867 4 09:26 pts/2 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 116935 116930 5 09:26 pts/2 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 116952 116947 7 09:26 pts/2 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 117141 117099 3 09:27 pts/2 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 117166 117161 5 09:27 pts/2 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 117183 117178 8 09:27 pts/2 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 117373 117331 2 09:29 pts/2 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 117398 117393 6 09:29 pts/2 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 117415 117410 11 09:29 pts/2 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 117657 117617 3 09:31 pts/2 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 117682 117677 3 09:31 pts/2 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 117699 117694 11 09:31 pts/2 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 117926 117883 3 09:31 pts/2 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 117951 117946 6 09:32 pts/2 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 117968 117963 7 09:32 pts/2 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 118235 118230 5 09:33 pts/2 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 118252 118247 13 09:33 pts/2 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 118560 118517 3 09:40 pts/2 00:00:00 kdialog --geometry 900x100+450+800 --imgbox I-saisiClav.jpg
+marco 118585 118580 6 09:41 pts/2 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png
+marco 118602 118597 7 09:41 pts/2 00:00:00 kdialog --geometry 1400x70+450+750 --imgbox tempo.png

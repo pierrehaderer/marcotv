@@ -1,0 +1,27 @@
+RATE=50; ZOOM2=2.2; ZOOM1=1.0; POSY=10; POSX=1040; ROOT=m/Ubu141221/claLess; POST=860; >ECHO; >FF; >TT; >LPID #pr -m -T --width=50 Nuniq3- zl > zlNum
+echo -e -n "q" |xclip
+mate-terminal --geometry=49x13+500+400 --title=' ' --hide-menubar --zoom=$ZOOM1 -- sh -c "less -Ps MSG1" 
+for n in 1 2 3 4 5; do
+mate-terminal --geometry=1x1+$POST+850  --title=' ' --hide-menubar --zoom=$ZOOM2 -- sh -c "less E;echo `cat E` >>/$ROOT/ECHO;/$ROOT/EE" & 
+done
+
+delta=800;for j in 9 8 7 6 5 4 3 2 1;do delta=`expr 80 \* $j`
+
+v=0;while test $v -lt $RATE; do v=`expr $v + 1`;done
+#if test $j -ne 0; then echo $j > $j; else echo E > 0; fi
+mate-terminal --geometry=1x1+$POST+`expr $POSY + $delta`  --title=' ' --hide-menubar --zoom=$ZOOM2 -- sh -c "less $j;echo `cat $j` >>/$ROOT/ECHO;/$ROOT/EE" & 
+done
+
+v=0; while test $v -lt $RATE; do v=`expr $v + 1`;done
+mate-terminal --geometry=48x6+$POSX+`expr $POSY + 820` --title=' ' --hide-menubar --zoom=$ZOOM1  -- sh -c "cat msgE > TT; less -Ps TT" &
+mate-terminal --geometry=48x17+$POSX+`expr $POSY + 80` --title=' ' --hide-menubar --zoom=$ZOOM1 -- sh -c "less -Ps zlNum" &
+echo `ps -ef|grep ' less'|grep -v grep|grep -v zl` |sed 's/marco/\n/g'| cut -d ' ' -f 2  > LPID
+
+while true; do L=`wc -l ECHO|cut -d ' ' -f 1`
+if test $L -eq 5;then kill `cat /$ROOT/LPID`;
+head -n 3 ECHO > ECHO2; cp ECHO2 ECHO;break;fi;done
+
+echo `cat ECHO`|tr -d ' ' > PP
+echo -n "VOUS AVEZ CHOISI LE FILM NUMERO :: " > M_; echo `cat ECHO` >> M_
+grep `cat PP` zlNum >> M_
+mate-terminal --geometry=42x4+$POSX+`expr $POSY + 80` --hide-menubar --title=' ' --zoom=$ZOOM1 -- sh -c "less -Ps M_" &

@@ -1,0 +1,52 @@
+marco      20191   20184  0 09:53 ?        00:00:00 xterm -geometry 1x1+660+900 -fa default -fg green -fs 40 -e echo S21; tput bold;echo -n E;read r;echo E >>TMP/ECHO;./EE E;~/KIL xterm;en
+marco      20192   20184  0 09:53 ?        00:00:00 xterm -geometry 1x1+660+900 -fa default -fg green -fs 40 -e echo S21; tput bold;echo -n E;read r;echo E >>TMP/ECHO;./EE E;~/KIL xterm;en
+marco      20195   20184  0 09:53 ?        00:00:00 xterm -geometry 1x1+660+900 -fa default -fg green -fs 40 -e echo S21; tput bold;echo -n E;read r;echo E >>TMP/ECHO;./EE E;~/KIL xterm;en
+marco      20196   20184  0 09:53 ?        00:00:00 xterm -geometry 1x1+660+900 -fa default -fg green -fs 40 -e echo S21; tput bold;echo -n E;read r;echo E >>TMP/ECHO;./EE E;~/KIL xterm;en
+marco      20197   20184  0 09:53 ?        00:00:00 xterm -geometry 1x1+660+900 -fa default -fg green -fs 40 -e echo S21; tput bold;echo -n E;read r;echo E >>TMP/ECHO;./EE E;~/KIL xterm;en
+marco      20198   20184  0 09:53 ?        00:00:00 xterm -geometry 1x1+660+810 -fa default -fg green -fs 40 -e echo S21; tput bold;echo -n 9;read r;echo 9 >>TMP/ECHO;./EE 9;~/KIL xterm;en
+marco      20199   20184  0 09:53 ?        00:00:00 xterm -geometry 1x1+660+810 -fa default -fg green -fs 40 -e echo S21; tput bold;echo -n 9;read r;echo 9 >>TMP/ECHO;./EE 9;~/KIL xterm;en
+marco      20215   20184  0 09:53 ?        00:00:00 xterm -geometry 1x1+660+720 -fa default -fg green -fs 40 -e echo S21; tput bold;echo -n 8;read r;echo 8 >>TMP/ECHO;./EE 8;~/KIL xterm;en
+marco      20216   20184  0 09:53 ?        00:00:00 xterm -geometry 1x1+660+630 -fa default -fg green -fs 40 -e echo S21; tput bold;echo -n 7;read r;echo 7 >>TMP/ECHO;./EE 7;~/KIL xterm;en
+marco      20218   20184  0 09:53 ?        00:00:00 xterm -geometry 1x1+660+540 -fa default -fg green -fs 40 -e echo S21; tput bold;echo -n 6;read r;echo 6 >>TMP/ECHO;./EE 6;~/KIL xterm;en
+marco      20222   20192  0 09:53 pts/1    00:00:00 bash -c echo S21; tput bold;echo -n E;read r;echo E >>TMP/ECHO;./EE E;~/KIL xterm;en
+marco      20224   20196  0 09:53 pts/5    00:00:00 bash -c echo S21; tput bold;echo -n E;read r;echo E >>TMP/ECHO;./EE E;~/KIL xterm;en
+marco      20226   20197  0 09:53 pts/2    00:00:00 bash -c echo S21; tput bold;echo -n E;read r;echo E >>TMP/ECHO;./EE E;~/KIL xterm;en
+marco      20227   20199  0 09:53 pts/4    00:00:00 bash -c echo S21; tput bold;echo -n 9;read r;echo 9 >>TMP/ECHO;./EE 9;~/KIL xterm;en
+marco      20232   20191  0 09:53 pts/0    00:00:00 bash -c echo S21; tput bold;echo -n E;read r;echo E >>TMP/ECHO;./EE E;~/KIL xterm;en
+marco      20234   20195  0 09:53 pts/3    00:00:00 bash -c echo S21; tput bold;echo -n E;read r;echo E >>TMP/ECHO;./EE E;~/KIL xterm;en
+marco      20236   20218  0 09:53 pts/8    00:00:00 bash -c echo S21; tput bold;echo -n 6;read r;echo 6 >>TMP/ECHO;./EE 6;~/KIL xterm;en
+marco      20242   20184  0 09:53 ?        00:00:00 xterm -geometry 1x1+660+450 -fa default -fg green -fs 40 -e echo S21; tput bold;echo -n 5;read r;echo 5 >>TMP/ECHO;./EE 5;~/KIL xterm;en
+marco      20243   20184  0 09:53 ?        00:00:00 xterm -geometry 1x1+660+360 -fa default -fg green -fs 40 -e echo S21; tput bold;echo -n 4;read r;echo 4 >>TMP/ECHO;./EE 4;~/KIL xterm;en
+marco      20244   20184  0 09:53 ?        00:00:00 xterm -geometry 1x1+660+270 -fa default -fg green -fs 40 -e echo S21; tput bold;echo -n 3;read r;echo 3 >>TMP/ECHO;./EE 3;~/KIL xterm;en
+marco      20245   20184  0 09:53 ?        00:00:00 xterm -geometry 1x1+660+180 -fa default -fg green -fs 40 -e echo S21; tput bold;echo -n 2;read r;echo 2 >>TMP/ECHO;./EE 2;~/KIL xterm;en
+marco      20246   20184  0 09:53 ?        00:00:00 xterm -geometry 1x1+660+90 -fa default -fg green -fs 40 -e echo S21; tput bold;echo -n 1;read r;echo 1 >>TMP/ECHO;./EE 1;~/KIL xterm;en
+marco      20251   20216  0 09:53 pts/7    00:00:00 bash -c echo S21; tput bold;echo -n 7;read r;echo 7 >>TMP/ECHO;./EE 7;~/KIL xterm;en
+marco      20252   20198  0 09:53 pts/6    00:00:00 bash -c echo S21; tput bold;echo -n 9;read r;echo 9 >>TMP/ECHO;./EE 9;~/KIL xterm;en
+marco      20269   20215  0 09:53 pts/9    00:00:00 bash -c echo S21; tput bold;echo -n 8;read r;echo 8 >>TMP/ECHO;./EE 8;~/KIL xterm;en
+marco      20299   20242  0 09:53 pts/14   00:00:00 bash -c echo S21; tput bold;echo -n 5;read r;echo 5 >>TMP/ECHO;./EE 5;~/KIL xterm;en
+marco      20302   20244  0 09:53 pts/10   00:00:00 bash -c echo S21; tput bold;echo -n 3;read r;echo 3 >>TMP/ECHO;./EE 3;~/KIL xterm;en
+marco      20305   20246  0 09:53 pts/11   00:00:00 bash -c echo S21; tput bold;echo -n 1;read r;echo 1 >>TMP/ECHO;./EE 1;~/KIL xterm;en
+marco      20306   20243  0 09:53 pts/13   00:00:00 bash -c echo S21; tput bold;echo -n 4;read r;echo 4 >>TMP/ECHO;./EE 4;~/KIL xterm;en
+marco      20310   20184  0 09:53 ?        00:00:00 xterm -geometry 1x1+660+720 -fa default -fg green -fs 40 -e echo S21; tput bold;echo -n 8;read r;echo 8 >>TMP/ECHO;./EE 8;~/KIL xterm;en
+marco      20325   20184  0 09:53 ?        00:00:00 xterm -geometry 1x1+660+630 -fa default -fg green -fs 40 -e echo S21; tput bold;echo -n 7;read r;echo 7 >>TMP/ECHO;./EE 7;~/KIL xterm;en
+marco      20335   20184  0 09:53 ?        00:00:00 xterm -geometry 1x1+660+540 -fa default -fg green -fs 40 -e echo S21; tput bold;echo -n 6;read r;echo 6 >>TMP/ECHO;./EE 6;~/KIL xterm;en
+marco      20344   20245  0 09:53 pts/12   00:00:00 bash -c echo S21; tput bold;echo -n 2;read r;echo 2 >>TMP/ECHO;./EE 2;~/KIL xterm;en
+marco      20347   20310  0 09:53 pts/15   00:00:00 bash -c echo S21; tput bold;echo -n 8;read r;echo 8 >>TMP/ECHO;./EE 8;~/KIL xterm;en
+marco      20348   20325  0 09:53 pts/16   00:00:00 bash -c echo S21; tput bold;echo -n 7;read r;echo 7 >>TMP/ECHO;./EE 7;~/KIL xterm;en
+marco      20351   20335  0 09:53 pts/17   00:00:00 bash -c echo S21; tput bold;echo -n 6;read r;echo 6 >>TMP/ECHO;./EE 6;~/KIL xterm;en
+marco      20353   20184  0 09:54 ?        00:00:00 xterm -geometry 1x1+660+450 -fa default -fg green -fs 40 -e echo S21; tput bold;echo -n 5;read r;echo 5 >>TMP/ECHO;./EE 5;~/KIL xterm;en
+marco      20389   20353  0 09:54 pts/18   00:00:00 bash -c echo S21; tput bold;echo -n 5;read r;echo 5 >>TMP/ECHO;./EE 5;~/KIL xterm;en
+marco      20465   20184  0 09:54 ?        00:00:00 xterm -geometry 48x15+715+80 -fs 30 -fa default -fg green -e echo S21;clear;tput civis;cat TMP/LISNUMb;read r
+marco      20466   20184  0 09:54 ?        00:00:00 xterm -geometry 48x5+715+830 -fs 30 -fa default -fg green -e echo S21;cat MSG/msg_Trail >TMP/TT;cat TMP/TT;read r
+marco      20470   20466  0 09:54 pts/23   00:00:00 bash -c echo S21;cat MSG/msg_Trail >TMP/TT;cat TMP/TT;read r
+marco      20471   20465  0 09:54 pts/24   00:00:00 bash -c echo S21;clear;tput civis;cat TMP/LISNUMb;read r
+marco      26977       1  0 09:57 ?        00:00:00 xterm -geometry 48x4+715+865 -fs 30 -fa default -fg green -e V S21;./Q;cat TMP/FF;read r;cp TMP/ECHOL ~/TMP; cp TMP/lism2 ~/TMP;echo>TMP/FINAL;en;./K;en;
+marco      27014   26977  0 09:57 pts/25   00:00:00 bash -c V S21;./Q;cat TMP/FF;read r;cp TMP/ECHOL ~/TMP; cp TMP/lism2 ~/TMP;echo>TMP/FINAL;en;./K;en;
+marco      28411       1  0 09:58 ?        00:00:00 xterm -geometry 48x4+715+865 -fs 30 -fa default -fg green -e V S21;./Q;cat TMP/FF;read r;cp TMP/ECHOL ~/TMP; cp TMP/lism2 ~/TMP;echo>TMP/FINAL;en;./K;en;
+marco      28412   28411  0 09:58 pts/26   00:00:00 bash -c V S21;./Q;cat TMP/FF;read r;cp TMP/ECHOL ~/TMP; cp TMP/lism2 ~/TMP;echo>TMP/FINAL;en;./K;en;
+marco      28617   20234  0 09:58 pts/3    00:00:00 bash -c echo S21; tput bold;echo -n E;read r;echo E >>TMP/ECHO;./EE E;~/KIL xterm;en
+marco      28639   28617  0 09:58 pts/3    00:00:00 xterm -geometry 48x4+715+865 -fs 30 -fa default -fg green -e V S21;./Q;cat TMP/FF;read r;cp TMP/ECHOL ~/TMP; cp TMP/lism2 ~/TMP;echo>TMP/FINAL;en;./K;en;
+marco      28648   28639  0 09:58 pts/27   00:00:00 bash -c V S21;./Q;cat TMP/FF;read r;cp TMP/ECHOL ~/TMP; cp TMP/lism2 ~/TMP;echo>TMP/FINAL;en;./K;en;
+marco      28803       1  0 09:59 ?        00:00:00 xterm -geometry 48x4+715+865 -fs 30 -fa default -fg green -e V S21;./Q;cat TMP/FF;read r;cp TMP/ECHOL ~/TMP; cp TMP/lism2 ~/TMP;echo>TMP/FINAL;en;./K;en;
+marco      28811   28803  0 09:59 pts/28   00:00:00 bash -c V S21;./Q;cat TMP/FF;read r;cp TMP/ECHOL ~/TMP; cp TMP/lism2 ~/TMP;echo>TMP/FINAL;en;./K;en;
+marco      29575   29570  0 09:59 ?        00:00:00 grep S21

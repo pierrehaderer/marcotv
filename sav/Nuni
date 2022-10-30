@@ -1,0 +1,12 @@
+
+V="1 2 3 4 5 6 7 8 9"
+for i in $V; do
+for j in $V; do
+if test $j -eq $i; then continue; fi
+for k in $V; do
+if test $k -eq $i; then continue; fi
+if test $k -eq $j; then continue; fi
+echo ' '$i$j$k
+done
+done
+done

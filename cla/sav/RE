@@ -1,0 +1,4 @@
+
+echo RESET
+kill `cat ../ulPID`
+kill `cat claPID`

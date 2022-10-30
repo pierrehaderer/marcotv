@@ -1,0 +1,88 @@
+
+# CHOIX DU TERMINAL GRAPHIQUE ::
+
+# echo M # si mate-terminal
+ echo X # si xterm
+# echo G # si gnome-terminal
+# echo K # si konsole
+# echo T # si terminator
+
+# DEBUG EN COURS ::
+# creer pour chaque ecran, une liste de fenetre Taggees pour collecter
+# leur PID plus tard :: les killer en groupe devient + simple ...
+
+# pb de Portabilite et "cohabitation" xterm et less :: --mouse permet scroll, 
+# mais plante le \n de selection en xclip !!! :: la syllabe de selection doit
+# etre suffisamment "riche" pour un resultat en 1 page !!!
+# OU :: tester more !! :: le scroll back pas necessaire ?? ...
+# OU :: detecter l'exces de lignes, et paginer "a la main" ??
+# OU :: un PS1='';clear;tput civis;grep SYL FIC permet un scroll sans less !!
+#----- U :: PROCEDURE DE RECHERCHE ET DE LANCEMENT DU FILM -------------
+# C=`~/TERM`  # choix de la Console Graphique
+
+#flags de Synchro et data temporaire dans repertoire $F ::
+# BUGS avec Rtou, trop violent au kill ?? :: peut tuer dd de microsd !!
+# clafUP :: presence full clavier alpha
+# mpvUP :: Fichier,taille 0-1 :: le film est en Cours de lecture ..., UP a 
+      # msg_mpv par UL, DOWN fin mpv, au msg_retir :: un Reset Rtou doit DOWN
+# F :: synchro avec TL ??
+# ECHO :: echo brut en plusieurs lignes 
+# ECHOL :: echo en 1 seule ligne
+# PP :: numero de film de la microsd, frappe au clavier numeriq vertical
+# ulPID :: liste tous les PID de UL
+# ulPID2 :: liste tous les autres ? PID de UL
+# ECHO2 :: choix du MENU 1,2,3 apres proc 'sel' ... puis dans variable SE
+# zl :: liste tous les films Collection
+# FINIOUINON :: Fichier flag de Boucle sur recherch TOUS les films
+# OUI, NON  :: fichier reponse vers recherch TOUS film en clavier alpha
+# Rtou :: Reset complet !!, si Pb
+# FINISYL :: fichier flag de syllabe complete apres clavier alpha
+# lism :: liste des films microsd
+# lism2 :: liste des films microsd, numerotes avec numero uniq
+# lism3 :: ligne du film selectionnee extraite de microsd
+# lism4 :: nom du film selectionne sur microsd, puis variable FI
+# SD_UNMONTED :: etat de Montage de la microsd
+# SE :: choix du MENU
+ 
+# selPID :: PIDs pour futur RESET trop ou pas assez violent ?
+# tous les Menus sont ecrits pour du 1080p, meme sur un ecran 4K ou 8K
+# seul mpv pourrait afficher en 4K ou 8K ...
+# >FF;>TT; pas present dans cette Proc 'sel'
+# ECHO, ECHO2 :: fichier de travail de l'Echo
+# RselF :: flag de Synchro du Reset 'Rsel' de la proc 'sel' 
+  
+# NOTES DE PORTAGE ::
+# -DEPENDANCES :: scroll texte avec souris (less), Player (mpv), xclip (copier
+# coller X11), terminal graphique (mate-terminal, xterm), format du ps-ef? ...
+# -Pour ajuster les affichages en 'less', jouer a la fois sur le zoom de less,
+# ET sur le profile par defaut du terminal graphique ... ici mate-terminal ...
+# en xterm, jouer sur la fs -FontSize suffit !!
+# -en 1080p en force ! sur moniteur 2K, 4K, ou 8K :: positionnements inchanges
+# -pour apt et terminal graphique, activer les sites NON Canonical ...
+# -etc/sudoers :: marco ALL=(ALL:ALL) NOPASSWD:ALL, et rm passwd marco shadow
+# -on armbian, use armbian-config for grXaphic login ...
+# -dans .profile, procedure SON en & :: /home/marco/S & :: gagne 20s au boot !!!
+# ajouter aussi :: ( sleep 20; /home/marco/TL ) & ...
+# portabilite de la syntaxe & de less, pour recherche selective dans collection?
+
+#flags de Synchro et data temporaire dans repertoire $F ::
+# les Flags Variables Shell ne sont pas maintenus en Reset par Exec TL ...
+# mais les Flags Fichiers le sont ...
+# noter Dir, et moments UP, puis DOWN, puis Proc qui les utilisent ...
+
+# PROCEDURE DE DEMARRAGE DE LA BOX MULTIMEDIA ... ET GESTION MICROSD
+# BOOTDEV pour l'ordre des BlockDEV au Boot ...
+# F :: ?? entre TL et UL
+# NEWSD :: nouvelle microsd detectee 1ere fois ??
+# clafUP :: hors full clavier alpĥa ...
+# mpvUP :: hors mpv, Fichier, pas TL,
+# SD_UNMOUNTED :: etat du montage microsd ...
+# CHKless, CHKmpv, CHKdd :: flags de Presence ..., control relance UL, testSD
+# ECHOL :: texte saisi en 1 seule ligne, 
+# TRACE pour stocker des Traces en Debug
+# SP :: /dev/sdx de la microsd 
+# PARTED, Parted :: taille en Octet de la microsd
+# affiner les Kill des procedures de Reset ... et d'effacement de menus ... ::
+# ils peuvent tuer dd de microsd !!
+# tester microsd FAT32, et ... reparer !
+# remettre a 0 auto, le testSDcur en fin de microsd

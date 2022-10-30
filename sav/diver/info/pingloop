@@ -1,0 +1,14 @@
+
+C=1
+while test $C -lt 128
+do
+echo "192.168.0.$C"
+(ping -c 1 -i '0.3' 192.168.0.$C | grep ttl 
+#echo $?
+if test "$?" -eq 0 -a "$C" -ne 12
+then
+exit
+fi)&
+#sleep 5
+C=`expr $C + 1`
+done

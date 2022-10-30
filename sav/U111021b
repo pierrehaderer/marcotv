@@ -1,0 +1,85 @@
+s="<big><big><big><big>"
+e="</big></big></big></big>"
+#ROOT='p'
+ROOT='m'
+GNOX=10;GNOY=10
+4K=0
+CARD=1_0
+
+xrandr|grep current|grep 3840
+if test $? -eq 0
+then
+4K=1
+fi
+if test -e /home/marco/F;then
+rm /home/marco/F
+
+else
+>/home/marco/F
+#ZOOM x 2 ::  xrandr --output HDMI-1 --scale 0.5x0.5 --pos ?x?
+film=`zenity --width=1900 --height=700 --list --column " " --imagelist /home/marco/microsd/$CARD/menu/*` 
+#film=`zenity --width=1900 --height=700 --list --column " " --imagelist /$ROOT/.menu/*` 
+
+#if test "$film" = "/$ROOT/.menu/LISTE-DE-TOUS-LES-FILMS-DU-PORTEFEUILLE.jpg"
+if test "$film" = "/home/marco/microsd/$CARD/menu/LISTE-DE-TOUS-LES-FILMS-DU-PORTEFEUILLE.jpg"
+then
+#libreoffice /$ROOT/.lifi
+gnome-terminal --geometry=70x15+$GNOX+$GNOY --zoom=1.5 -- sh -c "less -I  /home/marco/zl"
+#gnome-terminal --geometry=70x15+$GNOX+$GNOY --zoom=1.5 -- sh -c "less -I  /m/zl"
+cd ./clavier12X86;./Kdia12 /home/marco/zl
+echo `ps -ef|grep less|grep -v grep|grep -v root`|cut -d ' ' -f 2 >PID
+kill `cat PID`
+
+else # PAS TOUT LE PORTE-FEUILLE
+#gnome-terminal --geometry=70x15+$GNOX+$GNOY --zoom=1.5 -- sh -c "less -I  /m/zL"
+film=`zenity --width=1900 --height=900 --list --column " " --imagelist /home/marco/microsd/$CARD/filmjpg/*`
+#film=`zenity --width=1900 --height=900 --list --column " " --imagelist /$ROOT/.fi/*`
+#cd ./clavier12X86;./Kdia12 /m/zL
+#echo `ps -ef|grep less|grep -v grep|grep -v root`|cut -d ' ' -f 2 >PID
+#kill `cat PID`
+
+zenity --width=1800 --height=600 --info --text "$s
+POUR UTILISER LE LOGICIEL DE LECTURE VIDEO, VOUS DISPOSER D'UNE BARRE
+DE LECTURE HORIZONTALE, EN BAS DE PAGE, QUI APPARAIT A TOUT MOUVEMENT
+DE LA SOURIS ...
+
+
+VOUS POUVEZ CLIQUER DANS CETTE BARRE POUR VOUS DEPLACER A CET ENDROIT
+DANS LE FILM, DONT A SON EXTREMITE DROITE, POUR QUITTER LE FILM ..., OU
+UTILISER AUSSI LA MOLLETTE DE LA SOURIS POUR LA MEME CHOSE ...
+
+
+... CLIQUER SUR OK EN BAS A DROITE DE L'ECRAN ...
+$e"
+
+fi=`echo $film |cut -d '.' -f 1-3`
+fil=`echo $fi |cut -d '/' -f 7`
+#fil=`echo $fi |cut -d '/' -f 4`
+#echo $fi > aux3
+#echo $fil > aux4
+
+echo -e -n "q" |xclip  # COPIER/COLLER MARCHE PAS POUR SORTIR DU mpv !!!???
+if test $4K = 0
+then
+#mpv -fs /$ROOT/.fi/.z/$fil.mkv
+mpv -fs /$ROOT/$fil
+#mpv -fs /$ROOT/$fil.mkv
+else
+#xrandr --size 1920x1080
+#mpv -fs /$ROOT/.fi/.z/$fil.mkv
+mpv -fs /$ROOT/$fil
+#xrandr -s 0
+fi
+
+zenity --width=1800 --height=800 --question --text "$s
+VOULEZ-VOUS RETIRER VOTRE CLE USB DE LA BOX NOIRE ?? ...
+$e"
+r=$?
+if test "$r" = 0;then
+sudo umount /$ROOT
+rm /home/marco/SD_UNMOUNTED
+fi
+rm /home/marco/F
+fi
+
+fi

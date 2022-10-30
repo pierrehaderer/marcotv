@@ -1,0 +1,330 @@
+UID PID PPID C STIME TTY TIME CMD
+root 2 0 0 sept.09 u v w x y 00:00:00 [kthreadd]
+root 4 2 0 sept.09 u v w x y 00:00:00 u
+root 9 2 0 sept.09 u v w x y 00:00:00 u w
+root 11 2 0 sept.09 u v w x y 00:00:00 u
+root 13 2 0 sept.09 u v w x y 00:00:11 u
+root 15 2 0 sept.09 u v w x y 00:00:00 [idle_inject/0]
+root 17 2 0 sept.09 u v w x y 00:00:00 [cpuhp/1]
+root 19 2 0 sept.09 u v w x y 00:00:00 [migration/1]
+root 22 2 0 sept.09 u v w x y 00:00:00 [kworker/1:0H-kblockd]
+root 24 2 0 sept.09 u v w x y 00:00:00 [idle_inject/2]
+root 26 2 0 sept.09 u v w x y 00:00:01 [ksoftirqd/2]
+root 29 2 0 sept.09 u v w x y 00:00:00 [cpuhp/3]
+root 31 2 0 sept.09 u v w x y 00:00:00 [migration/3]
+root 34 2 0 sept.09 u v w x y 00:00:00 [kworker/3:0H-events_highpri]
+root 36 2 0 sept.09 u v w x y 00:00:00 [idle_inject/4]
+root 38 2 0 sept.09 u v w x y 00:00:00 [ksoftirqd/4]
+root 41 2 0 sept.09 u v w x y 00:00:00 [cpuhp/5]
+root 43 2 0 sept.09 u v w x y 00:00:00 [migration/5]
+root 46 2 0 sept.09 u v w x y 00:00:00 [kworker/5:0H-events_highpri]
+root 48 2 0 sept.09 u v w x y 00:00:00 [idle_inject/6]
+root 50 2 0 sept.09 u v w x y 00:00:00 [ksoftirqd/6]
+root 53 2 0 sept.09 u v w x y 00:00:00 [cpuhp/7]
+root 55 2 0 sept.09 u v w x y 00:00:00 [migration/7]
+root 58 2 0 sept.09 u v w x y 00:00:00 [kworker/7:0H-kblockd]
+root 60 2 0 sept.09 u v w x y 00:00:00 [idle_inject/8]
+root 62 2 0 sept.09 u v w x y 00:00:00 [ksoftirqd/8]
+root 65 2 0 sept.09 u v w x y 00:00:00 [cpuhp/9]
+root 67 2 0 sept.09 u v w x y 00:00:00 [migration/9]
+root 70 2 0 sept.09 u v w x y 00:00:00 [kworker/9:0H-kblockd]
+root 72 2 0 sept.09 u v w x y 00:00:00 [idle_inject/10]
+root 74 2 0 sept.09 u v w x y 00:00:00 [ksoftirqd/10]
+root 77 2 0 sept.09 u v w x y 00:00:00 [cpuhp/11]
+root 79 2 0 sept.09 u v w x y 00:00:00 [migration/11]
+root 82 2 0 sept.09 u v w x y 00:00:00 [kworker/11:0H-kblockd]
+root 84 2 0 sept.09 u v w x y 00:00:00 [netns]
+root 86 2 0 sept.09 u v w x y 00:00:00 u
+root 91 2 0 sept.09 u v w x y 00:00:00 [oom_reaper]
+root 93 2 0 sept.09 u v w x y 00:00:01 [kcompactd0]
+root 95 2 0 sept.09 u v w x y 00:00:00 u
+root 144 2 0 sept.09 u v w x y 00:00:00 [kblockd]
+root 146 2 0 sept.09 u v w x y 00:00:00 v w
+root 148 2 0 sept.09 u v w x y 00:00:00 [md]
+root 150 2 0 sept.09 u v w x y 00:00:00 v w
+root 153 2 0 sept.09 u v w x y 00:00:00 [kworker/0:1H-kblockd]
+root 157 2 0 sept.09 u v w x y 00:00:20 w
+root 160 2 0 sept.09 u v w x y 00:00:00 [kthrotld]
+root 162 2 0 sept.09 u v w x y 00:00:00 [irq/27-aerdrv]
+root 171 2 0 sept.09 u v w x y 00:00:00 [acpi_thermal_pm]
+root 176 2 0 sept.09 u v w x y 00:00:00 v
+root 188 2 0 sept.09 u v w x y 00:00:00 w
+root 194 2 0 sept.09 u v w x y 00:00:00 [charger_manager]
+root 260 2 0 sept.09 u v w x y 00:00:00 [kworker/2:1H-kblockd]
+root 263 2 0 sept.09 u v w x y 00:00:00 [scsi_tmf_0]
+root 266 2 0 sept.09 u v w x y 00:00:00 [scsi_tmf_1]
+root 268 2 0 sept.09 u v w x y 00:00:00 [scsi_tmf_2]
+root 270 2 0 sept.09 u v w x y 00:00:00 [scsi_tmf_3]
+root 272 2 0 sept.09 u v w x y 00:00:00 [scsi_tmf_4]
+root 274 2 0 sept.09 u v w x y 00:00:00 [scsi_tmf_5]
+root 276 2 0 sept.09 u v w x y 00:00:00 [scsi_tmf_6]
+root 278 2 0 sept.09 u v w x y 00:00:00 [scsi_tmf_7]
+root 287 2 0 sept.09 u v w x y 00:00:00 [scsi_tmf_8]
+root 292 2 0 sept.09 u v w x y 00:00:00 [kworker/5:1H-kblockd]
+root 318 2 0 sept.09 u v w x y 00:00:00 [kworker/11:1H-kblockd]
+root 320 2 0 sept.09 u v w x y 00:00:00 v x
+root 330 2 0 sept.09 u v w x y 00:00:00 [kworker/4:1H-kblockd]
+root 375 2 0 sept.09 u v w x y 00:00:00 [kworker/7:1H-kblockd]
+root 395 2 0 sept.09 u v w x y 00:00:00 [loop1]
+root 400 2 0 sept.09 u v w x y 00:00:00 [kworker/8:1H-kblockd]
+root 407 2 0 sept.09 u v w x y 00:00:00 [loop3]
+root 409 2 0 sept.09 u v w x y 00:00:00 [loop5]
+root 411 2 0 sept.09 u v w x y 00:00:00 [loop7]
+root 414 2 0 sept.09 u v w x y 00:00:00 [kworker/9:1H-kblockd]
+root 459 2 0 sept.09 u v w x y 00:00:00 y
+root 461 2 0 sept.09 u v w x y 00:00:00 [ccp-1-q3]
+root 465 2 0 sept.09 u v w x y 00:00:00 [loop10]
+root 572 2 0 sept.09 u v w x y 00:00:00 w
+root 574 2 0 sept.09 u v w x y 00:00:00 [card0-crtc1]
+systemd+ 760 1 0 sept.09 u v w x y 00:00:00 /lib/systemd/systemd-timesyncd
+root 784 1 0 sept.09 u v w x y 00:00:00 /usr/sbin/acpid
+root 788 1 0 sept.09 u v w x y 00:00:00 /usr/sbin/cron -f -P
+root 790 1 0 sept.09 u v w x y 00:00:16 /usr/sbin/NetworkManager --no-daemon
+root 800 1 0 sept.09 u v w x y 00:00:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root 803 1 0 sept.09 u v w x y 00:00:00 /usr/libexec/power-profiles-daemon
+root 806 1 0 sept.09 u v w x y 00:00:15 /usr/lib/snapd/snapd
+root 808 1 0 sept.09 u v w x y 00:00:00 /lib/systemd/systemd-logind
+root 825 1 0 sept.09 u v w x y 00:00:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+root 892 1 0 sept.09 u v w x y 00:00:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root 905 1 0 sept.09 u v w x y 00:00:00 /usr/sbin/lircd --nodaemon
+root 916 1 0 sept.09 u v w x y 00:00:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root 930 1 0 sept.09 u v w x y 00:00:00 /usr/sbin/xrdp-sesman
+xrdp 962 1 0 sept.09 u v w x y 00:00:00 /usr/sbin/xrdp
+whoopsie 1162 1 0 sept.09 u v w x y 00:00:00 /usr/bin/whoopsie -f
+kernoops 1166 1 0 sept.09 u v w x y 00:00:00 /usr/sbin/kerneloops
+proftpd 1288 1 0 sept.09 u v w x y 00:00:01 proftpd: (accepting connections)
+root 3062 2 0 sept.09 u v w x y 00:00:00 v x
+root 7243 1 0 00:00 u v w x y 00:00:00 /usr/sbin/cups-browsed
+root 33971 2 0 18:22 u v w x y 00:00:00 [kworker/6:0-events_freezable]
+root 34693 2 0 18:56 u v w x y 00:00:00 [kworker/1:2-mm_percpu_wq]
+root 35112 2 0 19:10 u v w x y 00:00:00 [kworker/0:0-cgroup_destroy]
+root 35300 2 1 19:34 u v w x y 00:00:51 [kworker/u64:1-events_unbound]
+root 35942 2 1 20:01 u v w x y 00:00:39 [kworker/u64:3-events_unbound]
+root 36112 2 0 20:09 u v w x y 00:00:00 [kworker/3:0-events]
+root 36132 2 0 20:11 u v w x y 00:00:00 [kworker/2:2]
+root 36469 2 0 20:18 u v w x y 00:00:00 [kworker/9:0-events]
+root 37829 2 0 20:22 u v w x y 00:00:00 [kworker/5:0-events]
+root 37840 2 0 20:22 u v w x y 00:00:00 [kworker/3:2-mm_percpu_wq]
+root 38002 2 0 20:22 u v w x y 00:00:00 [kworker/8:0-mm_percpu_wq]
+root 38452 2 0 20:22 u v w x y 00:00:00 [kworker/1:1-events]
+root 40869 1 0 20:26 tty3 00:00:00 /sbin/agetty -o -p -- \u --noclear tty3 linux
+root 41033 2 0 20:26 u v w x y 00:00:00 [kworker/11:2-events]
+root 41207 936 0 20:26 u v w x y 00:00:00 gdm-session-worker [pam/gdm-password]
+marco 41213 41212 0 20:27 u v w x y 00:00:00 (sd-pam)
+marco 41220 41212 0 20:27 u v w x y 00:00:00 /usr/bin/pipewire-media-session
+marco 41223 41212 0 20:27 u v w x y 00:00:00 /usr/libexec/tracker-miner-fs
+marco 41228 1 0 20:27 u v w x y 00:00:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+marco 41242 41212 0 20:27 u v w x y 00:00:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+marco 41267 41212 0 20:27 u v w x y 00:00:00 /usr/libexec/gvfs-mtp-volume-monitor
+marco 41276 41212 0 20:27 u v w x y 00:00:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+marco 41284 41212 0 20:27 u v w x y 00:00:00 /usr/libexec/goa-daemon
+marco 41308 41207 0 20:27 tty4 00:00:00 /usr/libexec/gdm-wayland-session env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --session=ubuntu
+marco 41348 41212 0 20:27 u v w x y 00:00:00 /usr/libexec/gnome-session-ctl --monitor
+marco 41375 41212 1 20:27 u v w x y 00:00:24 /usr/bin/gnome-shell
+marco 41383 41376 0 20:27 u v w x y 00:00:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+marco 41432 41212 0 20:27 u v w x y 00:00:00 /usr/libexec/xdg-permission-store
+marco 41443 41212 0 20:27 u v w x y 00:00:00 /usr/libexec/evolution-source-registry
+marco 41459 41212 0 20:27 u v w x y 00:00:00 /usr/libexec/dconf-service
+marco 41480 41212 0 20:27 u v w x y 00:00:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell.Notifications
+marco 41498 41234 0 20:27 u v w x y 00:00:00 /usr/libexec/gvfsd-trash --spawner :1.2 /org/gtk/gvfs/exec_spaw/0
+marco 41510 41212 0 20:27 u v w x y 00:00:00 /usr/libexec/gsd-color
+marco 41513 41212 0 20:27 u v w x y 00:00:00 /usr/libexec/gsd-housekeeping
+marco 41518 41212 0 20:27 u v w x y 00:00:00 /usr/libexec/gsd-media-keys
+marco 41525 41212 0 20:27 u v w x y 00:00:00 /usr/libexec/gsd-print-notifications
+marco 41527 41212 0 20:27 u v w x y 00:00:00 /usr/libexec/gsd-screensaver-proxy
+marco 41529 41212 0 20:27 u v w x y 00:00:00 /usr/libexec/gsd-smartcard
+marco 41534 41212 0 20:27 u v w x y 00:00:00 /usr/libexec/gsd-wacom
+marco 41582 41357 0 20:27 u v w x y 00:00:00 /usr/lib/x86_64-linux-gnu/libexec/kdeconnectd
+marco 41638 41212 0 20:27 u v w x y 00:00:02 /snap/snap-store/547/usr/bin/snap-store --gapplication-service
+root 41677 41673 0 20:27 u v w x y 00:00:00 fusermount -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc
+marco 41739 41375 0 20:27 u v w x y 00:00:02 ibus-daemon --panel disable -r --xim
+marco 41759 41739 0 20:27 u v w x y 00:00:00 /usr/libexec/ibus-memconf
+marco 41762 41212 0 20:27 u v w x y 00:00:00 /usr/libexec/ibus-x11 --kill-daemon
+marco 41789 41212 0 20:27 u v w x y 00:00:00 /usr/libexec/xdg-desktop-portal
+marco 41814 41739 0 20:27 u v w x y 00:00:00 /usr/libexec/ibus-engine-simple
+marco 42163 41882 0 20:27 u v w x y 00:00:00 /usr/bin/python3 /usr/bin/gnome-terminal --wait
+marco 42169 41212 0 20:27 u v w x y 00:00:07 /usr/libexec/gnome-terminal-server
+marco 42212 41212 0 20:28 u v w x y 00:00:00 /usr/libexec/gvfsd-metadata
+root 42780 2 0 20:32 u v w x y 00:00:00 [kworker/6:2-cgroup_destroy]
+root 43171 2 1 20:40 u v w x y 00:00:06 [kworker/u64:0-events_unbound]
+marco 43724 41212 0 20:44 pts/0 00:00:00 xclip
+marco 43884 41212 0 20:47 pts/0 00:00:00 /bin/sh ./frap A
+marco 43907 43884 4 20:47 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 43925 41212 0 20:47 pts/0 00:00:00 /bin/sh ./frap B
+marco 43959 43925 6 20:47 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 43989 43835 0 20:47 pts/0 00:00:00 ps -ef
+marco 43925 41212 0 20:47 pts/0 00:00:00 /bin/sh ./frap B
+marco 43959 43925 2 20:47 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+UID PID PPID C STIME TTY TIME CMD
+root 2 0 0 sept.09 u v w x y 00:00:00 [kthreadd]
+root 4 2 0 sept.09 u v w x y 00:00:00 u
+root 9 2 0 sept.09 u v w x y 00:00:00 u w
+root 11 2 0 sept.09 u v w x y 00:00:00 u
+root 13 2 0 sept.09 u v w x y 00:00:11 u
+root 15 2 0 sept.09 u v w x y 00:00:00 [idle_inject/0]
+root 17 2 0 sept.09 u v w x y 00:00:00 [cpuhp/1]
+root 19 2 0 sept.09 u v w x y 00:00:00 [migration/1]
+root 22 2 0 sept.09 u v w x y 00:00:00 [kworker/1:0H-kblockd]
+root 24 2 0 sept.09 u v w x y 00:00:00 [idle_inject/2]
+root 26 2 0 sept.09 u v w x y 00:00:01 [ksoftirqd/2]
+root 29 2 0 sept.09 u v w x y 00:00:00 [cpuhp/3]
+root 31 2 0 sept.09 u v w x y 00:00:00 [migration/3]
+root 34 2 0 sept.09 u v w x y 00:00:00 [kworker/3:0H-events_highpri]
+root 36 2 0 sept.09 u v w x y 00:00:00 [idle_inject/4]
+root 38 2 0 sept.09 u v w x y 00:00:00 [ksoftirqd/4]
+root 41 2 0 sept.09 u v w x y 00:00:00 [cpuhp/5]
+root 43 2 0 sept.09 u v w x y 00:00:00 [migration/5]
+root 46 2 0 sept.09 u v w x y 00:00:00 [kworker/5:0H-events_highpri]
+root 48 2 0 sept.09 u v w x y 00:00:00 [idle_inject/6]
+root 50 2 0 sept.09 u v w x y 00:00:00 [ksoftirqd/6]
+root 53 2 0 sept.09 u v w x y 00:00:00 [cpuhp/7]
+root 55 2 0 sept.09 u v w x y 00:00:00 [migration/7]
+root 58 2 0 sept.09 u v w x y 00:00:00 [kworker/7:0H-kblockd]
+root 60 2 0 sept.09 u v w x y 00:00:00 [idle_inject/8]
+root 62 2 0 sept.09 u v w x y 00:00:00 [ksoftirqd/8]
+root 65 2 0 sept.09 u v w x y 00:00:00 [cpuhp/9]
+root 67 2 0 sept.09 u v w x y 00:00:00 [migration/9]
+root 70 2 0 sept.09 u v w x y 00:00:00 [kworker/9:0H-kblockd]
+root 72 2 0 sept.09 u v w x y 00:00:00 [idle_inject/10]
+root 74 2 0 sept.09 u v w x y 00:00:00 [ksoftirqd/10]
+root 77 2 0 sept.09 u v w x y 00:00:00 [cpuhp/11]
+root 79 2 0 sept.09 u v w x y 00:00:00 [migration/11]
+root 82 2 0 sept.09 u v w x y 00:00:00 [kworker/11:0H-kblockd]
+root 84 2 0 sept.09 u v w x y 00:00:00 [netns]
+root 86 2 0 sept.09 u v w x y 00:00:00 u
+root 91 2 0 sept.09 u v w x y 00:00:00 [oom_reaper]
+root 93 2 0 sept.09 u v w x y 00:00:01 [kcompactd0]
+root 95 2 0 sept.09 u v w x y 00:00:00 u
+root 144 2 0 sept.09 u v w x y 00:00:00 [kblockd]
+root 146 2 0 sept.09 u v w x y 00:00:00 v w
+root 148 2 0 sept.09 u v w x y 00:00:00 [md]
+root 150 2 0 sept.09 u v w x y 00:00:00 v w
+root 153 2 0 sept.09 u v w x y 00:00:00 [kworker/0:1H-kblockd]
+root 157 2 0 sept.09 u v w x y 00:00:20 w
+root 160 2 0 sept.09 u v w x y 00:00:00 [kthrotld]
+root 162 2 0 sept.09 u v w x y 00:00:00 [irq/27-aerdrv]
+root 171 2 0 sept.09 u v w x y 00:00:00 [acpi_thermal_pm]
+root 176 2 0 sept.09 u v w x y 00:00:00 v
+root 188 2 0 sept.09 u v w x y 00:00:00 w
+root 194 2 0 sept.09 u v w x y 00:00:00 [charger_manager]
+root 260 2 0 sept.09 u v w x y 00:00:00 [kworker/2:1H-kblockd]
+root 263 2 0 sept.09 u v w x y 00:00:00 [scsi_tmf_0]
+root 266 2 0 sept.09 u v w x y 00:00:00 [scsi_tmf_1]
+root 268 2 0 sept.09 u v w x y 00:00:00 [scsi_tmf_2]
+root 270 2 0 sept.09 u v w x y 00:00:00 [scsi_tmf_3]
+root 272 2 0 sept.09 u v w x y 00:00:00 [scsi_tmf_4]
+root 274 2 0 sept.09 u v w x y 00:00:00 [scsi_tmf_5]
+root 276 2 0 sept.09 u v w x y 00:00:00 [scsi_tmf_6]
+root 278 2 0 sept.09 u v w x y 00:00:00 [scsi_tmf_7]
+root 287 2 0 sept.09 u v w x y 00:00:00 [scsi_tmf_8]
+root 292 2 0 sept.09 u v w x y 00:00:00 [kworker/5:1H-kblockd]
+root 318 2 0 sept.09 u v w x y 00:00:00 [kworker/11:1H-kblockd]
+root 320 2 0 sept.09 u v w x y 00:00:00 v x
+root 330 2 0 sept.09 u v w x y 00:00:00 [kworker/4:1H-kblockd]
+root 375 2 0 sept.09 u v w x y 00:00:00 [kworker/7:1H-kblockd]
+root 395 2 0 sept.09 u v w x y 00:00:00 [loop1]
+root 400 2 0 sept.09 u v w x y 00:00:00 [kworker/8:1H-kblockd]
+root 407 2 0 sept.09 u v w x y 00:00:00 [loop3]
+root 409 2 0 sept.09 u v w x y 00:00:00 [loop5]
+root 411 2 0 sept.09 u v w x y 00:00:00 [loop7]
+root 414 2 0 sept.09 u v w x y 00:00:00 [kworker/9:1H-kblockd]
+root 459 2 0 sept.09 u v w x y 00:00:00 y
+root 461 2 0 sept.09 u v w x y 00:00:00 [ccp-1-q3]
+root 465 2 0 sept.09 u v w x y 00:00:00 [loop10]
+root 572 2 0 sept.09 u v w x y 00:00:00 w
+root 574 2 0 sept.09 u v w x y 00:00:00 [card0-crtc1]
+systemd+ 760 1 0 sept.09 u v w x y 00:00:00 /lib/systemd/systemd-timesyncd
+root 784 1 0 sept.09 u v w x y 00:00:00 /usr/sbin/acpid
+root 788 1 0 sept.09 u v w x y 00:00:00 /usr/sbin/cron -f -P
+root 790 1 0 sept.09 u v w x y 00:00:16 /usr/sbin/NetworkManager --no-daemon
+root 800 1 0 sept.09 u v w x y 00:00:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root 803 1 0 sept.09 u v w x y 00:00:00 /usr/libexec/power-profiles-daemon
+root 806 1 0 sept.09 u v w x y 00:00:15 /usr/lib/snapd/snapd
+root 808 1 0 sept.09 u v w x y 00:00:00 /lib/systemd/systemd-logind
+root 825 1 0 sept.09 u v w x y 00:00:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+root 892 1 0 sept.09 u v w x y 00:00:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root 905 1 0 sept.09 u v w x y 00:00:00 /usr/sbin/lircd --nodaemon
+root 916 1 0 sept.09 u v w x y 00:00:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root 930 1 0 sept.09 u v w x y 00:00:00 /usr/sbin/xrdp-sesman
+xrdp 962 1 0 sept.09 u v w x y 00:00:00 /usr/sbin/xrdp
+whoopsie 1162 1 0 sept.09 u v w x y 00:00:00 /usr/bin/whoopsie -f
+kernoops 1166 1 0 sept.09 u v w x y 00:00:00 /usr/sbin/kerneloops
+proftpd 1288 1 0 sept.09 u v w x y 00:00:01 proftpd: (accepting connections)
+root 3062 2 0 sept.09 u v w x y 00:00:00 v x
+root 7243 1 0 00:00 u v w x y 00:00:00 /usr/sbin/cups-browsed
+root 33971 2 0 18:22 u v w x y 00:00:00 [kworker/6:0-rcu_par_gp]
+root 34693 2 0 18:56 u v w x y 00:00:00 [kworker/1:2-rcu_gp]
+root 35112 2 0 19:10 u v w x y 00:00:00 [kworker/0:0-cgroup_destroy]
+root 35324 2 2 19:43 u v w x y 00:01:31 [kworker/u64:2-events_unbound]
+root 35956 2 0 20:02 u v w x y 00:00:00 [kworker/2:0-events]
+root 36113 2 0 20:09 u v w x y 00:00:00 [kworker/5:2-rcu_par_gp]
+root 36137 2 0 20:11 u v w x y 00:00:00 [kworker/4:2-rcu_par_gp]
+root 36471 2 0 20:18 u v w x y 00:00:00 [kworker/11:1-rcu_par_gp]
+root 37833 1 0 20:22 tty2 00:00:00 /sbin/agetty -o -p -- \u --noclear tty2 linux
+root 37852 2 0 20:22 u v w x y 00:00:00 [kworker/4:1-mm_percpu_wq]
+root 38431 2 0 20:22 u v w x y 00:00:00 [kworker/7:0-mm_percpu_wq]
+root 39213 2 0 20:23 u v w x y 00:00:00 [kworker/0:1-events]
+root 40876 2 0 20:26 u v w x y 00:00:00 [kworker/9:1-events]
+root 41168 2 0 20:26 u v w x y 00:00:00 [kworker/7:3-cgroup_destroy]
+root 43148 2 0 20:39 u v w x y 00:00:00 [kworker/10:2-cgroup_destroy]
+root 43717 2 1 20:44 u v w x y 00:00:03 [kworker/u64:4-events_unbound]
+root 44576 1 0 20:48 tty4 00:00:00 /sbin/agetty -o -p -- \u --noclear tty4 linux
+root 44704 2 0 20:48 u v w x y 00:00:00 [kworker/4:0-events]
+root 44839 2 0 20:48 u v w x y 00:00:00 [kworker/5:1-events]
+root 44872 2 0 20:48 u v w x y 00:00:00 [kworker/2:1-rcu_par_gp]
+root 44929 936 0 20:48 u v w x y 00:00:00 gdm-session-worker [pam/gdm-password]
+marco 44937 1 0 20:48 u v w x y 00:00:00 /lib/systemd/systemd --user
+marco 44944 44937 0 20:48 u v w x y 00:00:00 /usr/bin/pipewire
+marco 44946 44937 0 20:48 u v w x y 00:00:00 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+marco 44951 44937 0 20:48 u v w x y 00:00:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+marco 44971 44937 0 20:48 u v w x y 00:00:00 /usr/libexec/gvfsd
+marco 44984 44937 0 20:48 u v w x y 00:00:00 /usr/libexec/gvfs-udisks2-volume-monitor
+marco 44996 44937 0 20:48 u v w x y 00:00:00 /usr/libexec/gvfs-afc-volume-monitor
+marco 45006 44937 0 20:48 u v w x y 00:00:00 /usr/libexec/gvfs-goa-volume-monitor
+marco 45017 44937 0 20:48 u v w x y 00:00:00 /usr/libexec/goa-identity-service
+marco 45035 45032 0 20:48 tty5 00:00:00 /usr/libexec/gnome-session-binary --systemd --session=ubuntu
+marco 45081 44937 0 20:48 u v w x y 00:00:00 /usr/libexec/gnome-session-binary --systemd-service --session=ubuntu
+marco 45100 45081 0 20:48 u v w x y 00:00:00 /usr/libexec/at-spi-bus-launcher --launch-immediately
+marco 45132 45099 0 20:48 u v w x y 00:00:00 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.4JA580 -listen 4 -listen 5 -displayfd 6 -initfd 7
+marco 45161 44937 0 20:48 u v w x y 00:00:00 /usr/libexec/gnome-shell-calendar-server
+marco 45174 44937 0 20:48 u v w x y 00:00:00 /usr/libexec/evolution-calendar-factory
+marco 45189 44937 0 20:48 u v w x y 00:00:00 /usr/libexec/evolution-addressbook-factory
+marco 45206 44937 0 20:48 u v w x y 00:00:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+marco 45233 44937 0 20:48 u v w x y 00:00:00 /usr/libexec/gsd-a11y-settings
+marco 45235 44937 0 20:48 u v w x y 00:00:00 /usr/libexec/gsd-datetime
+marco 45239 44937 0 20:48 u v w x y 00:00:00 /usr/libexec/gsd-keyboard
+marco 45243 44937 0 20:48 u v w x y 00:00:00 /usr/libexec/gsd-power
+marco 45249 44937 0 20:48 u v w x y 00:00:00 /usr/libexec/gsd-rfkill
+marco 45253 44937 0 20:48 u v w x y 00:00:00 /usr/libexec/gsd-sharing
+marco 45256 44937 0 20:48 u v w x y 00:00:00 /usr/libexec/gsd-sound
+marco 45275 45081 0 20:48 u v w x y 00:00:00 /usr/libexec/gsd-disk-utility-notify
+marco 45322 45081 0 20:48 u v w x y 00:00:00 /usr/libexec/evolution-data-server/evolution-alarm-notify
+marco 45364 44937 1 20:48 u v w x y 00:00:02 /snap/snap-store/547/usr/bin/snap-store --gapplication-service
+root 45404 45400 0 20:48 u v w x y 00:00:00 fusermount -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc
+marco 45485 44937 0 20:48 u v w x y 00:00:00 /usr/libexec/xdg-desktop-portal-gtk
+marco 45530 44937 0 20:48 u v w x y 00:00:00 /usr/libexec/gsd-xsettings
+marco 45537 45528 0 20:48 u v w x y 00:00:00 /usr/libexec/ibus-extension-gtk3
+marco 45542 44937 0 20:48 u v w x y 00:00:00 /usr/libexec/ibus-portal
+marco 45601 45099 0 20:48 u v w x y 00:00:00 gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com -M 0 -D 72:34:1848:1046:1
+marco 45901 45900 0 20:48 u v w x y 00:00:00 /usr/bin/gnome-terminal.real --wait
+marco 45911 45906 0 20:48 pts/0 00:00:00 bash
+root 45923 2 0 20:48 u v w x y 00:00:00 [kworker/11:0-events]
+marco 45947 45081 0 20:49 u v w x y 00:00:00 update-notifier
+marco 46189 45081 0 20:50 u v w x y 00:00:00 /usr/libexec/deja-dup/deja-dup-monitor
+marco 46228 44937 0 20:50 pts/0 00:00:00 /bin/sh ./kdiaTxtjpg tempo.png
+marco 46242 46228 6 20:50 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 46274 44937 0 20:50 pts/0 00:00:00 /bin/sh ./kdiaTxtjpg tempo.png
+marco 46294 46274 12 20:50 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 46242 46228 3 20:50 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 46294 46274 4 20:50 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 46274 44937 0 20:50 pts/0 00:00:00 /bin/sh ./kdiaTxtjpg tempo.png
+marco 46242 46228 3 20:50 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 46294 46274 4 20:50 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 48580 48551 1 20:53 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 48580 48551 1 20:53 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 48885 48862 3 20:56 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 48937 48914 6 20:56 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png
+marco 48896 48882 1 20:56 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 48882 47240 0 20:56 pts/0 00:00:00 /bin/sh ./kdiaTxtjpg tempo.png
+marco 48896 48882 1 20:56 pts/0 00:00:00 kdialog --geometry 900x100+1610+940 --yesno
+marco 48937 48914 1 20:56 pts/0 00:00:00 kdialog --geometry 900x100+450+800 --imgbox tempo.png

@@ -1,0 +1,13 @@
+TE='mate-terminal';H='hide-menubar';G=geometry;T=title;Z=zoom;
+Z1=1.7; Xm=715; Ym=865 ; PARTE="--$T= --$H -- sh -c"; Xt=650;PARG="--$G=1x1+"
+PAt=90; Z2=2.4
+L=`tail -1 ECHO`;if test "$L" = "E";then l=`wc -l ECHO|cut -d ' ' -f 1`
+h=`expr "$l" - 2`;head -n "$h" ECHO >ECHO1;cp ECHO1 ECHO;fi
+echo `cat ECHO` >ECHOL;echo 'kill `cat EEPID`' >K;chmod 777 K
+echo 'cat ECHOL msg_Trail2 > FF' > Q; chmod 777 Q
+echo `ps -ef|grep ' less'|grep -v root`|cut -d ' ' -f 2 >EEPID
+#J=$1;YT=`expr $PAt \* $J`
+#$TE ${PARG}$Xt+90 --$Z=$Z2 $PARTE "less $J;echo `cat $J` >>ECHO;" &
+#$TE ${PARG}$Xt+$YT --$Z=$Z2 $PARTE "less $J;echo `cat $J` >>ECHO;" &
+#sleep 1
+$TE --$G=48x4+$Xm+$Ym --$Z=$Z1 $PARTE "./Q;less -Ps FF;echo>FINAL;./K" 

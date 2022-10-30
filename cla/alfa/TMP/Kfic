@@ -1,0 +1,89 @@
+marco      37206   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+151+650 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " U";read r;echo U >>TMP/ECHO;./EF 151 650
+marco      37208   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+301+650 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " V";read r;echo V >>TMP/ECHO;./EF 301 650
+marco      37210   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+451+650 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " W";read r;echo W >>TMP/ECHO;./EF 451 650
+marco      37212   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+601+650 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " X";read r;echo X >>TMP/ECHO;./EF 601 650
+marco      37214   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+751+650 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " Y";read r;echo Y >>TMP/ECHO;./EF 751 650
+marco      37216   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+901+650 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " Z";read r;echo Z >>TMP/ECHO;./EF 901 650
+marco      37218   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+1051+650 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " _";read r;echo _ >>TMP/ECHO;./EF 1051 650
+marco      37220   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+1201+650 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " _";read r;echo _ >>TMP/ECHO;./EF 1201 650
+marco      37222   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+1351+650 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " _";read r;echo _ >>TMP/ECHO;./EF 1351 650
+marco      37224   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+1501+650 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " ef";read r;echo ef >>TMP/ECHO;./EF 1501 650
+marco      37240   37208  0 10:04 pts/1    00:00:00 bash -c V S11;tput bold;echo -n " V";read r;echo V >>TMP/ECHO;./EF 301 650
+marco      37259   37220  0 10:04 pts/7    00:00:00 bash -c V S11;tput bold;echo -n " _";read r;echo _ >>TMP/ECHO;./EF 1201 650
+marco      37260   37206  0 10:04 pts/0    00:00:00 bash -c V S11;tput bold;echo -n " U";read r;echo U >>TMP/ECHO;./EF 151 650
+marco      37266   37210  0 10:04 pts/3    00:00:00 bash -c V S11;tput bold;echo -n " W";read r;echo W >>TMP/ECHO;./EF 451 650
+marco      37269   37212  0 10:04 pts/2    00:00:00 bash -c V S11;tput bold;echo -n " X";read r;echo X >>TMP/ECHO;./EF 601 650
+marco      37274   37214  0 10:04 pts/4    00:00:00 bash -c V S11;tput bold;echo -n " Y";read r;echo Y >>TMP/ECHO;./EF 751 650
+marco      37282   37224  0 10:04 pts/9    00:00:00 bash -c V S11;tput bold;echo -n " ef";read r;echo ef >>TMP/ECHO;./EF 1501 650
+marco      37286   37222  0 10:04 pts/6    00:00:00 bash -c V S11;tput bold;echo -n " _";read r;echo _ >>TMP/ECHO;./EF 1351 650
+marco      37287   37218  0 10:04 pts/5    00:00:00 bash -c V S11;tput bold;echo -n " _";read r;echo _ >>TMP/ECHO;./EF 1051 650
+marco      37297   37216  0 10:04 pts/8    00:00:00 bash -c V S11;tput bold;echo -n " Z";read r;echo Z >>TMP/ECHO;./EF 901 650
+marco      37310   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+151+490 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " K";read r;echo K >>TMP/ECHO;./EF 151 490
+marco      37312   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+301+490 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " L";read r;echo L >>TMP/ECHO;./EF 301 490
+marco      37314   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+451+490 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " M";read r;echo M >>TMP/ECHO;./EF 451 490
+marco      37316   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+601+490 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " N";read r;echo N >>TMP/ECHO;./EF 601 490
+marco      37318   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+751+490 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " O";read r;echo O >>TMP/ECHO;./EF 751 490
+marco      37320   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+901+490 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " P";read r;echo P >>TMP/ECHO;./EF 901 490
+marco      37322   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+1051+490 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " Q";read r;echo Q >>TMP/ECHO;./EF 1051 490
+marco      37324   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+1201+490 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " R";read r;echo R >>TMP/ECHO;./EF 1201 490
+marco      37326   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+1351+490 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " S";read r;echo S >>TMP/ECHO;./EF 1351 490
+marco      37328   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+1501+490 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " T";read r;echo T >>TMP/ECHO;./EF 1501 490
+marco      37334   37314  0 10:04 pts/12   00:00:00 bash -c V S11;tput bold;echo -n " M";read r;echo M >>TMP/ECHO;./EF 451 490
+marco      37337   37312  0 10:04 pts/11   00:00:00 bash -c V S11;tput bold;echo -n " L";read r;echo L >>TMP/ECHO;./EF 301 490
+marco      37340   37310  0 10:04 pts/10   00:00:00 bash -c V S11;tput bold;echo -n " K";read r;echo K >>TMP/ECHO;./EF 151 490
+marco      37343   37318  0 10:04 pts/15   00:00:00 bash -c V S11;tput bold;echo -n " O";read r;echo O >>TMP/ECHO;./EF 751 490
+marco      37344   37316  0 10:04 pts/13   00:00:00 bash -c V S11;tput bold;echo -n " N";read r;echo N >>TMP/ECHO;./EF 601 490
+marco      37349   37322  0 10:04 pts/16   00:00:00 bash -c V S11;tput bold;echo -n " Q";read r;echo Q >>TMP/ECHO;./EF 1051 490
+marco      37352   37320  0 10:04 pts/14   00:00:00 bash -c V S11;tput bold;echo -n " P";read r;echo P >>TMP/ECHO;./EF 901 490
+marco      37355   37328  0 10:04 pts/18   00:00:00 bash -c V S11;tput bold;echo -n " T";read r;echo T >>TMP/ECHO;./EF 1501 490
+marco      37358   37324  0 10:04 pts/17   00:00:00 bash -c V S11;tput bold;echo -n " R";read r;echo R >>TMP/ECHO;./EF 1201 490
+marco      37361   37326  0 10:04 pts/19   00:00:00 bash -c V S11;tput bold;echo -n " S";read r;echo S >>TMP/ECHO;./EF 1351 490
+marco      37412   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+151+330 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " A";read r;echo A >>TMP/ECHO;./EF 151 330
+marco      37414   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+301+330 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " B";read r;echo B >>TMP/ECHO;./EF 301 330
+marco      37416   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+451+330 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " C";read r;echo C >>TMP/ECHO;./EF 451 330
+marco      37418   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+601+330 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " D";read r;echo D >>TMP/ECHO;./EF 601 330
+marco      37420   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+751+330 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " E";read r;echo E >>TMP/ECHO;./EF 751 330
+marco      37422   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+901+330 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " F";read r;echo F >>TMP/ECHO;./EF 901 330
+marco      37424   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+1051+330 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " G";read r;echo G >>TMP/ECHO;./EF 1051 330
+marco      37426   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+1201+330 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " H";read r;echo H >>TMP/ECHO;./EF 1201 330
+marco      37428   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+1351+330 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " I";read r;echo I >>TMP/ECHO;./EF 1351 330
+marco      37430   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+1501+330 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " J";read r;echo J >>TMP/ECHO;./EF 1501 330
+marco      37436   37412  0 10:04 pts/20   00:00:00 bash -c V S11;tput bold;echo -n " A";read r;echo A >>TMP/ECHO;./EF 151 330
+marco      37437   37430  0 10:04 pts/29   00:00:00 bash -c V S11;tput bold;echo -n " J";read r;echo J >>TMP/ECHO;./EF 1501 330
+marco      37442   37428  0 10:04 pts/26   00:00:00 bash -c V S11;tput bold;echo -n " I";read r;echo I >>TMP/ECHO;./EF 1351 330
+marco      37445   37418  0 10:04 pts/22   00:00:00 bash -c V S11;tput bold;echo -n " D";read r;echo D >>TMP/ECHO;./EF 601 330
+marco      37447   37414  0 10:04 pts/21   00:00:00 bash -c V S11;tput bold;echo -n " B";read r;echo B >>TMP/ECHO;./EF 301 330
+marco      37451   37422  0 10:04 pts/27   00:00:00 bash -c V S11;tput bold;echo -n " F";read r;echo F >>TMP/ECHO;./EF 901 330
+marco      37454   37424  0 10:04 pts/25   00:00:00 bash -c V S11;tput bold;echo -n " G";read r;echo G >>TMP/ECHO;./EF 1051 330
+marco      37455   37426  0 10:04 pts/28   00:00:00 bash -c V S11;tput bold;echo -n " H";read r;echo H >>TMP/ECHO;./EF 1201 330
+marco      37460   37416  0 10:04 pts/23   00:00:00 bash -c V S11;tput bold;echo -n " C";read r;echo C >>TMP/ECHO;./EF 451 330
+marco      37461   37420  0 10:04 pts/24   00:00:00 bash -c V S11;tput bold;echo -n " E";read r;echo E >>TMP/ECHO;./EF 751 330
+marco      37494   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+151+170 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " 1";read r;echo 1 >>TMP/ECHO;./EF 151 170
+marco      37500   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+301+170 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " 2";read r;echo 2 >>TMP/ECHO;./EF 301 170
+marco      37503   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+451+170 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " 3";read r;echo 3 >>TMP/ECHO;./EF 451 170
+marco      37505   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+601+170 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " 4";read r;echo 4 >>TMP/ECHO;./EF 601 170
+marco      37507   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+751+170 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " 5";read r;echo 5 >>TMP/ECHO;./EF 751 170
+marco      37509   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+901+170 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " 6";read r;echo 6 >>TMP/ECHO;./EF 901 170
+marco      37511   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+1051+170 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " 7";read r;echo 7 >>TMP/ECHO;./EF 1051 170
+marco      37513   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+1201+170 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " 8";read r;echo 8 >>TMP/ECHO;./EF 1201 170
+marco      37515   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+1351+170 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " 9";read r;echo 9 >>TMP/ECHO;./EF 1351 170
+marco      37521   37196  0 10:04 ?        00:00:00 xterm -geometry 1x1+1501+170 -fa default -fg green -fs 45 -e V S11;tput bold;echo -n " 0";read r;echo 0 >>TMP/ECHO;./EF 1501 170
+marco      37525   37196  0 10:04 ?        00:00:00 xterm -geometry 69x1+151+275 -fa default -fg green -fs 25 -e echo S11;tput civis;cat TMP/xx;read r
+marco      37527   37196  0 10:04 ?        00:00:00 xterm -geometry 69x1+151+435 -fa default -fg green -fs 25 -e echo S11;tput civis;cat TMP/xx;read r
+marco      37529   37196  0 10:04 ?        00:00:00 xterm -geometry 69x1+151+595 -fa default -fg green -fs 25 -e echo S11;tput civis;cat TMP/xx;read r
+marco      37570   37500  0 10:04 pts/31   00:00:00 bash -c V S11;tput bold;echo -n " 2";read r;echo 2 >>TMP/ECHO;./EF 301 170
+marco      37576   37505  0 10:04 pts/33   00:00:00 bash -c V S11;tput bold;echo -n " 4";read r;echo 4 >>TMP/ECHO;./EF 601 170
+marco      37597   37503  0 10:04 pts/34   00:00:00 bash -c V S11;tput bold;echo -n " 3";read r;echo 3 >>TMP/ECHO;./EF 451 170
+marco      37598   37494  0 10:04 pts/30   00:00:00 bash -c V S11;tput bold;echo -n " 1";read r;echo 1 >>TMP/ECHO;./EF 151 170
+marco      37600   37511  0 10:04 pts/32   00:00:00 bash -c V S11;tput bold;echo -n " 7";read r;echo 7 >>TMP/ECHO;./EF 1051 170
+marco      37610   37509  0 10:04 pts/35   00:00:00 bash -c V S11;tput bold;echo -n " 6";read r;echo 6 >>TMP/ECHO;./EF 901 170
+marco      37622   37525  0 10:04 pts/41   00:00:00 bash -c echo S11;tput civis;cat TMP/xx;read r
+marco      37625   37196  0 10:04 ?        00:00:00 xterm -geometry 79x2+1+73 -fa default -fg green -fs 25 -e echo S11;tput bold;cat MSG/msg_HEAD;read r;
+marco      37632   37527  0 10:04 pts/40   00:00:00 bash -c echo S11;tput civis;cat TMP/xx;read r
+marco      37635   37513  0 10:04 pts/37   00:00:00 bash -c V S11;tput bold;echo -n " 8";read r;echo 8 >>TMP/ECHO;./EF 1201 170
+marco      37645   37521  0 10:04 pts/39   00:00:00 bash -c V S11;tput bold;echo -n " 0";read r;echo 0 >>TMP/ECHO;./EF 1501 170
+marco      37649   37507  0 10:04 pts/36   00:00:00 bash -c V S11;tput bold;echo -n " 5";read r;echo 5 >>TMP/ECHO;./EF 751 170
+marco      37652   37515  0 10:04 pts/38   00:00:00 bash -c V S11;tput bold;echo -n " 9";read r;echo 9 >>TMP/ECHO;./EF 1351 170
+marco      37675   37529  0 10:04 pts/42   00:00:00 bash -c echo S11;tput civis;cat TMP/xx;read r
+marco      37766   37625  0 10:04 pts/43   00:00:00 bash -c echo S11;tput bold;cat MSG/msg_HEAD;read r;
+marco      98923   98921  0 10:08 ?        00:00:00 grep S11

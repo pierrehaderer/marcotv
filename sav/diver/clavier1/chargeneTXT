@@ -1,0 +1,5 @@
+
+(echo;cat $1;echo) > $1.txt
+# convert -trim -border 9 -pointsize 80  text:$l.txt tempo.png
+ convert -trim -border 9 -pointsize 80  text:$1.txt tempo.png
+# mv temp* $l.png

@@ -1,0 +1,13 @@
+MEG=256000;   # DEV=c;ROOT=m/projetX #INDX=_1_8
+DEV=a;ROOT=home/marco;ST=0
+
+#sudo dd if=/dev/sd$DEV of=/$ROOT/INDEX bs=1 skip=61000000 count=4 2>/dev/null
+INDX=`cat /$ROOT/INDEX`;ST=`tail --lines=1 /$ROOT/microsd/$INDX/testSDcur` 
+
+SK=0;SK=$ST; while test "$SK" -le $MEG;do INDX=`cat /$ROOT/INDEX`
+sudo dd if=/dev/sd$DEV of=/dev/null bs=1M count=100 skip=$SK # 2>/dev/null
+if test "$?" -ne 0 ;then  # sav bad position, and GO ON
+echo $SK `date +%d%m%y` >> /$ROOT/microsd/$INDX/ddError; #exit; 
+fi
+SK=`expr $SK + 100`;echo  $SK >> /$ROOT/microsd/$INDX/testSDcur
+done ; echo 10 >/$ROOT/microsd/$INDX/testSDcur

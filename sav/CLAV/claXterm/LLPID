@@ -1,0 +1,819 @@
+marco    2267062 2267055 17 16:23 pts/4    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O
+marco    2267071 2267062  0 16:23 pts/5    00:00:00 sh -c less O
+marco    2267072 2267071  0 16:23 pts/5    00:00:00 less O
+marco    2267073 2267062  0 16:23 pts/6    00:00:00 sh -c less -Ps M_
+marco    2267077 2267073  0 16:23 pts/6    00:00:00 less -Ps M_
+marco    2267092 2253383  0 16:23 pts/4    00:00:00 grep  less
+marco    2278058 2278051 18 16:29 pts/4    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O
+marco    2278067 2278058  0 16:29 pts/5    00:00:00 sh -c less O
+marco    2278068 2278067  0 16:29 pts/5    00:00:00 less O
+marco    2278070 2278058  0 16:29 pts/6    00:00:00 sh -c less -Ps M_
+marco    2278078 2278070  0 16:29 pts/6    00:00:00 less -Ps M_
+marco    2278088 2267135  0 16:29 pts/4    00:00:00 grep  less
+marco    2290846 2290839 20 16:30 pts/4    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O
+marco    2290856 2290846  0 16:30 pts/5    00:00:00 sh -c less O
+marco    2290857 2290856  0 16:30 pts/5    00:00:00 less O
+marco    2290858 2290846  0 16:30 pts/6    00:00:00 sh -c less -Ps M_
+marco    2290863 2290858  0 16:30 pts/6    00:00:00 less -Ps M_
+marco    2290877 2278128  0 16:30 pts/4    00:00:00 grep  less
+marco    2290879 2290841  0 16:30 pts/4    00:00:00 mate-terminal --geometry=1x1+990+210 --hide-menubar --title=  --zoom=2.2 -- sh -c less N
+marco    2300912 2300905 18 16:30 pts/4    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O
+marco    2300923 2300912  0 16:30 pts/5    00:00:00 sh -c less O
+marco    2300924 2300923  0 16:30 pts/5    00:00:00 less O
+marco    2300926 2300912  0 16:30 pts/6    00:00:00 sh -c less -Ps M_
+marco    2300930 2300926  0 16:30 pts/6    00:00:00 less -Ps M_
+marco    2300944 2290899  0 16:31 pts/4    00:00:00 grep  less
+marco    2312007 2300982 20 16:33 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2312026 2312007  0 16:33 pts/5    00:00:00 sh -c less -Ps M_
+marco    2312027 2312026  0 16:33 pts/5    00:00:00 less -Ps M_
+marco    2312030 2312007  0 16:33 pts/6    00:00:00 sh -c less O
+marco    2312037 2312030  0 16:33 pts/6    00:00:00 less O
+marco    2312047 2300982  0 16:33 pts/4    00:00:00 grep  less
+marco    2323067 2312092 17 16:35 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2323086 2323067  0 16:35 pts/5    00:00:00 sh -c less -Ps M_
+marco    2323087 2323086  0 16:35 pts/5    00:00:00 less -Ps M_
+marco    2323088 2323067  0 16:35 pts/6    00:00:00 sh -c less O
+marco    2323092 2323088  0 16:35 pts/6    00:00:00 less O
+marco    2323107 2312092  0 16:35 pts/4    00:00:00 grep  less
+marco    2336845 2336838 18 16:36 pts/4    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O
+marco    2336854 2336845  0 16:36 pts/5    00:00:00 sh -c less O
+marco    2336855 2336854  0 16:36 pts/5    00:00:00 less O
+marco    2336857 2336845  0 16:36 pts/6    00:00:00 sh -c less -Ps M_
+marco    2336860 2336857  0 16:36 pts/6    00:00:00 less -Ps M_
+marco    2336875 2323142  0 16:36 pts/4    00:00:00 grep  less
+marco    2350009 2336916 10 16:40 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2350029 2350009  0 16:40 pts/5    00:00:00 sh -c less -Ps M_
+marco    2350030 2350029  0 16:40 pts/5    00:00:00 less -Ps M_
+marco    2350031 2350009  0 16:40 pts/6    00:00:00 sh -c less O
+marco    2350035 2350031  0 16:40 pts/6    00:00:00 less O
+marco    2350055 2350009  0 16:40 pts/7    00:00:00 sh -c less N
+marco    2350056 2350055  0 16:40 pts/7    00:00:00 less N
+marco    2350070 2350009  0 16:40 pts/8    00:00:00 sh -c less -Ps choix
+marco    2350071 2350070  0 16:40 pts/8    00:00:00 less -Ps choix
+marco    2350080 2336916  0 16:40 pts/4    00:00:00 grep  less
+marco    2359688 2350088  8 16:40 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2359709 2359688  0 16:40 pts/5    00:00:00 sh -c less -Ps M_
+marco    2359710 2359709  0 16:40 pts/5    00:00:00 less -Ps M_
+marco    2359715 2359688  0 16:40 pts/6    00:00:00 sh -c less O
+marco    2359720 2359715  0 16:40 pts/6    00:00:00 less O
+marco    2359737 2359688  0 16:40 pts/7    00:00:00 sh -c less N
+marco    2359738 2359737  0 16:40 pts/7    00:00:00 less N
+marco    2359752 2359688  0 16:40 pts/8    00:00:00 sh -c less -Ps choix
+marco    2359753 2359752  0 16:40 pts/8    00:00:00 less -Ps choix
+marco    2359762 2350088  0 16:40 pts/4    00:00:00 grep  less
+marco    2371431 2359842  9 16:44 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2371451 2371431  0 16:44 pts/5    00:00:00 sh -c less -Ps M_
+marco    2371452 2371451  0 16:44 pts/5    00:00:00 less -Ps M_
+marco    2371453 2371431  0 16:44 pts/6    00:00:00 sh -c less O
+marco    2371459 2371453  0 16:44 pts/6    00:00:00 less O
+marco    2371479 2371431  0 16:45 pts/7    00:00:00 sh -c less N
+marco    2371480 2371479  0 16:45 pts/7    00:00:00 less N
+marco    2371494 2371431  0 16:45 pts/8    00:00:00 sh -c less -Ps choix
+marco    2371495 2371494  0 16:45 pts/8    00:00:00 less -Ps choix
+marco    2371504 2359842  0 16:45 pts/4    00:00:00 grep  less
+marco    2382976 2382969  9 16:46 pts/4    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O
+marco    2382985 2382976  0 16:46 pts/5    00:00:00 sh -c less O
+marco    2382986 2382985  0 16:46 pts/5    00:00:00 less O
+marco    2382994 2382976  0 16:46 pts/6    00:00:00 sh -c less -Ps M_
+marco    2382996 2382994  0 16:46 pts/6    00:00:00 less -Ps M_
+marco    2383011 2382976  0 16:46 pts/7    00:00:00 sh -c less N
+marco    2383012 2383011  0 16:46 pts/7    00:00:00 less N
+marco    2383026 2382976  0 16:46 pts/8    00:00:00 sh -c less -Ps choix
+marco    2383027 2383026  0 16:46 pts/8    00:00:00 less -Ps choix
+marco    2383036 2371536  0 16:46 pts/4    00:00:00 grep  less
+marco    2395432 2383046  9 16:48 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2395452 2395432  0 16:48 pts/5    00:00:00 sh -c less -Ps M_
+marco    2395453 2395452  0 16:48 pts/5    00:00:00 less -Ps M_
+marco    2395457 2395432  0 16:48 pts/6    00:00:00 sh -c less O
+marco    2395462 2395457  0 16:48 pts/6    00:00:00 less O
+marco    2395478 2395432  0 16:48 pts/7    00:00:00 sh -c less N
+marco    2395479 2395478  0 16:48 pts/7    00:00:00 less N
+marco    2395495 2395432  0 16:48 pts/8    00:00:00 sh -c less -Ps choix
+marco    2395496 2395495  0 16:48 pts/8    00:00:00 less -Ps choix
+marco    2395505 2383046  0 16:48 pts/4    00:00:00 grep  less
+marco    2405943 2395511  9 16:49 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2405962 2405943  0 16:49 pts/5    00:00:00 sh -c less -Ps M_
+marco    2405963 2405962  0 16:49 pts/5    00:00:00 less -Ps M_
+marco    2405965 2405943  0 16:49 pts/6    00:00:00 sh -c less O
+marco    2405968 2405965  0 16:49 pts/6    00:00:00 less O
+marco    2405991 2405943  0 16:49 pts/7    00:00:00 sh -c less N
+marco    2405992 2405991  0 16:49 pts/7    00:00:00 less N
+marco    2406006 2405943  0 16:49 pts/8    00:00:00 sh -c less -Ps choix
+marco    2406007 2406006  0 16:49 pts/8    00:00:00 less -Ps choix
+marco    2406016 2395511  0 16:49 pts/4    00:00:00 grep  less
+marco    2418047 2406131  9 16:52 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2418066 2418047  0 16:52 pts/5    00:00:00 sh -c less -Ps M_
+marco    2418067 2418066  0 16:52 pts/5    00:00:00 less -Ps M_
+marco    2418075 2418047  0 16:52 pts/6    00:00:00 sh -c less O
+marco    2418076 2418075  0 16:52 pts/6    00:00:00 less O
+marco    2418091 2418047  0 16:52 pts/7    00:00:00 sh -c less N
+marco    2418092 2418091  0 16:52 pts/7    00:00:00 less N
+marco    2418106 2418047  0 16:52 pts/8    00:00:00 sh -c less -Ps choix
+marco    2418107 2418106  0 16:52 pts/8    00:00:00 less -Ps choix
+marco    2418116 2406131  0 16:52 pts/4    00:00:00 grep  less
+marco    2429094 2418121  8 16:52 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2429113 2429094  0 16:52 pts/5    00:00:00 sh -c less -Ps M_
+marco    2429114 2429113  0 16:52 pts/5    00:00:00 less -Ps M_
+marco    2429115 2429094  0 16:52 pts/6    00:00:00 sh -c less O
+marco    2429120 2429115  0 16:52 pts/6    00:00:00 less O
+marco    2429139 2429094  0 16:52 pts/7    00:00:00 sh -c less N
+marco    2429140 2429139  0 16:52 pts/7    00:00:00 less N
+marco    2429153 2429094  0 16:52 pts/8    00:00:00 sh -c less -Ps choix
+marco    2429155 2429153  0 16:52 pts/8    00:00:00 less -Ps choix
+marco    2429164 2418121  0 16:52 pts/4    00:00:00 grep  less
+marco    2439243 2439236 10 16:55 pts/4    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O
+marco    2439252 2439243  0 16:55 pts/5    00:00:00 sh -c less O
+marco    2439253 2439252  0 16:55 pts/5    00:00:00 less O
+marco    2439254 2439243  0 16:55 pts/6    00:00:00 sh -c less -Ps M_
+marco    2439258 2439254  0 16:55 pts/6    00:00:00 less -Ps M_
+marco    2439278 2439243  0 16:55 pts/7    00:00:00 sh -c less N
+marco    2439279 2439278  0 16:55 pts/7    00:00:00 less N
+marco    2439293 2439243  0 16:55 pts/8    00:00:00 sh -c less -Ps choix
+marco    2439294 2439293  0 16:55 pts/8    00:00:00 less -Ps choix
+marco    2439303 2429270  0 16:55 pts/4    00:00:00 grep  less
+marco    2448439 2448432  9 16:57 pts/4    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O
+marco    2448448 2448439  0 16:57 pts/5    00:00:00 sh -c less O
+marco    2448449 2448448  0 16:57 pts/5    00:00:00 less O
+marco    2448450 2448439  0 16:57 pts/6    00:00:00 sh -c less -Ps M_
+marco    2448455 2448450  0 16:57 pts/6    00:00:00 less -Ps M_
+marco    2448474 2448439  0 16:57 pts/7    00:00:00 sh -c less N
+marco    2448475 2448474  0 16:57 pts/7    00:00:00 less N
+marco    2448489 2448439  0 16:57 pts/8    00:00:00 sh -c less -Ps choix
+marco    2448490 2448489  0 16:57 pts/8    00:00:00 less -Ps choix
+marco    2448499 2439317  0 16:57 pts/4    00:00:00 grep  less
+marco    2460544 2448507  9 17:01 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2460563 2460544  0 17:01 pts/5    00:00:00 sh -c less -Ps M_
+marco    2460564 2460563  0 17:01 pts/5    00:00:00 less -Ps M_
+marco    2460572 2460544  0 17:01 pts/6    00:00:00 sh -c less O
+marco    2460574 2460572  0 17:01 pts/6    00:00:00 less O
+marco    2460590 2460544  0 17:01 pts/7    00:00:00 sh -c less N
+marco    2460591 2460590  0 17:01 pts/7    00:00:00 less N
+marco    2460606 2460544  0 17:01 pts/8    00:00:00 sh -c less -Ps choix
+marco    2460607 2460606  0 17:01 pts/8    00:00:00 less -Ps choix
+marco    2460616 2448507  0 17:01 pts/4    00:00:00 grep  less
+marco    2471126 2460624  9 17:03 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2471145 2471126  0 17:03 pts/5    00:00:00 sh -c less -Ps M_
+marco    2471146 2471145  0 17:03 pts/5    00:00:00 less -Ps M_
+marco    2471147 2471126  0 17:03 pts/6    00:00:00 sh -c less O
+marco    2471151 2471147  0 17:03 pts/6    00:00:00 less O
+marco    2471171 2471126  0 17:03 pts/7    00:00:00 sh -c less N
+marco    2471172 2471171  0 17:03 pts/7    00:00:00 less N
+marco    2471185 2471126  0 17:03 pts/8    00:00:00 sh -c less -Ps choix
+marco    2471187 2471185  0 17:03 pts/8    00:00:00 less -Ps choix
+marco    2471196 2460624  0 17:03 pts/4    00:00:00 grep  less
+marco    2483246 2483239 10 17:10 pts/4    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O
+marco    2483255 2483246  0 17:10 pts/5    00:00:00 sh -c less O
+marco    2483256 2483255  0 17:10 pts/5    00:00:00 less O
+marco    2483258 2483246  0 17:10 pts/6    00:00:00 sh -c less -Ps M_
+marco    2483261 2483258  0 17:10 pts/6    00:00:00 less -Ps M_
+marco    2483281 2483246  0 17:10 pts/7    00:00:00 sh -c less N
+marco    2483282 2483281  0 17:10 pts/7    00:00:00 less N
+marco    2483296 2483246  0 17:10 pts/8    00:00:00 sh -c less -Ps choix
+marco    2483297 2483296  0 17:10 pts/8    00:00:00 less -Ps choix
+marco    2483306 2471459  0 17:10 pts/4    00:00:00 grep  less
+marco    2493298 2483414  9 17:12 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2493317 2493298  0 17:12 pts/5    00:00:00 sh -c less -Ps M_
+marco    2493318 2493317  0 17:12 pts/5    00:00:00 less -Ps M_
+marco    2493321 2493298  0 17:12 pts/6    00:00:00 sh -c less O
+marco    2493325 2493321  0 17:12 pts/6    00:00:00 less O
+marco    2493343 2493298  0 17:12 pts/7    00:00:00 sh -c less N
+marco    2493344 2493343  0 17:12 pts/7    00:00:00 less N
+marco    2493358 2493298  0 17:12 pts/8    00:00:00 sh -c less -Ps choix
+marco    2493359 2493358  0 17:12 pts/8    00:00:00 less -Ps choix
+marco    2493368 2483414  0 17:12 pts/4    00:00:00 grep  less
+marco    2521125 2493438  8 17:15 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2521142 2521125  0 17:15 pts/5    00:00:00 sh -c less -Ps M_
+marco    2521143 2521142  0 17:15 pts/5    00:00:00 less -Ps M_
+marco    2521196 2493438  0 17:15 pts/4    00:00:00 grep  less
+marco    2533851 2521205  6 17:16 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2533868 2533851  0 17:16 pts/5    00:00:00 sh -c less -Ps M_
+marco    2533869 2533868  0 17:16 pts/5    00:00:00 less -Ps M_
+marco    2533872 2533851  0 17:16 pts/6    00:00:00 sh -c less O
+marco    2533876 2533872  0 17:16 pts/6    00:00:00 less O
+marco    2533893 2533851  0 17:16 pts/7    00:00:00 sh -c less N
+marco    2533899 2533893  0 17:16 pts/7    00:00:00 less N
+marco    2533913 2533851  0 17:16 pts/8    00:00:00 sh -c less -Ps choix
+marco    2533914 2533913  0 17:16 pts/8    00:00:00 less -Ps choix
+marco    2533923 2521205  0 17:16 pts/4    00:00:00 grep  less
+marco    2553414 2533968  6 17:19 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2553430 2553414  0 17:19 pts/5    00:00:00 sh -c less -Ps M_
+marco    2553431 2553430  0 17:19 pts/5    00:00:00 less -Ps M_
+marco    2553432 2553414  0 17:19 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2553436 2553432  0 17:19 pts/6    00:00:00 less O
+marco    2553459 2553414  0 17:19 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2553460 2553459  0 17:19 pts/7    00:00:00 less N
+marco    2553473 2553414  0 17:20 pts/8    00:00:00 sh -c less -Ps choix
+marco    2553475 2553473  0 17:20 pts/8    00:00:00 less -Ps choix
+marco    2553484 2533968  0 17:20 pts/4    00:00:00 grep  less
+marco    2567732 2553559  6 17:22 pts/4    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O; echo oui > OUI
+marco    2567745 2567732  0 17:22 pts/5    00:00:00 sh -c less O; echo oui > OUI
+marco    2567746 2567745  0 17:22 pts/5    00:00:00 less O
+marco    2567747 2567732  0 17:22 pts/6    00:00:00 sh -c less -Ps M_
+marco    2567751 2567747  0 17:22 pts/6    00:00:00 less -Ps M_
+marco    2567771 2567732  0 17:22 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2567773 2567771  0 17:22 pts/7    00:00:00 less N
+marco    2567786 2567732  0 17:22 pts/8    00:00:00 sh -c less -Ps choix
+marco    2567790 2567786  0 17:22 pts/8    00:00:00 less -Ps choix
+marco    2567799 2553559  0 17:22 pts/4    00:00:00 grep  less
+marco    2578229 2567808  7 17:23 pts/4    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O; echo oui > OUI
+marco    2578242 2578229  0 17:23 pts/5    00:00:00 sh -c less O; echo oui > OUI
+marco    2578243 2578242  0 17:23 pts/5    00:00:00 less O
+marco    2578246 2578229  0 17:23 pts/6    00:00:00 sh -c less -Ps M_
+marco    2578249 2578246  0 17:23 pts/6    00:00:00 less -Ps M_
+marco    2578269 2578229  0 17:23 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2578270 2578269  0 17:23 pts/7    00:00:00 less N
+marco    2578284 2578229  0 17:23 pts/8    00:00:00 sh -c less -Ps choix
+marco    2578285 2578284  0 17:23 pts/8    00:00:00 less -Ps choix
+marco    2578294 2567808  0 17:23 pts/4    00:00:00 grep  less
+marco    2589863 2578403  7 17:24 pts/4    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O; echo oui > OUI
+marco    2589876 2589863  0 17:24 pts/5    00:00:00 sh -c less O; echo oui > OUI
+marco    2589877 2589863  0 17:24 pts/6    00:00:00 sh -c less -Ps M_
+marco    2589879 2589876  0 17:24 pts/5    00:00:00 less O
+marco    2589880 2589877  0 17:24 pts/6    00:00:00 less -Ps M_
+marco    2589908 2589863  0 17:24 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2589909 2589908  0 17:24 pts/7    00:00:00 less N
+marco    2589923 2589863  0 17:24 pts/8    00:00:00 sh -c less -Ps choix
+marco    2589924 2589923  0 17:24 pts/8    00:00:00 less -Ps choix
+marco    2589934 2578403  0 17:24 pts/4    00:00:00 grep  less
+marco    2604012 2591281  6 17:48 pts/4    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O; echo oui > OUI
+marco    2604025 2604012  0 17:48 pts/5    00:00:00 sh -c less O; echo oui > OUI
+marco    2604026 2604025  0 17:48 pts/5    00:00:00 less O
+marco    2604027 2604012  0 17:48 pts/6    00:00:00 sh -c less -Ps M_
+marco    2604031 2604027  0 17:48 pts/6    00:00:00 less -Ps M_
+marco    2604051 2604012  0 17:48 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2604054 2604051  0 17:48 pts/7    00:00:00 less N
+marco    2604068 2604012  0 17:48 pts/8    00:00:00 sh -c less -Ps choix
+marco    2604069 2604068  0 17:48 pts/8    00:00:00 less -Ps choix
+marco    2604078 2591281  0 17:48 pts/4    00:00:00 grep  less
+marco    2616662 2604215  6 17:53 pts/4    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O; echo oui > OUI
+marco    2616674 2616662  0 17:53 pts/5    00:00:00 sh -c less O; echo oui > OUI
+marco    2616675 2616674  0 17:53 pts/5    00:00:00 less O
+marco    2616678 2616662  0 17:53 pts/6    00:00:00 sh -c less -Ps M_
+marco    2616681 2616678  0 17:53 pts/6    00:00:00 less -Ps M_
+marco    2616700 2616662  0 17:53 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2616702 2616700  0 17:53 pts/7    00:00:00 less N
+marco    2616716 2616662  0 17:53 pts/8    00:00:00 sh -c less -Ps choix
+marco    2616717 2616716  0 17:53 pts/8    00:00:00 less -Ps choix
+marco    2616726 2604215  0 17:53 pts/4    00:00:00 grep  less
+marco    2629362 2616734  7 17:54 pts/4    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O; echo oui > OUI
+marco    2629376 2629362  0 17:54 pts/5    00:00:00 sh -c less O; echo oui > OUI
+marco    2629377 2629376  0 17:54 pts/5    00:00:00 less O
+marco    2629385 2629362  0 17:54 pts/6    00:00:00 sh -c less -Ps M_
+marco    2629387 2629385  0 17:54 pts/6    00:00:00 less -Ps M_
+marco    2629403 2629362  0 17:54 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2629404 2629403  0 17:54 pts/7    00:00:00 less N
+marco    2629418 2629362  0 17:54 pts/8    00:00:00 sh -c less -Ps choix
+marco    2629419 2629418  0 17:54 pts/8    00:00:00 less -Ps choix
+marco    2629428 2616734  0 17:54 pts/4    00:00:00 grep  less
+marco    2638373 2629457  6 17:54 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2638390 2638373  0 17:54 pts/5    00:00:00 sh -c less -Ps M_
+marco    2638391 2638390  0 17:54 pts/5    00:00:00 less -Ps M_
+marco    2638394 2638373  0 17:54 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2638399 2638394  0 17:54 pts/6    00:00:00 less O
+marco    2638417 2638373  0 17:54 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2638418 2638417  0 17:54 pts/7    00:00:00 less N
+marco    2638432 2638373  0 17:54 pts/8    00:00:00 sh -c less -Ps choix
+marco    2638433 2638432  0 17:54 pts/8    00:00:00 less -Ps choix
+marco    2638444 2629457  0 17:55 pts/4    00:00:00 grep  less
+marco    2652240 2638480  6 17:56 pts/4    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O; echo oui > OUI
+marco    2652252 2652240  0 17:56 pts/5    00:00:00 sh -c less O; echo oui > OUI
+marco    2652253 2652252  0 17:56 pts/5    00:00:00 less O
+marco    2652257 2652240  0 17:56 pts/6    00:00:00 sh -c less -Ps M_
+marco    2652262 2652257  0 17:56 pts/6    00:00:00 less -Ps M_
+marco    2652280 2652240  0 17:56 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2652281 2652280  0 17:56 pts/7    00:00:00 less N
+marco    2652296 2652240  0 17:56 pts/8    00:00:00 sh -c less -Ps choix
+marco    2652297 2652296  0 17:56 pts/8    00:00:00 less -Ps choix
+marco    2652306 2638480  0 17:56 pts/4    00:00:00 grep  less
+marco    2664758 2652323  7 17:57 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2664775 2664758  0 17:57 pts/5    00:00:00 sh -c less -Ps M_
+marco    2664776 2664775  0 17:57 pts/5    00:00:00 less -Ps M_
+marco    2664784 2664758  0 17:57 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2664785 2664784  0 17:57 pts/6    00:00:00 less O
+marco    2664812 2664758  0 17:57 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2664814 2664812  0 17:57 pts/7    00:00:00 less N
+marco    2664827 2664758  0 17:57 pts/8    00:00:00 sh -c less -Ps choix
+marco    2664829 2664827  0 17:57 pts/8    00:00:00 less -Ps choix
+marco    2664839 2652323  0 17:57 pts/4    00:00:00 grep  less
+marco    2675030 2664854  6 17:58 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2675048 2675030  0 17:58 pts/5    00:00:00 sh -c less -Ps M_
+marco    2675049 2675048  0 17:58 pts/5    00:00:00 less -Ps M_
+marco    2675050 2675030  0 17:58 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2675054 2675050  0 17:58 pts/6    00:00:00 less O
+marco    2675074 2675030  0 17:58 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2675076 2675074  0 17:58 pts/7    00:00:00 less N
+marco    2675089 2675030  0 17:58 pts/8    00:00:00 sh -c less -Ps choix
+marco    2675091 2675089  0 17:58 pts/8    00:00:00 less -Ps choix
+marco    2675100 2664854  0 17:58 pts/4    00:00:00 grep  less
+marco    2784567 2751970  6 18:10 pts/4    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O; echo oui > OUI
+marco    2784580 2784567  0 18:10 pts/5    00:00:00 sh -c less O; echo oui > OUI
+marco    2784581 2784580  0 18:10 pts/5    00:00:00 less O
+marco    2784582 2784567  0 18:10 pts/6    00:00:00 sh -c less -Ps M_
+marco    2784585 2784582  0 18:10 pts/6    00:00:00 less -Ps M_
+marco    2784609 2784567  0 18:10 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2784610 2784609  0 18:10 pts/7    00:00:00 less N
+marco    2784624 2784567  0 18:10 pts/8    00:00:00 sh -c less -Ps choix
+marco    2784625 2784624  0 18:10 pts/8    00:00:00 less -Ps choix
+marco    2784634 2751970  0 18:10 pts/4    00:00:00 grep  less
+marco    2815879 2784641  6 18:11 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2815897 2815879  0 18:11 pts/5    00:00:00 sh -c less -Ps M_
+marco    2815898 2815897  0 18:11 pts/5    00:00:00 less -Ps M_
+marco    2815900 2815879  0 18:11 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2815903 2815900  0 18:11 pts/6    00:00:00 less O
+marco    2815926 2815879  0 18:11 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2815927 2815926  0 18:11 pts/7    00:00:00 less N
+marco    2815942 2815879  0 18:11 pts/8    00:00:00 sh -c less -Ps choix
+marco    2815943 2815942  0 18:11 pts/8    00:00:00 less -Ps choix
+marco    2815952 2784641  0 18:11 pts/4    00:00:00 grep  less
+marco    2852389 2815955  7 18:11 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2852406 2852389  0 18:11 pts/5    00:00:00 sh -c less -Ps M_
+marco    2852407 2852406  0 18:11 pts/5    00:00:00 less -Ps M_
+marco    2852408 2852389  0 18:11 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2852412 2852408  0 18:11 pts/6    00:00:00 less O
+marco    2852434 2852389  0 18:11 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2852435 2852434  0 18:11 pts/7    00:00:00 less N
+marco    2852449 2852389  0 18:11 pts/8    00:00:00 sh -c less -Ps choix
+marco    2852450 2852449  0 18:11 pts/8    00:00:00 less -Ps choix
+marco    2852460 2815955  0 18:11 pts/4    00:00:00 grep  less
+marco    2865923 2852470  7 18:11 pts/4    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O; echo oui > OUI
+marco    2865935 2865923  0 18:11 pts/5    00:00:00 sh -c less O; echo oui > OUI
+marco    2865936 2865935  0 18:11 pts/5    00:00:00 less O
+marco    2865937 2865923  0 18:11 pts/6    00:00:00 sh -c less -Ps M_
+marco    2865941 2865937  0 18:11 pts/6    00:00:00 less -Ps M_
+marco    2865978 2865923  0 18:12 pts/8    00:00:00 sh -c less -Ps choix
+marco    2865979 2865978  0 18:12 pts/8    00:00:00 less -Ps choix
+marco    2865988 2852470  0 18:12 pts/4    00:00:00 grep  less
+marco    2901382 2866008  7 18:13 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2901402 2901382  0 18:13 pts/5    00:00:00 sh -c less -Ps M_
+marco    2901403 2901402  0 18:13 pts/5    00:00:00 less -Ps M_
+marco    2901404 2901382  0 18:13 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2901408 2901404  0 18:13 pts/6    00:00:00 less O
+marco    2901430 2901382  0 18:13 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2901431 2901430  0 18:13 pts/7    00:00:00 less N
+marco    2901445 2901382  0 18:13 pts/8    00:00:00 sh -c less -Ps choix
+marco    2901446 2901445  0 18:13 pts/8    00:00:00 less -Ps choix
+marco    2901455 2866008  0 18:13 pts/4    00:00:00 grep  less
+marco    2919584 2901461  6 18:14 pts/4    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O; echo oui > OUI
+marco    2919596 2919584  0 18:14 pts/5    00:00:00 sh -c less O; echo oui > OUI
+marco    2919597 2919596  0 18:14 pts/5    00:00:00 less O
+marco    2919601 2919584  0 18:14 pts/6    00:00:00 sh -c less -Ps M_
+marco    2919606 2919601  0 18:14 pts/6    00:00:00 less -Ps M_
+marco    2919622 2919584  0 18:14 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2919623 2919622  0 18:14 pts/7    00:00:00 less N
+marco    2919636 2919584  0 18:14 pts/8    00:00:00 sh -c less -Ps choix
+marco    2919637 2919636  0 18:14 pts/8    00:00:00 less -Ps choix
+marco    2919647 2901461  0 18:14 pts/4    00:00:00 grep  less
+marco    2920950 2919668  7 18:16 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2920967 2920950  0 18:16 pts/5    00:00:00 sh -c less -Ps M_
+marco    2920968 2920967  0 18:16 pts/5    00:00:00 less -Ps M_
+marco    2920972 2920950  0 18:16 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2920978 2920972  0 18:16 pts/6    00:00:00 less O
+marco    2920995 2920950  0 18:16 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2920996 2920995  0 18:16 pts/7    00:00:00 less N
+marco    2921010 2920950  0 18:16 pts/8    00:00:00 sh -c less -Ps choix
+marco    2921011 2921010  0 18:16 pts/8    00:00:00 less -Ps choix
+marco    2921020 2919668  0 18:16 pts/4    00:00:00 grep  less
+marco    2922404 2921031  7 18:17 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2922421 2922404  0 18:17 pts/5    00:00:00 sh -c less -Ps M_
+marco    2922422 2922421  0 18:17 pts/5    00:00:00 less -Ps M_
+marco    2922424 2922404  0 18:17 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2922428 2922424  0 18:17 pts/6    00:00:00 less O
+marco    2922449 2922404  0 18:17 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2922450 2922449  0 18:17 pts/7    00:00:00 less N
+marco    2922466 2922404  0 18:17 pts/8    00:00:00 sh -c less -Ps choix
+marco    2922467 2922466  0 18:17 pts/8    00:00:00 less -Ps choix
+marco    2922476 2921031  0 18:17 pts/4    00:00:00 grep  less
+marco    2925064 2923702  7 18:21 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2925083 2925064  0 18:21 pts/5    00:00:00 sh -c less -Ps M_
+marco    2925084 2925083  0 18:21 pts/5    00:00:00 less -Ps M_
+marco    2925088 2925064  0 18:21 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2925092 2925088  0 18:21 pts/6    00:00:00 less O
+marco    2925112 2925064  0 18:21 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2925113 2925112  0 18:21 pts/7    00:00:00 less N
+marco    2925126 2925064  0 18:21 pts/8    00:00:00 sh -c less -Ps choix
+marco    2925128 2925126  0 18:21 pts/8    00:00:00 less -Ps choix
+marco    2925137 2923702  0 18:21 pts/4    00:00:00 grep  less
+marco    2926514 2925146  6 18:23 pts/4    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O; echo oui > OUI
+marco    2926526 2926514  0 18:23 pts/5    00:00:00 sh -c less O; echo oui > OUI
+marco    2926527 2926526  0 18:23 pts/5    00:00:00 less O
+marco    2926530 2926514  0 18:23 pts/6    00:00:00 sh -c less -Ps M_
+marco    2926534 2926530  0 18:23 pts/6    00:00:00 less -Ps M_
+marco    2926554 2926514  0 18:23 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2926555 2926554  0 18:23 pts/7    00:00:00 less N
+marco    2926569 2926514  0 18:24 pts/8    00:00:00 sh -c less -Ps choix
+marco    2926570 2926569  0 18:24 pts/8    00:00:00 less -Ps choix
+marco    2926579 2925146  0 18:24 pts/4    00:00:00 grep  less
+marco    2939395 2938096  7 09:18 pts/4    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2939413 2939395  0 09:18 pts/5    00:00:00 sh -c less -Ps M_
+marco    2939414 2939413  0 09:18 pts/5    00:00:00 less -Ps M_
+marco    2939417 2939395  0 09:18 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2939420 2939417  0 09:18 pts/6    00:00:00 less O
+marco    2939441 2939395  0 09:19 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2939442 2939441  0 09:19 pts/7    00:00:00 less N
+marco    2939456 2939395  0 09:19 pts/8    00:00:00 sh -c less -Ps choix
+marco    2939457 2939456  0 09:19 pts/8    00:00:00 less -Ps choix
+marco    2939466 2938096  0 09:19 pts/4    00:00:00 grep  less
+marco    2941799 2940631  7 09:27 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2941816 2941799  0 09:27 pts/5    00:00:00 sh -c less -Ps M_
+marco    2941817 2941816  0 09:27 pts/5    00:00:00 less -Ps M_
+marco    2941819 2941799  0 09:27 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2941822 2941819  0 09:27 pts/6    00:00:00 less O
+marco    2941857 2941799  0 09:27 pts/8    00:00:00 sh -c less -Ps choix
+marco    2941859 2941857  0 09:27 pts/8    00:00:00 less -Ps choix
+marco    2941868 2940631  0 09:27 pts/0    00:00:00 grep  less
+marco    2943028 2941872  7 09:27 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2943045 2943028  0 09:27 pts/5    00:00:00 sh -c less -Ps M_
+marco    2943046 2943045  0 09:27 pts/5    00:00:00 less -Ps M_
+marco    2943049 2943028  0 09:27 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2943054 2943049  0 09:27 pts/6    00:00:00 less O
+marco    2943088 2943028  0 09:27 pts/7    00:00:00 sh -c less -Ps choix
+marco    2943089 2943088  0 09:27 pts/7    00:00:00 less -Ps choix
+marco    2943098 2941872  0 09:27 pts/0    00:00:00 grep  less
+marco    2944273 2943103  7 09:28 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2944290 2944273  0 09:28 pts/5    00:00:00 sh -c less -Ps M_
+marco    2944291 2944290  0 09:28 pts/5    00:00:00 less -Ps M_
+marco    2944317 2944273  0 09:28 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2944318 2944317  0 09:28 pts/7    00:00:00 less N
+marco    2944332 2944273  0 09:28 pts/8    00:00:00 sh -c less -Ps choix
+marco    2944333 2944332  0 09:28 pts/8    00:00:00 less -Ps choix
+marco    2944342 2943103  0 09:28 pts/0    00:00:00 grep  less
+marco    2945489 2944347  7 09:28 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2945508 2945489  0 09:28 pts/5    00:00:00 sh -c less -Ps M_
+marco    2945509 2945508  0 09:28 pts/5    00:00:00 less -Ps M_
+marco    2945511 2945489  0 09:28 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2945514 2945511  0 09:28 pts/6    00:00:00 less O
+marco    2945552 2945489  0 09:28 pts/8    00:00:00 sh -c less -Ps choix
+marco    2945553 2945552  0 09:28 pts/8    00:00:00 less -Ps choix
+marco    2945562 2944347  0 09:28 pts/0    00:00:00 grep  less
+marco    2946956 2945580  6 09:30 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2946979 2946956  0 09:30 pts/5    00:00:00 sh -c less -Ps M_
+marco    2946980 2946979  0 09:30 pts/5    00:00:00 less -Ps M_
+marco    2946981 2946956  0 09:30 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2946985 2946981  0 09:30 pts/6    00:00:00 less O
+marco    2947006 2946956  0 09:30 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2947008 2947006  0 09:30 pts/7    00:00:00 less N
+marco    2947022 2946956  0 09:30 pts/8    00:00:00 sh -c less -Ps choix
+marco    2947023 2947022  0 09:30 pts/8    00:00:00 less -Ps choix
+marco    2947032 2945580  0 09:30 pts/0    00:00:00 grep  less
+marco    2948409 2947047  8 09:33 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2948432 2948409  0 09:33 pts/5    00:00:00 sh -c less -Ps M_
+marco    2948433 2948432  0 09:33 pts/5    00:00:00 less -Ps M_
+marco    2948460 2948409  0 09:33 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2948461 2948460  0 09:33 pts/7    00:00:00 less N
+marco    2948475 2948409  0 09:34 pts/8    00:00:00 sh -c less -Ps choix
+marco    2948476 2948475  0 09:34 pts/8    00:00:00 less -Ps choix
+marco    2948485 2947047  0 09:34 pts/0    00:00:00 grep  less
+marco    2949776 2948492  6 09:36 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2949801 2949776  0 09:36 pts/5    00:00:00 sh -c less -Ps M_
+marco    2949802 2949801  0 09:36 pts/5    00:00:00 less -Ps M_
+marco    2949805 2949776  0 09:36 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2949807 2949805  0 09:36 pts/6    00:00:00 less O
+marco    2949828 2949776  0 09:36 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2949829 2949828  0 09:36 pts/7    00:00:00 less N
+marco    2949843 2949776  0 09:36 pts/8    00:00:00 sh -c less -Ps choix
+marco    2949844 2949843  0 09:36 pts/8    00:00:00 less -Ps choix
+marco    2949853 2948492  0 09:36 pts/0    00:00:00 grep  less
+marco    2951231 2949867  7 09:39 pts/0    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O; echo oui > OUI
+marco    2951243 2951231  0 09:39 pts/5    00:00:00 sh -c less O; echo oui > OUI
+marco    2951244 2951243  0 09:39 pts/5    00:00:00 less O
+marco    2951245 2951231  0 09:39 pts/6    00:00:00 sh -c less -Ps M_
+marco    2951249 2951245  0 09:39 pts/6    00:00:00 less -Ps M_
+marco    2951288 2951231  0 09:39 pts/8    00:00:00 sh -c less -Ps choix
+marco    2951289 2951288  0 09:39 pts/8    00:00:00 less -Ps choix
+marco    2951298 2949867  0 09:39 pts/0    00:00:00 grep  less
+marco    2952646 2951328  7 09:44 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2952669 2952646  0 09:44 pts/5    00:00:00 sh -c less -Ps M_
+marco    2952670 2952669  0 09:44 pts/5    00:00:00 less -Ps M_
+marco    2952671 2952646  0 09:44 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2952675 2952671  0 09:44 pts/6    00:00:00 less O
+marco    2952728 2952646  0 09:44 pts/8    00:00:00 sh -c less -Ps choix
+marco    2952729 2952728  0 09:44 pts/8    00:00:00 less -Ps choix
+marco    2952768 2951328  0 09:44 pts/0    00:00:00 grep  less
+marco    2954156 2952796  7 09:45 pts/0    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O; echo oui > OUI
+marco    2954169 2954156  0 09:45 pts/5    00:00:00 sh -c less O; echo oui > OUI
+marco    2954170 2954169  0 09:45 pts/5    00:00:00 less O
+marco    2954173 2954156  0 09:45 pts/6    00:00:00 sh -c less -Ps M_
+marco    2954176 2954173  0 09:45 pts/6    00:00:00 less -Ps M_
+marco    2954212 2954156  0 09:45 pts/8    00:00:00 sh -c less -Ps choix
+marco    2954214 2954212  0 09:45 pts/8    00:00:00 less -Ps choix
+marco    2954223 2952796  0 09:45 pts/0    00:00:00 grep  less
+marco    2955703 2954237  7 09:46 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2955726 2955703  0 09:46 pts/5    00:00:00 sh -c less -Ps M_
+marco    2955727 2955726  0 09:46 pts/5    00:00:00 less -Ps M_
+marco    2955730 2955703  0 09:46 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2955733 2955730  0 09:46 pts/6    00:00:00 less O
+marco    2955755 2955703  0 09:46 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2955756 2955755  0 09:46 pts/7    00:00:00 less N
+marco    2955770 2955703  0 09:47 pts/8    00:00:00 sh -c less -Ps choix
+marco    2955771 2955770  0 09:47 pts/8    00:00:00 less -Ps choix
+marco    2955780 2954237  0 09:47 pts/0    00:00:00 grep  less
+marco    2957124 2955788  6 09:48 pts/0    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O; echo oui > OUI
+marco    2957136 2957124  0 09:48 pts/5    00:00:00 sh -c less O; echo oui > OUI
+marco    2957137 2957136  0 09:48 pts/5    00:00:00 less O
+marco    2957139 2957124  0 09:48 pts/6    00:00:00 sh -c less -Ps M_
+marco    2957144 2957139  0 09:48 pts/6    00:00:00 less -Ps M_
+marco    2957163 2957124  0 09:48 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2957164 2957163  0 09:48 pts/7    00:00:00 less N
+marco    2957178 2957124  0 09:48 pts/8    00:00:00 sh -c less -Ps choix
+marco    2957179 2957178  0 09:48 pts/8    00:00:00 less -Ps choix
+marco    2957188 2955788  0 09:48 pts/0    00:00:00 grep  less
+marco    2958570 2957203  6 09:49 pts/0    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O; echo oui > OUI
+marco    2958582 2958570  0 09:49 pts/5    00:00:00 sh -c less O; echo oui > OUI
+marco    2958583 2958582  0 09:49 pts/5    00:00:00 less O
+marco    2958584 2958570  0 09:49 pts/6    00:00:00 sh -c less -Ps M_
+marco    2958589 2958584  0 09:49 pts/6    00:00:00 less -Ps M_
+marco    2958610 2958570  0 09:49 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2958611 2958610  0 09:49 pts/7    00:00:00 less N
+marco    2958625 2958570  0 09:49 pts/8    00:00:00 sh -c less -Ps choix
+marco    2958626 2958625  0 09:49 pts/8    00:00:00 less -Ps choix
+marco    2958635 2957203  0 09:49 pts/0    00:00:00 grep  less
+marco    2960559 2959116  7 11:10 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2960582 2960559  0 11:10 pts/5    00:00:00 sh -c less -Ps M_
+marco    2960583 2960582  0 11:10 pts/5    00:00:00 less -Ps M_
+marco    2960585 2960559  0 11:10 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2960588 2960585  0 11:10 pts/6    00:00:00 less O
+marco    2960624 2960559  0 11:10 pts/8    00:00:00 sh -c less -Ps choix
+marco    2960625 2960624  0 11:10 pts/8    00:00:00 less -Ps choix
+marco    2960637 2959116  0 11:10 pts/0    00:00:00 grep  less
+marco    2961984 2960646  7 11:13 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2962007 2961984  0 11:13 pts/5    00:00:00 sh -c less -Ps M_
+marco    2962008 2962007  0 11:13 pts/5    00:00:00 less -Ps M_
+marco    2962011 2961984  0 11:13 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2962013 2962011  0 11:13 pts/6    00:00:00 less O
+marco    2962036 2961984  0 11:13 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2962037 2962036  0 11:13 pts/7    00:00:00 less N
+marco    2962051 2961984  0 11:13 pts/8    00:00:00 sh -c less -Ps choix
+marco    2962052 2962051  0 11:13 pts/8    00:00:00 less -Ps choix
+marco    2962061 2960646  0 11:13 pts/0    00:00:00 grep  less
+marco    2965264 2963833  7 11:20 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2965290 2965264  0 11:20 pts/5    00:00:00 sh -c less -Ps M_
+marco    2965291 2965290  0 11:20 pts/5    00:00:00 less -Ps M_
+marco    2965292 2965264  0 11:20 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2965296 2965292  0 11:20 pts/6    00:00:00 less O
+marco    2965338 2965264  0 11:20 pts/8    00:00:00 sh -c less -Ps choix
+marco    2965340 2965338  0 11:20 pts/8    00:00:00 less -Ps choix
+marco    2965350 2963833  0 11:20 pts/0    00:00:00 grep  less
+marco    2966867 2965445  6 11:37 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2966891 2966867  0 11:37 pts/5    00:00:00 sh -c less -Ps M_
+marco    2966892 2966891  0 11:37 pts/5    00:00:00 less -Ps M_
+marco    2966894 2966867  0 11:37 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2966899 2966894  0 11:37 pts/6    00:00:00 less O
+marco    2966921 2966867  0 11:37 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2966922 2966921  0 11:37 pts/7    00:00:00 less N
+marco    2966939 2966867  0 11:37 pts/8    00:00:00 sh -c less -Ps choix
+marco    2966940 2966939  0 11:37 pts/8    00:00:00 less -Ps choix
+marco    2966949 2965445  0 11:37 pts/0    00:00:00 grep  less
+marco    2968448 2967019  7 11:45 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2968471 2968448  0 11:45 pts/5    00:00:00 sh -c less -Ps M_
+marco    2968472 2968471  0 11:45 pts/5    00:00:00 less -Ps M_
+marco    2968475 2968448  0 11:45 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2968482 2968475  0 11:45 pts/6    00:00:00 less O
+marco    2968519 2968448  0 11:45 pts/8    00:00:00 sh -c less -Ps choix
+marco    2968520 2968519  0 11:45 pts/8    00:00:00 less -Ps choix
+marco    2968529 2967019  0 11:45 pts/0    00:00:00 grep  less
+marco    2970030 2968542  8 11:47 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2970053 2970030  0 11:47 pts/5    00:00:00 sh -c less -Ps M_
+marco    2970054 2970053  0 11:47 pts/5    00:00:00 less -Ps M_
+marco    2970055 2970030  0 11:47 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2970059 2970055  0 11:47 pts/6    00:00:00 less O
+marco    2970101 2970030  0 11:48 pts/8    00:00:00 sh -c less -Ps choix
+marco    2970102 2970101  0 11:48 pts/8    00:00:00 less -Ps choix
+marco    2970111 2968542  0 11:48 pts/0    00:00:00 grep  less
+marco    2984924 2983470  8 12:54 pts/0    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom= -- sh -c less O; echo oui > OUI
+marco    2984936 2984924  0 12:54 pts/5    00:00:00 sh -c less O; echo oui > OUI
+marco    2984937 2984936  0 12:54 pts/5    00:00:00 less O
+marco    2984966 2984924  0 12:54 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2984967 2984966  0 12:54 pts/7    00:00:00 less N
+marco    2984984 2984924  0 12:54 pts/6    00:00:00 sh -c less -Ps choix
+marco    2984985 2984984  0 12:54 pts/6    00:00:00 less -Ps choix
+marco    2984994 2983470  0 12:54 pts/0    00:00:00 grep  less
+marco    2988151 2986519  6 12:57 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2988174 2988151  0 12:57 pts/5    00:00:00 sh -c less -Ps M_
+marco    2988175 2988174  0 12:57 pts/5    00:00:00 less -Ps M_
+marco    2988178 2988151  0 12:57 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2988180 2988178  0 12:57 pts/6    00:00:00 less O
+marco    2988203 2988151  0 12:57 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2988208 2988203  0 12:57 pts/7    00:00:00 less N
+marco    2988226 2988151  0 12:57 pts/8    00:00:00 sh -c less -Ps choix
+marco    2988227 2988226  0 12:57 pts/8    00:00:00 less -Ps choix
+marco    2988237 2986519  0 12:57 pts/0    00:00:00 grep  less
+marco    2989865 2988250  6 13:02 pts/0    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O; echo oui > OUI
+marco    2989878 2989865  0 13:02 pts/5    00:00:00 sh -c less O; echo oui > OUI
+marco    2989879 2989878  0 13:02 pts/5    00:00:00 less O
+marco    2989880 2989865  0 13:02 pts/6    00:00:00 sh -c less -Ps M_
+marco    2989884 2989880  0 13:02 pts/6    00:00:00 less -Ps M_
+marco    2989908 2989865  0 13:02 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2989910 2989908  0 13:02 pts/7    00:00:00 less N
+marco    2989926 2989865  0 13:02 pts/8    00:00:00 sh -c less -Ps choix
+marco    2989928 2989926  0 13:02 pts/8    00:00:00 less -Ps choix
+marco    2989937 2988250  0 13:02 pts/0    00:00:00 grep  less
+marco    2991609 2990007  6 13:07 pts/0    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O; echo oui > OUI
+marco    2991621 2991609  0 13:07 pts/5    00:00:00 sh -c less O; echo oui > OUI
+marco    2991622 2991621  0 13:07 pts/5    00:00:00 less O
+marco    2991624 2991609  0 13:07 pts/6    00:00:00 sh -c less -Ps M_
+marco    2991627 2991624  0 13:07 pts/6    00:00:00 less -Ps M_
+marco    2991651 2991609  0 13:07 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2991653 2991651  0 13:07 pts/7    00:00:00 less N
+marco    2991670 2991609  0 13:07 pts/8    00:00:00 sh -c less -Ps choix
+marco    2991671 2991670  0 13:07 pts/8    00:00:00 less -Ps choix
+marco    2991680 2990007  0 13:07 pts/0    00:00:00 grep  less
+marco    2993231 2991699  7 13:11 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2993254 2993231  0 13:11 pts/5    00:00:00 sh -c less -Ps M_
+marco    2993255 2993254  0 13:11 pts/5    00:00:00 less -Ps M_
+marco    2993257 2993231  0 13:11 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2993260 2993257  0 13:11 pts/6    00:00:00 less O
+marco    2993285 2993231  0 13:11 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2993286 2993285  0 13:11 pts/7    00:00:00 less N
+marco    2993303 2993231  0 13:11 pts/8    00:00:00 sh -c less -Ps choix
+marco    2993304 2993303  0 13:11 pts/8    00:00:00 less -Ps choix
+marco    2993313 2991699  0 13:11 pts/0    00:00:00 grep  less
+marco    2994881 2993319  7 13:12 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2994905 2994881  0 13:12 pts/5    00:00:00 sh -c less -Ps M_
+marco    2994906 2994905  0 13:12 pts/5    00:00:00 less -Ps M_
+marco    2994908 2994881  0 13:12 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2994911 2994908  0 13:12 pts/6    00:00:00 less O
+marco    2994936 2994881  0 13:12 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2994937 2994936  0 13:12 pts/7    00:00:00 less N
+marco    2994954 2994881  0 13:12 pts/8    00:00:00 sh -c less -Ps choix
+marco    2994955 2994954  0 13:12 pts/8    00:00:00 less -Ps choix
+marco    2994964 2993319  0 13:12 pts/0    00:00:00 grep  less
+marco    2996404 2994988  6 13:15 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2996427 2996404  0 13:15 pts/5    00:00:00 sh -c less -Ps M_
+marco    2996428 2996427  0 13:15 pts/5    00:00:00 less -Ps M_
+marco    2996429 2996404  0 13:15 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2996433 2996429  0 13:15 pts/6    00:00:00 less O
+marco    2996457 2996404  0 13:15 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2996458 2996457  0 13:15 pts/7    00:00:00 less N
+marco    2996475 2996404  0 13:15 pts/8    00:00:00 sh -c less -Ps choix
+marco    2996476 2996475  0 13:15 pts/8    00:00:00 less -Ps choix
+marco    2996485 2994988  0 13:15 pts/0    00:00:00 grep  less
+marco    2998084 2996495  6 13:17 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2998110 2998084  0 13:17 pts/5    00:00:00 sh -c less -Ps M_
+marco    2998111 2998110  0 13:17 pts/5    00:00:00 less -Ps M_
+marco    2998119 2998084  0 13:17 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2998120 2998119  0 13:17 pts/6    00:00:00 less O
+marco    2998140 2998084  0 13:17 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    2998141 2998140  0 13:17 pts/7    00:00:00 less N
+marco    2998157 2998084  0 13:17 pts/8    00:00:00 sh -c less -Ps choix
+marco    2998159 2998157  0 13:17 pts/8    00:00:00 less -Ps choix
+marco    2998168 2996495  0 13:17 pts/0    00:00:00 grep  less
+marco    2999896 2998253  7 13:26 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    2999919 2999896  0 13:26 pts/5    00:00:00 sh -c less -Ps M_
+marco    2999920 2999919  0 13:26 pts/5    00:00:00 less -Ps M_
+marco    2999922 2999896  0 13:26 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    2999925 2999922  0 13:26 pts/6    00:00:00 less O
+marco    2999969 2999896  0 13:26 pts/8    00:00:00 sh -c less -Ps choix
+marco    2999970 2999969  0 13:26 pts/8    00:00:00 less -Ps choix
+marco    2999979 2998253  0 13:26 pts/0    00:00:00 grep  less
+marco    3362013 3360438  6 19:16 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco    3362036 3362013  0 19:16 pts/5    00:00:00 sh -c less -Ps M_
+marco    3362037 3362036  0 19:16 pts/5    00:00:00 less -Ps M_
+marco    3362038 3362013  0 19:16 pts/6    00:00:00 sh -c less O; echo oui > OUI
+marco    3362042 3362038  0 19:16 pts/6    00:00:00 less O
+marco    3362072 3362013  0 19:16 pts/7    00:00:00 sh -c less N; echo non >NON
+marco    3362073 3362072  0 19:16 pts/7    00:00:00 less N
+marco    3362084 3362013  0 19:16 pts/8    00:00:00 sh -c less -Ps choix
+marco    3362085 3362084  0 19:16 pts/8    00:00:00 less -Ps choix
+marco    3362094 3360438  0 19:16 pts/0    00:00:00 grep  less
+marco     145056  143437 15 17:25 pts/1    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco     145090  145056  0 17:25 pts/2    00:00:00 sh -c less -Ps M_
+marco     145091  145090  0 17:25 pts/2    00:00:00 less -Ps M_
+marco     145099  145056  0 17:25 pts/3    00:00:00 sh -c less O; echo oui > OUI
+marco     145102  145099  0 17:25 pts/3    00:00:00 less O
+marco     145118  145056  0 17:25 pts/4    00:00:00 sh -c less N; echo non >NON
+marco     145119  145118  0 17:25 pts/4    00:00:00 less N
+marco     145128  145056  0 17:25 pts/5    00:00:00 sh -c less -Ps choix
+marco     145129  145128  0 17:25 pts/5    00:00:00 less -Ps choix
+marco     145138  143437  0 17:25 pts/1    00:00:00 grep  less
+marco     146237  145182 21 17:29 pts/1    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.0 -- sh -c less -Ps M_
+marco     146270  146237  0 17:29 pts/2    00:00:00 sh -c less -Ps M_
+marco     146273  146237  0 17:29 pts/3    00:00:00 sh -c less O; echo oui > OUI
+marco     146274  146270  0 17:29 pts/2    00:00:00 less -Ps M_
+marco     146275  146273  0 17:29 pts/3    00:00:00 less O
+marco     146298  146237  1 17:29 pts/4    00:00:00 sh -c less N; echo non >NON
+marco     146299  146298  0 17:29 pts/4    00:00:00 less N
+marco     146308  146237  1 17:29 pts/5    00:00:00 sh -c less -Ps choix
+marco     146309  146308  0 17:29 pts/5    00:00:00 less -Ps choix
+marco     146318  145182  0 17:29 pts/1    00:00:00 grep  less
+marco     147507  146347 19 17:31 pts/1    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O; echo oui > OUI
+marco     147527  147507  0 17:31 pts/2    00:00:00 sh -c less O; echo oui > OUI
+marco     147529  147527  0 17:31 pts/2    00:00:00 less O
+marco     147538  147507  0 17:31 pts/3    00:00:00 sh -c less -Ps M_
+marco     147539  147538  0 17:31 pts/3    00:00:00 less -Ps M_
+marco     147548  147507  0 17:31 pts/4    00:00:00 sh -c less N; echo non >NON
+marco     147549  147548  0 17:31 pts/4    00:00:00 less N
+marco     147567  147507  1 17:31 pts/5    00:00:00 sh -c less -Ps choix
+marco     147568  147567  0 17:31 pts/5    00:00:00 less -Ps choix
+marco     147577  146347  0 17:31 pts/1    00:00:00 grep  less
+marco     148838  147591 20 17:33 pts/1    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.5 -- sh -c less -Ps M_
+marco     148877  148838  0 17:33 pts/2    00:00:00 sh -c less -Ps M_
+marco     148878  148838  0 17:33 pts/3    00:00:00 sh -c less O; echo oui > OUI
+marco     148879  148877  0 17:33 pts/2    00:00:00 less -Ps M_
+marco     148883  148878  0 17:33 pts/3    00:00:00 less O
+marco     148891  148838  0 17:33 pts/4    00:00:00 sh -c less N; echo non >NON
+marco     148892  148891  0 17:33 pts/4    00:00:00 less N
+marco     148909  148838  1 17:33 pts/5    00:00:00 sh -c less -Ps choix
+marco     148910  148909  0 17:33 pts/5    00:00:00 less -Ps choix
+marco     148920  147591  0 17:33 pts/1    00:00:00 grep  less
+marco     150102  148940 19 17:35 pts/1    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.2 -- sh -c less O; echo oui > OUI
+marco     150127  150102  0 17:35 pts/2    00:00:00 sh -c less O; echo oui > OUI
+marco     150128  150127  0 17:35 pts/2    00:00:00 less O
+marco     150138  150102  0 17:35 pts/3    00:00:00 sh -c less -Ps M_
+marco     150139  150138  0 17:35 pts/3    00:00:00 less -Ps M_
+marco     150150  150102  1 17:35 pts/4    00:00:00 sh -c less N; echo non >NON
+marco     150152  150150  0 17:35 pts/4    00:00:00 less N
+marco     150163  150102  1 17:35 pts/5    00:00:00 sh -c less -Ps choix
+marco     150164  150163  0 17:35 pts/5    00:00:00 less -Ps choix
+marco     150173  148940  0 17:35 pts/1    00:00:00 grep  less
+marco     151400  150187 19 17:37 pts/1    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.5 -- sh -c less O; echo oui > OUI
+marco     151422  151400  0 17:37 pts/2    00:00:00 sh -c less O; echo oui > OUI
+marco     151425  151422  0 17:37 pts/2    00:00:00 less O
+marco     151426  151400  0 17:37 pts/3    00:00:00 sh -c less -Ps M_
+marco     151429  151426  0 17:37 pts/3    00:00:00 less -Ps M_
+marco     151450  151400  1 17:37 pts/4    00:00:00 sh -c less N; echo non >NON
+marco     151451  151450  0 17:37 pts/4    00:00:00 less N
+marco     151460  151400  1 17:37 pts/5    00:00:00 sh -c less -Ps choix
+marco     151461  151460  0 17:37 pts/5    00:00:00 less -Ps choix
+marco     151470  150187  0 17:37 pts/1    00:00:00 grep  less
+marco     152735  151490 19 17:39 pts/1    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.7 -- sh -c less -Ps M_
+marco     152775  152735  1 17:39 pts/2    00:00:00 sh -c less -Ps M_
+marco     152776  152775  0 17:39 pts/2    00:00:00 less -Ps M_
+marco     152786  152735  0 17:39 pts/3    00:00:00 sh -c less O; echo oui > OUI
+marco     152787  152786  0 17:39 pts/3    00:00:00 less O
+marco     152796  152735  1 17:39 pts/4    00:00:00 sh -c less N; echo non >NON
+marco     152797  152796  0 17:39 pts/4    00:00:00 less N
+marco     152807  152735  0 17:39 pts/5    00:00:00 sh -c less -Ps choix
+marco     152808  152807  0 17:39 pts/5    00:00:00 less -Ps choix
+marco     152817  151490  0 17:39 pts/1    00:00:00 grep  less
+marco     154046  152832 19 17:41 pts/1    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.7 -- sh -c less -Ps M_
+marco     154080  154046  0 17:41 pts/2    00:00:00 sh -c less -Ps M_
+marco     154081  154080  0 17:41 pts/2    00:00:00 less -Ps M_
+marco     154093  154046  1 17:41 pts/3    00:00:00 sh -c less O; echo oui > OUI
+marco     154094  154093  0 17:41 pts/3    00:00:00 less O
+marco     154107  154046  1 17:41 pts/4    00:00:00 sh -c less N; echo non >NON
+marco     154108  154107  0 17:41 pts/4    00:00:00 less N
+marco     154118  154046  0 17:41 pts/5    00:00:00 sh -c less -Ps choix
+marco     154119  154118  0 17:41 pts/5    00:00:00 less -Ps choix
+marco     154128  152832  0 17:41 pts/1    00:00:00 grep  less
+marco     155290  154151 19 17:43 pts/1    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.8 -- sh -c less -Ps M_
+marco     155325  155290  0 17:43 pts/2    00:00:00 sh -c less -Ps M_
+marco     155328  155325  0 17:43 pts/2    00:00:00 less -Ps M_
+marco     155337  155290  0 17:43 pts/3    00:00:00 sh -c less O; echo oui > OUI
+marco     155338  155337  0 17:43 pts/3    00:00:00 less O
+marco     155350  155290  1 17:43 pts/4    00:00:00 sh -c less N; echo non >NON
+marco     155351  155350  0 17:43 pts/4    00:00:00 less N
+marco     155361  155290  0 17:43 pts/5    00:00:00 sh -c less -Ps choix
+marco     155362  155361  0 17:43 pts/5    00:00:00 less -Ps choix
+marco     155372  154151  0 17:43 pts/1    00:00:00 grep  less
+marco     156792  155402 19 17:46 pts/1    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.7 -- sh -c less -Ps M_
+marco     156834  156792  0 17:46 pts/2    00:00:00 sh -c less -Ps M_
+marco     156835  156834  0 17:46 pts/2    00:00:00 less -Ps M_
+marco     156843  156792  0 17:46 pts/3    00:00:00 sh -c less O; echo oui > OUI
+marco     156844  156843  0 17:46 pts/3    00:00:00 less O
+marco     156853  156792  0 17:46 pts/4    00:00:00 sh -c less N; echo non >NON
+marco     156854  156853  0 17:46 pts/4    00:00:00 less N
+marco     156864  156792  0 17:46 pts/5    00:00:00 sh -c less -Ps choix
+marco     156865  156864  0 17:46 pts/5    00:00:00 less -Ps choix
+marco     156874  155402  0 17:46 pts/1    00:00:00 grep  less
+marco     157674  156898 19 17:49 pts/1    00:00:00 mate-terminal --geometry=1x1+990+310 --hide-menubar --title=  --zoom=2.8 -- sh -c less O; echo oui > OUI
+marco     157705  157674  1 17:49 pts/2    00:00:00 sh -c less O; echo oui > OUI
+marco     157706  157705  0 17:49 pts/2    00:00:00 less O
+marco     157710  157674  1 17:49 pts/3    00:00:00 sh -c less -Ps M_
+marco     157715  157710  0 17:49 pts/3    00:00:00 less -Ps M_
+marco     157725  157674  0 17:49 pts/4    00:00:00 sh -c less N; echo non >NON
+marco     157726  157725  0 17:49 pts/4    00:00:00 less N
+marco     157734  157674  0 17:49 pts/5    00:00:00 sh -c less -Ps choix
+marco     157736  157734  0 17:49 pts/5    00:00:00 less -Ps choix
+marco     157745  156898  0 17:49 pts/1    00:00:00 grep  less
+marco       4201    2301 24 15:10 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.7 -- sh -c less -Ps M_
+marco       4224    4201  0 15:10 pts/1    00:00:00 sh -c less -Ps M_
+marco       4225    4224  0 15:10 pts/1    00:00:00 less -Ps M_
+marco       4226    4201  0 15:10 pts/2    00:00:00 sh -c less O; echo oui > OUI
+marco       4229    4226  0 15:10 pts/2    00:00:00 less O
+marco       4292    4201  1 15:10 pts/4    00:00:00 sh -c less -Ps choix
+marco       4293    4292  0 15:10 pts/4    00:00:00 less -Ps choix
+marco       4321    2301  0 15:10 pts/0    00:00:00 grep  less
+marco       5724    4634 24 15:12 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.7 -- sh -c less -Ps M_
+marco       5748    5724  0 15:12 pts/1    00:00:00 sh -c less -Ps M_
+marco       5752    5724  0 15:12 pts/2    00:00:00 sh -c less O; echo oui > OUI
+marco       5756    5748  0 15:12 pts/1    00:00:00 less -Ps M_
+marco       5759    5752  0 15:12 pts/2    00:00:00 less O
+marco       5814    5724  0 15:12 pts/4    00:00:00 sh -c less -Ps choix
+marco       5815    5814  0 15:12 pts/4    00:00:00 less -Ps choix
+marco       5843    4634  0 15:12 pts/0    00:00:00 grep  less
+marco      12695   11760 24 15:17 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.7 -- sh -c less -Ps M_
+marco      12718   12695  0 15:17 pts/1    00:00:00 sh -c less -Ps M_
+marco      12719   12718  0 15:17 pts/1    00:00:00 less -Ps M_
+marco      12720   12695  0 15:17 pts/2    00:00:00 sh -c less O; echo oui > OUI
+marco      12724   12720  0 15:17 pts/2    00:00:00 less O
+marco      12786   12695  0 15:17 pts/4    00:00:00 sh -c less -Ps choix
+marco      12787   12786  0 15:17 pts/4    00:00:00 less -Ps choix
+marco      12815   11760  0 15:17 pts/0    00:00:00 grep  less
+marco      14040   12857 24 15:18 pts/0    00:00:00 mate-terminal --geometry=42x4+1040+90 --hide-menubar --title=  --zoom=1.7 -- sh -c less -Ps M_
+marco      14064   14040  0 15:18 pts/1    00:00:00 sh -c less -Ps M_
+marco      14065   14064  0 15:18 pts/1    00:00:00 less -Ps M_
+marco      14067   14040  0 15:18 pts/2    00:00:00 sh -c less O; echo oui > OUI
+marco      14069   14067  0 15:18 pts/2    00:00:00 less O
+marco      14131   14040  0 15:18 pts/4    00:00:00 sh -c less -Ps choix
+marco      14132   14131  0 15:18 pts/4    00:00:00 less -Ps choix
+marco      14160   12857  0 15:18 pts/0    00:00:00 grep  less

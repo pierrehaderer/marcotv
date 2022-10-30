@@ -1,0 +1,99 @@
+POSXC=1;Z2=1.8;ZBB=0.28;PLAY=mpv;PA=100;Tcach=6 #dd bs=1M HORS mpv
+PAmpv=6; # King 6x432 ; Sand 1x332 ; Chin 2x432 # dd bs=1M DANS mpv
+Z1=2.9;DTX=150;DTY=160;LI=497;POSYC=650;BB=275;YHEAD=577;YTRAIL=110 
+TE='mate-terminal';G=geometry;T=title;H='hide-menubar';Z=zoom;
+PARTE="--$T= --$H -- sh -c"; PARG="--$G=1x1+"; CLA=_____CLAVIER_____
+
+ee () { echo -e -n "q" |xclip ; }
+ff () { #while test $v -lt $RATE;do v=`expr $v + 1`;done
+$TE ${PARG}$2+$3 --$Z=$Z1 $PARTE "less $1;echo `cat $1` >>ECHO;./EF $2 $3" & }
+bb () { $TE --$G=${LI}x1+151+$1 --$Z=$ZBB $PARTE "less -Ps vid" & }
+>ECHO;>vid;>TRACE;>clafUP;>mpvUP
+
+Init () { echo; #liste flags et fichiers Synchro ::
+# BOOTDEV pour l'ordre des BlockDEV au Boot ...
+# F :: ?? entre TL et UL
+# NEWSD :: nouvelle microsd detectee 1ere fois ??
+# clafUP :: hors full clavier ...
+# mpvUP :: hors mpv
+# SD_UNMOUNTED :: etat du montage microsd ...
+# CHKless, CHKmpv, CHKdd :: flags de Presence ..., control relance UL, testSD
+# ECHOL ?, TRACE
+}
+
+D=`df|grep '/dev/sd'|grep boot|cut -c 8|tail -1`; #determiner BOOT device
+echo $D >BOOTDEV #danger apres RESET 0 ??:
+if test $D = a; then SP=sdb; else SP=sda; fi # mettre dans .profile ??
+
+ee;clear;$TE --$G=35x9+251+250 --zoom=3.0 $PARTE "less -Ps msg_BienTV" & 
+p2=$!;sleep 5; kill $p2 #__________MESSAGES ACCUEIL_________________
+ee;clear;$TE --$G=70x20+291+200 --$Z=1.8 $PARTE "less -Ps msg_Intro8L" 
+ee;clear;$TE --$G=70x20+251+200 --$Z=1.8 $PARTE "less -Ps msg_Intro9" 
+SEEKIDX=70000000  #dans le fichier bidon _ de 10M plein de -, sur la microsd
+# lancer mpv, ou TL sans &, AVANT le WindowManager, dans .profile direct ??
+
+# ------ T :: PROCEDURE CYCLIQUE DE SURVEILLANCE DE LA MICROSD -----------
+while true;do sleep 2 #la boucle doit continuer pendant l'affichage MENU 
+#pour continuer de tester microsd, dont son arrachage intempestif !! :: 
+
+CHKmpv=`ps -ef |grep $PLAY|wc -l`;echo $CHKdd >> CHKdd
+if test $CHKmpv -eq 1;then #pas de test microsd pendant mpv ??, pour pas de hic
+if test `ls /dev/$SP`;then  >> NEWSD; # microsd Exist !
+PARTED=`sudo parted /dev/$SP 'unit B print' | grep $SP | cut -d ':' -f 2 `
+echo $PARTED|cut -d 'B' -f 1 >Parted #INDEX microsd #echo ${PARTED%B} >Parted
+sudo dd if=/dev/$SP of=INDEX bs=1 skip=$SEEKIDX count=4 2>/dev/null
+ID=`cat INDEX` # verif si l'INDEX commence par _ :: test "${ID:0:1}" 
+if test `cut -c 1` != '_';then echo BUG microsd IDX `date` >> BUGmsd;fi
+#----- INDEX EST RECUPERE -----sinon, afficher un msg disant microsd KO !!!
+fi
+#------ TEST FAT32 MICROSD ------------------------------------------------
+df|grep "/dev/${SP}1" >/dev/null; GS=$?; # test MOUNT sd, SI !! sd demontee !!
+# ET UNIQUEMENT LORS DE SON INTRODUCTION !!! ... a faire ... !!!
+#if test $GS -eq 1;then N=`expr $N + 1` # boucle attente Nx2s test MOUNT
+# if test $N -eq 90 -a -f NEWSD;then N=0;sudo echo; #mount /dev/${SP}1 /n;MS=$?
+ #MOUNTable ?
+#  if test $MS -eq 0; then echo -n _$MS >> FATOK ;sudo echo; #umount /n; # Yes
+#  else echo -n $MS >> FATNOK; IDX=`cat INDEX` # re-ecrire FAT !!
+  # sudo dd if=microsd/$IDX/FAT$IDX of=/dev/$SP bs=1M
+#  fi # BAD FAT ?? Recopie FAT ... sur sd !!! ... a faire, et comme c'est FAT
+     # d origine, tous Updates dessus seront perdus, si pas deja enregistres
+     # sur Syteme ... et si recopie FAT marche pas, afficher a l ecran un mesg 
+     # disant MICROSD KO !!! :: envoyer Mail P+JJ avec ID sd ?? Inconnu ??!!
+     # ping -c 2 8.8.8.8; P=$?; if test $P -eq 0; then mail; fi
+# fi 
+#fi 
+else rm NEWSD; echo microsd pas montee # continue ou next 
+fi 
+#--------REGENERATION SILICIUM-------------------------------------
+CHKdd=`ps -ef |grep ' dd '|grep -v grep|wc -l` # test surface partiel
+CHKmpv=`ps -ef |grep $PLAY|wc -l`; echo $CHKdd >> CHKdd
+#selon puissance CPU et flots simultanes microsd, arreter dd pendant film mpv,
+# ET claf affichage pas fini !!!, ou ... lecture "pointille" microsd PAmpv
+# au 1er !!! CHKmpv, retarder testSD de Tcach sec, pour gagner sur cp en Cache
+# et decalage d autant pour mpv, pour test debut ACE
+ if test -s mpvUP; then sleep $Tcach; >mpvUP; fi
+if test $CHKdd -eq 0 && test  ! -s clafUP; 
+then if test $CHKmpv -ne 2; then ./testSD `cat Parted` $PA  &
+else #pendant mpv, la boucle 2 sec n'est plus utile ... ::
+for i in 1 2 3 4; do ./testSD `cat Parted` $PAmpv ; done ; sleep 1 ;
+for i in 1 2 3 ; do ./testSD `cat Parted` $PAmpv ; done ; sleep 1 
+./testSD `cat Parted` $PAmpv ; ./testSD `cat Parted` $PAmpv ;
+fi # KO si un ";" suit le "&" du dessus !!! ----------------------------
+fi
+if test -e /dev/${SP}1 -a -e SD_UNMOUNTED;then sudo mount /dev/${SP}1 /m
+# echo message si MENU apparait pas, alors retirer et reinserer la microsd
+
+#------------------------ RELANCE MENU UL ------------------------------
+CHKmpv=`ps -ef |grep $PLAY|wc -l` # T en attente fin de mpv
+CHKless=`ps -ef |grep less|wc -l` # T en attente fin de less 
+ if test $CHKmpv -eq 1 && test $CHKless -le 2 && test ! -s clafUP;then ./UL &
+ fi # lancer menu U # en background ??, pour ne pas rester coince dessus mais 
+#ne pas relancer menu U tant que mpv pas fini ET claf pas fini d'afficher 
+else sudo echo; #umount /m; # rm INDEX;
+if test -e /dev/${SP}1;then echo;else > SD_UNMOUNTED;fi
+fi; done
+#-------------------- PROCEDURE DE MISE A JOUR SYSTEM --------------
+# A PARTIR DE TOUTE NOUVELLE SD INSEREE POUR LISTE TOUS LES FILMS zl
+# old=`wc -l microdsd/zl`; new=`wc -l /m/zl` #OU ... Repertoire/Fichier!! zzzz
+# if test $new -gt $old; then update ...
+

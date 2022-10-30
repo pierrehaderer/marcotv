@@ -1,0 +1,21 @@
+
+ROOT=home/marco/claLess; 
+
+L=`tail -1 ECHO` ;
+if test "$L" = "E"
+then 
+echo ERASE >>STA
+l=`wc -l ECHO|cut -d ' ' -f 1`
+echo LIGNECHO::$l >>STA
+h=`expr "$l" - 2` 
+echo LIGNECHO1::$h >>STA
+head -n "$h" ECHO > ECHO1
+cp ECHO1 ECHO
+fi
+
+#echo "echo \`cat /$ROOT/FF\` > /$ROOT/TT" > k;
+#echo "\`cat /$ROOT/FF\` > /$ROOT/TT" > k;
+chmod 777 k
+echo `cat ECHO` > ECHOL
+#mate-terminal --geometry=48x5+1045+810  -- sh -c "cat msgE ECHO > FF;/$ROOT/k; less -Ps TT" 
+mate-terminal --geometry=48x6+1045+810  --hide-menubar --zoom=1.7 -- sh -c "cat msgE ECHOL > FF; less -Ps FF" 

@@ -1,0 +1,77 @@
+C=`~/TERM`  # choix de la Console Graphique
+F=TMP;>$F/ECHO;>$F/ECHO2;>$F/ECHOL;>$F/lism4;>$F/PP; >$F/ulPID ; >$F/clafUP
+>$F/termPID3;TM='mate-terminal';TX=xterm;G=geometry;T=title;H='hide-menubar';
+Z=zoom; R4K=0; TE=$TM; >TMP/FINISYL 
+PARTE="--$T= --$H -- sh -c";TP2='tput bold';TP1="tput civis;$TP2"
+PARX='-fa default -fg green'; PARTX="$PARX -fs 50 -b 15"; S=sleep
+x () { $TX -$G 1x1+$Xpos+$1 $PARTX -e "$TP1;echo -n ' ' $2;read r" &
+echo $! >> $F/claXpid; } # appel :: x 300 7 
+en () { echo -e -n "\n" |xclip; }
+ee () { echo -e -n "q\n" |xclip ; }
+ul () { echo $! >> $F/ulPID; }
+PS () { ps -ef|grep $1|grep -v grep; }
+KI () { kill `cat $F/$1`; }
+ee;clear; xrandr|grep current|grep 3840;if test $? -eq 0;then R4K=1;fi
+
+#-------------------------- 1ere ENTREE DU MENU --------------------------
+#AFFICHER TOUS LES FILMS DE LA COLLECTION, et recuperer le film choisi x,y
+claDir=cla;G1='58x17+251+40';CM1='less -Ps --mouse zl';S11='echo S11';case $C in
+M) echo mate ; $TM --$G=$G1 --$Z=2.0 $PARTE "$S11;$CM1" & ;;
+X) echo xterm ; $TX -$G $G1 -fs 30 $PARX -e "$S11;$CM1" & ;;
+*) echo autre console ;;
+esac;ul
+echo `ps -ef|grep 'less '|grep -v grep|grep xterm`|cut -d ' ' -f 2 >> $F/zlPID
+(sleep 2; G2='63x5+250+850';CM2='cat MSG/msg_choix;read r'; case $C in
+M) $TM --$G=$G2 --$Z=1.8 $PARTE "$S11;$CM2";ul ;;
+X) $TX -$G $G2 -fs 30 $PARX -e "$S11;$CM2";ul ;;
+*) echo autre console ;;
+esac ) &
+ul;rm $F/OUI $F/NON $F/FINIOUINON # -----------> AFFICHER LES TOUCHES OUI/NON
+CM3="tput rev;echo -n O;read r;echo oui >$F/OUI;";G3='200+850'; case $C in
+M) en;$TM --$G=1x1+$G3 --$Z=2.9 $PARTE "$CM3" & ;;
+X) en;$TX -$G 1x1+$G3 -fs 50 $PARX -e "tput bold;$CM3" & ;;
+*) echo autre Console ;;
+esac;ul;sleep 1;
+G4='200+950';CM4="tput rev;echo -n N;read r;echo non >$F/NON"; case $C in
+M) en;$TM --$G=1x1+$G4 --$Z=2.9 $PARTE "$CM4" & ;;
+X) en;$TX -$G 1x1+$G4 -fs 50 $PARX -e "tput bold;$CM4" & ;;
+*) echo autre Console ;;
+esac;ul;sleep 2; 
+# ------------------> RESET precable sur MOLETTE ::
+G6='1x1-1+1';CMDR2="echo `cat 0` >>$F/ECHO;./Rtou";CMDR3="echo -n 0;read r"
+CMDR0="tput civis;$CMDR3";CMDR1="tput bold;tput rev;$CMDR3";  
+if test $C = M ;then en; $TM --$G=$G6 --$Z=2.9 $PARTE "$S11;$CMDR0;$CMDR2" &
+else $TX -$G $G6 -fs 50 $PARX -e "$S11;$CMDR1;$CMDR2" &
+fi # ------------------> ATTENTE Reponse OUI/NON ::
+while true;do sleep 1;  if test -s $F/OUI;then break;fi
+if test -s $F/NON;then >$F/clafUP;sleep 1;break;fi #break ou exit ??   
+if test -s $F/FINIOUINON;then KI ulPID; exit ;fi;   done
+KI ulPID; KI zlPID; KI choiPID; >$F/FINISYL; 
+# ------------------> Reponse OUI :: (lancer clavier alfa)
+if test -s $F/OUI; then 
+echo `PS $G`|cut -d ' ' -f 2 >> $F/geoPID;KI geoPID; ./KIL S11
+echo `PS choix`|cut -d ' ' -f 2 >> $F/choiPID;KI choiPID; ./KIL S11
+echo >$F/clafUP;cd cla/alfa; ./claf; en
+cp $F/ECHOL $F/ECHO2 ~/$F;cd ~; R=`cat $F/ECHOL` ; >$F/ulPID
+
+G8='80x5+10+750'; CM2='cat MSG/msg_cherchLess;read r;./Rtou'; case $C in
+M) $TE --$G=$G8 --$Z=1.8 $PARTE "$CM2" & ;;
+X) en;$TX -$G $G8 -fs 30 $PARX -e "$CM2" &  ;;
+       *) echo autre Console ;; esac;ul # ----------------> Selection du Film
+echo "echo -e -n \"\\n\"|xclip " > $F/L;en;ch=\'+\&$R\'
+G9='90x18+60+60'; case $C in
+M) echo "$TE --$G=$G9 --$Z=1.5 -- sh -c \"less -I $ch zl\" & "  >> $F/L ;;
+X) en;echo "$TX -$G $G9 -fs 20 $PARX -e \"echo|xclip;less -I $ch zl\" & " >>$F/L ;;
+#X) echo "$TX -$G $G9 -fs 20 $PARX -e \"less --mouse -I $ch zl\" & " >>$F/L ;; 
+# pb de "cohabitation" xterm et less :: --mouse permet scroll, mais plante 
+# le \n de selection en xclip !!! :: la syllabe de selection doit etre 
+# suffisamment "riche" pour un resultat en 1 page !!!
+# OU :: tester more !! :: le scroll back pas necessaire ?? ...
+      *) echo autre Console ;; esac;chmod 777 $F/L; sleep 2;
+en;./$F/L ;ul #echo $! > $F/ulPID
+# ----------------------> MENAGE !!
+echo `PS 'less '`|grep zl|cut -d ' ' -f 2 >$F/ulPID2
+>$F/FINISYL;while test ! -s $F/FINISYL; do sleep 1; done; >$F/clafUP
+echo `PS $G`|cut -d ' ' -f 2 >> $F/geoPID ; KI geoPID; KI ulPID2;
+else # -----------------> Touche NON :: pas de recherche alfa 
+echo `PS $G`|cut -d ' ' -f 2 >> $F/geoPID; KI geoPID; fi

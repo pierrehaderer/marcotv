@@ -1,0 +1,27 @@
+POSXC=1; Z2=1.8 #PARAM Pi4
+Z1=2.9;DTX=150;DTY=160;LI=497;POSYC=650;BB=275;YHEAD=580;YTRAIL=120 #Pi4 LARG
+# Z1=2.4;DTX=127;DTY=140;LI=420;POSYC=700 #Pi4 ETROI
+#POSXC=1 ; POSYC=600;  RATE=20; LI=223 #PARAM 1600
+#DTX=160 ; DTY=110; Z1=1.8 ; #PARAM 1600 large
+#DTX=135 ; DTY=150; Z1=1.5 ; #PARAM 1600 etroit
+TE='mate-terminal';G=geometry;T=title;H='hide-menubar';Z=zoom; 
+PARTE="--title= --hide-menubar -- sh -c"; PARG="--$G=1x1+"
+#variante de "less $j" avec echo !!:: echo|xclip; "echo $j;read r"
+#variante :: xterm -geometry 1x2+90+50 -fa default -fs 43 -e "less -Ps A" ou less --prompt=chaine
+
+ee () { echo -e -n "q" |xclip ; }
+ff () { DX=`expr $DX + $DTX` #while test $v -lt $RATE;do v=`expr $v + 1`;done
+$TE $PARG$DX+$DY --$Z=$Z1 $PARTE "less $1;echo `cat $1` >>ECHO;./EF $DX $DY" & }
+# Espace avant >> imperatif si un chiffre precede !! sinon rediction en entree
+bb () { $TE --$G=${LI}x1+151+$1 --$Z=0.28 $PARTE "less -Ps xx" & }
+LI3='1 2 3 4 5 6 7 8 9 0';LI2='A B C D E F G H I J';LI1='K L M N O P Q R S T'
+LI0='U V W X Y Z _ _ _ ef';clear;cat BIEN_CLAV;>ECHO;>ECHOL;>xx ; 
+
+for n in 0 1 2 3;do DX=$POSXC;DY=`expr $POSYC - $n \* $DTY`
+l1=LI$n; l2=\$$l1; eval l3=$l2 ; ee; sleep 1; # echo +++$l1---$l2,,,$l3...
+for j in $l3;do ff $j;done;sleep 1;done; # Touches du Clavier
+bb $BB;bb `expr $BB + $DTY`;bb `expr $BB + 2 \* $DTY` # 3 barres noires horiz
+
+sleep 1;$TE --$G=85x2+1+`expr $POSYC - $YHEAD` --$T='---  CLAVIER  ---' --$Z=$Z2 --$H -- sh -c "less -Ps HEAD"  &
+$TE --$G=85x4+1+`expr $POSYC + $YTRAIL` --$Z=$Z2 $PARTE "less -Ps TRAIL"  & 
+echo `ps -ef|grep ' less'|grep -v grep|grep -v zl`|sed 's/marco/\n/g'|cut -d ' ' -f 2 >LPID;read r; kill `cat LPID`
