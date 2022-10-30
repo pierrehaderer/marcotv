@@ -1,4 +1,0 @@
-echo -n $1 >> recher
-./chargeneTXT recher
-./kdiaTxtjpg tempo.png
-

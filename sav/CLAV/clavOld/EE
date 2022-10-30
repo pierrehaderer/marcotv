@@ -1,9 +1,0 @@
-##### # PARAM Pi4
-TE='mate-terminal';H='hide-menubar'; G=geometry; Z=zoom; Z1=1.0; 
-XmsgE=1045; YmsgE=810 # PARAM 1600
-L=`tail -1 ECHO` ; # a retablir sur l'ecran 1 couche
-if test "$L" = "E";then 
-l=`wc -l ECHO|cut -d ' ' -f 1`;h=`expr "$l" - 2` 
-head -n "$h" ECHO > ECHO1;cp ECHO1 ECHO;fi
-echo `cat ECHO` > ECHOL
-$TE --$G=48x6+$XmsgE+$YmsgE  --$H --$Z=$Z1 -- sh -c "cat msgE ECHOL > FF; less -Ps FF" 

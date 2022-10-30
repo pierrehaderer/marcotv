@@ -1,9 +1,0 @@
-#IMG=`ls FI*.jpg`
-
-(((sleep 2;kdialog --geometry 900x100+1610+940  --yesno ""; echo $? > YESNO; \
-kill `cat KPID`) &);  sleep 3; echo `ps -ef|grep imgbox|grep -v grep`|\
-cut -d ' ' -f 2 >> KPID; )& 
-
-#sleep 1;kdialog --geometry 900x100+500+680  --imgbox "$2" & 
-#sleep 1;kdialog --geometry 900x100+450+800  --imgbox "$1" 
-

@@ -1,9 +1,0 @@
-while true
-do
-ftp -vin 10.42.0.199 2223 <<%
-user marco marco99
-ls
-ls . sdx
-%
-sleep 2
-done

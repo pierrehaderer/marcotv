@@ -1,1 +1,0 @@
-kill `cat $F/ulPID $F/ulPID2`; echo >$F/FINISYL

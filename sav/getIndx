@@ -1,7 +1,0 @@
-SP=c
-if test `ls /dev/sd$SP`;then # echo SPECIAL # microsd Exist !!
-dd if=/dev/sdc of=INDX bs=1 skip=61000000 count=4 2>/dev/null
-echo _MICROSD_CREDIT :: `cat INDX`
-mount /dev/sd${SP}1 /n;echo MOUNT N/OK :: $?;umount /n
-else echo BAD # microsd NON detectee <o( ... KO Electriq ??
-fi

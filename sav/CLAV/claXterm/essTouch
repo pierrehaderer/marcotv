@@ -1,6 +1,0 @@
-echo | xclip
-#echo -e -n "q" | xclip
-mate-terminal --geometry=1x1-1+1 --zoom=3.5 -- sh -c "echo -n A;read r" &
-#mate-terminal --geometry=1x1-1+1 --profile=less --zoom=3.5 -- sh -c "echo -n A;read r" &
-#puis clicker avec molette !!!!
-echo FIN
