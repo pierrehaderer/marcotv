@@ -1,8 +1,0 @@
-TE='mate-terminal';H='hide-menubar';G=geometry;T=title;Z=zoom;
-Z1=1.7; Xm=715; Ym=865 ; PARTE="--$T= --$H -- sh -c"
-L=`tail -1 ECHO`;if test "$L" = "E";then l=`wc -l ECHO|cut -d ' ' -f 1`;
-h=`expr "$l" - 2`;head -n "$h" ECHO >ECHO1;cp ECHO1 ECHO;fi
-echo `cat ECHO` >ECHOL;echo 'kill `cat EEPID`;' >K;chmod 777 K
-echo `ps -ef|grep ' less'|grep -v root`|cut -d ' ' -f 2 >EEPID
-echo 'cat ECHOL msg_Trail2 > FF' > Q; chmod 777 Q
-$TE --$G=48x4+$Xm+$Ym --$Z=$Z1 $PARTE "./Q;less -Ps FF;echo>FINAL;./K" 

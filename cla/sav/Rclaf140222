@@ -1,9 +1,0 @@
-
-TERMI="mate-terminal"   #TERMI=tilix
-echo `ps -ef |grep "$TERMI"|grep -v grep` |cut -d ' ' -f 2 > termPID
-echo >FINI ; echo > ../FINISYL; > ../clafUP; rm ../F
-kill `cat clafPID`
-kill `cat ulPID`
-kill `cat ../ulPID`
-kill `cat termPID`
-sleep 2;cd ../; exec /home/marco/TL

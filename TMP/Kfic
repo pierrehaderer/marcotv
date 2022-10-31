@@ -1,7 +1,0 @@
-marco     159692  159686  2 10:48 ?        00:00:00 xterm -geometry 58x17+251+40 -fs 30 -fa default -fg green -e echo S11 >/dev/null;clear;cat zl;read r
-marco     159718  159692  0 10:48 pts/0    00:00:00 bash -c echo S11 >/dev/null;clear;cat zl;read r
-marco     159766  159686  3 10:48 ?        00:00:00 xterm -geometry 1x1+200+950 -fs 50 -fa default -fg green -e echo S11 >/dev/null;tput bold;tput rev;echo -n N;read r;echo non >TMP/NON
-marco     159776  159766  0 10:48 pts/3    00:00:00 bash -c echo S11 >/dev/null;tput bold;tput rev;echo -n N;read r;echo non >TMP/NON
-marco     159779  159693  2 10:48 ?        00:00:00 xterm -geometry 63x5+250+850 -fs 30 -fa default -fg green -e echo S11 >/dev/null;cat MSG/msg_choix;read r
-marco     159785  159779  0 10:48 pts/4    00:00:00 bash -c echo S11 >/dev/null;cat MSG/msg_choix;read r
-marco     159980  159977  0 10:48 ?        00:00:00 grep S11

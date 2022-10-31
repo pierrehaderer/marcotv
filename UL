@@ -1,26 +1,34 @@
-#----- UL :: PROCEDURE DE RECHERCHE ET DE LANCEMENT DU FILM -------------
-C=`~/TERM`; F=TMP;>$F/ECHO;>$F/ECHO2;>$F/ECHOL;>$F/lism4;>$F/PP; 
->$F/ulPID ; >$F/clafUP;>$F/termPID3;claDir=cla ; S21='echo S21'
-TM='mate-terminal';TX=xterm;G=geometry;T=title;H='hide-menubar';Z=zoom; R4K=0;
-PARTE="--$T= --$H -- sh -c";SE=0;Tcach=1;TP2='tput bold';TP1="tput civis;$TP2"
+# PROCEDURE DE RECHERCHE ET DE LANCEMENT DU FILM
+
+# --------------------------- VARIABLES -------------------------------
+C=`~/TERM`; F=TMP; S21='echo S21'; claDir=cla;
+TM='mate-terminal'; TX=xterm; G=geometry; T=title; H='hide-menubar'; Z=zoom; R4K=0;
+PARTE="--$T= --$H -- sh -c"; SE=0; Tcach=1; TP2='tput bold'; TP1="tput civis;$TP2"
 PARX='-fa default -fg green'; PARTX="$PARX -fs 50 -b 15"; S=sleep
-en () { echo -e -n "\n" |xclip; } #ee () { echo -e -n "q\n" |xclip ; }
+
+# ----------------------------- MENAGE -------------------------------
+>$F/ECHO ;>$F/ECHO2; >$F/ECHOL; >$F/lism4; >$F/PP; >$F/ulPID; >$F/clafUP; >$F/termPID3;
+
+# --------------------------- FONCTIONS -------------------------------
+en () { echo -e -n "\n" |xclip; }
+#ee () { echo -e -n "q\n" |xclip ; }
 clear; D=`cat $F/BOOTDEV`;if test $D = a;then DEV=b;else DEV=a;fi
 
-# ------------------------- AFFICHER LE MENU (avec sel) ---------------
+# ------------------------- CHECK INITIAL -----------------------------
 if test -e $F/F;then rm $F/F
 else >$F/F;ls /dev/sd$DEV;LS=$?;if test "$LS" -ne 0;then echo paDEV;exit;fi
+
+# ------------------ AFFICHER LE MENU PRINCIPAL -----------------------
 cd $claDir;./sel MSG/msg_MENU;cp $F/ECHO2 ../$F;cd ..;fi; 
 
+# ------------------- REDIRECTION VERS SOUS MENU ----------------------
 SE=`cat $F/ECHO2`; case $SE in
-1) #------------------------ 1ere ENTREE (avec MENU1) ------------------
-~/MENU1 ;; #AFFICHER TOUTE LA COLLECTION, et numeros du film choisi x,y
+1) # 1ere ENTREE - AFFICHER TOUTE LA COLLECTION
+~/MENU1 ;;
 
-2) #------------------------ 2eme ENTREE MENU2 (dont PLAYER) ----------
-# LISTE des films de CETTE !! MicroCarte
-# le Scroll souris dans less suffirait, SI on savait OU on en est !!!???
+2) # 2eme ENTREE - LISTE DES FILMS DE LA MICROSD ACTUELLE
 cd cla/num;ls -1 /m > $F/lism; LIG=`wc -l TMP/lism|cut -d ' ' -f 1`;en
-pr -m -T -J Uniq3- $F/lism >$F/lism2;./cla $F/lism2;cp $F/ECHO2 $F/PP ~/$F
+pr -m -T -J Uniq3- $F/lism > $F/lism2;./cla $F/lism2; cp $F/ECHO2 $F/PP ~/$F
 cd; grep `cat $F/ECHOL|tr -d ' '|cut -c 1-3` $F/lism2 >$F/lism3;
 echo `cat $F/lism3`|cut -d ' ' -f 2 >$F/lism4; ~/KIL S21; 
 #FI=`cat $F/lism4`;# nom film #cp /m/$FI /dev/null & # ? charge film<10s : 
@@ -33,5 +41,5 @@ X) xterm -$G $G12 -fs 25 $PARX -e "$CM12;read r" ;;
        *) echo autre Console ;; esac; 
 if test "$r" = 0;then sudo #umount /m; #Demonter la microsd ...
 rm $F/SD_UNMOUNTED; fi ;; 
-3) echo 'films par acteurs ...' ;;
+
 *) rm F ;; esac; # ENTREES NON ENCORE IMPLEMENTEES 
