@@ -3,15 +3,14 @@
 # -------------------------- VARIABLES -------------------------------------
 TM='mate-terminal'; TX=xterm; G=geometry; Z=zoom; TP1='tput bold';
 PARTE="--title= --hide-menubar -- sh -c"; PARX='-fa default -fg green';
-C=`$BASEDIR/TERM`; S=sleep; F=$BASEDIR/TMP; MSG=$BASEDIR/MSG; SID="S00=''"
+C=`$BASEDIR/TERM`; S=sleep; F=$BASEDIR/TMP; MSG=$BASEDIR/MSG; SID="S03=''"
+NS="echo 'NEXT' > $F/NEXT_SCREEN"
 
 # -------------------------- FONCTIONS -------------------------------------
 en () { echo -e -n "\n" |xclip ; } # RETURN dans xclip
 
-# ------------------------ MESSAGE BIENVENUE -------------------------------
-G1='35x9+251+250'; case $C in
-M) en;$TM --$G=$G1 --$Z=3.0 $PARTE "$SID;$S 2;cat $MSG/msg_BienTV; $S 4" & ;;
-X) en;$TX -$G $G1 -fs 50 $PARX -e "$SID;$S 2;$TP1;cat $MSG/msg_BienTV; $S 4" & ;;
-esac;p2=$!;$S 4; kill $p2
-
-echo 'NEXT' > $F/NEXT_SCREEN
+# ------------------------ MESSAGES ACCUEIL --------------------------------
+B1='55x20+600+10';case $C in
+M) en;$TE --$G=$B1 --$Z=1.7 $PARTE "$SID;$TP2;cat $MSG/msg_USER_Init;read r; $NS" ;; 
+X) en;$TX -$G $B1 $PARTX -e "$SID;$TP2;cat $MSG/msg_USER_Init;read r; $NS" ;;
+esac

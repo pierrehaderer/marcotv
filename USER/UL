@@ -1,36 +1,37 @@
 # PROCEDURE DE RECHERCHE ET DE LANCEMENT DU FILM
 
 # --------------------------- VARIABLES -------------------------------
-F=$BASEDIR/TMP;
+F=$BASEDIR/TMP; FNS=$F/NEXT_SCREEN
 
 # ----------------------------- MENAGE --------------------------------
-rm $F/NEXT_SCREEN; rm $F/ECHOL
+rm -f $F/NEXT_SCREEN; rm -f $F/ECHOL
 
 # --------------------------- FONCTIONS -------------------------------
-W () { while true; do sleep 0.2; if test -s $F/NEXT_SCREEN;
-then break; fi; done; NS=`cat $F/NEXT_SCREEN`; rm $F/NEXT_SCREEN;
-$BASEDIR/USER/KIL $1; }
+W () { while true; do sleep 0.2; if test -s $FNS; then break; fi; done; }
+K () { rm $FNS; $BASEDIR/USER/KIL $1; }
 
 # --------------------- LANCEMENT DES ECRANS --------------------------
 
 $BASEDIR/USER/WELCOME &
-W 'S00'
+W; K 'S00';
 $BASEDIR/USER/MESS1 &
-W 'S01'
+W; K 'S01'
 $BASEDIR/USER/MESS2 &
-W 'S02'
+W; K 'S02'
+$BASEDIR/USER/MESS3 &
+W; K 'S02'
 
 while true; do 
 $BASEDIR/USER/MAIN &
-W 'S11'
+W; NS=`cat $FNS`; K 'S11'
 case $NS in
 1) while true; do $BASEDIR/USER/LISTALL &
-W 'S21'
+W; NS=`cat $FNS`; K 'S21'
 if test ! "$NS" = 'RECHERCHE'; then break; else
 $BASEDIR/USER/RECH &
-W 'S31'; fi; done ;;
+W; K 'S31'; fi; done ;;
 2) $BASEDIR/USER/LISTSD &
-W 'S22' ;;
+W; K 'S22' ;;
 *) ;;# Pas implemente, retour au menu principal
 esac
 done
