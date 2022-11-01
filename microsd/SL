@@ -1,0 +1,63 @@
+# GESTION MICROSD
+
+# -------------------------- VARIABLES -------------------------------------
+F=$BASEDIR/TMP
+
+# ------------------------- TROUVER BOOTDEV --------------------------------
+if test `df|grep mmcblk|wc -l` -eq 1; then D=b #si boot mmcblk sur slot intern
+else D=`df|grep '/dev/sd'|grep boot|cut -c 8|tail -1`; fi #find BOOT dev
+echo $D >$F/BOOTDEV;
+if test $D = a;then SP=sdb;else SP=sda; fi 
+
+# -------------------- SURVEILLANCE DE LA MICROSD --------------------------
+#pour continuer de tester microsd, dont son arrachage intempestif !! :: 
+PLAY=mpv;
+echo $SP > $F/SP;CHKmpv=`ps -ef |grep $PLAY|wc -l`;echo $CHKdd >> $F/CHKdd
+if test $CHKmpv -eq 1;then #pas de test microsd pendant mpv ?, pour pas de hic
+if test `ls /dev/$SP`;then  echo $SP >> $F/NEWSD; # microsd Exist !
+PARTED=`sudo parted /dev/$SP 'unit B print'|grep $SP|grep Disk|cut -d ':' -f 2`
+echo $PARTED|cut -d 'B' -f 1 >$F/Parted #puis, INDEX microsd :: # ${PARTED%B}
+SEEKIDX=70000000  #dans le fichier bidon _ de 10M plein de -, sur la microsd
+sudo dd if=/dev/$SP of=$F/INDEX bs=1 skip=$SEEKIDX count=4 2>/dev/null
+ID=`cat $F/INDEX` # verif si l'INDEX commence par _ :: # test "${ID:0:1}" 
+if test `cat $F/INDEX|cut -c 1` != '_';then echo BUG sd IDX `date` >> $F/BUGmsd;fi
+# INDEX EST RECUPERE sinon, afficher un msg disant microsd KO !!!
+fi
+else rm $F/NEWSD; echo microsd pas montee # continue ou next ?
+fi 
+
+# ----------------------- TEST FAT32 MICROSD -------------------------------
+#df|grep "/dev/${SP}1" >/dev/null; GS=$?; # test MOUNT sd, SI !! sd demontee !!
+# ET UNIQUEMENT LORS DE SON INTRODUCTION !!! ... a faire ... !!!
+#if test $GS -eq 1;then N=`expr $N + 1` # boucle attente Nx2s test MOUNT
+# if test $N -eq 90 -a -f NEWSD;then N=0;sudo echo; #mount /dev/${SP}1 /n;MS=$?
+# MOUNTable ?
+#  if test $MS -eq 0; then echo -n _$MS >> FATOK ;sudo echo; #umount /n; # Yes
+#  else echo -n $MS >> FATNOK; IDX=`cat INDEX` # re-ecrire FAT !!
+# sudo dd if=microsd/$IDX/FAT$IDX of=/dev/$SP bs=1M
+#  fi # BAD FAT ?? Recopie FAT ... sur sd !!! ... a faire, et comme c'est FAT
+# d origine, tous Updates dessus seront perdus, si pas deja enregistres
+# sur Syteme ... et si recopie FAT marche pas, afficher a l ecran un mesg 
+# disant MICROSD KO !!! :: envoyer Mail P+JJ avec ID sd ?? Inconnu ??!!
+# ping -c 2 8.8.8.8; P=$?; if test $P -eq 0; then mail; fi
+# fi 
+#fi 
+
+
+# ----------------------- REGENERATION SILICIUM ----------------------------
+PA=100; PAmpv=5; # King 6x432 ; Sand 1x332 ; Chin 2x432 # 
+CHKdd=`ps -ef |grep ' dd '|grep -v grep|wc -l` # test surface partiel
+CHKmpv=`ps -ef |grep $PLAY|wc -l`;echo $CHKdd >>$F/CHKdd #lectur Video en cours?
+#selon puissance CPU et flots simultanes microsd, arreter dd pendant film mpv,
+# ET claf affichage pas fini !!!, ou ... lecture "pointille"!! microsd PAmpv ??
+# au 1er !!! CHKmpv, retarder testSD de 6 sec, pour gagner sur cp en Cache
+# et decalage d autant pour mpv, pour test Hic debut ACE
+#if test -s mpvUP; then sleep 6; >mpvUP; fi
+if test $CHKdd -eq 0 && test ! -s $F/clafUP; 
+then if test $CHKmpv -ne 2; then ./testSD `cat $F/Parted` $PA  &
+else #pendant mpv, la boucle 2 sec n'est plus utile ... ::
+for i in 1 2 3 4; do ./testSD `cat $F/Parted` $PAmpv ; done ; sleep 1 ;
+for i in 1 2 3 ; do ./testSD `cat $F/Parted` $PAmpv ; done ; sleep 1 
+./testSD `cat $F/Parted` $PAmpv ; ./testSD `cat $F/Parted` $PAmpv ;
+fi # KO si un ";" suit le "&" precedent !!! ----------------------------
+fi
