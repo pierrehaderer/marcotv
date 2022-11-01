@@ -35,6 +35,6 @@ M) en;$TE --$G=43x2+146+$M --$Z='2.9' $PARTE "$SID;cat $F/ECHOL;read r"  ;;
 X) en;$TX -$G 43x1+146+$M $PARX -fs 39 -e "$SID;cat $F/ECHOL;read r" ;;
 esac
 case $C in
-M) en;$TE --$G=85x3+1+$N --$Z='1.8' $PARTE "en;$SID;cat $MSG/msg_TRAIL2;read r;NS 'NEXT'" ;;
-X) en;$TX -$G 85x3+1+$N $PARX -fs 45 -e "en;$SID;cat $MSG/msg_TRAIL2;read r;NS 'NEXT'" ;;
+M) en;$TE --$G=85x3+1+$N --$Z='1.8' $PARTE "en;$SID;cat $MSG/msg_alfa_TRAIL2;read r;NS 'NEXT'" ;;
+X) en;$TX -$G 85x3+1+$N $PARX -fs 45 -e "en;$SID;cat $MSG/msg_alfa_TRAIL2;read r;NS 'NEXT'" ;;
 esac;

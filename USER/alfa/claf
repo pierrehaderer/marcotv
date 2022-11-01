@@ -36,7 +36,7 @@ if test $n != 3; then sleep 0.1 ;fi;done;
 en;bb $BB;bb `expr $BB + $DTY`;bb `expr $BB + 2 \* $DTY`
 
 # ----------- AFFICHAGE DES MESSAGES HEADER ET TRAIL ------------------
-sleep 0.1;N=`expr $POSYC - 577`; MH="cat $MSG/msg_HEAD";MT="cat $MSG/msg_TRAIL2"
+sleep 0.1;N=`expr $POSYC - 577`; MH="cat $MSG/msg_alfa_HEAD";MT="cat $MSG/msg_alfa_TRAIL2"
 YM=`expr $POSYC + 110`;case $C in # puis Messages HEAD et TRAIL ::
 M) en;$TE --$G=79x2+1+$N --$T=$CLA --$Z='1.8' $TI "$SID;$MH;read r;" & 
 en;$TE --$G=79x5+1+$YM --$Z='1.8' $PARTE "$SID;$MT;read r;NS 'NEXT'" & ;;
