@@ -7,6 +7,6 @@ mkdir -p $BASEDIR/TMP
 ./USER/UL &
 
 # Gestion des microsd
-./microsd/SL &
+#./microsd/SL &
 
 sleep 1

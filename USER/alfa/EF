@@ -10,7 +10,7 @@ PARX='-fa default -fg green'; SID="S31=''"
 ee () { echo -e -n "q" |xclip ; }
 en () { echo |xclip ; }
 bb () { $TE --$G=497x1+148+$1 --$Z=0.28 $PARTE "less -Ps $F/xx" & }
-NS () {echo '$1' > $F/NEXT_SCREEN}
+NS () { echo '$1' > $F/NEXT_SCREEN; }
 
 
 # --------------------RETABLIR LA TOUCHE ------------------------------

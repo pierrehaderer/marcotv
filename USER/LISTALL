@@ -11,7 +11,7 @@ x () { $TX -$G 1x1+$Xpos+$1 $PARTX -e "$SID;$TP1;echo -n ' ' $2;read r" &
 echo $! >> $F/claXpid; } # appel :: x 300 7 
 en () { echo -e -n "\n" |xclip; }
 ee () { echo -e -n "q\n" |xclip ; }
-NS () {echo '$1' > $F/NEXT_SCREEN}
+NS () { echo '$1' > $F/NEXT_SCREEN; }
 clear; xrandr|grep current|grep 3840;if test $? -eq 0;then R4K=1;fi
 
 #-------------------------- 1ere ENTREE DU MENU -----------------------

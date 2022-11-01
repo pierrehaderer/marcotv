@@ -4,7 +4,6 @@
 TM='mate-terminal'; TX=xterm; G=geometry; Z=zoom; TP1='tput bold';
 PARTE="--title= --hide-menubar -- sh -c"; PARX='-fa default -fg green';
 C=`$BASEDIR/TERM`; S=sleep; F=$BASEDIR/TMP; MSG=$BASEDIR/MSG; SID="S00=''"
-NS="echo 'NEXT' > $F/NEXT_SCREEN"
 
 # -------------------------- FONCTIONS -------------------------------------
 en () { echo -e -n "\n" |xclip ; } # RETURN dans xclip
@@ -15,5 +14,7 @@ M) en;$TM --$G=$G1 --$Z=3.0 $PARTE "$SID;$S 2;cat $MSG/msg_BienTV; $S 4" & ;;
 X) en;$TX -$G $G1 -fs 50 $PARX -e "$SID;$S 2;$TP1;cat $MSG/msg_BienTV; $S 4" & ;;
 esac;p2=$!;$S 4; kill $p2
 
-$NS
-
+echo "Pierre"
+echo 'NEXT' > $F/NEXT_SCREEN
+echo "Pierre"
+sleep 1

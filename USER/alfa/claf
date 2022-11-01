@@ -20,7 +20,7 @@ bb () { case $C in
 M) $TE --$G=497x1+151+$1 --$Z='0.28' $PARTE "$SID;cat $F/xx;read r" & ;;
 X) xterm -$G 69x1+151+$1 $PARX -fs 25 -e "$SID;$TP2;cat $F/xx;read r" & ;;
 esac; }
-NS () {echo '$1' > $F/NEXT_SCREEN}
+NS () { echo '$1' > $F/NEXT_SCREEN; }
 
 # ------------------ AFFICHAGE DU CLAVIER ALFA ------------------------
 LI3='1 2 3 4 5 6 7 8 9 0';LI2='A Z E R T Y U I O P';LI1='Q S D F G H J K L M'

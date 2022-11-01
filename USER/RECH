@@ -9,7 +9,7 @@ PARX='-fa default -fg green'; PARTX="$PARX -fs 50 -b 15"; S=sleep; SID="S31=''"
 # --------------------------- FONCTIONS -------------------------------
 en () { echo -e -n "\n" |xclip; }
 ee () { echo -e -n "q\n" |xclip ; }
-NS () {echo '$1' > $F/NEXT_SCREEN}
+NS () { echo '$1' > $F/NEXT_SCREEN; }
 clear; xrandr|grep current|grep 3840;if test $? -eq 0;then R4K=1;fi
 
 # --------------------- LANCER LE CLAVIER ALFA ------------------------
