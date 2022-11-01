@@ -1,6 +1,7 @@
 # PROCEDURE DE DEMARRAGE DE LA BOX MULTIMEDIA ... ET GESTION MICROSD
 
 D=`dirname $0`; export BASEDIR=`cd $D; pwd`
+mkdir -p $BASEDIR/TMP
 
 # Gestion des ecrans et du lancement des films
 ./USER/UL &
