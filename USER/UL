@@ -19,7 +19,7 @@ W; K 'S01'
 $BASEDIR/USER/MESS2 &
 W; K 'S02'
 $BASEDIR/USER/MESS3 &
-W; K 'S02'
+W; K 'S03'
 
 while true; do 
 $BASEDIR/USER/MAIN &

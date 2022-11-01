@@ -11,7 +11,6 @@ x () { $TX -$G 1x1+$Xpos+$1 $PARTX -e "$SID;$TP1;echo -n ' ' $2;read r" &
 echo $! >> $F/claXpid; } # appel :: x 300 7 
 en () { echo -e -n "\n" |xclip; }
 ee () { echo -e -n "q\n" |xclip ; }
-NS='NS () { echo "$1" > $F/NEXT_SCREEN; }; NS '
 xrandr|grep current|grep 3840;if test $? -eq 0;then R4K=1;fi
 
 #-------------------------- 1ere ENTREE DU MENU -----------------------
@@ -31,11 +30,11 @@ X) $TX -$G $G2 -fs 30 $PARX -e "$SID;;$CM2" ;;
 esac ) &
 
 # ------------- AFFICHER LES TOUCHES RECHERCHE/RETOUR -----------------
-CM3="tput rev;echo -n Recherche;read r;$NS 'RECHERCHE'";G3='200+850'; case $C in
+CM3="tput rev;echo -n Recherche;read r;echo 'RECHERCHE' > $F/NEXT_SCREEN;";G3='200+850'; case $C in
 M) en;$TM --$G=10x1+$G3 --$Z=2.9 $PARTE "$SID;$CM3" & ;;
 X) en;$TX -$G 10x1+$G3 -fs 50 $PARX -e "$SID;tput bold;$CM3" & ;;
 esac; $S 1;
-G4='200+950';CM4="tput rev;echo -n Retour;read r;$NS 'MAIN'"; case $C in
+G4='200+950';CM4="tput rev;echo -n Retour;read r;echo 'MAIN' > $F/NEXT_SCREEN;"; case $C in
 M) en;$TM --$G=6x1+$G4 --$Z=2.9 $PARTE "$SID;$CM4" & ;;
 X) en;$TX -$G 6x1+$G4 -fs 50 $PARX -e "$SID;tput bold;$CM4" & ;;
 esac; $S 2; 

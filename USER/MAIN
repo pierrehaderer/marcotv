@@ -10,9 +10,8 @@ D1='1x1+560';
 
 # --------------------------- FONCTIONS -------------------------------
 en () { echo -e -n "\n" |xclip; } 
-NS='NS () { echo "$1" > $F/NEXT_SCREEN; }; NS '
-t () { $TE "$PARG"560+$1 --$Z=2.8 $PARTE "$SID;$TP1;$TP3;echo -n _;read r;$NS $2" & } 
-x () { $TX -$G $D1+$1 $PARX -fs 35 -e "$SID;$TP1;$TP3;echo -n _;read r;$NS $2" & }
+t () { $TE "$PARG"560+$1 --$Z=2.8 $PARTE "$SID;$TP1;$TP3;echo -n _;read r;echo "$2" > $F/NEXT_SCREEN;" & } 
+x () { $TX -$G $D1+$1 $PARX -fs 35 -e "$SID;$TP1;$TP3;echo -n _;read r;echo "$2" > $F/NEXT_SCREEN;" & }
 
 # ------------- MESSAGE INITIAL + BOUTON RESET INITIAL ----------------
 en;B1='55x20+600+10';case $C in

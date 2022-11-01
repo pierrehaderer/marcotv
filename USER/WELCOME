@@ -10,8 +10,11 @@ en () { echo -e -n "\n" |xclip ; } # RETURN dans xclip
 
 # ------------------------ MESSAGE BIENVENUE -------------------------------
 G1='35x9+251+250'; case $C in
-M) en;$TM --$G=$G1 --$Z=3.0 $PARTE "$SID;$S 2;cat $MSG/msg_BienTV; $S 4" & ;;
-X) en;$TX -$G $G1 -fs 50 $PARX -e "$SID;$S 2;$TP1;cat $MSG/msg_BienTV; $S 4" & ;;
-esac;p2=$!;$S 4; kill $p2
+M) en;$TM --$G=$G1 --$Z=3.0 $PARTE "$SID;cat $MSG/msg_BienTV; $S 4" & ;;
+X) en;$TX -$G $G1 -fs 50 $PARX -e "$SID;$TP1;cat $MSG/msg_BienTV; $S 4" & ;;
+esac;
 
+sleep 4
 echo 'NEXT' > $F/NEXT_SCREEN
+
+
