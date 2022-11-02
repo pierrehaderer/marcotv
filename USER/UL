@@ -8,7 +8,7 @@ rm -f $F/NEXT_SCREEN; rm -f $F/ECHOL
 
 # --------------------------- FONCTIONS -------------------------------
 W () { while true; do sleep 0.2; if test -s $FNS; then break; fi; done; }
-K () { rm $FNS; $BASEDIR/USER/KIL $1; }
+K () { $BASEDIR/USER/KIL $1; sleep 0.1; rm $FNS; }
 
 # --------------------- LANCEMENT DES ECRANS --------------------------
 

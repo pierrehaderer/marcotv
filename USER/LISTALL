@@ -1,40 +1,38 @@
 # AFFICHAGE DE LA LISTE DES FILMS
 
 # --------------------------- VARIABLES -------------------------------
-C=`~/TERM`; F=$BASEDIR/TMP; MSG=$BASEDIR/MSG; TM='mate-terminal'; TX=xterm;
+C=`$BASEDIR/TERM`; F=$BASEDIR/TMP; MSG=$BASEDIR/MSG; TM='mate-terminal'; TX=xterm;
 G=geometry; Z=zoom; R4K=0; TP2='tput bold'; TP1="tput civis;$TP2";
 PARTE="--title= --hide-menubar -- sh -c"
 PARX='-fa default -fg green'; PARTX="$PARX -fs 50 -b 15"; S=sleep; SID="S21=''"
 
 # --------------------------- FONCTIONS -------------------------------
-x () { $TX -$G 1x1+$Xpos+$1 $PARTX -e "$SID;$TP1;echo -n ' ' $2;read r" &
-echo $! >> $F/claXpid; } # appel :: x 300 7 
 en () { echo -e -n "\n" |xclip; }
 ee () { echo -e -n "q\n" |xclip ; }
 xrandr|grep current|grep 3840;if test $? -eq 0;then R4K=1;fi
 
 #-------------------------- 1ere ENTREE DU MENU -----------------------
 #AFFICHER TOUS LES FILMS DE LA COLLECTION
-if test -s $F/ECHOL; then FILT=`cat $F/ECHOL`; L="grep -i `$FILT` $BASEDIR/zl 2>/dev/null";
+if test -s $F/ECHOL; then FILT=`cat $F/ECHOL | tr -d "\n"`; L="grep -i '$FILT' $BASEDIR/zl 2>/dev/null";
 else L="cat $BASEDIR/zl"; fi
 # CM1='less -Ps --mouse zl'; # on pourrait laisser less pour scroll a partir du debut ...
-CM2='$L;read r'; # tput civis; si curseur genant !!
+CM1="$L;read r"; # tput civis; si curseur genant !!
 G1='58x17+251+40';
 case $C in 
-M) $TM --$G=$G1 --$Z=2.0 $PARTE "$SID;;$CM2" & ;;
-X) $TX -$G $G1 -fs 30 $PARX -e "$SID;;$CM2" & ;;
+M) $TM --$G=$G1 --$Z=2.0 $PARTE "$SID;$CM1" & ;;
+X) $TX -$G $G1 -fs 30 $PARX -e "$SID;$CM1" & ;;
 esac; 
-($S 2; G2='63x5+250+850';CM2='cat $MSG/msg_choix;read r'; case $C in
-M) $TM --$G=$G2 --$Z=1.8 $PARTE "$SID;;$CM2" ;; 
-X) $TX -$G $G2 -fs 30 $PARX -e "$SID;;$CM2" ;; 
-esac ) &
+G2='63x5+250+850';CM2="cat $MSG/msg_choix;read r"; case $C in
+M) $TM --$G=$G2 --$Z=1.8 $PARTE "$SID;$CM2" & ;; 
+X) $TX -$G $G2 -fs 30 $PARX -e "$SID;$CM2" & ;; 
+esac;
 
 # ------------- AFFICHER LES TOUCHES RECHERCHE/RETOUR -----------------
 CM3="tput rev;echo -n Recherche;read r;echo 'RECHERCHE' > $F/NEXT_SCREEN;";G3='200+850'; case $C in
 M) en;$TM --$G=10x1+$G3 --$Z=2.9 $PARTE "$SID;$CM3" & ;;
 X) en;$TX -$G 10x1+$G3 -fs 50 $PARX -e "$SID;tput bold;$CM3" & ;;
-esac; $S 1;
+esac;
 G4='200+950';CM4="tput rev;echo -n Retour;read r;echo 'MAIN' > $F/NEXT_SCREEN;"; case $C in
 M) en;$TM --$G=6x1+$G4 --$Z=2.9 $PARTE "$SID;$CM4" & ;;
 X) en;$TX -$G 6x1+$G4 -fs 50 $PARX -e "$SID;tput bold;$CM4" & ;;
-esac; $S 2; 
+esac; 
