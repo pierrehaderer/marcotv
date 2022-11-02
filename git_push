@@ -1,0 +1,4 @@
+cd ~/repo/marcotv
+git add .
+git commit -m "MARCO"
+git push
