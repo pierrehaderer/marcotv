@@ -1,0 +1,1 @@
+for p in `ps -ef |egrep "S31|S21|S11" | grep -v grep | tr -s ' ' | cut -f 2 -d ' '`; do kill $p; done

@@ -1,16 +1,15 @@
 # AFFICHE LE CALVIER ALPHA NUMERIQUE
 
 # --------------------------- VARIABLES -------------------------------
-C=`~$BASEDIR/TERM`;F=$BASEDIR/TMP; MSG=$BASEDIR/MSG; rm $F/clafPID ../$F/clafUP;
+C=`$BASEDIR/TERM`;F=$BASEDIR/TMP; MSG=$BASEDIR/MSG; rm -f $F/clafPID $F/clafUP;
 DTY=160;POSYC=650;BB=275; 
-TE='mate-terminal';G=geometry;T=title;H='hide-menubar';Z=zoom; 
+TE='mate-terminal'; tx=xterm; G=geometry; T=title; H='hide-menubar'; Z=zoom; 
 TI="--$H -- sh -c";PARTE="--$T= $TI"; PARG="--$G=1x1+"; CLA=_____CLAVIER_____
 PARX='-fa default -fg green'; TP1='tput bold'; TP2='tput civis'; TX=xterm; SID="S31=''"
 
 # --------------------------- FONCTIONS -------------------------------
 ee () { echo -e -n "q" |xclip ; }
 en () { echo |xclip ; }
-pp () { echo $! >>TMP/clafPID; }
 #sl () { b=0; while test $b -lt $1; do b=`expr $b + 1`; done; }
 ff () { pa="read r;echo $1 > $F/ECHO;$BASEDIR/USER/alfa/EF $2 $3"
 $TE ${PARG}$2+$3 --$Z='2.9' $PARTE "$SID;$TP2;echo -n \" $1\";$pa" & }

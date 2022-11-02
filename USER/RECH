@@ -10,12 +10,8 @@ PARX='-fa default -fg green'; PARTX="$PARX -fs 50 -b 15"; S=sleep; SID="S31=''"
 en () { echo -e -n "\n" |xclip; }
 ee () { echo -e -n "q\n" |xclip ; }
 NS="echo 'RECH' > $F/NEXT_SCREEN"
-clear; xrandr|grep current|grep 3840;if test $? -eq 0;then R4K=1;fi
+xrandr|grep current|grep 3840;if test $? -eq 0;then R4K=1;fi
 
 # --------------------- LANCER LE CLAVIER ALFA ------------------------
 $BASEDIR/USER/alfa/claf
 
-G8='80x5+10+750'; CM2="$SID;cat $MSG/msg_cherchLess;read r;$NS"; case $C in
-M) en;$TM --$G=$G8 --$Z=1.8 $PARTE "$CM2" & ;;
-X) en;$TX -$G $G8 -fs 30 $PARX -e "$CM2" &  ;;
-esac;

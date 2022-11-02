@@ -13,8 +13,9 @@ xrandr|grep current|grep 3840;if test $? -eq 0;then R4K=1;fi
 
 #-------------------------- 1ere ENTREE DU MENU -----------------------
 #AFFICHER TOUS LES FILMS DE LA COLLECTION
-if test -s $F/ECHOL; then FILT=`cat $F/ECHOL | tr -d "\n"`; L="grep -i '$FILT' $BASEDIR/zl 2>/dev/null";
+if test -s $F/ECHOL; then FILT=`cat $F/ECHOL | tr -d "\n"`; L="grep -i $FILT $BASEDIR/zl 2>/dev/null";
 else L="cat $BASEDIR/zl"; fi
+echo $L > $F/PIERRE2
 # CM1='less -Ps --mouse zl'; # on pourrait laisser less pour scroll a partir du debut ...
 CM1="$L;read r"; # tput civis; si curseur genant !!
 G1='58x17+251+40';
