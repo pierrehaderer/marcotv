@@ -20,6 +20,7 @@ M) $TE --$G=497x1+151+$1 --$Z='0.28' $PARTE "$SID;cat $F/xx;read r" & ;;
 X) xterm -$G 69x1+151+$1 $PARX -fs 25 -e "$SID;$TP2;cat $F/xx;read r" & ;;
 esac; }
 NS () { echo '$1' > $F/NEXT_SCREEN; }
+NS1="echo $1 > $F/NEXT_SCREEN;"
 
 # ------------------ AFFICHAGE DU CLAVIER ALFA ------------------------
 LI3='1 2 3 4 5 6 7 8 9 0';LI2='A Z E R T Y U I O P';LI1='Q S D F G H J K L M'
@@ -29,7 +30,7 @@ en;for n in 0 1 2 3;do DX=1;DY=`expr $POSYC - $n \* $DTY` #Touch Clavier
 l1=LI$n;l2=\$$l1;eval l3=$l2;if test $n != 0;then sleep 0.1;fi 
 for j in $l3;do DX=`expr $DX + 150`; case $C in
 M) ff $j $DX $DY ;;
-X) XX $j $DX $DY ;;
+X) XX $j $DX $DY; sleep 0.2 ;;
 esac; done
 if test $n != 3; then sleep 0.1 ;fi;done;
 en;bb $BB;bb `expr $BB + $DTY`;bb `expr $BB + 2 \* $DTY`
@@ -40,5 +41,8 @@ YM=`expr $POSYC + 110`;case $C in # puis Messages HEAD et TRAIL ::
 M) en;$TE --$G=79x2+1+$N --$T=$CLA --$Z='1.8' $TI "$SID;$MH;read r;" & 
 en;$TE --$G=79x5+1+$YM --$Z='1.8' $PARTE "$SID;$MT;read r;NS 'NEXT'" & ;;
 X) en;$TX -$G 79x2+1+$N $PARX -fs 25 -e "$SID;$TP1;$MH;read r;" &
-en;$TX -$G 79x5+1+$YM $PARX -fs 25 -e "$SID;$TP1;$MT;read r;NS 'NEXT'" & ;;
+en;$TX -$G 79x5+1+$YM $PARX -fs 25 -e "$SID;$TP1;$MT;read r; $NS1 'NEXT';" & ;; 
+# le nom de Fonction NS n'est PAS substitue ... !!, seulement en Variable ... ::
+# la substitution de Variable est + "Portable" ...
+#en;$TX -$G 79x5+1+$YM $PARX -fs 25 -e "$SID;$TP1;$MT;read r; NS 'NEXT'" & ;;
 esac;

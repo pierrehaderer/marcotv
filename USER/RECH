@@ -13,5 +13,8 @@ NS="echo 'RECH' > $F/NEXT_SCREEN"
 xrandr|grep current|grep 3840;if test $? -eq 0;then R4K=1;fi
 
 # --------------------- LANCER LE CLAVIER ALFA ------------------------
-$BASEDIR/USER/alfa/claf
+cd $BASEDIR/USER/alfa
+./claf
+# sleep 9;../KIL S31 # trop violent :: tue tout apres affichage des touches
+# $BASEDIR/USER/alfa/claf
 
