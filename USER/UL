@@ -32,7 +32,7 @@ $BASEDIR/USER/RECH &
 W; K 'S31'; fi; done ;;
 2) $BASEDIR/USER/LISTSD &
 W; K 'S22' ;;
-*) ;;# Pas implemente, retour au menu principal
+*) ;;  # Pas implemente, retour au menu principal
 esac
 done
 
