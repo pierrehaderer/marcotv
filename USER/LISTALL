@@ -13,7 +13,8 @@ xrandr|grep current|grep 3840;if test $? -eq 0;then R4K=1;fi
 
 #-------------------------- 1ere ENTREE DU MENU -----------------------
 #AFFICHER TOUS LES FILMS DE LA COLLECTION
-if test -s $F/ECHOL; then FILT=`cat $F/ECHOL | tr -d "\n"`; L="grep -i $FILT $BASEDIR/zl 2>/dev/null";
+if test -s $F/ECHOL; then 
+FILT=`cat $F/ECHOL | tr -d "\n"`; L="grep -i $FILT $BASEDIR/zl 2>/dev/null";
 else L="cat $BASEDIR/zl"; fi
 # CM1='less -Ps --mouse zl'; # on pourrait laisser less pour scroll a partir du debut ...
 CM1="$L;read r"; # tput civis; si curseur genant !!
@@ -22,10 +23,15 @@ case $C in
 M) $TM --$G=$G1 --$Z=2.0 $PARTE "$SID;$CM1" & ;;
 X) $TX -$G $G1 -fs 30 $PARX -e "$SID;$CM1" & ;;
 esac; 
-G2='63x5+250+850';CM2="cat $MSG/msg_choix;read r"; case $C in
+# le msg est different selon qu'on est  en fain de recherche ou au debut ...
+#
+if test -s $F/ECHOL; then MS=msg_cherchLess; else MS=msg_choix;  fi
+G2='66x5+250+850';CM2="cat $MSG/$MS;read r"; case $C in
 M) $TM --$G=$G2 --$Z=1.8 $PARTE "$SID;$CM2" & ;; 
 X) $TX -$G $G2 -fs 30 $PARX -e "$SID;$CM2" & ;; 
 esac;
+> $F/ECHOL # apres usage, il faut remettre ECHOL a zero, sinon le passage
+# suivant ne reaffiche pas la liste des films ...
 
 # ------------- AFFICHER LES TOUCHES RECHERCHE/RETOUR -----------------
 CM3="tput civis;echo -n Recherche;read r;echo 'RECHERCHE' > $F/NEXT_SCREEN;";G3='2+890'; case $C in

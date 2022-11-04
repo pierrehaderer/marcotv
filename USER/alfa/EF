@@ -15,12 +15,16 @@ bb () { $TE --$G=497x1+148+$1 --$Z=0.28 $PARTE "less -Ps $F/xx" & }
 L=`cat $F/ECHO`;
 case $C in
 M) $TE --$G=1x1+$x+$y --$Z='2.9' $PARTE "$SID;echo -n $L;read r;echo -n $L > $F/ECHO;$BASEDIR/USER/alfa/EF $x $y" & ;;
+#X) $TX -$G 1x1+$x+$y $PARX -fs 45 -e "$SID;echo -n $L;read r;echo -n $L > $F/ECHO;/home/marco/repo/marcotv/USER/alfa/EFx $x $y" & ;;
 X) $TX -$G 1x1+$x+$y $PARX -fs 45 -e "$SID;echo -n $L;read r;echo -n $L > $F/ECHO;$BASEDIR/USER/alfa/EF $x $y" & ;;
 esac;
-if test "$L" = "ef"; then
+if test "$L" = "ef"; then # echo ef reconnu >> trace
 # ----------------- GESTION DE L'EFFACEMENT ---------------------------
-l=`wc -l $F/ECHOL|cut -d ' ' -f 1`
-h=`expr "$l" - 1`; head -n "$h" $F/ECHOL > $F/ECHOLTMP; mv $F/ECHOLTMP $F/ECHOL;
+l=`cat $F/ECHOL|wc -c`;
+#l=`wc -l $F/ECHOL|cut -d ' ' -f 1`;
+#(echo wc $l ; cat $F/ECHOL) >> trace
+# code debug galere reste, tant que pas sur !!
+h=`expr "$l" - 1`; head -c "$h" $F/ECHOL > $F/ECHOLTMP; cp $F/ECHOLTMP $F/ECHOL;
 # ---------------- GESTION DES AUTRES TOUCHES -------------------------
 else echo -n $L >> $F/ECHOL; fi
 
