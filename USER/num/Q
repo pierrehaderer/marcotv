@@ -1,1 +1,1 @@
-cat TMP/ECHOL MSG/msg_Trail2 >TMP/FF; kill 20362
+cat /home/marco/repo/marcotv/TMP/ECHOL /home/marco/repo/marcotv/MSG/msg_Trail2 >/home/marco/repo/marcotv/TMP/FF; kill 3550

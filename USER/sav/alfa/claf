@@ -1,0 +1,48 @@
+# AFFICHE LE CALVIER ALPHA NUMERIQUE
+
+# --------------------------- VARIABLES -------------------------------
+C=`$BASEDIR/TERM`;F=$BASEDIR/TMP; MSG=$BASEDIR/MSG; rm -f $F/clafPID $F/clafUP;
+DTY=160;POSYC=650;BB=275; 
+TE='mate-terminal'; tx=xterm; G=geometry; T=title; H='hide-menubar'; Z=zoom; 
+TI="--$H -- sh -c";PARTE="--$T= $TI"; PARG="--$G=1x1+"; CLA=_____CLAVIER_____
+PARX='-fa default -fg green'; TP1='tput bold'; TP2='tput civis'; TX=xterm; SID="S31=''"
+
+# --------------------------- FONCTIONS -------------------------------
+ee () { echo -e -n "q" |xclip ; }
+en () { echo |xclip ; }
+#sl () { b=0; while test $b -lt $1; do b=`expr $b + 1`; done; }
+ff () { pa="read r;echo $1 > $F/ECHO;$BASEDIR/USER/alfa/EF $2 $3"
+$TE ${PARG}$2+$3 --$Z='2.9' $PARTE "$SID;$TP2;echo -n \" $1\";$pa" & }
+XX () { pa="read r;echo $1 > $F/ECHO;$BASEDIR/USER/alfa/EF $2 $3"
+xterm -$G 1x1+$2+$3 $PARX -fs 45 -e "$SID;$TP1;echo -n \" $1\";$pa" & }
+bb () { case $C in
+M) $TE --$G=497x1+151+$1 --$Z='0.28' $PARTE "$SID;cat $F/xx;read r" & ;;
+X) xterm -$G 69x1+151+$1 $PARX -fs 25 -e "$SID;$TP2;cat $F/xx;read r" & ;;
+esac; }
+NS () { echo '$1' > $F/NEXT_SCREEN; }
+NS1="echo $1 > $F/NEXT_SCREEN;"
+
+# ------------------ AFFICHAGE DU CLAVIER ALFA ------------------------
+LI3='1 2 3 4 5 6 7 8 9 0';LI2='A Z E R T Y U I O P';LI1='Q S D F G H J K L M'
+LI0='W X C V B N _ _ _ ef';
+>$F/ECHO;>$F/ECHOL;>$F/xx;>$F/ECHOL2x;>$F/ECHOL3x;>$F/ECHOL2;>$F/ECHOL3; 
+en;for n in 0 1 2 3;do DX=1;DY=`expr $POSYC - $n \* $DTY` #Touch Clavier
+l1=LI$n;l2=\$$l1;eval l3=$l2;if test $n != 0;then sleep 0.1;fi 
+for j in $l3;do DX=`expr $DX + 150`; case $C in
+M) ff $j $DX $DY ;;
+X) XX $j $DX $DY; sleep 0.2 ;;
+esac; done
+if test $n != 3; then sleep 0.1 ;fi;done;
+en;bb $BB;bb `expr $BB + $DTY`;bb `expr $BB + 2 \* $DTY`
+
+# ----------- AFFICHAGE DES MESSAGES HEADER ET TRAIL ------------------
+sleep 0.1;N=`expr $POSYC - 577`; MH="cat $MSG/msg_alfa_HEAD";MT="cat $MSG/msg_alfa_TRAIL2"
+YM=`expr $POSYC + 110`;case $C in # puis Messages HEAD et TRAIL ::
+M) en;$TE --$G=79x2+1+$N --$T=$CLA --$Z='1.8' $TI "$SID;$MH;read r;" & 
+en;$TE --$G=79x5+1+$YM --$Z='1.8' $PARTE "$SID;$MT;read r;NS 'NEXT'" & ;;
+X) en;$TX -$G 79x2+1+$N $PARX -fs 25 -e "$SID;$TP1;$MH;read r;" &
+en;$TX -$G 79x5+1+$YM $PARX -fs 25 -e "$SID;$TP1;$MT;read r; $NS1 'NEXT';" & ;; 
+# le nom de Fonction NS n'est PAS substitue ... !!, seulement en Variable ... ::
+# la substitution de Variable est + "Portable" ...
+#en;$TX -$G 79x5+1+$YM $PARX -fs 25 -e "$SID;$TP1;$MT;read r; NS 'NEXT'" & ;;
+esac;

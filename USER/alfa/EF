@@ -1,4 +1,4 @@
-# Creation d'une touche cliquee
+# ------------------- Creation d'une touche cliquee -------------------
 
 # --------------------------- VARIABLES -------------------------------
 C=`$BASEDIR/TERM`; F=$BASEDIR/TMP; MSG=$BASEDIR/MSG; x=$1; y=$2 
@@ -12,19 +12,15 @@ en () { echo |xclip ; }
 bb () { $TE --$G=497x1+148+$1 --$Z=0.28 $PARTE "less -Ps $F/xx" & }
 
 # --------------------RETABLIR LA TOUCHE ------------------------------
-L=`cat $F/ECHO`;
-case $C in
-M) $TE --$G=1x1+$x+$y --$Z='2.9' $PARTE "$SID;echo -n $L;read r;echo -n $L > $F/ECHO;$BASEDIR/USER/alfa/EF $x $y" & ;;
-#X) $TX -$G 1x1+$x+$y $PARX -fs 45 -e "$SID;echo -n $L;read r;echo -n $L > $F/ECHO;/home/marco/repo/marcotv/USER/alfa/EFx $x $y" & ;;
-X) $TX -$G 1x1+$x+$y $PARX -fs 45 -e "$SID;echo -n $L;read r;echo -n $L > $F/ECHO;$BASEDIR/USER/alfa/EF $x $y" & ;;
+L=`cat $F/ECHO`; V3="$SID;echo -n $L;read r;echo -n $L >$F/ECHO" 
+G7="1x1+$x+$y"; case $C in
+M) $TE --$G=$G7 --$Z='2.9' $PARTE "$V3;$BASEDIR/USER/alfa/EF $x $y" & ;;
+X) $TX -$G $G7 $PARX -fs 45 -e "$V3;$BASEDIR/USER/alfa/EF $x $y" & ;;
 esac;
-if test "$L" = "ef"; then # echo ef reconnu >> trace
+
 # ----------------- GESTION DE L'EFFACEMENT ---------------------------
-l=`cat $F/ECHOL|wc -c`;
-#l=`wc -l $F/ECHOL|cut -d ' ' -f 1`;
-#(echo wc $l ; cat $F/ECHOL) >> trace
-# code debug galere reste, tant que pas sur !!
-h=`expr "$l" - 1`; head -c "$h" $F/ECHOL > $F/ECHOLTMP; cp $F/ECHOLTMP $F/ECHOL;
+if test "$L" = "ef"; then l=`cat $F/ECHOL|wc -c`; h=`expr "$l" - 1`;
+head -c "$h" $F/ECHOL > $F/ECHOLTMP;cp $F/ECHOLTMP $F/ECHOL;
 # ---------------- GESTION DES AUTRES TOUCHES -------------------------
 else echo -n $L >> $F/ECHOL; fi
 
@@ -34,7 +30,7 @@ case $C in
 M) en;$TE --$G=43x2+146+$M --$Z='2.9' $PARTE "$SID;cat $F/ECHOL;read r"  ;;
 X) en;$TX -$G 43x1+146+$M $PARX -fs 39 -e "$SID;cat $F/ECHOL;read r" ;;
 esac
-case $C in
-M) en;$TE --$G=85x3+1+$N --$Z='1.8' $PARTE "en;$SID;cat $MSG/msg_alfa_TRAIL2;read r;echo 'NEXT' > $F/NEXT_SCREEN;" ;;
-X) en;$TX -$G 85x3+1+$N $PARX -fs 45 -e "en;$SID;cat $MSG/msg_alfa_TRAIL2;read r;echo 'NEXT' > $F/NEXT_SCREEN;" ;;
+G8="cat $MSG/msg_alfa_TRAIL2;read r;echo NEXT >$F/NEXT_SCREEN";case $C in
+M) en;$TE --$G=85x3+1+$N --$Z='1.8' $PARTE "en;$SID;$G8" ;;
+X) en;$TX -$G 85x3+1+$N $PARX -fs 45 -e "en;$SID;$G8" ;;
 esac;

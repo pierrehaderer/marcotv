@@ -1,0 +1,22 @@
+BASEDIR=/home/marco/repo/marcotv
+C=`$BASEDIR/TERM`;F=$BASEDIR/TMP; MSG=$BASEDIR/MSG; #rm -f $F/clafPID $F/clafUP;
+TM='mate-terminal';H='hide-menubar';G=geometry;T=title;
+Z=zoom;PARX='-fa default -fg green';PARTE="--$T= --$H -- sh -c";
+en () { echo -e -n "\n" |xclip; }
+eb () { echo|xclip; }
+V () { echo $1; }    # grep S2 ??
+S21='echo -n S21 >/dev/null'
+
+L=`tail -1 $F/ECHO`;if test "$L" = "E";then l=`wc -l $F/ECHO|cut -d ' ' -f 1`
+h=`expr "$l" - 2`;head -n "$h" $F/ECHO > $F/ECHO1;cp $F/ECHO1 $F/ECHO;fi
+
+echo `cat $F/ECHO` >$F/ECHOL;#cp $F/ECHOL ~/TMP/ECHOL;cp $F/ECHOL ../TMP/ECHOL
+echo "cat $F/ECHOL $MSG/msg_Trail2 >$F/FF; kill `cat $F/touchPID$1`" >Q 
+chmod 777 Q;
+
+G3="48x4+715+865"; case $C in
+M) eb;$TM --$G=$G3 --$Z='1.7' $PARTE "V S21;./Q;cat $F/FF;read r;cp $F/ECHOL ~/TMP; cp $F/lism2 ~/TMP;echo>$F/FINAL;eb;./K;eb;" ;;
+
+X) en;xterm -$G $G3 -fs 30 $PARX -e "$S21;./Q;cat $F/FF;read r;echo>$F/FINAL;" ;; 
+#X) en;xterm -$G $G3 -fs 30 $PARX -e "$S21;./Q;cat $F/FF;read r;cp $F/ECHOL ~/TMP; cp $F/lism2 ~/TMP;echo>$F/FINAL;" ;; 
+esac; 

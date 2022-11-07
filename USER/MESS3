@@ -11,6 +11,6 @@ en () { echo -e -n "\n" |xclip ; } # RETURN dans xclip
 
 # ------------------------ MESSAGES ACCUEIL --------------------------------
 B1='55x20+600+10';case $C in
-M) en;$TE --$G=$B1 --$Z=1.8 $PARTE "$SID;$TP1;cat $MSG/msg_USER_Init;read r; $NS" ;; 
+M) en;$TM --$G=$B1 --$Z=1.8 $PARTE "$SID;$TP1;cat $MSG/msg_USER_Init;read r; $NS" ;; 
 X) en;$TX -$G $B1 -fs 25 $PARX -e "$SID;$TP1;cat $MSG/msg_USER_Init;read r; $NS" ;;
 esac

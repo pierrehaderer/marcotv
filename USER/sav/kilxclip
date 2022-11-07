@@ -1,0 +1,3 @@
+
+kill `cat $BASEDIR/TMP/traceXclip`;
+./KIL xclip

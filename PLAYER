@@ -1,5 +1,6 @@
 
-C=`~/TERM`; F=TMP; claDir=cla ; S21='echo S21'
+BASEDIR=/home/marco/repo/marcotv
+C=`$BASEDIR/TERM`; F=$BASEDIR/TMP; MSG=$BASEDIR/MSG;claDir=cla ; S21='echo S21'
 TM='mate-terminal';TX=xterm;G=geometry;T=title;H='hide-menubar';Z=zoom; R4K=0;
 PARTE="--$T= --$H -- sh -c";SE=0;Tcach=1;TP2='tput bold';TP1="tput civis;$TP2"
 PARX='-fa default -fg green'; PARTX="$PARX -fs 50 -b 15"; S=sleep
@@ -8,7 +9,7 @@ ee () { echo -e -n "q\n" |xclip ; }
 FI=`cat $F/lism4`; if test `cat $F/lism4|wc -w` != 1; then exit; fi
 
 # PLAYER mpv ...
-echo>$F/mpvUP;$S 2;G11='70x20+250+50';CM11="$TP2;cat MSG/msg_mpv"; case $C in
+echo>$F/mpvUP;$S 2;G11='70x20+250+50';CM11="$TP2;cat $MSG/msg_mpv"; case $C in
 M) en;$TM --$G=$G11 --$Z=1.8 $PARTE "$CM11;read r" ;;
 X) en;xterm -$G $G11 -fs 25 $PARX -e "$CM11;read r" ;;
       *) echo autre Console ;; esac;     

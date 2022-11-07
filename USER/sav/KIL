@@ -1,0 +1,4 @@
+
+if test "$1"; then
+for p in `ps -ef | grep $1 | grep -v grep | tr -s ' ' | cut -d ' ' -f 2`;
+do kill $p; done; fi; 

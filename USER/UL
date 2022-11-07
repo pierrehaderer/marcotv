@@ -7,8 +7,11 @@ F=$BASEDIR/TMP; FNS=$F/NEXT_SCREEN
 rm -f $F/NEXT_SCREEN; rm -f $F/ECHOL
 
 # --------------------------- FONCTIONS -------------------------------
-W () { while true; do sleep 0.2; if test -s $FNS; then break; fi; done; }
+W () { while true; do sleep 0.5; echo|xclip; 
+if test -s $FNS; then break; fi; done; }
 K () { $BASEDIR/USER/KIL $1; sleep 0.1; rm $FNS; }
+# pb X11 Server avec xclip :: perte du buffer Copier/Coller ... ::
+# mettre echo|xclip dans la boucle principale W() ??
 
 # --------------------- LANCEMENT DES ECRANS --------------------------
 
@@ -24,14 +27,20 @@ W; K 'S03'
 while true; do 
 $BASEDIR/USER/MAIN &
 W; NS=`cat $FNS`; K 'S11'
+
 case $NS in
 1) while true; do $BASEDIR/USER/LISTALL &
 W; NS=`cat $FNS`; K 'S21'
 if test ! "$NS" = 'RECHERCHE'; then break; else
 $BASEDIR/USER/RECH &
 W; K 'S31'; fi; done ;;
-2) $BASEDIR/USER/LISTSD &
-W; K 'S22' ;;
+
+2) while true; do $BASEDIR/USER/LISTSD &
+W; NS=`cat $FNS`; K 'S21' 
+#W; NS=`cat $FNS`; K 'S22' 
+if test ! $NS = NEXT; then break; fi; done 
+rm $F/ECHOL ;;
+
 *) ;;  # Pas implemente, retour au menu principal
 esac
 done

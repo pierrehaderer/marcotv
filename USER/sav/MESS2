@@ -1,0 +1,16 @@
+# PROCEDURE DE DEMARRAGE DE LA BOX MULTIMEDIA ... ET GESTION MICROSD
+
+# -------------------------- VARIABLES -------------------------------------
+TM='mate-terminal'; TX=xterm; G=geometry; Z=zoom; TP1='tput bold';
+PARTE="--title= --hide-menubar -- sh -c"; PARX='-fa default -fg green';
+C=`$BASEDIR/TERM`; S=sleep; F=$BASEDIR/TMP; MSG=$BASEDIR/MSG; SID="S02=''"
+NS="echo 'NEXT' > $F/NEXT_SCREEN"
+
+# -------------------------- FONCTIONS -------------------------------------
+en () { echo -e -n "\n" |xclip ; } # RETURN dans xclip
+
+# ------------------------ MESSAGES ACCUEIL --------------------------------
+G2='70x20+291+200'; case $C in
+M) en;$TM --$G=$G2 --$Z=1.8 $PARTE "$SID;$TP1;cat $MSG/msg_Intro9;read r; $NS" ;;
+X) en;$TX -$G $G2 -fs 25 $PARX -e "$SID;$TP1;cat $MSG/msg_Intro9;read r; $NS"  ;;
+esac

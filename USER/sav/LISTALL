@@ -1,0 +1,46 @@
+# AFFICHAGE DE LA LISTE DES FILMS
+
+# --------------------------- VARIABLES -------------------------------
+C=`$BASEDIR/TERM`; F=$BASEDIR/TMP; MSG=$BASEDIR/MSG; TM='mate-terminal'; TX=xterm;
+G=geometry; Z=zoom; R4K=0; TP2='tput bold'; TP1="tput civis;$TP2";
+PARTE="--title= --hide-menubar -- sh -c"
+PARX='-fa default -fg green'; PARTX="$PARX -fs 50 -b 15"; S=sleep; SID="S21=''"
+
+# --------------------------- FONCTIONS -------------------------------
+en () { echo -e -n "\n" |xclip; }
+ee () { echo -e -n "q\n" |xclip ; }
+xrandr|grep current|grep 3840;if test $? -eq 0;then R4K=1;fi
+
+#-------------------------- 1ere ENTREE DU MENU -----------------------
+#AFFICHER TOUS LES FILMS DE LA COLLECTION
+if test -s $F/ECHOL; then 
+FILT=`cat $F/ECHOL | tr -d "\n"`; L="grep -i $FILT $BASEDIR/zl 2>/dev/null";
+else L="cat $BASEDIR/zl"; fi
+# CM1='less -Ps --mouse zl'; # on pourrait laisser less pour scroll a partir du debut ...
+CM1="$L;read r"; # tput civis; si curseur genant !!
+G1='58x17+251+40';
+case $C in 
+M) $TM --$G=$G1 --$Z=2.0 $PARTE "$SID;$CM1" & ;;
+X) $TX -$G $G1 -fs 30 $PARX -e "$SID;$CM1" & ;;
+esac; 
+# le msg est different selon qu'on est  en fin de recherche ou au debut ...
+#
+if test -s $F/ECHOL; then MS=msg_cherchLess; else MS=msg_choix;  fi
+G2='66x5+250+850';CM2="cat $MSG/$MS;read r"; case $C in
+M) $TM --$G=$G2 --$Z=1.8 $PARTE "$SID;$CM2" & ;; 
+X) $TX -$G $G2 -fs 30 $PARX -e "$SID;$CM2" & ;; 
+esac;
+> $F/ECHOL # apres usage, il faut remettre ECHOL a zero, sinon le passage
+# suivant ne reaffiche pas la liste des films ...
+
+# ------------- AFFICHER LES TOUCHES RECHERCHE/RETOUR -----------------
+CM3="tput civis;echo -n Recherche;read r;echo 'RECHERCHE' > $F/NEXT_SCREEN;";G3='2+890'; case $C in
+#CM3="tput rev;echo -n Recherche;read r;echo 'RECHERCHE' > $F/NEXT_SCREEN;";G3='2+850'; case $C in
+M) en;$TM --$G=10x1+$G3 --$Z=2.9 $PARTE "$SID;$CM3" & ;;
+X) en;$TX -$G 10x1+$G3 -fs 30 $PARX -e "$SID;tput bold;$CM3" & ;;
+esac;
+G4='2+980';CM4="tput civis;echo -n '  Retour';read r;echo 'MAIN' > $F/NEXT_SCREEN;";
+case $C in
+M) en;$TM --$G=6x1+$G4 --$Z=2.9 $PARTE "$SID;$CM4" & ;;
+X) en;$TX -$G 10x1+$G4 -fs 30 $PARX -e "$SID;tput bold;$CM4" & ;;
+esac; 

@@ -1,0 +1,71 @@
+# AFFICHAGE DE LA LISTE DES FILMS
+
+# --------------------------- VARIABLES -------------------------------
+C=`$BASEDIR/TERM`; F=$BASEDIR/TMP; MSG=$BASEDIR/MSG; TM='mate-terminal'; TX=xterm;
+G=geometry; Z=zoom; R4K=0; TP2='tput bold'; TP1="tput civis;$TP2";
+PARTE="--title= --hide-menubar -- sh -c"
+PARX='-fa default -fg green'; PARTX="$PARX -fs 50 -b 15"; S=sleep; SID="S21=''"
+
+# --------------------------- FONCTIONS -------------------------------
+en () { echo -e -n "\n" |xclip; }
+ee () { echo -e -n "q\n" |xclip ; }
+xrandr|grep current|grep 3840;if test $? -eq 0;then R4K=1;fi
+
+#------------------------ 2eme ENTREE MENU2 (dont PLAYER) ----------
+# LISTE des films de CETTE !! MicroCarte
+# le Scroll souris dans less suffirait, SI on savait OU on en est !!!???
+#
+#cd cla/num;ls -1 /m > $F/lism; LIG=`wc -l TMP/lism|cut -d ' ' -f 1`;en
+#pr -m -T -J Uniq3- $F/lism >$F/lism2;./cla $F/lism2;cp $F/ECHO2 $F/PP ~/$F
+#cd; grep `cat $F/ECHOL|tr -d ' '|cut -c 1-3` $F/lism2 >$F/lism3;
+#echo `cat $F/lism3`|cut -d ' ' -f 2 >$F/lism4; ~/KIL S21; 
+#
+#FI=`cat $F/lism4`;# nom film #cp /m/$FI /dev/null & # ? charge film<10s : 
+
+#~/PLAYER ## partie specifique du PLAYER 
+
+>$F/mpvUP;$S 1;G12='70x10+290+150';CM12="$TP2;cat $MSG/msg_retir";case $C in
+M) $TM --$G=$G12 --$Z=1.8 $PARTE "$CM12;read r" &  ;; 
+X) xterm -$G $G12 -fs 25 $PARX -e "$CM12;read r;echo UL > $F/NEXT_SCREEN " ;; 
+       *) echo autre Console ;; esac; 
+if test "$r" = 0;then sudo #umount /m; #Demonter la microsd ...
+rm $F/SD_UNMOUNTED; fi 
+#
+#
+#
+#
+#
+#
+#
+##AFFICHER TOUS LES FILMS DE LA COLLECTION
+#if test -s $F/ECHOL; then 
+#FILT=`cat $F/ECHOL | tr -d "\n"`; L="grep -i $FILT $BASEDIR/zl 2>/dev/null";
+#else L="cat $BASEDIR/zl"; fi
+## CM1='less -Ps --mouse zl'; # on pourrait laisser less pour scroll a partir du debut ...
+#CM1="$L;read r"; # tput civis; si curseur genant !!
+#G1='58x17+251+40';
+#case $C in 
+#M) $TM --$G=$G1 --$Z=2.0 $PARTE "$SID;$CM1" & ;;
+#X) $TX -$G $G1 -fs 30 $PARX -e "$SID;$CM1" & ;;
+#esac; 
+## le msg est different selon qu'on est  en fin de recherche ou au debut ...
+##
+#if test -s $F/ECHOL; then MS=msg_cherchLess; else MS=msg_choix;  fi
+#G2='66x5+250+850';CM2="cat $MSG/$MS;read r"; case $C in
+#M) $TM --$G=$G2 --$Z=1.8 $PARTE "$SID;$CM2" & ;; 
+#X) $TX -$G $G2 -fs 30 $PARX -e "$SID;$CM2" & ;; 
+#esac;
+#> $F/ECHOL # apres usage, il faut remettre ECHOL a zero, sinon le passage
+## suivant ne reaffiche pas la liste des films ...
+#
+## ------------- AFFICHER LES TOUCHES RECHERCHE/RETOUR -----------------
+#CM3="tput civis;echo -n Recherche;read r;echo 'RECHERCHE' > $F/NEXT_SCREEN;";G3='2+890'; case $C in
+##CM3="tput rev;echo -n Recherche;read r;echo 'RECHERCHE' > $F/NEXT_SCREEN;";G3='2+850'; case $C in
+#M) en;$TM --$G=10x1+$G3 --$Z=2.9 $PARTE "$SID;$CM3" & ;;
+#X) en;$TX -$G 10x1+$G3 -fs 30 $PARX -e "$SID;tput bold;$CM3" & ;;
+#esac;
+#G4='2+980';CM4="tput civis;echo -n '  Retour';read r;echo 'MAIN' > $F/NEXT_SCREEN;";
+#case $C in
+#M) en;$TM --$G=6x1+$G4 --$Z=2.9 $PARTE "$SID;$CM4" & ;;
+#X) en;$TX -$G 10x1+$G4 -fs 30 $PARX -e "$SID;tput bold;$CM4" & ;;
+#esac; 
