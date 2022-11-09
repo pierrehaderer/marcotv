@@ -4,8 +4,9 @@
 
 # --------------------------- VARIABLES -------------------------------
 C=`$BASEDIR/TERM`;F=$BASEDIR/TMP; MSG=$BASEDIR/MSG; #rm -f $F/clafPID $F/clafUP;
-Xm=715; S="sleep 1"; S21='echo S21 >/dev/null'; LISNUM=$1; TM='mate-terminal'
-TX=xterm; G=geometry;H='hide-menubar'; Z=zoom; T=title; rm $F/claPID
+Xm=715; S="sleep 1"; #S21='echo S21 >/dev/null'; 
+LISNUM=$2; TM='mate-terminal'
+TX=xterm; G=geometry;H='hide-menubar'; Z=zoom; T=title; rm $F/claPID; SID="$1=''"
 PARTE="--$T= --$H -- sh -c"; >$F/ECHO;>$F/FF;>$F/TT;>$F/LPID;vg='grep -v grep'
 >$F/FINAL; PARX='-fa default -fg green'; TP1='tput bold'; TP2='tput civis';
 TP3='tput rev'; >$F/EEPID; > $F/ECHOL; #pr -m -T --width=50 Nuniq3- zl >zlNum
@@ -14,10 +15,10 @@ TP3='tput rev'; >$F/EEPID; > $F/ECHOL; #pr -m -T --width=50 Nuniq3- zl >zlNum
 # la substitution de variables DANS une fonction, ne se fait qu'avec des
 # variables declaress DANS la fonction, pas avec des variables externes !!!
 en () { echo -e -n "\n" |xclip; } 
-T () { $TM --$G=1x1+650+$1 --$Z='2.4' $PARTE "$S21;PS1='';$TP1;$TP2;$TP3;echo -n $2;read r;echo `cat $2` >>$F/ECHO;./EE;en" & } 
-x () { P7="$S21; $TP1;echo -n $2;read r"; P8="1x1+660+$1" 
+T () { $TM --$G=1x1+650+$1 --$Z='2.4' $PARTE "$SID;PS1='';$TP1;$TP2;$TP3;echo -n $2;read r;echo `cat $2` >>$F/ECHO;./EE;en" & } 
+x () { P7="$SID; $TP1;echo -n $2;read r"; P8="1x1+660+$1" 
 en;xterm -$G $P8 $PARX -fs 40 -e "$P7;echo `cat $2` >>$F/ECHO;./EE $2;en" & }
-y () {  P7="$S21; $TP1;echo -n $2;read r"; P8="1x1+660+$1" 
+y () {  P7="$SID; $TP1;echo -n $2;read r"; P8="1x1+660+$1" 
 en;xterm -$G $P8 $PARX -fs 40 -e "$P7;echo `cat $2` >>$F/ECHO;./EE $2;en" & 
 echo -n `ps -ef|grep "\-n $2"|$vg|tail -1`|cut -d ' ' -f 2 >$F/touchPID$2; } 
 
@@ -40,15 +41,15 @@ esac
 # -------------------- AFFICHAGE LISTE DES FILMS ----------------------
 LIG=`wc -l $F/lism|cut -d ' ' -f 1`;head -n $LIG $F/lism2 >$F/LISNUMb
 G6="48x15+$Xm+80"; case $C in
-M) en;$S;$TM --$G=48x18+$Xm+80 --$Z='1.7' $PARTE "$S21;less -Ps $LISNUM" & ;;
-X) $S;xterm -$G $G6 -fs 30 $PARX -e "$S21;cat $F/LISNUMb;read r" & ;;
+M) en;$S;$TM --$G=48x18+$Xm+80 --$Z='1.7' $PARTE "$SID;less -Ps $LISNUM" & ;;
+X) $S;xterm -$G $G6 -fs 30 $PARX -e "$SID;cat $F/LISNUMb;read r" & ;;
 #less a conserver ?, pour scroll au debut ... less -Ps --mouse TMP/LISNUMb
 esac 
 
 # -------------------- AFFICHAGE DU TRAILER ---------------------------
 MS='cat MSG/msg_Trail'; G7="48x5+$Xm+830"; case $C in
-M) $TM --$G=$G7 --$Z='1.7' $PARTE "$S21;$MS >$F/TT;cat $F/TT;read r" & ;;
-X) xterm -$G $G7 -fs 30 $PARX -e "$S21;$MS >$F/TT;cat $F/TT;read r" & ;;
+M) $TM --$G=$G7 --$Z='1.7' $PARTE "$SID;$MS >$F/TT;cat $F/TT;read r" & ;;
+X) xterm -$G $G7 -fs 30 $PARX -e "$SID;$MS >$F/TT;cat $F/TT;read r" & ;;
 esac 
 
 # -------------------- TRAVAIL ECHO ---------------------------------- 

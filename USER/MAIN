@@ -5,28 +5,28 @@ F=$BASEDIR/TMP; MSG=$BASEDIR/MSG; C=`$BASEDIR/TERM`;
 TE='mate-terminal';G=geometry; Z=zoom; T=title; PARH='-- sh -c'
 TX=xterm;TP1="tput rev"; S=sleep; TP2="tput bold";TP3="tput civis"
 PARTE="--title= --hide-menubar -- sh -c";PARG="--$G=1x1+";D1='1x1+560'
-PARX='-fa default -fg green'; PARTX="$PARX -fs 20 -b 15"; SID="S11=''"
+PARX='-fa default -fg green'; PARTX="$PARX -fs 20 -b 15"; SID="$1=''"
 
 # --------------------------- FONCTIONS -------------------------------
 en () { echo -e -n "\n" |xclip; } 
 P1="$SID;$TP1;$TP3;echo -n _;read r;echo" 
 t () { $TE "$PARG"560+$1 --$Z=2.8 $PARTE "$P1 $2 >$F/NEXT_SCREEN;" & } 
-x () { $TX -$G $D1+$1 $PARX -fs 35 -e "$P1 $2 >$F/NEXT_SCREEN;" & }
+x () { $TX -$G 1x1+560+$1 $PARX -fs 35 -e "$P1 $2 >$F/NEXT_SCREEN;" & }
 
-# ------------- MESSAGE INITIAL + BOUTON RESET INITIAL ----------------
-en;B1='55x20+600+10'; B2='x1+1-1';case $C in
-M) $TE --$G=1$B2 --$Z=2.9 $PARTE "$SID;$TP3;echo -n I;read r;./Rini" &  ;;
-X) $TX -$G 2$B2 $PARX -fs 45 -e "$SID;$TP2;$TP3;echo -n I;read r;./Rini" & ;;
+# ----------------------- BOUTON EXTINCTION BOX --------------
+en;B1='55x20+600+10'; B2='x1+1-1';B4="echo -n I;read r";case $C in
+M) $TE --$G=1$B2 --$Z=2.9 $PARTE "$SID;$TP3;$B4;/sbin/init 0" &  ;;
+X) $TX -$G 2$B2 $PARX -fs 45 -e "$SID;$TP2;$TP3;$B4;/sbin/init 0" & ;;
 esac
 
-# ---------------------- BOUTONS LATTERAUX ----------------------------
+# ---------------------- BOUTONS LATERAUX ----------------------------
 case $C in #Touches blanches::pas besoin Proc en fin de $TE car 1 seul choix
-M) YT=860;for j in 9 8 7 6 5 4 3 2 1;do t $YT $j; YT=`expr $YT - 90`;done ;;
+M) YT=830;for j in 9 8 7 6 5 4 3 2 1;do t $YT $j; YT=`expr $YT - 90`;done ;;
 X) YT=830;for j in 9 8 7 6 5 4 3 2 1;do x $YT $j; YT=`expr $YT - 90`;done ;;
 esac
 
 # -------------------------- LISTE CHOIX ------------------------------
-A1='x19+600+70'; A2='less -Ps --mouse'; case $C in
+A1='x19+600+40'; A2='less -Ps --mouse'; case $C in
 M) $S 1;$TE --$G=49$A1 --$Z=1.9 --$T=MENU $PARH "$SID;$A2 $MSG/msg_USER_MENU" & ;;
 X) $TX -$G 50$A1 $PARX -fs '28,5' -e "$SID;$TP2;$A2 $MSG/msg_USER_MENU" & ;;
 esac
@@ -38,8 +38,8 @@ X) $TX -$G $A3 $PARTX -e "$SID;$TP2;cat $MSG/msg_USER_selTrail;read r" & ;;
 esac
 
 # ------------------------- BOUTON RESET ------------------------------
-A4='1x1+1800+50';case $C in
-M) $TE --$G=$A4 --$Z=2.9 $PARTE "$SID;$TP3;echo -n \" 0\";read r;./Rsel" & ;;
-X) $TX -$G 2x1-1+1 $PARX -fs 45 -e "$SID;$TP2;$TP3;echo -n 0;read r;./Rsel" & ;;
-esac
+#A4='1x1+1800+50';case $C in
+#M) $TE --$G=$A4 --$Z=2.9 $PARTE "$SID;$TP3;echo -n \" 0\";read r;./Rsel" & ;;
+#X) $TX -$G 2x1-1+1 $PARX -fs 45 -e "$SID;$TP2;$TP3;echo -n 0;read r;./Rsel" & ;;
+#esac
 

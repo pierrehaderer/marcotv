@@ -3,7 +3,7 @@
 # -------------------------- VARIABLES -------------------------------------
 TM='mate-terminal'; TX=xterm; G=geometry; Z=zoom; TP1='tput bold';
 PARTE="--title= --hide-menubar -- sh -c"; PARX='-fa default -fg green';
-C=`$BASEDIR/TERM`; S=sleep; F=$BASEDIR/TMP; MSG=$BASEDIR/MSG; SID="S01=''"
+C=`$BASEDIR/TERM`; S=sleep; F=$BASEDIR/TMP; MSG=$BASEDIR/MSG; SID="$1=''"
 NS="echo 'NEXT' > $F/NEXT_SCREEN"
 
 # -------------------------- FONCTIONS -------------------------------------

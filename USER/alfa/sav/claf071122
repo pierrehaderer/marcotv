@@ -5,7 +5,7 @@ C=`$BASEDIR/TERM`;F=$BASEDIR/TMP;MSG=$BASEDIR/MSG;rm -f $F/clafPID $F/clafUP;
 DTY=160;POSYC=650;BB=275; TX=xterm
 TE='mate-terminal'; tx=xterm; G=geometry; T=title;H='hide-menubar';Z=zoom; 
 TI="--$H -- sh -c";PARTE="--$T= $TI";PARG="--$G=1x1+";CLA=_____CLAVIER_____
-PARX='-fa default -fg green';TP1='tput bold';TP2='tput civis';SID="$1=''"
+PARX='-fa default -fg green';TP1='tput bold';TP2='tput civis';SID="S31=''"
 
 # --------------------------- FONCTIONS -------------------------------
 ee () { echo -e -n "q" |xclip ; }

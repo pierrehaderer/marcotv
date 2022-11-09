@@ -1,8 +1,8 @@
 
 # CHOIX DU TERMINAL GRAPHIQUE ::
 
-# echo M # si mate-terminal
- echo X # si xterm
+ echo M # si mate-terminal
+# echo X # si xterm
 # echo G # si gnome-terminal
 # echo K # si konsole
 # echo T # si terminator
