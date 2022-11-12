@@ -1,0 +1,46 @@
+# PROCEDURE DE RECHERCHE ET DE LANCEMENT DU FILM
+BASEDIR=/home/marco/repo/marcotv; export BASEDIR
+C=`$BASEDIR/TERM`; export C
+# --------------------------- VARIABLES -------------------------------
+F=$BASEDIR/TMP; FNS=$F/NEXT_SCREEN
+
+# ----------------------------- MENAGE --------------------------------
+rm -f $FNS; rm -f $F/ECHOL
+
+# --------------------------- FONCTIONS -------------------------------
+W () { while true; do sleep 0.5; echo|xclip; 
+       if test -s $FNS; then break; fi; done; }
+K () { $BASEDIR/USER/KIL $1; sleep 0.1; rm $FNS; }
+# pb X11 Server avec xclip :: perte du buffer Copier/Coller ... ::
+# mettre echo|xclip dans la boucle principale W() ??
+
+# --------------------- LANCEMENT DES ECRANS --------------------------
+
+$BASEDIR/USER/WELCOME 'S00' &
+W; K 'S00';
+$BASEDIR/USER/MESS1 'S01' &
+W; K 'S01'
+$BASEDIR/USER/MESS2 'S02' &
+W; K 'S02'
+$BASEDIR/USER/MESS3 'S03' &
+W; K 'S03'
+
+while true; do 
+$BASEDIR/USER/MAIN 'S11' &
+W; NS=`cat $FNS`; K 'S11'
+
+case $NS in
+1) while true; do $BASEDIR/USER/LISTALL 'S21' &
+W; NS=`cat $FNS`; K 'S21'
+if test ! "$NS" = 'RECHERCHE'; then break; else
+$BASEDIR/USER/RECH 'S22' &
+W; K 'S22'; fi; done ;;
+
+2) while true; do $BASEDIR/USER/LISTSD 'S31' &
+W; NS=`cat $FNS`; K 'S31' 
+if test ! $NS = NEXT; then break; fi; done 
+rm $F/ECHOL ;;
+
+*) echo ;;  # Pas implemente, retour a la boucle
+esac
+done

@@ -32,8 +32,8 @@ W; NS=`cat $FNS`; K 'S11'
 case $NS in
 1) while true; do $BASEDIR/USER/LISTALL 'S21' &
 W; NS=`cat $FNS`; K 'S21'
-if test ! "$NS" = 'RECHERCHE'; then break; else
-$BASEDIR/USER/RECH 'S22' &
+if test ! "$NS" = 'RECHERCHE'; then break; 
+else $BASEDIR/USER/RECH 'S22' &
 W; K 'S22'; fi; done ;;
 
 2) while true; do $BASEDIR/USER/LISTSD 'S31' &

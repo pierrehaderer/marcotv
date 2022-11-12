@@ -11,7 +11,7 @@ PARX='-fa default -fg green'; PARTX="$PARX -fs 20 -b 15"; SID="$1=''"
 en () { echo -e -n "\n" |xclip; } 
 P1="$SID;$TP1;$TP3;echo -n _;read r;echo" 
 t () { $TE "$PARG"560+$1 --$Z=2.8 $PARTE "$P1 $2 >$F/NEXT_SCREEN;" & } 
-x () { $TX -$G 1x1+560+$1 $PARX -fs 35 -e "$P1 $2 >$F/NEXT_SCREEN;" & }
+x () { $TX -$G 1x1+570+$1 $PARX -fs 35 -e "$P1 $2 >$F/NEXT_SCREEN;" & }
 
 # ----------------------- BOUTON EXTINCTION BOX --------------
 en;B1='55x20+600+10'; B2='x1+1-1';B4="echo -n I;read r";case $C in
@@ -22,7 +22,7 @@ esac
 # ---------------------- BOUTONS LATERAUX ----------------------------
 case $C in #Touches blanches::pas besoin Proc en fin de $TE car 1 seul choix
 M) YT=830;for j in 9 8 7 6 5 4 3 2 1;do t $YT $j; YT=`expr $YT - 90`;done ;;
-X) YT=830;for j in 9 8 7 6 5 4 3 2 1;do x $YT $j; YT=`expr $YT - 90`;done ;;
+X) YT=800;for j in 9 8 7 6 5 4 3 2 1;do x $YT $j; YT=`expr $YT - 90`;done ;;
 esac
 
 # -------------------------- LISTE CHOIX ------------------------------

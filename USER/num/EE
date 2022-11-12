@@ -1,18 +1,13 @@
-#BASEDIR=/home/marco/repo/marcotv
-C=`$BASEDIR/TERM`;F=$BASEDIR/TMP; MSG=$BASEDIR/MSG; 
-TM='mate-terminal';H='hide-menubar';G=geometry;S21='echo -n S21 >/dev/null'
-T=title;Z=zoom;PARX='-fa default -fg green';PARTE="--$T= --$H -- sh -c";
-en () { echo -e -n "\n" |xclip; }
-eb () { echo|xclip; }
+B=$BASEDIR;C=`$B/TERM`;F=$B/TMP;MSG=$B/MSG; SID="$1=''"
+TM='mate-terminal';H='hide-menubar';G=geometry; T=title;Z=zoom;
+PARX='-fa default -fg green';PARTE="--$T= --$H -- sh -c";
 
 L=`tail -1 $F/ECHO`;if test "$L" = "E";then l=`wc -l $F/ECHO|cut -d ' ' -f 1`
 h=`expr "$l" - 2`;head -n "$h" $F/ECHO > $F/ECHO1;cp $F/ECHO1 $F/ECHO;fi
 
-echo `cat $F/ECHO` >$F/ECHOL; 
-echo "cat $F/ECHOL $MSG/msg_Trail2 >$F/FF; kill `cat $F/touchPID$1`" >Q 
-chmod 777 Q;
+echo `cat $F/ECHO` >$F/ECHOL; echo >$F/Q; chmod 777 $F/Q 
+echo "cat $F/ECHOL $MSG/msg_Trail2 >$F/FF;kill `cat $F/touchPID$2`" >$F/Q 
 
-G3="48x4+715+865"; case $C in
-M) eb;$TM --$G=$G3 --$Z='1.7' $PARTE "$S21;./Q;cat $F/FF;read r;echo>$F/FINAL;eb;" ;;
-X) eb;xterm -$G $G3 -fs 30 $PARX -e "$S21;./Q;cat $F/FF;read r;echo>$F/FINAL;eb;" ;; 
-esac; en;eb
+P="cat $F/FF;read r;echo>$F/FINAL";G3="48x4+715+865"; case $C in
+M) $TM --$G=$G3 --$Z='1.7' $PARTE "$SID;$F/Q;$P" ;;
+X) xterm -$G $G3 -fs 30 $PARX -e "$SID;$F/Q;$P" ;; esac;

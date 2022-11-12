@@ -1,0 +1,16 @@
+# ----------------- AFFICHAGE DE LA LISTE DES FILMS -------------------
+
+# --------------------------- VARIABLES -------------------------------
+C=`$BASEDIR/TERM`; F=$BASEDIR/TMP; MSG=$BASEDIR/MSG;
+TM='mate-terminal'; TX=xterm; G=geometry; Z=zoom; R4K=0; S=sleep
+TP1="tput civis;tput bold"; PARTE="--title= --hide-menubar -- sh -c"
+PARX='-fa default -fg green'; PARTX="$PARX -fs 50 -b 15"; SID="$1=''"
+
+# --------------------------- FONCTIONS -------------------------------
+ee () { echo -e -n "q\n" |xclip ; }
+NS="echo RECH >$F/NEXT_SCREEN"
+#xrandr|grep current|grep 3840;if test $? -eq 0;then R4K=1;fi
+
+# --------------------- LANCER LE CLAVIER ALFA ------------------------
+cd $BASEDIR/USER/alfa;./claf $SID
+

@@ -1,8 +1,8 @@
 
 # CHOIX DU TERMINAL GRAPHIQUE ::
 
- echo M # si mate-terminal
-# echo X # si xterm
+# echo M # si mate-terminal
+ echo X # si xterm
 # echo G # si gnome-terminal
 # echo K # si konsole
 # echo T # si terminator
@@ -86,3 +86,27 @@
 # ils peuvent tuer dd de microsd !!
 # tester microsd FAT32, et ... reparer !
 # remettre a 0 auto, le testSDcur en fin de microsd
+#
+# TESTS ARRACHAGE MicroSD ::
+# si USER arrache la cle USB, on le repere dans "ddError", dans le repertoire
+# _x_y ... On le voit aussi, car "testSDcur" s'arrete ...
+# Si on demonte /m, et qu'on lui demande de rebrancher la cle, tout
+# est OK ... sinon, sans demonter, rebrancher la cle cree /dev/sdb, au lieu 
+# /dev/sda, et rien ne fonctionne ...
+#
+# SI le remount ne marche pas, alors explorer la detection /dev/sdx, puis la 
+# FAT32 ...
+#
+# Sortie ma microsd, directement en laissant la cle USB, ne fait pas 
+# disparaitre /dev/sda, mais seulement /dev/sda1 !!
+# En re-inserant la micrsd, tout repart !!!
+# Tant qu'on n'ecrit pas sur la microsd, ca reste propre ??...
+# Un arrachage pendant mpv l'arrete, et il sort une erreur ... 
+# Mais en re-inserant la microsd, on peut redemarrer le film !!! ... ::
+# il reste monte normalement !!!, car rien n'a ete ecrit ???
+# Et si on change de microsd, ca plante ???, car FAT differente ...
+#
+# Si detection d'arrachage, faire umount /m et attendre ... !!!, meme pas 
+# besoin de savoir si c'est cle USB ou microsd seule ...
+# puis reprendre un cycle du debut pour remonter ...
+#
