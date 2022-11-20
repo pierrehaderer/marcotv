@@ -8,15 +8,12 @@ PA=$2;MEGB=$1; MEG=`expr $MEGB / 1000000 - 200` #finir boucle avant! dd error
 ST=0;INDX=`cat $F/INDEX`; ST=`tail --lines=1 $BASEDIR/microsd/$INDX/testSDcur` 
 SK=0;SK=$ST; while test "$SK" -le $MEG;do #INDX=`cat $F/INDEX` #nice +20 ?
 #sudo dd if=/dev/sd$DEV of=/dev/null bs=1M count=$PA skip=$SK   2>&1 |grep medium >>$F/ddERROR #2>/dev/null
-#echo AVANT testSD_dd
 sudo dd if=/dev/$DEV of=/dev/null bs=1M count=$PA skip=$SK status=none 2>>$F/ddERROR #2>/dev/null
-#echo APRES testSD_dd
 #sudo dd if=/dev/sd$DEV of=/dev/null bs=1M count=$PA skip=$SK status=none 2>>$F/ddERROR #2>/dev/null
 
 if test "$?" -ne 0 ;then  # sav bad position, and GO ON, quand taille depassee
 echo $SK `date +%d%m%y` >> $BASEDIR/microsd/$INDX/ddError; 
-#sudo umount /m;  
-sleep 1; exit #??? #exec $BASEDIR/microsd/SL  
+sudo umount /m;  sleep 1;exit #return 1; #exec $BASEDIR/microsd/SL  
 fi
 SK=`expr $SK + $PA`;echo $SK >> $BASEDIR/microsd/$INDX/testSDcur
 exit # testSD est lance en bgd &, par T, pour 1 seul test a la fois
