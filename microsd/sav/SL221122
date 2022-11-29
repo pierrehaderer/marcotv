@@ -3,7 +3,7 @@
 
 # -------------------------- VARIABLES -------------------------------------
 BASEDIR=/home/marco/repo/marcotv; export BASEDIR
-B=$BASEDIR; F=$B/TMP; SD=$B/microsd; PLAY=mpv; S=sleep
+B=$BASEDIR; F=$B/TMP; SD=$B/microsd; PLAY=mpv;
 
 while true; do 
 # ------------------------- TROUVER MICROSD --------------------------------
@@ -30,7 +30,8 @@ if test `ls /dev/$SP`;then  echo $SP >> $F/NEWSD; # microsd Exist !
 sudo parted /dev/$SP 'unit B print'|grep $SP|grep Disk|cut -d ':' -f 2 >$F/taille2 &
 # faire un KIL de parted si ca plante a l'arrachage de microsd; apres une 
 # tempo ??  #  et relancer ??, car la taille dans Parted est alors nulle !!
-$S 1;PARTED=`cat $F/taille2`;$S 1;$B/USER/KIL parted; #echo 'APRES PARTED KIL'
+sleep 1; PARTED=`cat $F/taille2`
+sleep 1 ; $B/USER/KIL parted; # echo 'APRES PARTED KIL ....'
 echo $PARTED|cut -d 'B' -f 1 >$F/Parted 
 
 #puis, INDEX microsd :: # ${PARTED%B}
@@ -42,6 +43,7 @@ echo PB IDX;echo BUG sd IDX `date` >> $F/BUGmsd;fi
 fi
 else rm $F/NEWSD; echo microsd pas montee # continue ou next ?
 fi 
+#
 ## ----------------------- TEST FAT32 MICROSD -------------------------------
 # 1 - microsd montee par USER :: OK ...
 #     apres arrachage, microsd peut sembler mounte, mpv demarrer, et s'arreter
@@ -49,37 +51,43 @@ fi
 #     _, pour voir si on l'obtient entier ?? ...
 # 2 - mount :: marche pas ?? :: umount puis remount ?? ..., si mpv absent
 # 3 - dosfsck :: marche pas ?? :: va produire des modifs :: resav FAT32 ??!!
-#     ET difficilement Portable dans le temps :: options stables ???
-#     Pas utile, pour un filSys destine a etre readOnly :: impact des MAJ SYSTEM ??
 # 4 - recopier FAT32 Originelle vers microsd; puis reMount ... :: marche pas ??
 # 5 - SOS SAV Marco/Pierrot :: marche !!!!!
 #     ping -c 2 8.8.8.8; P=$?; if test $P -eq 0; then mail; fi
-df|grep "/dev/${SP}1" >/dev/null;GS=$?;echo dfgrep $GS #test MOUNT sd,SI sd demontee
-if test $GS -eq 0;then echo "/m OK " # semble mountee??:: verif acces reel !?::
-  if test `cat /m/_ |wc -c` -eq 10485760; then echo 'file _ detected'
-  else sudo umount /m;echo 'UNMOUNT';$S 1; #alors tenter de la remounter::
-       sudo mount /dev/${SP}1 /m; MS=$?; echo ' TEST REMOUNT !!'
-       if test $MS -eq 1; then echo 'REMOUNT KO!!'; #mount KO !!:: FAT KO ??
-         echo 'tenter dosfsck ??' ; echo ; DOSFSCK=0; # pas portable!!
-         if test $DOSFSCK -ne 0; then echo 'FSCK ECHOUE; recopy old FAT PORTABLE??'
-         ## IDX=`cat INDEX`;sudo dd if=microsd/$IDX/FAT of=/dev/$SP bs=1M
-         fi
-       fi
-  fi
-else  echo /m UNMOUNTED # essai MOUNT
+df|grep "/dev/${SP}1" ; GS=$?; echo dfgrep $GS # test MOUNT sd, SI !! sd demontee !!
+if test $GS -eq 0;then echo "/m OK " # semble mountee, mais ... verif acces reel !!?? ::
+ if test `cat /m/_ |wc -c` -eq 10485760; then echo '_ OK reel' # acces reel OK !!
+ else sudo umount /m; echo 'UNMOUNT'; sleep 1; # alors tenter de la remounter ...  ::
+      sudo mount /dev/${SP}1 /m; MS=$?; echo ' TEST REMOUNT !!'
+      if test $MS -eq 1; then echo 'REMOUNT KO!!'; # mount KO !!!! :: FAT KO ??
+      fi
+ fi
+else echo /m UNMOUNTED # essai MOUNT
       sudo mount /dev/${SP}1 /m; MS=$?; echo "TEST MOUNT $MS !!"
-      if test $MS -eq 1;then echo 'MOUNT KO!!';fi #mount KO !!:: FAT KO ?
+      if test $MS -eq 1; then echo 'MOUNT KO!!'; # mount KO !!!! :: FAT KO ??
+      fi
 fi
+##if test $GS -eq 1;then N=`expr $N + 1` # boucle attente Nx2s test MOUNT
+## if test $N -eq 90 -a -f NEWSD;then N=0;sudo echo; 
+ # ---------------------------> sudo mount /dev/${SP}1 /m;MS=$? #en test, mount /n
+##  if test $MS -eq 0; then echo -n _$MS >> FATOK ;sudo echo; #umount /n; # Yes
+##  else echo -n $MS >> FATNOK; IDX=`cat INDEX` # re-ecrire FAT !!
+##  sudo dd if=microsd/$IDX/FAT$IDX of=/dev/$SP bs=1M
+##  fi
+## fi 
+##fi 
 # ----------------------- REGENERATION SILICIUM ----------------------------
 # Cycles dd selon perf de Cle USB:: King 6x432 ; Sand 1x332 ; Chin 2x432 
 while true; do PA=100; PAmpv=5; 
-CHKdd=`ps -ef|grep ' dd '|grep -v grep|wc -l` #test surface partiel en dd
-CHKmpv=`ps -ef|grep $PLAY|wc -l`;echo $CHKdd >>$F/CHKdd #lectur Video en cours?
+CHKdd=`ps -ef |grep ' dd '|grep -v grep|wc -l` # test surface partiel en dd
+CHKmpv=`ps -ef |grep $PLAY|wc -l`;echo $CHKdd >>$F/CHKdd #lectur Video en cours?
 #selon puissance CPU et flots simultanes microsd, arreter dd pendant film mpv,
 # ET claf affichage pas fini !!!, ou ... lecture "pointille" de microsd PAmpv ??
+#
 # au 1er !!! CHKmpv, retarder testSD de 6 sec, pour gagner sur cp en Cache
 # et decalage d autant pour mpv, pour test Hic debut ACE ??
-#if test -s mpvUP; then $S 6; >mpvUP; fi
+#if test -s mpvUP; then sleep 6; >mpvUP; fi
+#
 if test $CHKdd -eq 0 && test ! -s $F/clafUP; 
 then if test $CHKmpv -ne 2; then #echo '1er testSD'; 
 TAILL=`cat $F/Parted`;if test `expr length "$TAILL"` -lt 3; then break; 
@@ -88,10 +96,11 @@ if test `grep medium $F/ddERROR|wc -w` -gt 0; then break; fi
 #Ste=$?; if test $Ste = 1; then echo ERRtestSD > $F/ERRtestSD; break; fi
 fi
 else echo  #pendant mpv, la boucle 2 sec n'est plus utile:: cycle 4x3x2 King
-for i in 1 2 3 4; do $SD/testSD `cat $F/Parted` $PAmpv $SP; done ; $S 1 ;
-for i in 1 2 3 ; do $SD/testSD `cat $F/Parted` $PAmpv $SP; done ; $S 1 
+for i in 1 2 3 4; do $SD/testSD `cat $F/Parted` $PAmpv $SP; done ; sleep 1 ;
+for i in 1 2 3 ; do $SD/testSD `cat $F/Parted` $PAmpv $SP; done ; sleep 1 
 $SD/testSD `cat $F/Parted` $PAmpv $SP; $SD/testSD `cat $F/Parted` $PAmpv $SP;
 fi # KO si un ";" suit le "&" precedent !!! ----------------------------
 else if test `grep medium $F/ddERROR|wc -w` -gt 0; then break; fi
-fi;$S 1; done
-echo '-----------------------FIN BOUCLE'; $S 1; done # boucle complete SL
+fi;sleep 1; done
+echo '-----------------------FIN BOUCLE'; sleep 1; done # boucle complete SL
+

@@ -87,6 +87,7 @@
 # tester microsd FAT32, et ... reparer !
 # remettre a 0 auto, le testSDcur en fin de microsd
 #
+###############################################################################
 # TESTS ARRACHAGE MicroSD ::
 # si USER arrache la cle USB, on le repere dans "ddError", dans le repertoire
 # _x_y ... On le voit aussi, car "testSDcur" s'arrete ...
@@ -97,16 +98,81 @@
 # SI le remount ne marche pas, alors explorer la detection /dev/sdx, puis la 
 # FAT32 ...
 #
-# Sortie ma microsd, directement en laissant la cle USB, ne fait pas 
+# Sortir ma microsd, directement en laissant la cle USB, ne fait pas 
 # disparaitre /dev/sda, mais seulement /dev/sda1 !!
-# En re-inserant la micrsd, tout repart !!!
+# En re-inserant la microsd, tout repart !!!
 # Tant qu'on n'ecrit pas sur la microsd, ca reste propre ??...
 # Un arrachage pendant mpv l'arrete, et il sort une erreur ... 
 # Mais en re-inserant la microsd, on peut redemarrer le film !!! ... ::
-# il reste monte normalement !!!, car rien n'a ete ecrit ???
+# il reste mounted normalement !!!, car rien n'a ete ecrit ???
 # Et si on change de microsd, ca plante ???, car FAT differente ...
 #
 # Si detection d'arrachage, faire umount /m et attendre ... !!!, meme pas 
 # besoin de savoir si c'est cle USB ou microsd seule ...
 # puis reprendre un cycle du debut pour remonter ...
+#
+##############################################################################
+# le PLAYER ..... une grosse dependance ...... ::
+#
+# Tentative avec ArchDroid sur Odroid C4 ... ::
+# dans /boot/boot.ini, corriger governor='performance'
+# mpv est presque bon !!! :: seuls les moments "difficiles" de ace* (le zoom
+# sur la montagne final) sautillent ... Des Drop frames ont lieu avant, mais
+# peu visibles ... une resolution Ecran 720p lisse un peu ...
+# kodi n'est pas trouve a l'install ??!!! (pacman -S kodi-x11)
+#
+# Sur Armbian, installer kodi OK !!, ... mais il manque libvdpau_meson.so pour 
+# l acceleration hardw ... ??
+#
+#  Penser a utiliser un accelerateur Hardw EXTERNE, pour etre moins dependant
+#  dans la Box ??? ...
+#  En 4K, 8K, les TVs auront une prise USB; ou un Remore FilSys en Ethernet, 
+#  pour lire le film en externe, et avec LEUR accel Hardw interne ...
+#
+#  Dont un Odroid C2 !!!, en LibrElec qui fait de la belle 4K, AVEC son accel Hard ...
+#  Peut-on acceder en LibrElec, a un serveur Video (ma Box) en Wifi ou Ether ??
+#  ou USB a USB ??
+#  Comment gerer les 2 entrees HDMI des 2 box sur la tele ...??? Switch HDMI ???
+#
+# Les prochaines box pi5:OdroiC5 auront assez de CPU en 2K, sans accel Hard, ...
+# mais en 4K ????, ou 8K
+#
+# Sur PI4, le pilote video est dans le kernel KMS ??? ... ca accelere ???
+#  en mode Legacy, le film ace* saute sans arret !!!, meme a 2GHz
+#  en mode KMS 128M, 1.5GHz suffit ... FKMS 512M pas convainquant ...
+#  KMS tres efficace !!! :: A-V 0 en mpv, et frame drop =0 !!!
+#
+# apparemment, pas de KMS sur Budgie C4 ..., seulement sur PI4
+#####################################################################
+## Config settings specific to arm64 sur Budgi Pi4
+#arm_64bit=1
+#dtoverlay=dwc2
+#gpu_mem=128
+#dtoverlay=vc4-kms-v3d
+#arm_freq=1800
+#over_voltage=3
+#[pi4]
+#max_framebuffers=2
+#arm_boost=1
+####################################################################
+## lsmod autour de KMS, et de ses modules ....::
+#drm_kms_helper        344064  3 vc4
+#cec                    81920  2 drm_kms_helper,vc4
+#fb_sys_fops            20480  1 drm_kms_helper
+#syscopyarea            16384  1 drm_kms_helper
+#sysfillrect            20480  1 drm_kms_helper
+#sysimgblt              16384  1 drm_kms_helper
+#drm                   651264  10 gpu_sched,drm_kms_helper,v3d,vc4
+#vc4                   344064  30
+#snd_soc_core          311296  2 vc4,snd_soc_hdmi_codec
+#drm_kms_helper        344064  3 vc4
+#cec                    81920  2 drm_kms_helper,vc4
+#drm                   651264  10 gpu_sched,drm_kms_helper,v3d,vc4
+#v3d                    94208  3
+#gpu_sched              49152  1 v3d
+#drm                   651264  10 gpu_sched,drm_kms_helper,v3d,vc4
+####################################################################
+#
+# comment fonctionnerait LibrElec de Odroid C4 !!!, en VM linux ???
+# Trouver une VM ARM !!! sur C4 ... (ou C2) ??
 #

@@ -1,0 +1,87 @@
+
+# DOC pour developpeurs ...
+
+# ce produit Multimedia a pour principal objet d'afficher des 
+# films sur une TV, ... ou tout ecran HDMI ...
+#
+# Il doit le faire par choix "Originel", sous une forme aussi
+# "Portable" que possible, afin que le meme code puisse fonctionner
+# avec un minimum d'adaptations, dans un demi siecle !!!
+#
+# Le reperage des Dependances et leurs delimitations, devient
+# un objectif permanent ...
+#
+# La syntaxe minimale du Shell Bourne a ete choisie pour le
+# developpement ..., supposee maintenue compatible pour un demi
+# siecle au moins ...
+#
+# les Dependances potentiellement non compatibles dans le temps, 
+# sont a plusieurs niveaux ::
+#
+# 1: des menus a l'ecran vont utiliser des caracteres alphabetiques,
+# dont des "touches" sur lequelles cliquer pour faire des choix ...
+# ces caracteres seront obtenus, avec des Fontes diverses, en tailles
+# et couleurs diverses, par usage de Consoles Graphiques, comme
+# xterm, mate-terminal, gnome-terminal, ....
+# Le code devra accommoder plusieurs Consoles graphiques au choix,
+# avec des effets visuels semblables, et un code aussi peu different
+# que possible, entre les diverses Consoles ...
+#
+# 2: la selection dans les menus, et les choix de touches, seront 
+# fait a la souris, permettant une selection "2D", plus confortable
+# qu'une Telecommande "1D"
+#
+# 3: un Serveur X11 etant suppose present, avec une bonne compatibilite
+# de long terme, la touche de souris la plus utilisee sera la Molette
+# Centrale, a la fois pour le SCROLL dans un texte, ... ET la Selection
+# de Touche, en cliquant SUR la Molette, et en provoquant un Copier/Coller 
+# d'une lettre PreProgrammee, vers le Serveur X11
+# (la commande "xclip", ou equivalent, permettra cette operation)
+#
+# 4: le produit Dependra aussi d'un Player Video, dont plusieurs
+# devront etre integres, avec un minimum de differences d'usage ...
+# L'evolution des Players avec la 4K, puis la 8K, definira ceux
+# les plus adaptes ...
+#
+# Il serait meme possible d'envisager de faire appel a un lecteur
+# hardware specialise externe, (comme pour des Decodeurs "lourds"
+# type AV1, en 8K), en le pilotant par programme, et en lui 
+# fournissant le film a decoder et a afficher, au fil de l'eau,
+# comme le ferait un Serveur Video ...
+#
+# Il faudra faire evoluer le microOrdinateur (au format type 
+# "Carte de Credit", genre Raspberry Pi), dans les annees ...., 
+# pour profiter au mieux de la montee en puissance, en parallele 
+# avec la lourdeur du decodage Video ... (comme AV1 en 8K)
+#
+# En supposant une perenite de Linux, comme OS de base, ou tout
+# autre OS, capable d'Interpreter du Shell Bourne, avec des
+# commandes de base GPL, on peut esperer une "migration" "douce" ...
+#
+# Le produit s'execute en 3 flots Shell, + ou - simultanes ::
+#
+# 1: un flot de Menus Utilisateurs, permettant une Recherche
+# d'un film dans une longue liste, presente sur un support
+# externe (ssd, carte USB, ...), puis la Selection du film a
+# visionner ...
+#
+# 2: un flot lie au Player Video, afin de lancer le film, de le 
+# suivre dans son execution, tout en l'alimentant avec le film ...
+#
+# 3: un flot de Maintenance du support de stockage externe
+# des films ..., destine a s'assurer de la qualite du stockage
+# dans le temps, par des tests si possible simultanes avec
+# sa lecture pour le film projete, ... et avec des Reparations
+# eventuelles, aussi automatiques que possibles, en cas de
+# defauts reperes (defauts de Surface, Magnetique ou Silicium)
+# (defauts de Structure, Systeme de Gestion de Fichiers endommage)
+#
+# Ce 3eme flot devra aussi assurer les Mises A Jours du Produit,
+# (dont a travers Internet)
+#
+# une partie de la Collection de films et de Documentairs etant 
+# fournie sous forme de cartouches MicroSD, en nombre croissant
+# au fil de l'enrichissement de la Collection, le flot de
+# Maintenance sera particulierement oriente, vers la surveillance
+# de ce support Silicium ...
+#

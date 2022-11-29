@@ -1,5 +1,5 @@
 # PROCEDURE DE RECHERCHE ET DE LANCEMENT DU FILM
-BASEDIR=/home/marco/repo/marcotv; export BASEDIR
+BASEDIR=/home/marco/repo/marcotv; export BASEDIR;
 C=`$BASEDIR/TERM`; export C
 # --------------------------- VARIABLES -------------------------------
 F=$BASEDIR/TMP; FNS=$F/NEXT_SCREEN
@@ -15,7 +15,6 @@ K () { $BASEDIR/USER/KIL $1; sleep 0.1; rm $FNS; }
 # mettre echo|xclip dans la boucle principale W() ??
 
 # --------------------- LANCEMENT DES ECRANS --------------------------
-
 $BASEDIR/USER/WELCOME 'S00' &
 W; K 'S00';
 $BASEDIR/USER/MESS1 'S01' &

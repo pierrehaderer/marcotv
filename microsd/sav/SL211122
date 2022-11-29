@@ -1,0 +1,89 @@
+# GESTION MICROSD
+
+# -------------------------- VARIABLES -------------------------------------
+BASEDIR=/home/marco/repo/marcotv; export BASEDIR
+F=$BASEDIR/TMP; SD=$BASEDIR/microsd; B=$BASEDIR
+PLAY=mpv;
+
+while true; do # echo DEBUT BOUCLE
+# ------------------------- TROUVER MICROSD --------------------------------
+echo `df|grep '/$'`|cut -d ' ' -f 1|cut -d '/' -f 3 > $F/ROO # root dev !!
+ROO=`cat $F/ROO|cut -c 1-3`;ls -1 /dev/sd*|grep -v $ROO > $F/BDEV;> $F/PARTI
+while read -r L;do echo `echo $L|cut -d ' ' -f 1|cut -d '/' -f 3` >>$F/PARTI
+done < $F/BDEV
+for i in `cat $F/PARTI` ;do
+ID=`sudo dd if=/dev/$i bs=1 count=1 skip=70000000 2>/dev/null`
+if test "$ID" = '_' ;then echo '-----------> MES MICROSD' $i; SP=$i ;
+else echo 'PAS LES MIENNES !!! :: on lit la carte qd meme?';continue;fi;done
+#lsusb -t |grep usb-sto #lsblk -t pour affiner ??
+
+# -------------- SURVEILLER UN ARRACHAGE IMPREVU DE LA MICROSD -------------
+# ajouter la detection sd? a LISTSD, car arrachage peut passer de sda a sdb !!
+echo $SP > $F/SP;CHKmpv=`ps -ef |grep $PLAY|wc -l`;echo $CHKdd >> $F/CHKdd
+if test $CHKmpv -eq 1;then #pas de test microsd pendant mpv ?, pour pas de hic
+if test `ls /dev/$SP`;then  echo $SP >> $F/NEWSD; # microsd Exist !
+# ??? sudo umount /m; # echo 'AVANT PARTED ....'
+sudo parted /dev/$SP 'unit B print'|grep $SP|grep Disk|cut -d ':' -f 2 >$F/taille2 &
+sleep 1; PARTED=`cat $F/taille2`
+sleep 1 ; $B/USER/KIL parted; # echo 'APRES PARTED KIL ....'
+echo $PARTED|cut -d 'B' -f 1 >$F/Parted 
+# faire un KIL de parted si ca plante a l'arrachage de microsd; apres une 
+# tempo ??  #  et relancer ??, car la taille dans Parted est alors nulle !!
+
+#puis, INDEX microsd :: # ${PARTED%B}
+SEEKIDX=70000000  #dans le fichier bidon _ de 10M plein de -, sur la microsd
+sudo dd if=/dev/$SP of=$F/INDEX bs=1 skip=$SEEKIDX count=4 2>/dev/null
+ID=`cat $F/INDEX` # verif si l'INDEX commence par _ :: # test "${ID:0:1}" 
+if test `cat $F/INDEX|cut -c 1` != '_';then 
+echo PB IDX;echo BUG sd IDX `date` >> $F/BUGmsd;fi
+fi
+else rm $F/NEWSD; echo microsd pas montee # continue ou next ?
+fi 
+#
+## ----------------------- TEST FAT32 MICROSD -------------------------------
+df|grep "/dev/${SP}1" >/dev/null; GS=$?; # test MOUNT sd, SI !! sd demontee !!
+## ET UNIQUEMENT LORS DE SON INTRODUCTION !!! ... a faire ... !!!
+#
+##if test $GS -eq 1;then N=`expr $N + 1` # boucle attente Nx2s test MOUNT
+## if test $N -eq 90 -a -f NEWSD;then N=0;sudo echo; 
+ # ---------------------------> sudo mount /dev/${SP}1 /m;MS=$? #en test, mount /n
+## MOUNTable ?
+##  if test $MS -eq 0; then echo -n _$MS >> FATOK ;sudo echo; #umount /n; # Yes
+##  else echo -n $MS >> FATNOK; IDX=`cat INDEX` # re-ecrire FAT !!
+## sudo dd if=microsd/$IDX/FAT$IDX of=/dev/$SP bs=1M
+##  fi # BAD FAT ?? Recopie FAT ... sur sd !!! ... a faire, et comme c'est FAT
+## d origine, tous Updates dessus seront perdus, si pas deja enregistres
+## sur Syteme ... et si recopie FAT marche pas, afficher a l ecran un mesg 
+## disant MICROSD KO !!! :: envoyer Mail P+JJ avec ID sd ?? Inconnu ??!!
+## ping -c 2 8.8.8.8; P=$?; if test $P -eq 0; then mail; fi
+## fi 
+##fi 
+## ----------------------- REGENERATION SILICIUM ----------------------------
+
+while true; do #echo dd_SILICIUM
+PA=100; PAmpv=5; # Cycles dd :: King 6x432 ; Sand 1x332 ; Chin 2x432 # 
+CHKdd=`ps -ef |grep ' dd '|grep -v grep|wc -l` # test surface partiel
+CHKmpv=`ps -ef |grep $PLAY|wc -l`;echo $CHKdd >>$F/CHKdd #lectur Video en cours?
+#selon puissance CPU et flots simultanes microsd, arreter dd pendant film mpv,
+# ET claf affichage pas fini !!!, ou ... lecture "pointille"!! microsd PAmpv ??
+# au 1er !!! CHKmpv, retarder testSD de 6 sec, pour gagner sur cp en Cache
+# et decalage d autant pour mpv, pour test Hic debut ACE
+#
+#if test -s mpvUP; then sleep 6; >mpvUP; fi
+if test $CHKdd -eq 0 && test ! -s $F/clafUP; 
+then if test $CHKmpv -ne 2; then #echo '1er testSD'; 
+TAILL=`cat $F/Parted`;if test `expr length "$TAILL"` -lt 3; then break; 
+else $SD/testSD $TAILL $PA $SP  & # pourquoi &, sinon ca bloque, et pas en mpv?
+if test `grep medium $F/ddERROR|wc -w` -gt 0; then break; fi
+#Ste=$?; if test $Ste = 1; then echo ERRtestSD > $F/ERRtestSD; exit; fi
+#Ste=$?; if test $Ste = 1; then echo ERRtestSD > $F/ERRtestSD; break; fi
+fi
+else echo  #pendant mpv, la boucle 2 sec n'est plus utile:: cycle 4x3x2 King
+for i in 1 2 3 4; do $SD/testSD `cat $F/Parted` $PAmpv $SP; done ; sleep 1 ;
+for i in 1 2 3 ; do $SD/testSD `cat $F/Parted` $PAmpv $SP; done ; sleep 1 
+$SD/testSD `cat $F/Parted` $PAmpv $SP; $SD/testSD `cat $F/Parted` $PAmpv $SP;
+fi # KO si un ";" suit le "&" precedent !!! ----------------------------
+else if test `grep medium $F/ddERROR|wc -w` -gt 0; then break; fi
+fi;sleep 1; done
+echo '-----------------------FIN BOUCLE'; sleep 1; done # boucle complete SL
+
