@@ -1,64 +1,78 @@
 
-# DOC pour developpeurs ...
+# DOC pour Developpeurs 2022 ...
 
-# ce produit Multimedia a pour principal objet d'afficher des 
+# Ce produit Multimedia a pour principal objet d'afficher des 
 # films sur une TV, ... ou tout ecran HDMI ...
 #
-# Il doit le faire par choix "Originel", sous une forme aussi
+##################################################################
+#
+# OBJECTIF MAJEUR :: 
+#
+# Il doit le faire, par choix "Originel" !!!, sous une forme aussi
 # "Portable" que possible, afin que le meme code puisse fonctionner
-# avec un minimum d'adaptations, dans un demi siecle !!!
+# avec un minimum d'adaptations, dans un demi siecle !!!!!!
 #
 # Le reperage des Dependances et leurs delimitations, devient
 # un objectif permanent ...
 #
-# La syntaxe minimale du Shell Bourne a ete choisie pour le
-# developpement ..., supposee maintenue compatible pour un demi
-# siecle au moins ...
+# La syntaxe minimale !! du Shell Bourne a ete choisie pour le
+# developpement ..., supposée maintenue compatible pour un demi
+# siecle au moins ... (car etant deja compatible depuis 40 ans ...)
 #
 # les Dependances potentiellement non compatibles dans le temps, 
 # sont a plusieurs niveaux ::
 #
 # 1: des menus a l'ecran vont utiliser des caracteres alphabetiques,
-# dont des "touches" sur lequelles cliquer pour faire des choix ...
+# dont des "touches" sur lesquelles cliquer pour faire des choix ...
 # ces caracteres seront obtenus, avec des Fontes diverses, en tailles
 # et couleurs diverses, par usage de Consoles Graphiques, comme
-# xterm, mate-terminal, gnome-terminal, ....
+# xterm, mate-terminal, gnome-terminal, .... et autres dans le futur
+#
 # Le code devra accommoder plusieurs Consoles graphiques au choix,
 # avec des effets visuels semblables, et un code aussi peu different
 # que possible, entre les diverses Consoles ...
+# Actuellement sont integrees, pour experimentation, xterm et mate
 #
 # 2: la selection dans les menus, et les choix de touches, seront 
 # fait a la souris, permettant une selection "2D", plus confortable
-# qu'une Telecommande "1D"
+# qu'une Telecommande "1D", ... en attendant d'autres outils plus
+#futuristes ...
 #
 # 3: un Serveur X11 etant suppose present, avec une bonne compatibilite
 # de long terme, la touche de souris la plus utilisee sera la Molette
 # Centrale, a la fois pour le SCROLL dans un texte, ... ET la Selection
 # de Touche, en cliquant SUR la Molette, et en provoquant un Copier/Coller 
 # d'une lettre PreProgrammee, vers le Serveur X11
-# (la commande "xclip", ou equivalent, permettra cette operation)
+# (la commande "xclip", ou equivalente, permettra cette operation)
 #
 # 4: le produit Dependra aussi d'un Player Video, dont plusieurs
 # devront etre integres, avec un minimum de differences d'usage ...
-# L'evolution des Players avec la 4K, puis la 8K, definira ceux
+# L'evolution des Players avec la 4K, puis la 8K, definira 
 # les plus adaptes ...
 #
 # Il serait meme possible d'envisager de faire appel a un lecteur
 # hardware specialise externe, (comme pour des Decodeurs "lourds"
-# type AV1, en 8K), en le pilotant par programme, et en lui 
+# type AV1, en 8K ou +), en le pilotant par programme, et en lui 
 # fournissant le film a decoder et a afficher, au fil de l'eau,
 # comme le ferait un Serveur Video ...
 #
 # Il faudra faire evoluer le microOrdinateur (au format type 
 # "Carte de Credit", genre Raspberry Pi), dans les annees ...., 
+# Il faudra faire evoluer le microOrdinateur (au format type 
+# "Carte de Credit", genre Raspberry Pi), dans les annees ...., 
 # pour profiter au mieux de la montee en puissance, en parallele 
-# avec la lourdeur du decodage Video ... (comme AV1 en 8K)
+# avec la lourdeur du decodage Video ... (comme AV1 en 8K ou +)
 #
 # En supposant une perenite de Linux, comme OS de base, ou tout
 # autre OS, capable d'Interpreter du Shell Bourne, avec des
 # commandes de base GPL, on peut esperer une "migration" "douce" ...
 #
-# Le produit s'execute en 3 flots Shell, + ou - simultanes ::
+#################################################################
+#
+# ARCHITECTURE DU PRODUIT ::
+#
+# Le produit s'execute en 3 flots Shell, + ou - simultanes, 
+# avec des moments de synchronisation ::
 #
 # 1: un flot de Menus Utilisateurs, permettant une Recherche
 # d'un film dans une longue liste, presente sur un support
@@ -79,9 +93,91 @@
 # Ce 3eme flot devra aussi assurer les Mises A Jours du Produit,
 # (dont a travers Internet)
 #
-# une partie de la Collection de films et de Documentairs etant 
+# une partie de la Collection de films et de Documentaires etant 
 # fournie sous forme de cartouches MicroSD, en nombre croissant
 # au fil de l'enrichissement de la Collection, le flot de
 # Maintenance sera particulierement oriente, vers la surveillance
 # de ce support Silicium ...
 #
+###################################################################
+#
+# NOTES sur la Dependance au PLAYER, avec une difficulte croissante
+# dans l'installation initiale de la Box, et reduisant la "Portabilite" ::
+#
+# 1 - le player choisi est execute avec le moins possible d'arguments,
+# pour augmenter la portabilite 
+#
+# 2 - le player choisi est lance avec un argument d'acceleration 
+# graphique, qui lui est specifique, et peut necessiter l'installation
+# de librairies d'acceleration Hard ou Soft complementaires ...
+# Ceci reduit la "Portabilite"
+#
+# 3 - Le kernel peut etre complete par des librairies KMS (Kernel
+# Mode Settings), permettant au Player d'avoir un acces moins
+# dependant du Serveur Graphique X11, en utilisant + directement
+# les "Frame-Buffer" fbdev ..., ce qui se traduit par # une 
+# acceleration sur la Video ... (comme le fait par exemple le 
+# Linux BUDGIE, sur Raspberry Pi4)
+#
+# 4 - Le player peut etre realise par un hardware externe (une
+# 2eme carte CPU !! format Credit), equipee d'un logiciel de 
+# decodage Video ultra optimise, en Frame Buffer direct, sans 
+# Serveur graphique X11, ce qui fait gagner beaucoup en 
+# performances  (en particulier pour des decodeurs Video 
+# "Lourds", de type AV1, en 8K ou + ...)
+#
+# Le probleme est alors le Pilotage de ce player hardware
+# exterme, par la Box principale (architecture Client/Serveur 
+# Video ..., switch des 2 sorties HDMI, vers l'entree TV, ...)
+#
+# exemple :: un Odroid C2, deja anciens, mais capable avec un 
+# logiciel specialise LibreElec, ou CoreElec, d'afficher de 
+# la video 4K fluide, codee en H265/HEVC, sur un ecran 4K
+#
+# 5 - Le player peut etre realise par le meme logiciel de decodage
+# ultra optimise, mais s'executant DANS une Machine Virtuelle, 
+# installee dans la Box Principale ... (comme KVM pour Linux)
+#
+#############################################################
+#
+# NOTES Techniques de Performances Graphiques ... ::
+#
+# Un Raspberry PI4 avec 2G de memoire, meme Overclocke a 2GHz, 
+# ne peut pas afficher de facon fluide une video 2K codee en 
+# Hevc/H265 ...
+#
+# En ajoutant DRM/KMS (Direct Rendering Management/Kernel
+# Mode Settings) dans le Kernel, et dont la presence est alors
+# visible quand le module "drm" est charge (lsmod) et le 
+# repertoire /dev/dri est present, la video devient fluide !!!
+# alors que le decodage video Hevc est fait purement par
+# le CPU, en logiciel !!!
+#
+# Car on a alors "court-circuite" la lourdeur du serveur 
+# graphique X11 ..., alors que la frequence du PI4 se contente 
+# de 1,5 GHz ...
+#
+# La variante de Linux dite "Budgie" a fait ce travail DRM/KMS,
+# mais ce n'est pas frequent ...
+#
+# En video 4K, ce travail ne suffit pas sur PI4 ::
+# il faut alors en +, des optimisations faites dans des produits
+# specialises de decodage Video, comme LibreElec ou CoreElec ...
+# qui tentent en +, d'utiliser du silicium specialise video
+# dans la carte mere ..., et des "FrameBuffer" fbdev ...
+#
+# En 8K, rien ne fonctionne sur PI4, car le GPU n'est pas 8K !!
+# Il faudra attendre le PI5 ou PI6, pour avoir un GPU 8K ... !?
+#
+#
+# Avec un Odroid C4 et 4G de memoire, a 2 GHz, on n'obtient pas
+# encore une bonne fluidite d'une video 2K en Hevc ..., mais 
+# c'est mieux qu'avec un PI4 ::
+# Trouver une distribution Linux qui integre DRM/KMS resoudrait
+# le probleme ... Archdroid est proche, ... et boot tres vite ...
+#
+# Pour la 4K en C4, il faut les memes produits specialises
+# que pour le PI4 ... En 8K, rien ne fonctionne ...
+#
+# Meme un Odroid C2 1G , produit une video 4K Hevc fluide !!!,
+# avec les produits sepcialises !!!

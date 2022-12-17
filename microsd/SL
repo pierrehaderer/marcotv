@@ -44,7 +44,7 @@ else rm $F/NEWSD; echo microsd pas montee # continue ou next ?
 fi 
 ## ----------------------- TEST FAT32 MICROSD -------------------------------
 # 1 - microsd montee par USER :: OK ...
-#     apres arrachage, microsd peut sembler mounte, mpv demarrer, et s'arreter
+#     apres arrachage, microsd peut sembler mountee, mpv demarrer, et s'arreter
 #     en qlques sec, alors que la microsd est absente !!! :: tester un dd de
 #     _, pour voir si on l'obtient entier ?? ...
 # 2 - mount :: marche pas ?? :: umount puis remount ?? ..., si mpv absent
@@ -60,7 +60,7 @@ if test $GS -eq 0;then echo "/m OK " # semble mountee??:: verif acces reel !?::
   else sudo umount /m;echo 'UNMOUNT';$S 1; #alors tenter de la remounter::
        sudo mount /dev/${SP}1 /m; MS=$?; echo ' TEST REMOUNT !!'
        if test $MS -eq 1; then echo 'REMOUNT KO!!'; #mount KO !!:: FAT KO ??
-         echo 'tenter dosfsck ??' ; echo ; DOSFSCK=0; # pas portable!!
+         echo 'tenter dosfsck ??' ; echo ; DOSFSCK=0; # PAS Portable!!
          if test $DOSFSCK -ne 0; then echo 'FSCK ECHOUE; recopy old FAT PORTABLE??'
          ## IDX=`cat INDEX`;sudo dd if=microsd/$IDX/FAT of=/dev/$SP bs=1M
          fi
