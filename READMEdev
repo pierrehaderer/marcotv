@@ -186,23 +186,49 @@
 # affiche seulement en 2K, et donc avec interpolation ...
 #
 ##############################################################
-# L'interet de separer les fonctions de ::
 #
-# - recherche et de selection du film, et de la gestion des 
-# cartouches microsd, et de l' administration de la Box Principale,
+# On considerera alors la box en 2 groupes de fonctions ::
+#
+# - l'une pour la recherche et la selection du film, et la gestion 
+# des cartouches microsd (surveillance de la surface silicium,
+# surveillance du Systeme de Gestion de Fichier, tentative de
+# Reparation, suite a un defaut detecte, check du lecteur 
+# USB/microsd, ...), de l' administration de la Box Principale 
+# et mise a jour de sa carte Systeme, et des microsd de films
 # d'une part,
-# - affichage du film dans une 2eme Box Player d'autre part
+# - l'autre pour affichage du film dans une 2eme Box Player, 
+# d'autre part
+# - et avec les 2 box dans le meme coffret, avec juste une entree
+# USB pour la microsd de films, une alim pour les 2 box, et une
+# sortie HDMI vers la TV ...
+# - la souris est une souris radio (2.4GHz, ou Bluetooth)
 #
-# est de pouvoir evoluer dans le temps de facon plus autonome,
-# par rapport a l'evolution de l'encodage des films a l'avenir ::
-# Resolutions de 2K, puis 4K, puis 8K ...
-# Encodeur H264, puis H265/Hevc, puis AV1 et VP1 et H266, ... etc
+# L'interet de separer les 2 groupes de fonctions # est de pouvoir 
+# evoluer dans le temps de facon plus autonome, par rapport a 
+# l'evolution de l'encodage des films a l'avenir ::
+# - Resolutions de 2K, puis 4K, puis 8K ...
+# - Encodeur H264, puis H265/Hevc, puis AV1 et VP1 et H266, ... etc
 #
 # La Box principale necessitera moins de changement du Hardware,
 # alors que la Box Player devra suivre les niveaux de performance
 # requis, et les specialisations logicielles, pour s'adapter a
-# l'evolution de l'encodage des films ..., et sa lourdeur en
+# l'evolution de l'encodage des films ..., et les lourdeurs en
 # calculs ...
+#
+# Par exemple, un Raspberry PI4, ou un Odroid C4, ne sont pas
+# capables, ni l'un ni l'autre, de lire une video 8K, avec
+# un logiciel Linux Desktop standard ...
+#
+# Mais avec une Box Principale en Raspberry PI4 et linux standard, 
+# et ... une Box Player en Odroid C4, MAIS equipe d'un logiciel 
+# optimise Video (comme CoreElec pour le C4), permet une
+# lecture 8K fluide !!!, ... (essai realise !!!, et ... c'est 
+# Magique ... !!!)
+#
+# Il suffit de configurer alors la Box Principale, en serveur
+# Video par Samba sur PI4, et qui porte la microsd a lire, ...
+# et la Box Player en client Samba sur C4, pour la lecture
+# pure du film ...
 #
 ############################################################
 # Si une formule a 2 box est alors choisie, il faudra les 
