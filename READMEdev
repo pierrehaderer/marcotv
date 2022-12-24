@@ -130,9 +130,9 @@
 # exterme, par la Box principale (architecture Client/Serveur 
 # Video ..., switch des 2 sorties HDMI, vers l'entree TV, ...)
 #
-# exemple :: un Odroid C2, deja anciens, mais capable avec un 
-# logiciel specialise LibreElec, ou CoreElec, d'afficher de 
-# la video 4K fluide, codee en H265/HEVC, sur un ecran 4K
+# exemple :: un Lepotato, deja ancien, mais capable avec un 
+# logiciel specialise CoreElec, d'afficher de la video 4K fluide, 
+# codee en H265/HEVC, sur un ecran 4K
 #
 # 5 - Le player peut etre realise par le meme logiciel de decodage
 # ultra optimise, mais s'executant DANS une Machine Virtuelle, 
@@ -177,7 +177,88 @@
 # le probleme ... Archdroid est proche, ... et boot tres vite ...
 #
 # Pour la 4K en C4, il faut les memes produits specialises
-# que pour le PI4 ... En 8K, rien ne fonctionne ...
+# que pour le PI4 ... Le C4 lit fluide en 8K sur CoreElec !!!!!!
+# LibreElec fonctionne bien en Pi4 en 2160p a 30 fps, 
+# et CoreElec sur Lepotato en 2160p a 60 fps !!
 #
 # Meme un Odroid C2 1G , produit une video 4K Hevc fluide !!!,
-# avec les produits sepcialises !!!
+# mais "moiree", avec les produits specialises !!!, car
+# affiche seulement en 2K, et donc avec interpolation ...
+#
+##############################################################
+# L'interet de separer les fonctions de ::
+#
+# - recherche et de selection du film, et de la gestion des 
+# cartouches microsd, et de l' administration de la Box Principale,
+# d'une part,
+# - affichage du film dans une 2eme Box Player d'autre part
+#
+# est de pouvoir evoluer dans le temps de facon plus autonome,
+# par rapport a l'evolution de l'encodage des films a l'avenir ::
+# Resolutions de 2K, puis 4K, puis 8K ...
+# Encodeur H264, puis H265/Hevc, puis AV1 et VP1 et H266, ... etc
+#
+# La Box principale necessitera moins de changement du Hardware,
+# alors que la Box Player devra suivre les niveaux de performance
+# requis, et les specialisations logicielles, pour s'adapter a
+# l'evolution de l'encodage des films ..., et sa lourdeur en
+# calculs ...
+#
+############################################################
+# Si une formule a 2 box est alors choisie, il faudra les 
+# connecter, pour gerer la Box Player, a partir de la Box
+# Principale ..., avec des outils telecom comme Samba,
+# Systeme de fichiers distribues ...
+#
+# il faudra egalement gerer l'alternance des 2 sorties HDMI,
+# de la Box Principale, et de la Box Player, avec un Switch
+# HDMI a 2 ports, vers un port ...
+#
+# Un switch HDMI telecommande pas un clavier infrarouge, 
+# permettra a la Box Principale, de telecommander le passage
+# a la Box Player, et retour, selon le besoin, en equipant
+# la Box Principale, d'une diode infrarouge emettrice, pilotable
+# par programme, et apres avoir appris a la Box Principale,
+# les codes de telecommande du switch ...
+#
+# Pour cela, la Box Principale sera en + equipee d'une # diode 
+# infrarouge receptrice, et d'une procedure d'apprentissage
+# collectant les codes infrarouge, de la telecommande du Switch
+#
+#############################################################
+# INSTALLATION de SAMBA, a minima !!, en serveur Video, pour 
+# ces lecteurs specialises externes ::
+#
+# ----->> 1 :: Sur le serveur Samba, dans le directory de Login 
+# (comme marco), ajouter un directory de Partage ::
+#
+# mkdir MON_FILM
+#
+# et dans /etc/samba/smb.conf, en superuser, ... ajouter des 
+# "share", entre [ ] ::
+#
+# [MON_FILM]
+# path = /home/marco/MON_FILM
+# browsable = yes
+#
+# puis saisir un "mot de passe samba", pour l'utilisateur marco ::
+#
+# smbpasswd -a marco
+#
+# et y frapper un mot de passe quelqonque, comme abcdefghij
+#
+# Toute modification du serveur devra etre activee en superuser par ::
+# service smbd restart 
+# (ou rebooter le serveur)
+#
+# ----->> 2 :: sur le client samba, utiliser les menus specifiques, 
+# pour saisir l'acces au serveur ::
+# smb://192.168.0.1/MON_FILM
+# ou l'adresse IP fournie est celle du serveur video ...
+# puis fournir un login ::
+# marco
+# et son mot de passe ::
+# abcdefghij
+# et accepter dans le menu client de s'en souvenir pour simplifier 
+# les # acces ulterieurs
+#
