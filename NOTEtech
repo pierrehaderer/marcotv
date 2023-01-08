@@ -60,7 +60,7 @@
 # -en 1080p en force ! sur moniteur 2K, 4K, ou 8K :: positionnements inchanges
 # -pour apt et terminal graphique, activer les sites NON Canonical ...
 # -etc/sudoers :: marco ALL=(ALL:ALL) NOPASSWD:ALL, et rm passwd marco shadow
-# -on armbian, use armbian-config for grXaphic login ...
+# -on armbian, use armbian-config for graphic login ...
 # -dans .profile, procedure SON en & :: /home/marco/S & :: gagne 20s au boot !!!
 # ajouter aussi :: ( sleep 20; /home/marco/TL ) & ...
 # portabilite de la syntaxe & de less, pour recherche selective dans collection?
@@ -129,20 +129,20 @@
 #  En 4K, 8K, les TVs auront une prise USB; ou un Remore FilSys en Ethernet, 
 #  pour lire le film en externe, et avec LEUR accel Hardw interne ...
 #
-#  Dont un Odroid C2 !!!, en LibrElec qui fait de la belle 4K, AVEC son accel Hard ...
-#  Peut-on acceder en LibrElec, a un serveur Video (ma Box) en Wifi ou Ether ??
+#  Dont un Odroid C2 !!!, en LibrElec qui fait de la 4K moyenne, AVEC son accel Hard ...
+#  Peut-on acceder en LibrElec, avec un serveur Video (ma Box) en Wifi ou Ether ??
 #  ou USB a USB ??
 #  Comment gerer les 2 entrees HDMI des 2 box sur la tele ...??? Switch HDMI ???
 #
 # Les prochaines box pi5:OdroiC5 auront assez de CPU en 2K, sans accel Hard, ...
-# mais en 4K ????, ou 8K
+# mais en 4K ????, ou 8K ????????
 #
 # Sur PI4, le pilote video est dans le kernel KMS ??? ... ca accelere ???
 #  en mode Legacy, le film ace* saute sans arret !!!, meme a 2GHz
 #  en mode KMS 128M, 1.5GHz suffit ... FKMS 512M pas convainquant ...
 #  KMS tres efficace !!! :: A-V 0 en mpv, et frame drop =0 !!!
 #
-# apparemment, pas de KMS sur Budgie C4 ..., seulement sur PI4
+# apparemment, pas de KMS sur Budgie C4 ..., seulement sur Budgie PI4
 #####################################################################
 ## Config settings specific to arm64 sur Budgi Pi4
 #arm_64bit=1
@@ -175,4 +175,100 @@
 #
 # comment fonctionnerait LibrElec de Odroid C4 !!!, en VM linux ???
 # Trouver une VM ARM !!! sur C4 ... (ou C2) ??
+#
+###################################################################
+# Si Box a 2 cartes, alors pb de syncho entre les 2 HDMIS vers 1 seul 
+# en sortie, ... et pb de LA souris devant gerer les 2 box alternativement ???
+# selon que le HDMI est sur l'une ou l'autre ....
+#
+# Trouver un switch UDMI de qulite 8K !!!, puisque c'est surtout dans
+# cette optique qu'on a 2 cartes ...
+#
+# Trouver un switch USB pour LA souris ??? :: 
+# le Bluetooth ne permet pas le partage de la seule souris,
+# et les souris Radio a cle USB, sont liees a LEUR cle ...
+#
+# Presenter la Box principale, sur un de ses ports USB en filaire,
+# comme une "souris" filaire virtuelle, vers la Box Player ?? ....
+# en transitant le flus de la souris connectee a la Box Principale,
+# VERS la Box Player quand on est DANS la Lecture du film ??...
+#
+# Un switch USB avec telecommance interne, et souris Radio 2.4 Ghz
+# sur le switch est + simple ...
+#
+# Reperer la situation de Pause evnetuelle du film sur la Box Player,
+# en surveillant le flux Samba toutes les 2 secondes, en ifconfig,
+# par rapport  au debit connu du film, en ffprobe ...
+#
+# ##############################################################
+#
+# Samba a un pb de presence d'interet, et des serveurs DNS 8.8.8.8
+# et 8.8.4.4 ???
+# En connection locale Ethernet en Patch Croise, ca ne marche pas  ...
+# Meme l'activation des 2 prises RJ45 pose Pb !!!, car rien d'actif
+# en face au boot ... ??
+#
+# Serveur SSH de la Box Player + simple ..., avec config en adresses 
+# IP statiques
+# Puis scp localfil root@192.168.1.102:/tmp/file
+# Pb le passwd (libreelec) ne peut etre saisi que sur un "vrai" 
+# terminal tty ...  : tester les paires ptty1 et ttyp1 ???
+#
+# sur le Pi4, creer le maitre ptyXY, sans lequel l'esclave ttyXY
+# plante ::
+# cat > /dev/ptya2, pour y ecrire
+# Puis creer l'esclave , pour y lire ::
+# ssh IPodroid < /dev/ttya2
+#
+# puis taper une commande cote maitre (sous cat), elle apparait
+# core esclave, avec son resultat (sous odroid, a travers ssh)
+#
+# Pour le moment, la saisie du mot de passe echappe au PseudoTerm ::
+# la frappe du mot de passe libreelec sous cat, n'est pas percue
+# par ssh ??
+#
+# on peut aussi faire l'inverse ::
+# creer le master ptyXY en reception ::
+# cat < /dev/ptya2
+# Puis se logger en ssh , en renvoyant les retours ssh  sur l'
+# esclave ttyXY ::
+# ssh IPodroid >/dev/ttya2
+#
+# #########################################################
+#
+# SE logger sur le serveur sshd (odroid) sans passwd !! ::
+# - fabriquer une paire de cle RSA sur le client (pi4)::
+#   ssh-keygen -t rsa
+#   preciser SANS Passphrase (taper Entree vide)
+# - les copier sur le serveur (odroid) ::
+#   ssh-copy-id root@192.168.1.102
+# - se connecter normalement ::
+#   ssh 192.168.1.102  
+#   en fournissant le mot de passe d'origine ...
+#   Puis se connecter a nouveau ::
+#   ssh 192.168.1.102  
+#   qui ne devrait pas demander un mot de passe, ni Passephrase
+#
+##########################################################
+#
+# La souris partagee entre 2 ordi, ne necessite que 2 fils D+,D-
+# DATA/CTRL a basculer :: un relais Bistable ! a 2 canaux suffit, 
+# a petite vitesse comme USB2
+# Entree souris femelle USB, pour cle male souris radio 2.4 Ghz
+# Le pilotage est fait par impulsion 5V sur le connecteur GPIO
+#
+# les cartes ne peuvent pas demarrer sans leur ecran HDMI 
+# branche ! ::
+# gerer les 2 boots et alim combinees, avec le switch HDMI !!!
+#
+# Commencer par booter la Box principale, HDMI vers lui, et
+# sans alim a la Bos Player
+# A la fin du boot (temps a definir), basculer le switch
+# HDMI, PUIS, l'alim DC de la Box Player par Relais Bistable
+#
+# Switch HDMI electronique indispensable, car 3 fils de Data+-,
+# puis 2 fils Horloge, puis 2 fils CTRL !!!
+# par IR ?, par bouton avec frappe par un electro # aimant !!?, 
+# par port microUSB deporte par certain switch ??, ...
+#
 #

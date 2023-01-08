@@ -1,0 +1,100 @@
+
+# REDUIRE LES DEPENDANCES, POUR AMELIORER LA PORTABILITE DE LONG TERME !!!
+
+BASEDIR=/home/marco/repo/marcotv
+C=`$BASEDIR/TERM`; F=$BASEDIR/TMP; MSG=$BASEDIR/MSG;claDir=cla ; #S21='echo S21'
+TM='mate-terminal';TX=xterm;G=geometry;T=title;H='hide-menubar';Z=zoom; R4K=0;
+PARTE="--$T= --$H -- sh -c";SE=0;Tcach=1;TP2='tput bold';TP1="tput civis;$TP2"
+PARX='-fa default -fg green'; PARTX="$PARX -fs 50 -b 15"; S=sleep; SID="$1=''"
+en () { echo -e -n "\n" |xclip; }
+ee () { echo -e -n "q\n" |xclip ; }
+FI=`cat $F/lism4`; if test `cat $F/lism4|wc -w` != 1; then exit; fi
+IPboxVideo='192.168.1.102'
+
+#test VIDEO 2K, 4K, 8K ::(toutes les Videos sont supposees RE-Encodee en Hevc)
+VTMP=`ffprobe /m/$FI 2>&1 |grep 'Video: hevc' | cut -d '[' -f 1`
+#(echo __________; echo $VTMP) >> $F/videoTMP
+LEN=`expr length "$VTMP"`;len=`expr $LEN \- 11`;RES=`echo $VTMP|cut -c ${len}-`
+# trouver + "Portable" que ffprobe !!??!!!!!
+
+case $RES in
+'1920x1080') # video 2K
+# VIDEO 2K :: PLAYER mpv Interne (et accelere ??), sur ecran 2K ou 4K ... ::
+# exemple :: Raspberri PI4, avec linux Budgie KMS ...
+echo>$F/mpvUP;$S 2;G11='70x20+250+50';CM11="$SID;$TP2;cat $MSG/msg_mpv"; 
+case $C in
+M) en;$TM --$G=$G11 --$Z=1.8 $PARTE "$CM11;read r" ;;
+X) en;xterm -$G $G11 -fs 25 $PARX -e "$CM11;read r" ;; esac 
+
+R4K=0; # pour test 2K vers 4K !!!
+xrandr|grep current|grep 3840;if test $? -eq 0;then R4K=1;fi
+if test $R4K = 0;then #forcer 2K au System,et lancer mpv en 4K sans --fs ???
+sleep $Tcach;nice -20 mpv --fs /m/$FI # --cache=yes MPV sautille !!
+else echo #on est en 4K !!;xrandr --size 1920x1080#mpv --fs /m/${}.hevc.mkv 
+fi; rm F #xrandr -s 0 # COPIER/COLLER xclip MARCHE PAS POUR SORTIR mpv !?
+;;
+
+'3840x2160') # video 4K
+# PLAYER Externe sur 2eme carte, avec soft special optimise (coreElec) ... ::
+# liaison Ethernet directe et Samba, switch HDMI ecrans, et switch USB souris
+# avec tetecommande interne par la Box Principale ...
+
+# VIDEO 4K :: PLAYER mpv Interne, sur ecran 2K ou 4K ...
+# aucun hardware actuel a petit prix, pour l'ensemble du produit Logiciel !!! ::
+# creer 2 Box :: une Box VIDEO pour l'affichage de film, une Box Principale
+# qui pilote tout le reste (dont les Menus Utilisateurs de Recherche de film, 
+# la gestion et Reparation des cartouches, la mise a jour et Maintenance du 
+# produit ....) !!
+# exemple :: un PI4 VIDEO, avec logiciel specialise Accelere (LibreElec/CoreElec)
+# puis un 2eme Pi4, comme Box Principale, qui pilote integralement le PI4 VIDEO
+
+# Le lien entre les 2, est un Ethernet point a point, avec un cable de Patch 
+# croise court, et des adresses IP manuelles, de meme Prefixe ...
+# Les echanges seront en ssh; ou en scp, pour les trasnfers de Videos ..., en
+# ayant supprime les Mots de Passe ssh
+# preparer la BOX Video, si LibreElec/CoreElec, a "voir" le film transfere 
+# comme un FAVOURITE de nom :: MON-FILM, pour juste cliquer dessus ...
+
+# scp /m/$FI $IPboxVideo/storage/videos/MON-FILM.mkv 
+
+# cas d'une Box Video LibreElec/Coreelec
+# Basculer simultanement les Relais de la souris Radio, vers la Box Video,
+# ET Basculer aussi la sortie HDMI, vers la Box Video ... (Bus GPIO de la
+# Box proncipale ... :: la lecture peut commencer immediatement, avant
+# la fin du tranfert complet ...
+
+# Surveiller la progression du film dans la Box Video !!??, en SSH ...,
+# une fois le transfert termine ..., pour decider un moment de revenir
+# en basculant les switsh USB/HDMI, a la Box principale, quand l'
+# Utilisateur aura termine, ... et en lui posant la question OUI/NON, 
+# sur la Box Principale !!! 
+;;
+
+'7680x4320') # video 8K
+# Pour les decodages Lourds, on pourrait separer l'affichage de la video
+# dans la Box Video, et celle du son dans la Box principale, ce qui 
+# laisserait un maximum de CPU a la Box Video ...
+#
+# Reste la Resynchro Video/Son entre les 2 Box !! ::
+# un ajustage de qqes fractions de secondes (sleep 0.1 a 0.9) dans la
+# Box pricipale, sur le son suffirait ... Elle devrait etre la meme
+# pour tous les films, sur la meme Paire de Box
+#
+# ffmpeg -i FILM.mkv -c:a copy son.mov &
+# separe le son tres rapidement
+# puis un sleep ajuste, avant de le jouer ::
+# sleep 0.x ; ffplay son.mov ; 
+# sur la box Principale, et ses 2 enceintes externes en Stereo ...
+#
+# enfin ::
+# ffmpeg -i FILM.mkv -c:v copy Video.mkv &
+# separe la video progressivement, et plus lentement, et donc en background
+# ce qui permet de demarrer le transfert de la video, encore plus lent, vers
+# la Box video, en ::
+# scp Video.mkv 192.168.1.102/storage/videos/MON-FILM.mkv
+#
+# l'usage du multiplex mkv, permet de demarrer la projectiion du film
+# presque immediatement, sans attendre la fin du transfer de la video complete,
+# avec une vitesse de lecture beaucoup plus lente que le tranfert ...
+;;
+esac

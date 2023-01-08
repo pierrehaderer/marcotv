@@ -2,7 +2,8 @@
 # DOC pour Developpeurs 2022 ...
 
 # Ce produit Multimedia a pour principal objet d'afficher des 
-# films sur une TV, ... ou tout ecran HDMI ...
+# films sur une TV, ... ou tout ecran HDMI ..., dans les 3
+# Resolutions 2K, 4K, 8K .... !!
 #
 ##################################################################
 #
@@ -11,9 +12,10 @@
 # Il doit le faire, par choix "Originel" !!!, sous une forme aussi
 # "Portable" que possible, afin que le meme code puisse fonctionner
 # avec un minimum d'adaptations, dans un demi siecle !!!!!!
+# Plutot ambitieux ... !!
 #
-# Le reperage des Dependances et leurs delimitations, devient
-# un objectif permanent ...
+# Le reperage des Dependances dans le Temps, et leurs delimitations, 
+# devient un objectif permanent ...
 #
 # La syntaxe minimale !! du Shell Bourne a ete choisie pour le
 # developpement ..., supposée maintenue compatible pour un demi
@@ -58,8 +60,6 @@
 #
 # Il faudra faire evoluer le microOrdinateur (au format type 
 # "Carte de Credit", genre Raspberry Pi), dans les annees ...., 
-# Il faudra faire evoluer le microOrdinateur (au format type 
-# "Carte de Credit", genre Raspberry Pi), dans les annees ...., 
 # pour profiter au mieux de la montee en puissance, en parallele 
 # avec la lourdeur du decodage Video ... (comme AV1 en 8K ou +)
 #
@@ -93,7 +93,7 @@
 # Ce 3eme flot devra aussi assurer les Mises A Jours du Produit,
 # (dont a travers Internet)
 #
-# une partie de la Collection de films et de Documentaires etant 
+# Une partie de la Collection de films et de Documentaires etant 
 # fournie sous forme de cartouches MicroSD, en nombre croissant
 # au fil de l'enrichissement de la Collection, le flot de
 # Maintenance sera particulierement oriente, vers la surveillance
@@ -102,7 +102,8 @@
 ###################################################################
 #
 # NOTES sur la Dependance au PLAYER, avec une difficulte croissante
-# dans l'installation initiale de la Box, et reduisant la "Portabilite" ::
+# dans l'installation initiale de la Box, et reduisant donc la 
+# "Portabilite" ::
 #
 # 1 - le player choisi est execute avec le moins possible d'arguments,
 # pour augmenter la portabilite 
@@ -114,8 +115,7 @@
 #
 # 3 - Le kernel peut etre complete par des librairies KMS (Kernel
 # Mode Settings), permettant au Player d'avoir un acces moins
-# dependant du Serveur Graphique X11, en utilisant + directement
-# les "Frame-Buffer" fbdev ..., ce qui se traduit par # une 
+# dependant du Serveur Graphique X11, ce qui se traduit par une 
 # acceleration sur la Video ... (comme le fait par exemple le 
 # Linux BUDGIE, sur Raspberry Pi4)
 #
@@ -137,13 +137,14 @@
 # 5 - Le player peut etre realise par le meme logiciel de decodage
 # ultra optimise, mais s'executant DANS une Machine Virtuelle, 
 # installee dans la Box Principale ... (comme KVM pour Linux)
+# (a essayer ???)
 #
 #############################################################
 #
 # NOTES Techniques de Performances Graphiques ... ::
 #
 # Un Raspberry PI4 avec 2G de memoire, meme Overclocke a 2GHz, 
-# ne peut pas afficher de facon fluide une video 2K codee en 
+# ne peut PAS afficher de facon fluide une video 2K codee en 
 # Hevc/H265 ...
 #
 # En ajoutant DRM/KMS (Direct Rendering Management/Kernel
@@ -153,9 +154,9 @@
 # alors que le decodage video Hevc est fait purement par
 # le CPU, en logiciel !!!
 #
-# Car on a alors "court-circuite" la lourdeur du serveur 
-# graphique X11 ..., alors que la frequence du PI4 se contente 
-# de 1,5 GHz ...
+# Car on a alors "court-circuite" en partie la lourdeur du 
+# serveur graphique X11 ..., alors que la frequence du PI4 se 
+# contente de 1,5 GHz ...
 #
 # La variante de Linux dite "Budgie" a fait ce travail DRM/KMS,
 # mais ce n'est pas frequent ...
@@ -164,11 +165,10 @@
 # il faut alors en +, des optimisations faites dans des produits
 # specialises de decodage Video, comme LibreElec ou CoreElec ...
 # qui tentent en +, d'utiliser du silicium specialise video
-# dans la carte mere ..., et des "FrameBuffer" fbdev ...
+# dans la carte mere ...
 #
 # En 8K, rien ne fonctionne sur PI4, car le GPU n'est pas 8K !!
 # Il faudra attendre le PI5 ou PI6, pour avoir un GPU 8K ... !?
-#
 #
 # Avec un Odroid C4 et 4G de memoire, a 2 GHz, on n'obtient pas
 # encore une bonne fluidite d'une video 2K en Hevc ..., mais 
@@ -203,7 +203,7 @@
 # sortie HDMI vers la TV ...
 # - la souris est une souris radio (2.4GHz, ou Bluetooth)
 #
-# L'interet de separer les 2 groupes de fonctions # est de pouvoir 
+# L'interet de separer les 2 groupes de fonctions est de pouvoir 
 # evoluer dans le temps de facon plus autonome, par rapport a 
 # l'evolution de l'encodage des films a l'avenir ::
 # - Resolutions de 2K, puis 4K, puis 8K ...
@@ -226,19 +226,19 @@
 # Magique ... !!!)
 #
 # Il suffit de configurer alors la Box Principale, en serveur
-# Video par Samba sur PI4, et qui porte la microsd a lire, ...
-# et la Box Player en client Samba sur C4, pour la lecture
-# pure du film ...
+# Video par Samba sur PI4, par exemple, et qui porte la microsd
+# a lire, ... et la Box Player en client Samba sur C4, pour la 
+# lecture pure du film ...
 #
 ############################################################
 # Si une formule a 2 box est alors choisie, il faudra les 
 # connecter, pour gerer la Box Player, a partir de la Box
 # Principale ..., avec des outils telecom comme Samba,
-# Systeme de fichiers distribues ...
+# Systeme de fichiers distribues, par exemple ...
 #
 # il faudra egalement gerer l'alternance des 2 sorties HDMI,
 # de la Box Principale, et de la Box Player, avec un Switch
-# HDMI a 2 ports, vers un port ...
+# HDMI a 2 ports, vers 1 port ...
 #
 # Un switch HDMI telecommande pas un clavier infrarouge, 
 # permettra a la Box Principale, de telecommander le passage
@@ -247,7 +247,7 @@
 # par programme, et apres avoir appris a la Box Principale,
 # les codes de telecommande du switch ...
 #
-# Pour cela, la Box Principale sera en + equipee d'une # diode 
+# Pour cela, la Box Principale sera en + equipee d'une diode 
 # infrarouge receptrice, et d'une procedure d'apprentissage
 # collectant les codes infrarouge, de la telecommande du Switch
 #
@@ -286,5 +286,5 @@
 # et son mot de passe ::
 # abcdefghij
 # et accepter dans le menu client de s'en souvenir pour simplifier 
-# les # acces ulterieurs
+# les acces ulterieurs
 #
