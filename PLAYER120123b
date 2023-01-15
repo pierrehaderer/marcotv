@@ -15,53 +15,44 @@ FI=`cat $F/lism4`; if test `cat $F/lism4|wc -w` != 1; then exit; fi
 IPboxVideo='192.168.0.102'
 GPIO='/sys/class/cpio'
 
-#SID="$1=''";B=$BASEDIR;C=`$B/TERM`;F=$B/TMP;MSG=$B/MSG;TM='mate-terminal';
-#TX=xterm;G=geometry;Z=zoom;R4K=0;TP2='tput bold';TP1="tput civis;$TP2";
-#PARTE="--title= --hide-menubar -- sh -c";PARX='-fa default -fg green';
-
-# tester dynamiquement la 2eme formule + moderne de gpiod !!
-init () { cd $GPIO; # utiliser les port GPIO 16,26,17,27,22,23,24,25
-sudo echo 25 > export # definition du port GPIO 25 pour switch souris
-cd gpio25; echo out > direction; cd ..
-sudo echo 23 > export # def du port GPIO 23 pour 1er switch HDMI en Y
-cd gpio23; echo out > direction ; cd ..
-sudo echo 24 > export # def du port GPIO 24? pour 2eme switch HDMI Ecran
-cd gpio24; echo out > direction ; cd ..
+init () { # tester dynamiquement la 2eme formule + moderne de gpiod !!
+cd $GPIO
+sudo echo 12 > export # definition du port GPIO 12 pour switch souris
+cd gpio12; echo out > direction; cd ..
+sudo echo 16 > export # definition du port GPIO 16 pour switch HDMI
+cd gpio16; echo out > direction ; cd ..
 #ssh-keygen -t rsa # une seule fois sur la Box Pricipale
 #ssh-copy-id root@192.168.0.102 ... (adress IP statique de Box Video)
-## OU ssh $IPboxVideo 'mkdir -p .ssh' avec passwd
-## puis cat .ssh/id_rsa.pub|ssh $IPboxVideo 'cat >> .ssh/authorized_keys'
-# a faire une seule fois sur la Box Video avec passwd
+# a faire une seule fois sur la Box Video
 }
-toVideo () { cd $GPIO # switch HDMI et souris ... vers Box Video
-cd gpio25; echo 1 > value; cd .. # switch les 2 fils Souris D+ et D-
-# switch HDMI:: les 2 switchs Y et Ecran en serie, et dans quel ordre ? ::
-# On suppose des switchs HDMI par impulsion/poussoir, PAS par interrupteur
-# cd gpio23; echo 0 > value; sleep 0.5; echo 1 > value; cd .. # switch Y
-# cd gpio24; echo 0 > value; sleep 0.5; echo 1 > value; cd .. # switch E
+toVideo () { # switch HDMI et souris vers Box Video
+cd $GPIO
+cd gpio12; echo 1 > value; cd ..
+cd gpio16; echo 1 > value; cd ..
 }
-toMain () { cd $GPIO # switch Souris et HDMI ... vers Box Principale
-cd gpio25; echo 0 > value; cd .. # switch les 2 fils Souris D+ et D-
-# switch HDMI:: les 2 switchs Y et Ecran en serie, et dans quel ordre ? ::
-# cd gpio23; echo 0 > value; sleep 0.5; echo 1 > value; cd ..
-# cd gpio24; echo 0 > value; sleep 0.5; echo 1 > value; cd ..
+toMain () { # switch HDMI et souris vers Box Principale
+cd $GPIO
+cd gpio12; echo 0 > value; cd ..
+cd gpio16; echo 0 > value; cd ..
 }
 pause () { # suivre l'activite du Player dans la Box Video par ssh
 echo
 # strace kodi
 }
 #
-#test VIDEO 2K, 4K, 8K, en Multiplex mkv !!  ::
+#test VIDEO 2K, 4K, 8K  ::
+# Methode ffprobe NON portable .... ::
+#VTMP=`ffprobe /m/$FI 2>&1 |grep 'Video: hevc' | cut -d '[' -f 1`
+#LEN=`expr length "$VTMP"`;len=`expr $LEN \- 11`;RES=`echo $VTMP|cut -c ${len}-`
+
+# trouver + "Portable" que ffprobe, en multiplex mkv !! ::
  od -c -w300 --read-bytes=100000 /m/$FI |grep '1   9   2   0' > $F/RES2K 
  od -c -w300 --read-bytes=100000 /m/$FI |grep '3   8   4   0' > $F/RES4K 
  od -c -w300 --read-bytes=100000 /m/$FI |grep '7   6   8   0' > $F/RES8K 
  if test -s $F/RES2K; then RES=1920x1080
  else if test -s $F/RES4K; then RES=3840x2160
      else if test -s $F/RES8K; then RES=7680x4320
-         else echo ; # methode ffprobe NON Portable en secours !! 
-VTMP=`ffprobe /m/$FI 2>&1 |grep 'Video: hevc' | cut -d '[' -f 1`
-LEN=`expr length "$VTMP"`;len=`expr $LEN \- 11`;RES=`echo $VTMP|cut -c ${len}-`
-          fi;fi;fi
+         else echo ERROR RESOL; fi;fi;fi
 case $RES in
 '1920x1080') 
 echo video 2K # son et video muxees en HDMI, sur une seule Box (pas de Box Video)
@@ -135,14 +126,13 @@ mpv --fs /m/$FI
 #   - sinon, vieille methode du "filesystem" specialisee GPIO ::
 #   cd /sys/class/gpio
 #   fabriquer un numero de Port portid :: (BANK-1)x32 + IOsymbol
-#   exemple a tester !! :: Bank GPIO1 et IO16 donne portid 16
+#   exemple a tester !! :: Bank GPIO1 et IO12 donne portid 12
 #   
-#                23 24  25            16
-#   5 5 G       G | | G |       G   G |   
-#   o o o o o o o o o o o o o o o o o o o o
-#   o o o o o o o o o o o o o o o o o o o o  
-# 3.3       G | | |_        G           | G
-#            17 27 22                  26
+#                                                     12  16
+#   5 5 G                                           G | G |   
+#   o o o ......................................... o o o o o o 
+#   o ....................................................... o
+#  3.3                                                        G
 #
 #   puis creer le pilote/repertoire vers ce port :: echo $portid > export
 #   puis y aller :: cd gpio$portid
@@ -206,77 +196,18 @@ mpv --fs /m/$FI
 ;;
 
 '7680x4320') # video 8K ou 4K
-echo video 8K ; #mpv --fs /m/$FI # OU recopie Film vers BoxVideo ::
-#sudo scp /m/$FI $IPboxVideo:/storage/videos/MON_FILM.mkv 
-## ---------- >>>> toVideo
-# puis suivi d'activite USER dans BoxVideo, avec strace sur kodi ... ::
-echo > $F/TRACEkodi; SEUIL=1000
-sudo ssh $IPboxVideo 'ps -ef' > $F/PSkodi
-echo `cat $F/PSkodi|grep kodi.bin|grep -v grep`|cut -d ' ' -f 1 > $F/PIDkodi
-PID_kodi=`cat $F/PIDkodi`
-sudo ssh $IPboxVideo "strace -p $PID_kodi -e read=all 2>&1 |grep IOC_READ" > $F/TRACEkodi &
-echo 11 >$F/SIZkodiOld
+echo video 8K ; #mpv --fs /m/$FI
 
-# boucle de surveillance activite BoxVideo ::
-# simulation activite BoxVideo ::
-# while true; do  sleep 1; ps -ef >> $F/SIZkodi ; done &
-CNT=0; >$F/OUI; >$F/NON; >$F/TOUCHOUINON
-while true
-do 
-kodO=`cat $F/SIZkodiOld`
-sleep 2;
-     if test -s "$F/NON"
-     then break
-     fi
-echo `ls -l $F/TRACEkodi`|cut -d ' ' -f 5 > $F/SIZkodi
-kodN=`cat $F/SIZkodi`
-delta=`expr $kodN - $kodO`
-if test "$delta" -lt "$SEUIL" -a "$CNT" -gt 10
-then echo 'USER FINI ?? ;; CONTINUER FILM OUI NON ?' 
-CNT=0
-# dans un 1er temps, on ignore la Pause, pour cause de KDMI avec PB
-# en retour toMain  !!! :: arret de strace signifie Fin de film,
-# et retour toMain visualise l'ecran, et Question OUI/NON ...
-     # revenir a BoxMain et poser question OUI/NON
-## --------------- >>>> toMain
-# ------------- AFFICHER LES TOUCHES OUI/NON -----------------
-SID=61 ; 
-if test -s $F/TOUCHOUINON
-then echo OUI deja la
-else echo >$F/TOUCHOUINON
-# >$F/OUI; >$F/NON
-CM3="tput civis;echo -n 'RETOUR AU FILM';read r; echo > $F/OUI
-#echo RECHERCHE >$F/NEXT_SCREEN;"
-#CM3="tput civis;echo -n Oui;read r;echo RECHERCHE >$F/NEXT_SCREEN;"
-G4='15x1+2+980'; G3='15x1+2+890'; case $C in
-M) en;$TM --$G=$G3 --$Z=1.9 $PARTE "$SID;$CM3" & ;;
-X) en;$TX -$G $G3 -fs 30 $PARX -e "$SID;$TP2;$CM3" & ;; esac
-CM4="tput civis;echo -n 'FILM FINI';read r; echo > $F/NON
-#echo MAIN >$F/NEXT_SCREEN;";
-#CM4="tput civis;echo -n 'Non';read r;echo MAIN >$F/NEXT_SCREEN;";
-case $C in
-M) en;$TM --$G=$G4 --$Z=1.9 $PARTE "$SID;$CM4" & ;;
-X) en;$TX -$G $G4 -fs 30 $PARX -e "$SID;$TP2;$CM4" & ;; esac
-fi
-     if test -s "$F/OUI"
-     then echo CONTINUE1;>$F/OUI;continue #laisser main a BoxVideo:: toVideo
-     else if test -s "$F/NON"
-          then echo BREAK; >$F/NON;>$F/OUI;
-             #  ~/KIL $SID
-               break # rester dans Box Principale
-          else echo CONTINUE2; continue
-          fi
-     fi
-else echo # LAISSER LA MAIN a BoxVideo
-fi
-cp $F/SIZkodi $F/SIZkodiOld
-CNT=`expr $CNT + 2`
-done
-# ------------- >>>> toMain
-~/KIL $SID
-# ---------------------- FIN DE LECTURE FILM ------------------------
-#
-# ---->>> afficher le mode d'emploi de CE Player Externe specifique ..
+#sudo ssh $IPboxVideo 'ps -ef > /storage/kodi'
+#ps -ef > kodi
+sudo ssh $IPboxVideo 'ps -ef > /storage/PSkodi'
+#sudo ssh $IPboxVideo 'echo `ps -ef|grep kodi.bin|grep -v grep` > /storage/TMP/PIDkodi; ps -ef > /storage/list'
+sudo scp $IPboxVideo:/storage/PSkodi $F/PSkodi 
+#sudo scp $IPboxVideo:/storage/TMP/PIDkodi $F/LIGNkodi 
+echo `cat $F/PSkodi|grep kodi.bin|grep -v grep`|cut -d ' ' -f 1 > $F/PIDkodi
+#cat $F/LIGNkodi | cut -d ' ' -f 1 > $F/PIDkodi
+#sudo ssh $IPboxVideo 'echo `ps -ef|grep kodi.bin|grep -v grep`|cut -d \' \' -f 1 > /storage/TMP/PIDkodi'
+# ---->>> afficher le mode d'emploi de CE Player Externe specifique ...
 #
 # la lourdeur d'un decodage 8K, en Hevc ou AV1, oblige a une Box Video
 # externe ...

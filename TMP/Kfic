@@ -1,0 +1,5 @@
+root         661       2  0 14:38 ?        00:00:00 [cec-vc4]
+marco      29433   29231  1 15:15 pts/12   00:00:00 xterm -geometry 15x1+2+890 -fs 30 -fa default -fg green -e 61;tput bold;tput civis;echo -n 'RETOUR AU FILM';read r; echo > /home/marco/repo/marcotv/TMP/OUI #echo RECHERCHE >/home/marco/repo/marcotv/TMP/NEXT_SCREEN;
+marco      29443   29433  0 15:15 pts/13   00:00:00 bash -c 61;tput bold;tput civis;echo -n 'RETOUR AU FILM';read r; echo > /home/marco/repo/marcotv/TMP/OUI #echo RECHERCHE >/home/marco/repo/marcotv/TMP/NEXT_SCREEN;
+marco      29661       1  0 15:15 ?        00:00:00 xclip
+marco      29665   29663  0 15:15 pts/12   00:00:00 grep 61

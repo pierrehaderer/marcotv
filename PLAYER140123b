@@ -15,10 +15,6 @@ FI=`cat $F/lism4`; if test `cat $F/lism4|wc -w` != 1; then exit; fi
 IPboxVideo='192.168.0.102'
 GPIO='/sys/class/cpio'
 
-#SID="$1=''";B=$BASEDIR;C=`$B/TERM`;F=$B/TMP;MSG=$B/MSG;TM='mate-terminal';
-#TX=xterm;G=geometry;Z=zoom;R4K=0;TP2='tput bold';TP1="tput civis;$TP2";
-#PARTE="--title= --hide-menubar -- sh -c";PARX='-fa default -fg green';
-
 # tester dynamiquement la 2eme formule + moderne de gpiod !!
 init () { cd $GPIO; # utiliser les port GPIO 16,26,17,27,22,23,24,25
 sudo echo 25 > export # definition du port GPIO 25 pour switch souris
@@ -208,9 +204,7 @@ mpv --fs /m/$FI
 '7680x4320') # video 8K ou 4K
 echo video 8K ; #mpv --fs /m/$FI # OU recopie Film vers BoxVideo ::
 #sudo scp /m/$FI $IPboxVideo:/storage/videos/MON_FILM.mkv 
-## ---------- >>>> toVideo
 # puis suivi d'activite USER dans BoxVideo, avec strace sur kodi ... ::
-echo > $F/TRACEkodi; SEUIL=1000
 sudo ssh $IPboxVideo 'ps -ef' > $F/PSkodi
 echo `cat $F/PSkodi|grep kodi.bin|grep -v grep`|cut -d ' ' -f 1 > $F/PIDkodi
 PID_kodi=`cat $F/PIDkodi`
@@ -220,59 +214,44 @@ echo 11 >$F/SIZkodiOld
 # boucle de surveillance activite BoxVideo ::
 # simulation activite BoxVideo ::
 # while true; do  sleep 1; ps -ef >> $F/SIZkodi ; done &
-CNT=0; >$F/OUI; >$F/NON; >$F/TOUCHOUINON
+ >$F/OUI; >$F/NON
 while true
-do 
+do sleep 2;echo `ls -l $F/TRACEkodi`|cut -d ' ' -f 5 > $F/SIZkodi
 kodO=`cat $F/SIZkodiOld`
-sleep 2;
-     if test -s "$F/NON"
-     then break
-     fi
-echo `ls -l $F/TRACEkodi`|cut -d ' ' -f 5 > $F/SIZkodi
 kodN=`cat $F/SIZkodi`
 delta=`expr $kodN - $kodO`
-if test "$delta" -lt "$SEUIL" -a "$CNT" -gt 10
-then echo 'USER FINI ?? ;; CONTINUER FILM OUI NON ?' 
-CNT=0
-# dans un 1er temps, on ignore la Pause, pour cause de KDMI avec PB
-# en retour toMain  !!! :: arret de strace signifie Fin de film,
-# et retour toMain visualise l'ecran, et Question OUI/NON ...
+if test "$delta" -lt 1000
+then echo 'USER en Pause ou FINI ?? ;; CONTINUER FILM OUI NON ?' 
      # revenir a BoxMain et poser question OUI/NON
-## --------------- >>>> toMain
+     # toMain
+
 # ------------- AFFICHER LES TOUCHES OUI/NON -----------------
-SID=61 ; 
-if test -s $F/TOUCHOUINON
-then echo OUI deja la
-else echo >$F/TOUCHOUINON
+SID=41 ;
 # >$F/OUI; >$F/NON
-CM3="tput civis;echo -n 'RETOUR AU FILM';read r; echo > $F/OUI
+CM3="tput civis;echo -n '  OUI';read r; echo > $F/OUI
 #echo RECHERCHE >$F/NEXT_SCREEN;"
 #CM3="tput civis;echo -n Oui;read r;echo RECHERCHE >$F/NEXT_SCREEN;"
-G4='15x1+2+980'; G3='15x1+2+890'; case $C in
+G4='10x1+2+980'; G3='10x1+2+890'; case $C in
 M) en;$TM --$G=$G3 --$Z=1.9 $PARTE "$SID;$CM3" & ;;
 X) en;$TX -$G $G3 -fs 30 $PARX -e "$SID;$TP2;$CM3" & ;; esac
-CM4="tput civis;echo -n 'FILM FINI';read r; echo > $F/NON
+CM4="tput civis;echo -n '  NON';read r; echo > $F/NON
 #echo MAIN >$F/NEXT_SCREEN;";
 #CM4="tput civis;echo -n 'Non';read r;echo MAIN >$F/NEXT_SCREEN;";
 case $C in
 M) en;$TM --$G=$G4 --$Z=1.9 $PARTE "$SID;$CM4" & ;;
 X) en;$TX -$G $G4 -fs 30 $PARX -e "$SID;$TP2;$CM4" & ;; esac
-fi
+
      if test -s "$F/OUI"
      then echo CONTINUE1;>$F/OUI;continue #laisser main a BoxVideo:: toVideo
      else if test -s "$F/NON"
-          then echo BREAK; >$F/NON;>$F/OUI;
-             #  ~/KIL $SID
-               break # rester dans Box Principale
+          then echo BREAK; >$F/NON;break # rester dans Box Principale
           else echo CONTINUE2; continue
           fi
      fi
 else echo # LAISSER LA MAIN a BoxVideo
 fi
 cp $F/SIZkodi $F/SIZkodiOld
-CNT=`expr $CNT + 2`
 done
-# ------------- >>>> toMain
 ~/KIL $SID
 # ---------------------- FIN DE LECTURE FILM ------------------------
 #
