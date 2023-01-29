@@ -63,12 +63,6 @@
 # recherche d'un film, en plus du clavier, en prononcant un
 # titre approximatif du film, ou une syllabe ou un mot du titre !
 #
-# Un smartphone pourrait etre utilise  ::
-# - a la fois pour reconnaissance # vocale, avec son micro, soit 
-# en transmission directe a la Box, soit apres reconnaissance
-# - pour lire le support du film (type microsd), puis transfert
-# a la box ...
-#
 # Il faudra faire evoluer le microOrdinateur (au format type 
 # "Carte de Credit", genre Raspberry Pi), dans les annees ...., 
 # pour profiter au mieux de la montee en puissance, en parallele 
@@ -302,14 +296,3 @@
 # et accepter dans le menu client de s'en souvenir pour simplifier 
 # les acces ulterieurs
 #
-###################################################################
-#Cartes Mere format Credit dispo en 2023, et leur usage ... ::
-#####################################################################
-Video8K optim# Video4K optim# Video2K optim# Main seul # Main+Video2K
-#####################################################################
-             # Raspberry Pi4#              # Rasp Pi4  # Rasp Pi4 KMS
-Odroid C4    # Odroid C2    #  Tous        # LePotato  # C4 (limite!)
-Odroid N2L ? # Odroid C4    #              #           # Odroid N2L ?
-             # LePotato     #              #           #  
-             # Odroid N2L   #              #           #  
-#####################################################################

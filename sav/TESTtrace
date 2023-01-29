@@ -1,0 +1,13 @@
+
+B='/home/marco/repo/marcotv'; F=$B/TMP
+echo `ls -l $F/TRACEkodi`|cut -d ' ' -f 5 > $F/SIZkodi
+kodN=`cat $F/SIZkodi`;DIV=2500
+while true;do
+echo `ls -l $F/TRACEkodi`|cut -d ' ' -f 5 > $F/SIZEkodi
+kodO=$kodN; kodN=`cat $F/SIZEkodi`
+delta=`expr $kodN - $kodO`;bar=`expr $delta / $DIV`
+nb=0;while test "$nb" -lt "$bar" ;do
+#echo  '|';nb=`expr $nb + 1`;done
+echo -n '+' >> $F/TRACElist;sync;nb=`expr $nb + 1`
+done
+echo;echo '.';sleep 1;done

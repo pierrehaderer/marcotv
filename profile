@@ -26,5 +26,12 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-( sleep 2;BASEDIR=/home/marco/repo/marcotv;export BASEDIR;$BASEDIR/microsd/SL ) &
+# MARCO.TV ::
+# config du son ... :: 1 pour HDMI, 0 pour Audio-Jack
+( sleep 30; pactl set-default-sink 1 ) &
+# flot des Menus Utilisateurs ::
 ( sleep 12;BASEDIR=/home/marco/repo/marcotv;export BASEDIR;$BASEDIR/USER/UL ) &
+# flot de l'Administration de la Box et des cartouches ::
+( sleep 2;BASEDIR=/home/marco/repo/marcotv;export BASEDIR;$BASEDIR/microsd/SL ) &
+# flot du Player :: (a suivre)
+

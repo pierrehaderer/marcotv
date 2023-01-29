@@ -1,24 +1,23 @@
-#
+
 # REDUIRE LES DEPENDANCES, POUR AMELIORER LA PORTABILITE DE LONG TERME !!!
 #
 # Hypothese de base:: les VIDEO 2K, 4K, 8K sont supposees RE-Encodees en 
 # Hevc, et multiplex mkv (pas mp4, qui a ses references en FIN de film)
 
 BASEDIR=/home/marco/repo/marcotv
-SID="$1=''";B=$BASEDIR;C=`$B/TERM`;F=$B/TMP;MSG=$B/MSG;claDir=cla;
+C=`$BASEDIR/TERM`; F=$BASEDIR/TMP; MSG=$BASEDIR/MSG;claDir=cla ; #S21='echo S21'
 TM='mate-terminal';TX=xterm;G=geometry;T=title;H='hide-menubar';Z=zoom; R4K=0;
 PARTE="--$T= --$H -- sh -c";SE=0;Tcach=1;TP2='tput bold';TP1="tput civis;$TP2"
 PARX='-fa default -fg green'; PARTX="$PARX -fs 50 -b 15"; S=sleep; SID="$1=''"
 en () { echo -e -n "\n" |xclip; }
 ee () { echo -e -n "q\n" |xclip ; }
 FI=`cat $F/lism4`; if test `cat $F/lism4|wc -w` != 1; then exit; fi
-IPboxVideo='192.168.0.102';GPIO='/sys/class/cpio'
+IPboxVideo='192.168.0.102'
+GPIO='/sys/class/cpio'
 
-# Pour booter, brancher les 2 en meme temps !!! ::
-# par defaut au Switch HDMI, MainPi4 boot d'abord, et BoxVideo reste bloquee
-# en detection HDMI ...
-# Basculer 5sec le Switch HDMI sur la BoxVideo, pour qu'elle finisse son 
-# boot aussi ..., et revenir sur MainPi4
+#SID="$1=''";B=$BASEDIR;C=`$B/TERM`;F=$B/TMP;MSG=$B/MSG;TM='mate-terminal';
+#TX=xterm;G=geometry;Z=zoom;R4K=0;TP2='tput bold';TP1="tput civis;$TP2";
+#PARTE="--title= --hide-menubar -- sh -c";PARX='-fa default -fg green';
 
 # tester dynamiquement la 2eme formule + moderne de gpiod !!
 init () { cd $GPIO; # utiliser les port GPIO 16,26,17,27,22,23,24,25
@@ -51,10 +50,7 @@ pause () { # suivre l'activite du Player dans la Box Video par ssh
 echo
 # strace kodi
 }
-
-###########################################################################
-while true
-do
+#
 #test VIDEO 2K, 4K, 8K, en Multiplex mkv !!  ::
  od -c -w300 --read-bytes=100000 /m/$FI |grep '1   9   2   0' > $F/RES2K 
  od -c -w300 --read-bytes=100000 /m/$FI |grep '3   8   4   0' > $F/RES4K 
@@ -66,7 +62,6 @@ do
 VTMP=`ffprobe /m/$FI 2>&1 |grep 'Video: hevc' | cut -d '[' -f 1`
 LEN=`expr length "$VTMP"`;len=`expr $LEN \- 11`;RES=`echo $VTMP|cut -c ${len}-`
           fi;fi;fi
-#########################################################################
 case $RES in
 '1920x1080') 
 echo video 2K # son et video muxees en HDMI, sur une seule Box (pas de Box Video)
@@ -90,7 +85,7 @@ sleep $Tcach;nice -20 mpv --fs /m/$FI # --cache=yes MPV sautille !!
 else echo #on est en 4K !!;xrandr --size 1920x1080#mpv --fs /m/${}.hevc.mkv 
 fi; rm F #xrandr -s 0 # COPIER/COLLER xclip MARCHE PAS POUR SORTIR mpv !?
 ;;
-######################################################################
+
 '3840x2160') # video 4K
 echo video 4K ; 
 # ---->>> afficher le mode d'emploi de CE Player Externe specifique ...
@@ -108,14 +103,6 @@ X) en;xterm -$G $G11 -fs 25 $PARX -e "$CM11;read r" ;; esac
 mpv --fs /m/$FI
 #
 # 2eme Methode ::
-#
-# la lourdeur decodage 8K, en Hevc ou AV1, oblige a une Box Video externe 
-# La seule Box Video Specialisee, a prix raisonnable aujourd'hui, pour 
-# lire une video 8K , est un Odroid C4, equipe d'un logiciel optimise 
-# (CoreElec, ... etc) ...
-# qqes Anomalies, entre compression HEVC par x265, et decompression ??
-# Pb en limite de performance ???
-
 # Si les performances de la Box Principale sont insuffisantes (encodage Hevc,
 # ou AV1 par exemple), on choisira un PLAYER Externe !!! sur une 2eme !!! 
 # carte dediee uniquement au Decodage de la Video, avec un soft special 
@@ -181,9 +168,9 @@ mpv --fs /m/$FI
 # aucun hardware actuel a petit prix, pour l'ensemble du produit Logiciel !!! ::
 # creer alors 2 Boxs :: une Box VIDEO pour l'affichage de film, ET une Box 
 # Principale qui pilote tout le reste (dont les Menus Utilisateurs de Recherche 
-# de film, la gestion et Reparation des cartouches, la mise a jour et 
-# Maintenance du produit ....) !!
-# exemple: un PI4 VIDEO, avec logiciel specialise Accelere (LibreElec/CoreElec)
+# de film, la gestion et Reparation des cartouches, la mise a jour et Maintenance 
+# du produit ....) !!
+# exemple :: un PI4 VIDEO, avec logiciel specialise Accelere (LibreElec/CoreElec)
 # puis un 2eme Pi4, comme Box Principale, qui pilote integralement la PI4 VIDEO
 
 # Le lien entre les 2, est un Ethernet point a point, avec un cable de Patch 
@@ -202,7 +189,7 @@ mpv --fs /m/$FI
 # Bus GPIO de la Box principale ... :: la lecture peut commencer 
 # immediatement, avant la fin du tranfert complet ...
 
-# Surveiller la progression du film dans la Box Video !!, en SSH ...,
+# Surveiller la progression du film dans la Box Video !!??, en SSH ...,
 # une fois le transfert termine ..., pour decider, dans la Box Pricipale,
 # de revenir en basculant les switsh USB/HDMI, a la Box principale, quand 
 # l' Utilisateur aura termine, ... et en lui posant la question ::
@@ -217,8 +204,8 @@ mpv --fs /m/$FI
 # et eventuellement basculer sur Box Principale (HDMI+USB souris),
 # pour proposer :: Arreter votre film (OUI/NON)
 ;;
-#####################################################################
-'7680x4320') # video 8K (ou 4K)
+
+'7680x4320') # video 8K ou 4K
 # ssh (et donc scp base dessus), est considere comme durable sur 
 # plusieurs decennies, mais la Box Video externe est changeante ::
 # tout suivi de son activite necessite des moyens specifiques ...
@@ -244,14 +231,7 @@ echo video 8K ; #mpv --fs /m/$FI # OU recopie Film vers BoxVideo ::
 #-------------------------------------------------------------------------
 # ---------- >>>> toVideo, avec suivi specifique NON Portable, de kodi
 # puis suivi d'activite USER dans BoxVideo, avec strace sur kodi ... ::
-#
-# METHODE de Pilotage de la Box Video externe en SSH ..... ::
-#
-method=CPU # independante de strace !!
-#method=TRACE1  # strace -e read=all
-#method=TRACE2 # strace -e trace=read
-#
-procVideo=kodi;SID=S61;echo > $F/TRACE$procVideo; SEUIL=1000;
+method=1;procVideo=kodi;SID=S61;echo > $F/TRACE$procVideo; SEUIL=1000;
 #sudo ssh $IPboxVideo 'ps -ef' > $F/PS$procVideo
 sudo ssh $IPboxVideo 'ps -e -o pid,time,args' > $F/PS$procVideo
 CMDps=`cat $F/PS$procVideo|grep ${procVideo}.bin|grep -v grep`
@@ -260,32 +240,32 @@ echo $CMDps|cut -d ' ' -f 2 > $F/CPU$procVideo;CPU_Video=`cat $F/CPU$procVideo`
 
 # Chercher a distinguer la Fin de la video (Rien ??), de la Pause 
 # (quelques poll + newselect), de la Lecture (bcp de READ en +)
-#echo METHODE=$method
-
 case $method in
-######################################################################
-#-------------------- KODI (DEPENDANT!!) SYSCALL TRACE1 ------------------
-TRACE1) echo methode trace1 kodi avec strace  # -e read=all
+1) echo strace 
 CMDssh="echo $SID;strace -p $PID_Video -e read=all 2>&1" 
 sudo ssh $IPboxVideo "$CMDssh" >> $F/TRACE$procVideo &
+#;;
+#esac
 # cette forme donne un bon tranfert en debut de film, a surveiller chaque
 # seconde !!! apres le debut du film, pour revenir au Menu proncipal au
 # plus vite, en fin de film ...
 #
 # Pour detecter la fin de film provoquee, chercher 4 a 6 sec de blanc, puis un 
 # enorme !!! transfert, suivi d'un plus petit :: On a un "marquage" Debut/Fin  
-#
 # Note :: l'activite souris pendant le film,  genere un bon transfer ::
 # Pollution !!! :: ne pas confondre avec enorme transfert par arret 
-# volontaire du film  :: la methode CPU simultanee donne la reponse Pause
+# volontaire du film 
 #
 # La fin naturelle du film ne produit rien de plus qu'au repos :: PB !!!
 # On connait d'avance la duree du film, en secondes avec ffprobe avant
 # transfert scp, ... mais pas les temps de pause Utilisateur , ni 
-# deplacements dans le film ... ??
+# deplacements dans le film ...
 #
 # En cours de lecture, on a seulement un pattern descendant sur 8 a 9 sec, 
 # avec un petit transfert, suivi d'un ou 2 + gros dans les 2 sec qui suivent
+#
+# Est-ce qu'on est mieux informe, qu'avec une simple surveillance
+# du temps CPU de kodi, en ps -ef !!!???
 #
 # Mais autres essais ::
 # CMDread="echo $SID;strace -p $PID_kodi -e read=all 2>&1 |grep IOC_READ"
@@ -295,32 +275,20 @@ sudo ssh $IPboxVideo "$CMDssh" >> $F/TRACE$procVideo &
 #sudo ssh $IPboxVideo "CMDmax" >> $F/TRACEkodi & 
 # puis tester successivement avec un grep en moins ...
 
-#______________ TEST VISUEL DU FILM DANS TMP/TRACElist ____________
-#echo `ls -l $F/TRACEkodi`|cut -d ' ' -f 5 > $F/SIZkodi
-#kodO=0;kodN=`cat $F/SIZkodi`; DIV=2500
-#while true;do
-#echo `ls -l $F/TRACEkodi`|cut -d ' ' -f 5 > $F/SIZEkodi
-#kodO=$kodN; kodN=`cat $F/SIZEkodi`
-#delta=`expr $kodN - "$kodO"`;bar=`expr $delta \/ "$DIV"`
-#nb=0;while test "$nb" -lt "$bar" ;do
-#echo -n '+' >> $F/TRACElist;sync;nb=`expr $nb + 1`;done
-#echo __$bar >> $F/TRACElist;echo '+' >> $F/TRACElist ;sleep 1;
-#done &
-## DEBUT film 8K :: + de 80 read, suivi de + de 4 rien
-## FIN de film 8K :: + de 8 rien, puis + de 500 read
-## les mouvements souris a tout instant ajoutent bcp de read !!!
-#_____________________ FIN DE TEST VISUEL ________________________
-
+# boucle de surveillance specifique activite BoxVideo par ps -ef ::
+#while true; do  sleep 1; procVideo=kodi
+#sudo ssh $IPboxVideo 'ps -ef' > $F/PS$procVideo
+#CMDps=`cat $F/PS$procVideo|grep ${procVideo}.bin|grep -v grep`
+#echo $CMDps|cut -d ' ' -f 7 > $F/PS$procVideo;PS_Video=`cat $F/PS$procVideo`
+#done
 echo 11 >$F/SIZkodiOld;CNT=0; >$F/OUI; >$F/NON; >$F/TOUCHOUINON
 
 while true;do kodO=`cat $F/SIZkodiOld`
 sleep 2; if test -s "$F/NON";then break;fi
 echo `ls -l $F/TRACEkodi`|cut -d ' ' -f 5 > $F/SIZkodi
 kodN=`cat $F/SIZkodi`;delta=`expr $kodN - $kodO`
-# test a revoir selon DEBUT et FIN de film !!! ::
-echo > $F/NON # pour DEBUG
 if test "$delta" -lt "$SEUIL" -a "$CNT" -gt 10
-then 
+then echo 'USER FINI ?? ;; CONTINUER FILM OUI NON ?' 
 # Pour KODI, la seule facon de revenir au Menu Principal, est de 
 # QUITTER le film !! (pour retrouver cote BoxVideo, une resolution 2K, 
 # et pouvoir basculer sans pb, vers la Box Pricipale deja en 2K)
@@ -331,10 +299,27 @@ then
 # Fin de film, et retour toMain visualise a nouveau l'ecran du
 # Menu Pricipal, et Question OUI/NON ...
 #
-##################### --------------- >>>> basculer toMain
-# --------------------------------------------------------------
-#echo 'USER FINI ?? ;; CONTINUER FILM OUI NON ?' 
+#
+# PB :: Coment distinguer l'arret de strace pour Pause, OU pour 
+# Fin de Film ???
+## --------------- >>>> toMain
 # ------------- AFFICHER LES TOUCHES OUI/NON -----------------
+CNT=0;SID=S61 ; 
+if test -s $F/TOUCHOUINON;then echo OUI deja la
+else echo >$F/TOUCHOUINON # >$F/OUI; >$F/NON
+CM3="tput civis;echo -n 'RETOUR AU FILM';read r; echo > $F/OUI
+#echo RECHERCHE >$F/NEXT_SCREEN;"
+#CM3="tput civis;echo -n Oui;read r;echo RECHERCHE >$F/NEXT_SCREEN;"
+G4='15x1+2+980'; G3='15x1+2+890'; case $C in
+M) en;$TM --$G=$G3 --$Z=1.9 $PARTE "echo $SID;$CM3" & ;;
+X) en;$TX -$G $G3 -fs 30 $PARX -e "echo $SID;$TP2;$CM3" & ;; esac
+CM4="tput civis;echo -n 'FILM FINI';read r; echo > $F/NON
+#echo MAIN >$F/NEXT_SCREEN;";
+#CM4="tput civis;echo -n 'Non';read r;echo MAIN >$F/NEXT_SCREEN;";
+case $C in
+M) en;$TM --$G=$G4 --$Z=1.9 $PARTE "echo $SID;$CM4" & ;;
+X) en;$TX -$G $G4 -fs 30 $PARX -e "echo $SID;$TP2;$CM4" & ;; esac
+fi
      if test -s "$F/OUI";then echo CONTINUE1;>$F/OUI;continue 
      #laisser main a BoxVideo:: toVideo
      else if test -s "$F/NON";then echo BREAK; >$F/NON;>$F/OUI;
@@ -346,93 +331,25 @@ else echo # LAISSER LA MAIN a BoxVideo
 fi
 cp $F/SIZkodi $F/SIZkodiOld;CNT=`expr $CNT + 2`
 done # fin de boucle Activite BoxVideo
-;; # FIN de TRACE1
-###################################################################
-#-------------------- KODI (DEPENDANT!!) SYSCALL TRACE2 ------------------
-TRACE2) echo methode trace2 kodi avec strace # -e trace=read
-echo 'gotoVideoBySwitchHDMI!!!'
-CMDssh="echo $SID;strace -p $PID_Video -e trace=read 2>&1" 
-sudo ssh $IPboxVideo "$CMDssh" >> $F/TRACE$procVideo &
-# -e trace=read donne exactement le debut (avec grep ligne 1080p de 
-# resolution d'origine des Menus), et la fin (grep avec ligne 2160p de 
-# resolution de lecture en 4K!!!, connue par avance, et sans impact souris 
-# grace a grep ...)
-# Sans grep, des blocs de 4 lignes read, et un sleep 10 sec, en Lecture,
-# et presque rien en PAUSE, mais avec avec un enorme bloc en mouvement souris, 
-# d'environ 40 lignes read, hors OU dans une PAUSE ... !!!
-echo 11 >$F/SIZkodiOld;CNT=0;CNT1=0,CNT2=0;>$F/OUI;>$F/NON;>$F/TOUCHOUINON
-
-while true;do kodO=`cat $F/SIZkodiOld`
-sleep 2; if test -s "$F/NON"
-then echo 'gotoMainBySwitchHDMI!!!';break;fi
-# test de FIN de film !!! ::
-grep 2160p $F/TRACE$procVideo;if test $? -eq 0;then echo >$F/NON
-# strace disparait avec une sortie du film clavier en x ...
-# mais PAS a la souris !!!!! :: le killer en direct par ssh
-sudo ssh $IPboxVideo 'ps -e -o pid,time,args' > $F/PS$procVideo
-CMDps=`cat $F/PS$procVideo|grep strace|grep -v grep`
-echo $CMDps|cut -d ' ' -f 1 > $F/PIDstrace;PID_strace=`cat $F/PIDstrace`
-sudo ssh $IPboxVideo "kill $PID_strace" ; fi
-done ;; # FIN de TRACE2
-#######################################################################
-#-------------------- KODI CPU TIME (PEU DEPENDANT!!) --------------------
-CPU) echo methode temps CPU de kodi
-procVideo=kodi;SID=S61; # chercher le CPUtime de kodi en mm:ss
-sudo ssh $IPboxVideo 'ps -e -o pid,time,args' > $F/PS$procVideo
-CMDps=`cat $F/PS$procVideo|grep ${procVideo}.bin|grep -v grep`
-echo $CMDps|cut -d ' ' -f 2 > $F/CPU$procVideo;
-CPU_Video=`cat $F/CPU$procVideo`;echo 11 >$F/CPU${procVideo}Old;
-CNT2=9;CNT1=9;CNT=9; >$F/OUI; >$F/NON; >$F/TOUCHOUINON;beg=0
-sleep 9 # utile en debut de film, pour retour BoxMain moins vite?
-
-while true;do TkodO=`cat $F/CPU${procVideo}Old`;sleep 1; 
-#chercher le nouveau CPUtime de kodi en mm:ss
-sudo ssh $IPboxVideo 'ps -e -o pid,time,args' > $F/PS$procVideo
-CMDps=`cat $F/PS$procVideo|grep ${procVideo}.bin|grep -v grep`
-echo $CMDps|cut -d ' ' -f 2 >> $F/CPU$procVideo;
-# le convertir en sec ...
-CPU_Video=`tail -1 $F/CPU$procVideo`;TkodN=$CPU_Video; 
-MIN=`echo $TkodN|cut -d ':' -f 1`;SEC=`echo $TkodN|cut -d ':' -f 2`
-CPUTIMnew=`expr 60 \* $MIN + $SEC`;echo $CPUTIMnew > $F/CPU$procVideo
-# analyser le nouveau CPUtime de kodi ::
-delta=`expr $CPUTIMnew - $TkodO`; 
-if test $delta -eq 0;then echo -n 0 >>$F/CPUdelta;CNT=`expr $CNT + 1`
-else if test "$CNT2" -gt 10; then beg=1; fi #CNT1=`expr $CNT1 + $CNT`
-CNT2=`expr $CNT1 + $CNT` #conserver la "derivee" pour test
-CNT1=$CNT # conserver l'ancienne valeur pour test
-echo 1 $CNT1 $CNT2 >>$F/CPUdelta; CNT=0;fi
-# si parfois erreur de sortie, alors USER cliquera RETOUR AU FILM !!!
-if test  "$beg" -eq 1 -a "$CNT1" -lt 4 
-# un long mouvement de souris de 5s retourne a BoxMain pour charge CPU !!
-# ce n'est pas l'arret du film qui retourne a BoxMain, mais les 
-# mouvements de souris pour trouver le carre blanc de sortie du film,
-# et qui chargent le CPU !!!...
-# il y a donc 3 facons de sortir du film ::
-# le carre blanc de Fin, la Pause, et des mouvements souris !!!
-then echo "to BoxMain FILM FINI $CNT $CNT1 $CNT2" >>$F/CPUdelta;break;fi 
-cp $F/CPU$procVideo $F/CPU${procVideo}Old; done ;; #  FIN de CPU time
-esac # FIN de case METHODE TRACE1/TRACE2/CPU
-esac # FIN de case 2K/4K/8K
-#
-# ------------- AFFICHER LES TOUCHES OUI/NON -----------------
 # ------------- >>>> toMain
-echo 11 >$F/SIZkodiOld;CNT=0; >$F/OUI; >$F/NON; >$F/TOUCHOUINON
-CNT=0;SID=S61 ; CMD5="echo>$F/OUI;echo>$F/TOUCHOUINON"
-CM3="tput civis;echo -n 'RETOUR AU FILM';read r;$CMD5"
-G4='15x1+2+980'; G3='15x1+2+890'; case $C in
-M) en;$TM --$G=$G3 --$Z=1.9 $PARTE "echo $SID;$CM3" & ;;
-X) en;$TX -$G $G3 -fs 30 $PARX -e "echo $SID;$TP2;$CM3" & ;; esac
-CM4="tput civis;echo -n 'FILM FINI';read r;echo>$F/NON;echo>TOUCHOUINON"
-case $C in
-M) en;$TM --$G=$G4 --$Z=1.9 $PARTE "echo $SID;$CM4" & ;;
-X) en;$TX -$G $G4 -fs 30 $PARX -e "echo $SID;$TP2;$CM4" & ;; esac
-#while test ! -s $F/OUI \|\| test ! -s $F/NON ;do sleep 2;done ??
-while test ! -s $F/TOUCHOUINON ;do 
-if test -s $F/NON; then break; fi
-if test -s $F/OUI; then break; fi
-sleep 1;done
+sudo ~/KIL $SID
 # ---------------------- FIN DE LECTURE FILM ------------------------
-if test -s $F/OUI; then continue; fi # RETOUR FILM :: toVideo
-if test -s $F/NON; then break; fi # sortir du PLAYER (rester toMain)
-done # fin de boucle externe, permettant un RETOUR FILM
-sudo ~/KIL $SID;
+#
+# ---->>> afficher le mode d'emploi de CE Player Externe specifique ..
+#
+# la lourdeur d'un decodage 8K, en Hevc ou AV1, oblige a une Box Video
+# externe ...
+# La seule Box Video Specialisee, a prix raisonnable aujourd'hui, pour 
+# lire une video 8K , est un Odroid C4, equipe d'un logiciel optimise 
+# (CoreElec, ... etc) ...
+#
+# A explorer :: Avec le C4, en video et image muxees en HDMI, certaines 
+# videos 8K plantent ... ???, mais toujours au meme endroit !!! ::
+# Anomalie, entre la compression HEVC par x265, et la decompression ??
+# Pb en limite de performance ???
+;;
+esac
+;;
+2) echo methode CPU
+;;
+esac

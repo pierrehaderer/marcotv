@@ -14,12 +14,6 @@ ee () { echo -e -n "q\n" |xclip ; }
 FI=`cat $F/lism4`; if test `cat $F/lism4|wc -w` != 1; then exit; fi
 IPboxVideo='192.168.0.102';GPIO='/sys/class/cpio'
 
-# Pour booter, brancher les 2 en meme temps !!! ::
-# par defaut au Switch HDMI, MainPi4 boot d'abord, et BoxVideo reste bloquee
-# en detection HDMI ...
-# Basculer 5sec le Switch HDMI sur la BoxVideo, pour qu'elle finisse son 
-# boot aussi ..., et revenir sur MainPi4
-
 # tester dynamiquement la 2eme formule + moderne de gpiod !!
 init () { cd $GPIO; # utiliser les port GPIO 16,26,17,27,22,23,24,25
 sudo echo 25 > export # definition du port GPIO 25 pour switch souris
@@ -181,9 +175,9 @@ mpv --fs /m/$FI
 # aucun hardware actuel a petit prix, pour l'ensemble du produit Logiciel !!! ::
 # creer alors 2 Boxs :: une Box VIDEO pour l'affichage de film, ET une Box 
 # Principale qui pilote tout le reste (dont les Menus Utilisateurs de Recherche 
-# de film, la gestion et Reparation des cartouches, la mise a jour et 
-# Maintenance du produit ....) !!
-# exemple: un PI4 VIDEO, avec logiciel specialise Accelere (LibreElec/CoreElec)
+# de film, la gestion et Reparation des cartouches, la mise a jour et Maintenance 
+# du produit ....) !!
+# exemple :: un PI4 VIDEO, avec logiciel specialise Accelere (LibreElec/CoreElec)
 # puis un 2eme Pi4, comme Box Principale, qui pilote integralement la PI4 VIDEO
 
 # Le lien entre les 2, est un Ethernet point a point, avec un cable de Patch 
@@ -202,7 +196,7 @@ mpv --fs /m/$FI
 # Bus GPIO de la Box principale ... :: la lecture peut commencer 
 # immediatement, avant la fin du tranfert complet ...
 
-# Surveiller la progression du film dans la Box Video !!, en SSH ...,
+# Surveiller la progression du film dans la Box Video !!??, en SSH ...,
 # une fois le transfert termine ..., pour decider, dans la Box Pricipale,
 # de revenir en basculant les switsh USB/HDMI, a la Box principale, quand 
 # l' Utilisateur aura termine, ... et en lui posant la question ::
@@ -218,7 +212,7 @@ mpv --fs /m/$FI
 # pour proposer :: Arreter votre film (OUI/NON)
 ;;
 #####################################################################
-'7680x4320') # video 8K (ou 4K)
+'7680x4320') # video 8K ou 4K
 # ssh (et donc scp base dessus), est considere comme durable sur 
 # plusieurs decennies, mais la Box Video externe est changeante ::
 # tout suivi de son activite necessite des moyens specifiques ...
@@ -245,7 +239,7 @@ echo video 8K ; #mpv --fs /m/$FI # OU recopie Film vers BoxVideo ::
 # ---------- >>>> toVideo, avec suivi specifique NON Portable, de kodi
 # puis suivi d'activite USER dans BoxVideo, avec strace sur kodi ... ::
 #
-# METHODE de Pilotage de la Box Video externe en SSH ..... ::
+# METHODE de Pilotage de la Box Video externe ..... ::
 #
 method=CPU # independante de strace !!
 #method=TRACE1  # strace -e read=all
