@@ -1,8 +1,11 @@
 PID   TIME  COMMAND
-    1  0:17 /usr/lib/systemd/systemd
+    1  0:01 /usr/lib/systemd/systemd
     2  0:00 [kthreadd]
+    3  0:00 [kworker/0:0]
+    4  0:00 [kworker/0:0H]
+    5  0:00 [kworker/u8:0]
     6  0:00 [ksoftirqd/0]
-    7  0:03 [rcu_preempt]
+    7  0:00 [rcu_preempt]
     8  0:00 [rcu_sched]
     9  0:00 [rcu_bh]
    10  0:00 [migration/0]
@@ -13,18 +16,25 @@ PID   TIME  COMMAND
    15  0:00 [watchdog/1]
    16  0:00 [migration/1]
    17  0:00 [ksoftirqd/1]
+   18  0:00 [kworker/1:0]
    19  0:00 [kworker/1:0H]
    20  0:00 [cpuhp/2]
    21  0:00 [watchdog/2]
    22  0:00 [migration/2]
    23  0:00 [ksoftirqd/2]
+   24  0:00 [kworker/2:0]
    25  0:00 [kworker/2:0H]
    26  0:00 [cpuhp/3]
    27  0:00 [watchdog/3]
    28  0:00 [migration/3]
    29  0:00 [ksoftirqd/3]
+   30  0:00 [kworker/3:0]
+   31  0:00 [kworker/3:0H]
    32  0:00 [kdevtmpfs]
    33  0:00 [netns]
+   34  0:00 [kworker/u8:1]
+   69  0:00 [kworker/u8:2]
+  562  0:00 [kworker/u8:3]
  1205  0:00 [khungtaskd]
  1206  0:00 [oom_reaper]
  1207  0:00 [writeback]
@@ -34,99 +44,101 @@ PID   TIME  COMMAND
  1213  0:00 [kblockd]
  1223  0:00 [ata_sff]
  1248  0:00 [devfreq_wq]
+ 1273  0:00 [kworker/0:1H]
+ 1295  0:00 [kworker/3:1]
  1296  0:00 [cfg80211]
  1300  0:00 [watchdogd]
  1386  0:00 [gp_pll]
- 1391  0:13 [kworker/3:1]
+ 1391  0:00 [kworker/1:1]
  1392  0:00 [rpciod]
  1393  0:00 [xprtiod]
- 1436  0:00 [kswapd0]
- 1437  0:00 [vmstat]
- 1526  0:00 [nfsiod]
- 1531  0:00 [cifsiod]
- 1532  0:00 [cifsoplockd]
- 1591  0:00 [hwrng]
- 1597  0:00 [bioset]
- 1600  0:00 [bioset]
- 1603  0:00 [bioset]
- 1606  0:00 [bioset]
- 1609  0:00 [bioset]
- 1612  0:00 [bioset]
- 1615  0:00 [bioset]
- 1618  0:00 [bioset]
+ 1394  0:00 [kworker/0:1]
+ 1437  0:00 [kswapd0]
+ 1438  0:00 [vmstat]
+ 1527  0:00 [nfsiod]
+ 1532  0:00 [cifsiod]
+ 1533  0:00 [cifsoplockd]
+ 1592  0:00 [hwrng]
+ 1595  0:00 [kworker/2:1]
+ 1598  0:00 [bioset]
+ 1601  0:00 [bioset]
+ 1604  0:00 [bioset]
+ 1607  0:00 [bioset]
+ 1610  0:00 [bioset]
+ 1613  0:00 [bioset]
+ 1616  0:00 [bioset]
+ 1619  0:00 [bioset]
  1629  0:00 [nvme]
- 1650  0:00 [eth_moniter_tx_]
- 1748  0:00 [null]
- 1749  0:00 [cpu_hogplug_thr]
- 1764  0:00 [vmalloc_ion]
- 1765  0:00 [codec_mm_ion]
- 1766  0:00 [fb_ion]
- 1770  0:00 [ge2d_monitor]
- 1783  0:01 [kthread_hdcp]
- 1794  0:02 [aml-ditest-0]
- 1795  0:00 [aml-dimem-1]
- 1803  0:00 [cabc workqueue]
- 1808  0:00 [irq/48-meson-am]
- 1810  0:00 [irq/49-meson-am]
- 1826  0:00 [cec_work]
- 1827  0:00 [kworker/3:1H]
- 1856  0:00 [cma_task0]
- 1857  0:00 [cma_task1]
- 1858  0:00 [cma_task2]
- 1859  0:00 [cma_task3]
- 1932  0:00 [ipv6_addrconf]
- 1938  0:01 [kworker/1:1]
- 1947  0:00 [dwc_otg]
+ 1651  0:00 [eth_moniter_tx_]
+ 1749  0:00 [null]
+ 1750  0:00 [cpu_hogplug_thr]
+ 1765  0:00 [vmalloc_ion]
+ 1766  0:00 [codec_mm_ion]
+ 1767  0:00 [fb_ion]
+ 1771  0:00 [ge2d_monitor]
+ 1784  0:00 [kthread_hdcp]
+ 1795  0:00 [aml-ditest-0]
+ 1796  0:00 [aml-dimem-1]
+ 1804  0:00 [cabc workqueue]
+ 1809  0:00 [irq/48-meson-am]
+ 1811  0:00 [kworker/0:2]
+ 1812  0:00 [irq/49-meson-am]
+ 1818  0:00 [cec_work]
+ 1819  0:00 [kworker/1:1H]
+ 1857  0:00 [cma_task0]
+ 1858  0:00 [cma_task1]
+ 1859  0:00 [cma_task2]
+ 1860  0:00 [cma_task3]
+ 1927  0:00 [kworker/2:2]
+ 1934  0:00 [ipv6_addrconf]
+ 1948  0:00 [dwc_otg]
+ 1983  0:00 [kworker/1:2]
+ 2006  0:00 [kworker/0:3]
  2014  0:00 [bioset]
- 2015  0:01 [mmcqd/1]
- 2044  0:00 [loop0]
- 2057  0:00 [kworker/1:1H]
- 2062  0:00 [jbd2/mmcblk1p2-]
- 2063  0:00 [ext4-rsv-conver]
- 2096  0:00 [kworker/2:1H]
- 2227  0:00 /bin/sh
- 2244  0:07 /usr/bin/wait-time-sync
- 2654  0:00 [irq/41-vdec-0]
- 2655  0:00 [irq/42-vdec-1]
- 2656  0:12 [vdec-core]
- 2658  0:00 [vdec-work]
- 2705  0:04 /usr/lib/systemd/systemd-journald
- 2960  0:00 [kauditd]
- 3139  0:00 /usr/sbin/rpcbind -f
- 3167  0:00 /usr/sbin/rpc.idmapd
- 3180  0:00 /usr/lib/systemd/systemd-udevd
- 3204  0:00 /usr/sbin/connman-vpnd -n
- 3208  0:00 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
- 3209  0:00 /usr/sbin/eventlircd -f --evmap=/etc/eventlircd.d --socket=/run/lirc/lircd
- 3216  0:00 /usr/bin/pulseaudio --system --disallow-exit --exit-idle-time=-1 --disable-shm --enable-memfd --realtime
- 3220  0:00 /usr/lib/systemd/systemd-logind
- 3232  0:00 /sbin/crond -f -S
- 3289  0:01 /usr/sbin/connmand -nr --config=/etc/connman/main.conf
- 3293  0:00 [kbase_job_fault]
- 3430  0:00 /usr/sbin/nfsdcld
- 3436  0:00 avahi-daemon: running [CoreELEC.local]
- 3454  0:00 /usr/bin/wpa_supplicant -u
- 3475  0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
- 3600  0:00 /usr/sbin/rpc.statd
- 3602  0:00 /usr/sbin/rpc.mountd
- 3612  0:00 [rc0]
- 4563  0:00 [kworker/1:0]
- 4580  0:00 {kodi.sh} /bin/sh /usr/lib/kodi/kodi.sh --standalone -fs
- 4585 24:42 /usr/lib/kodi/kodi.bin --standalone -fs
- 4607  0:00 [kbase_event]
- 4665  0:00 [kworker/0:0]
- 4677  0:00 [codec_mm_sc]
- 5079  0:00 [kworker/0:2]
- 5080  0:00 [kworker/3:2]
- 5887  0:00 [kworker/u8:2]
- 6135  0:00 [kworker/3:2H]
- 6537  0:00 [kworker/0:0H]
- 6540  0:00 [kworker/u8:1]
- 9345  0:00 [kworker/0:2H]
- 9660  0:00 [kworker/2:1]
- 9728  0:01 [kworker/2:0]
-10793  0:00 [kworker/u9:1]
-11430  0:00 [kworker/u9:0]
-12111  0:00 [kworker/u9:2]
-12148  0:00 sshd: root@notty
-12150  0:00 ps -e -o pid,time,args
+ 2015  0:00 [mmcqd/1]
+ 2053  0:00 [loop0]
+ 2055  0:00 [kworker/2:1H]
+ 2057  0:00 [jbd2/mmcblk1p2-]
+ 2058  0:00 [ext4-rsv-conver]
+ 2091  0:00 [kworker/3:1H]
+ 2221  0:00 /bin/sh
+ 2240  0:00 /usr/bin/wait-time-sync
+ 2249  0:00 [kworker/3:2]
+ 2650  0:00 [irq/41-vdec-0]
+ 2651  0:00 [irq/42-vdec-1]
+ 2652  0:00 [vdec-core]
+ 2653  0:00 [kworker/u9:0]
+ 2655  0:00 [vdec-work]
+ 2690  0:00 /usr/lib/systemd/systemd-journald
+ 2692  0:00 [kauditd]
+ 3130  0:00 /usr/sbin/rpcbind -f
+ 3131  0:00 [kworker/3:3]
+ 3158  0:00 [kworker/1:3]
+ 3159  0:00 /usr/sbin/rpc.idmapd
+ 3171  0:00 /usr/lib/systemd/systemd-udevd
+ 3172  0:00 [kworker/2:3]
+ 3188  0:00 /usr/sbin/connman-vpnd -n
+ 3202  0:00 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+ 3203  0:00 /usr/sbin/eventlircd -f --evmap=/etc/eventlircd.d --socket=/run/lirc/lircd
+ 3210  0:00 /usr/bin/pulseaudio --system --disallow-exit --exit-idle-time=-1 --disable-shm --enable-memfd --realtime
+ 3214  0:00 /usr/lib/systemd/systemd-logind
+ 3227  0:00 /sbin/crond -f -S
+ 3282  0:00 [kbase_job_fault]
+ 3283  0:00 [kworker/u9:1]
+ 3300  0:00 /usr/sbin/connmand -nr --config=/etc/connman/main.conf
+ 3404  0:00 /usr/sbin/nfsdcld
+ 3407  0:00 avahi-daemon: running [CoreELEC.local]
+ 3413  0:00 /usr/bin/wpa_supplicant -u
+ 3437  0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+ 3552  0:00 /usr/sbin/rpc.statd
+ 3553  0:00 /usr/sbin/rpc.mountd
+ 3562  0:00 [rc0]
+ 3769  0:00 [kworker/0:2H]
+ 3875  0:00 [kworker/u9:2]
+ 3972  0:00 [codec_mm_sc]
+ 4215  0:00 {kodi.sh} /bin/sh /usr/lib/kodi/kodi.sh --standalone -fs
+ 4406  0:00 {kodi.sh} /bin/sh /usr/lib/kodi/kodi.sh --standalone -fs
+ 4407  0:01 gdb /usr/lib/kodi/kodi.bin --core=/storage/.cache/cores/core.!usr!lib!kodi!kodi.bin.1628261199.4219 --batch -ex thread apply all bt
+ 4411  0:00 [gdb]
+ 4418  0:00 sshd: root@notty
+ 4420  0:00 ps -e -o pid,time,args

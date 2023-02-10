@@ -1,3 +1,2 @@
-marco       4366       1  0 13:10 ?        00:00:00 xterm -geometry 15x1+2+890 -fs 30 -fa default -fg green -e echo S61;tput bold;tput civis;echo -n 'RETOUR AU FILM';read r; echo > /home/marco/repo/marcotv/TMP/OUI #echo RECHERCHE >/home/marco/repo/marcotv/TMP/NEXT_SCREEN;
-marco       4391    4366  0 13:10 pts/0    00:00:00 bash -c echo S61;tput bold;tput civis;echo -n 'RETOUR AU FILM';read r; echo > /home/marco/repo/marcotv/TMP/OUI #echo RECHERCHE >/home/marco/repo/marcotv/TMP/NEXT_SCREEN;
-marco       7500    7498  0 13:12 pts/13   00:00:00 grep S61
+marco      10540    3728  3 16:43 ?        00:00:00 xterm -geometry 15x1+2+890 -fs 30 -fa default -fg green -e echo S61;tput bold;tput civis;echo -n 'RETOUR AU FILM';read r;echo>/home/marco/repo/marcotv/TMP/OUI;echo > /home/marco/repo/marcotv/TMP/TOUCHOUINON
+marco      10597   10540  0 16:43 pts/1    00:00:00 bash -c echo S61;tput bold;tput civis;echo -n 'RETOUR AU FILM';read r;echo>/home/marco/repo/marcotv/TMP/OUI;echo > /home/marco/repo/marcotv/TMP/TOUCHOUINON

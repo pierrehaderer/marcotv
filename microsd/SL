@@ -5,6 +5,65 @@
 BASEDIR=/home/marco/repo/marcotv; export BASEDIR
 B=$BASEDIR; F=$B/TMP; SD=$B/microsd; PLAY=mpv; S=sleep
 
+###########################################################################
+# BOOT
+
+SID="$1=''";B=$BASEDIR;C=`$B/TERM`;F=$B/TMP;MSG=$B/MSG;claDir=cla;
+TM='mate-terminal';TX=xterm;G=geometry;T=title;H='hide-menubar';Z=zoom; R4K=0;
+PARTE="--$T= --$H -- sh -c";SE=0;Tcach=1;TP2='tput bold';TP1="tput civis;$TP2"
+PARX='-fa default -fg green'; PARTX="$PARX -fs 50 -b 15"; S=sleep
+en () { echo -e -n "\n" |xclip; }
+ee () { echo -e -n "q\n" |xclip ; }
+#FI=`cat $F/lism4`; if test `cat $F/lism4|wc -w` != 1; then exit; fi
+IPboxVideo='192.168.0.102';GPIO='/sys/class/gpio'; VIDEO=0
+
+# Pour booter, brancher les 2 en meme temps !!! ::
+# par defaut au Switch HDMI, MainPi4 boot d'abord, et BoxVideo reste bloquee
+# en detection HDMI ... Puis Basculer 5sec le Switch HDMI sur la BoxVideo, 
+# pour qu'elle finisse son boot aussi ..., et revenir sur MainPi4
+
+# tester dynamiquement la 2eme formule + moderne de gpiod !!
+#
+dir () { sudo su root -c "echo $1 > ./gpio$2/direction"
+}
+init () { cd $GPIO; # utiliser les port GPIO 16,26,17,27,22,23,24,25
+# ces init sont a faire a chaque boot, car elles disparaissent !!!
+sudo su root -c "echo 23 > export" #def du port GPIO23 pour switchHDMI  
+sudo su root -c "echo 25 > export" #def du port GPIO25 pour switchSOURIS 
+dir out 23;sleep 1;dir out 25 
+}
+# POUR ACCES BoxVideo en SSH sans mot de passe ::
+#ssh-keygen -t rsa # une seule fois sur la Box Pricipale
+#ssh-copy-id root@192.168.0.102 ... (adress IP statique de Box Video)
+## OU ssh $IPboxVideo 'mkdir -p .ssh' avec passwd
+## puis cat .ssh/id_rsa.pub|ssh $IPboxVideo 'cat >> .ssh/authorized_keys'
+# a faire une seule fois sur la Box Video avec passwd
+#
+val () { sudo su root -c "echo $1 > ./gpio$2/value"
+}
+toVideo () { cd $GPIO # switch HDMI et souris ... vers Box Video
+dir out 23;sleep 1;val 1 23
+# switch les 2 fils Souris D+ et D- ::
+dir out 25;sleep 1;val 1 25
+# switch HDMI:: 2 switchs Y et Ecran en serie ?, et dans quel ordre ? ::
+# On suppose des switchs HDMI par impulsion/poussoir, PAS par interrupteur
+}
+toMain () { cd $GPIO # switch Souris et HDMI ... vers Box Principale
+dir out 23;sleep 1;val 1 23 #swith HDMI toMain au 2eme coup
+# switch les 2 fils Souris D+ et D- ::
+dir out 25;sleep 1;val 0 25 #swith SOURIS toMain
+}
+pause () { # suivre l'activite du Player dans la Box Video par ssh
+echo # strace kodi
+}
+
+init; val 0 25 #swith SOURIS toMain
+sleep 3;val 0 23 #swith HDMI toVideo
+sleep 1;val 1 23 #relache swith HDMI
+sleep 1;val 0 23 #swith HDMI toMain
+sleep 1;val 1 23 # relache swith HDMI toMain 
+###########################################################################
+
 while true; do 
 # ------------------------- TROUVER MICROSD --------------------------------
 echo `df|grep '/$'`|cut -d ' ' -f 1|cut -d '/' -f 3 > $F/ROO # root dev !!

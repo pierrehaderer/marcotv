@@ -1,0 +1,157 @@
+# --------------------------- GESTION MICROSD ------------------------------ 
+# travailler les DEPENDANCES !!!, dont au Kernel, et reconnaissance microsd
+
+# -------------------------- VARIABLES -------------------------------------
+BASEDIR=/home/marco/repo/marcotv; export BASEDIR
+B=$BASEDIR; F=$B/TMP; SD=$B/microsd; PLAY=mpv; S=sleep
+
+###########################################################################
+# BOOT
+
+SID="$1=''";B=$BASEDIR;C=`$B/TERM`;F=$B/TMP;MSG=$B/MSG;claDir=cla;
+TM='mate-terminal';TX=xterm;G=geometry;T=title;H='hide-menubar';Z=zoom; R4K=0;
+PARTE="--$T= --$H -- sh -c";SE=0;Tcach=1;TP2='tput bold';TP1="tput civis;$TP2"
+PARX='-fa default -fg green'; PARTX="$PARX -fs 50 -b 15"; S=sleep
+en () { echo -e -n "\n" |xclip; }
+ee () { echo -e -n "q\n" |xclip ; }
+#FI=`cat $F/lism4`; if test `cat $F/lism4|wc -w` != 1; then exit; fi
+IPboxVideo='192.168.0.102';GPIO='/sys/class/gpio'; VIDEO=0
+
+# Pour booter, brancher les 2 en meme temps !!! ::
+# par defaut au Switch HDMI, MainPi4 boot d'abord, et BoxVideo reste bloquee
+# en detection HDMI ... Puis Basculer 5sec le Switch HDMI sur la BoxVideo, 
+# pour qu'elle finisse son boot aussi ..., et revenir sur MainPi4
+
+# tester dynamiquement la 2eme formule + moderne de gpiod !!
+#
+dir () { sudo su root -c "echo $1 > ./gpio$2/direction"
+}
+init () { cd $GPIO; # utiliser les port GPIO 16,26,17,27,22,23,24,25
+# ces init sont a faire a chaque boot, car elles disparaissent !!!
+sudo su root -c "echo 23 > export" #def du port GPIO23 pour switchHDMI  
+sudo su root -c "echo 25 > export" #def du port GPIO25 pour switchSOURIS 
+dir out 23;sleep 1;dir out 25 
+}
+# POUR ACCES BoxVideo en SSH sans mot de passe ::
+#ssh-keygen -t rsa # une seule fois sur la Box Pricipale
+#ssh-copy-id root@192.168.0.102 ... (adress IP statique de Box Video)
+## OU ssh $IPboxVideo 'mkdir -p .ssh' avec passwd
+## puis cat .ssh/id_rsa.pub|ssh $IPboxVideo 'cat >> .ssh/authorized_keys'
+# a faire une seule fois sur la Box Video avec passwd
+#
+val () { sudo su root -c "echo $1 > ./gpio$2/value"
+}
+toVideo () { cd $GPIO # switch HDMI et souris ... vers Box Video
+dir out 23;sleep 1;val 1 23
+# switch les 2 fils Souris D+ et D- ::
+dir out 25;sleep 1;val 1 25
+# switch HDMI:: 2 switchs Y et Ecran en serie ?, et dans quel ordre ? ::
+# On suppose des switchs HDMI par impulsion/poussoir, PAS par interrupteur
+}
+toMain () { cd $GPIO # switch Souris et HDMI ... vers Box Principale
+dir out 23;sleep 1;val 1 23 #swith HDMI toMain au 2eme coup
+# switch les 2 fils Souris D+ et D- ::
+dir out 25;sleep 1;val 0 25 #swith SOURIS toMain
+}
+pause () { # suivre l'activite du Player dans la Box Video par ssh
+echo # strace kodi
+}
+
+init; val 0 25 #swith SOURIS toMain
+sleep 3;val 0 23 #swith HDMI toVideo
+sleep 1;val 1 23 #relache swith HDMI
+sleep 1;val 0 23 #swith HDMI toMain
+sleep 1;val 1 23 # relache swith HDMI toMain 
+###########################################################################
+
+while true; do 
+# ------------------------- TROUVER MICROSD --------------------------------
+echo `df|grep '/$'`|cut -d ' ' -f 1|cut -d '/' -f 3 > $F/ROO # root dev !!
+ROO=`cat $F/ROO|cut -c 1-3`;ls -1 /dev/sd*|grep -v $ROO > $F/BDEV;> $F/PARTI
+while read -r L;do echo `echo $L|cut -d ' ' -f 1|cut -d '/' -f 3` >>$F/PARTI
+done < $F/BDEV
+for i in `cat $F/PARTI` ;do
+ID=`sudo dd if=/dev/$i bs=1 count=1 skip=70000000 2>/dev/null`
+if test "$ID" = '_' ;then echo '-----------> MES MICROSD' $i; SP=$i ;
+else echo 'RIEN NE MARCHE SANS _' ;continue;fi;done
+#else echo 'RIEN NE MARCHE SANS _ :: VERIFIER 70M sur /dev/sdx' ;continue;fi;done
+#else echo 'PAS LES MIENNES !!! :: on lit la carte qd meme?';continue;fi;done
+#lsusb -t |grep usb-sto #lsblk -t pour affiner ??
+# prevoir aussi que sda reapparait, mais pas sda1 !!! :: FilSys par reconnu !!!
+if test ! -b "/dev/${SP}1" ; then echo 'erreur :: FilSys par reconnu ??'; 
+echo 'afficher un message pour retirer et reinserer la cle USB ... :: ok';fi
+
+# -------------- SURVEILLER UN ARRACHAGE IMPREVU DE LA MICROSD -------------
+# ajouter la detection sd? a LISTSD, car arrachage peut passer de sda a sdb !!
+echo $SP > $F/SP;CHKmpv=`ps -ef |grep $PLAY|wc -l`;echo $CHKdd >> $F/CHKdd
+if test $CHKmpv -eq 1;then #pas de test microsd pendant mpv ?, pour pas de hic
+if test `ls /dev/$SP`;then  echo $SP >> $F/NEWSD; # microsd Exist !
+# ??? sudo umount /m; # echo 'AVANT PARTED ....'
+sudo parted /dev/$SP 'unit B print'|grep $SP|grep Disk|cut -d ':' -f 2 >$F/taille2 &
+# faire un KIL de parted si ca plante a l'arrachage de microsd; apres une 
+# tempo ??  #  et relancer ??, car la taille dans Parted est alors nulle !!
+$S 1;PARTED=`cat $F/taille2`;$S 1;$B/USER/KIL parted; #echo 'APRES PARTED KIL'
+echo $PARTED|cut -d 'B' -f 1 >$F/Parted 
+
+#puis, INDEX microsd :: # ${PARTED%B}
+SEEKIDX=70000000  #dans le fichier bidon _ de 10M, sur la microsd
+sudo dd if=/dev/$SP of=$F/INDEX bs=1 skip=$SEEKIDX count=4 2>/dev/null
+ID=`cat $F/INDEX` # verif si l'INDEX commence par _ :: # test "${ID:0:1}" 
+if test `cat $F/INDEX|cut -c 1` != '_';then 
+echo PB IDX;echo BUG sd IDX `date` >> $F/BUGmsd;fi
+fi
+else rm $F/NEWSD; echo microsd pas montee # continue ou next ?
+fi 
+## ----------------------- TEST FAT32 MICROSD -------------------------------
+# 1 - microsd montee par USER :: OK ...
+#     apres arrachage, microsd peut sembler mountee, mpv demarrer, et s'arreter
+#     en qlques sec, alors que la microsd est absente !!! :: tester un dd de
+#     _, pour voir si on l'obtient entier ?? ...
+# 2 - mount :: marche pas ?? :: umount puis remount ?? ..., si mpv absent
+# 3 - dosfsck :: marche pas ?? :: va produire des modifs :: resav FAT32 ??!!
+#     ET difficilement Portable dans le temps :: options stables ???
+#     Pas utile, pour un filSys destine a etre readOnly :: impact des MAJ SYSTEM ??
+# 4 - recopier FAT32 Originelle vers microsd; puis reMount ... :: marche pas ??
+# 5 - SOS SAV Marco/Pierrot :: marche !!!!!
+#     ping -c 2 8.8.8.8; P=$?; if test $P -eq 0; then mail; fi
+df|grep "/dev/${SP}1" >/dev/null;GS=$?;echo dfgrep $GS #test MOUNT sd,SI sd demontee
+if test $GS -eq 0;then echo "/m OK " # semble mountee??:: verif acces reel !?::
+  if test `cat /m/_ |wc -c` -eq 10485760; then echo 'file _ detected'
+  else sudo umount /m;echo 'UNMOUNT';$S 1; #alors tenter de la remounter::
+       sudo mount /dev/${SP}1 /m; MS=$?; echo ' TEST REMOUNT !!'
+       if test $MS -eq 1; then echo 'REMOUNT KO!!'; #mount KO !!:: FAT KO ??
+         echo 'tenter dosfsck ??' ; echo ; DOSFSCK=0; # PAS Portable!!
+         if test $DOSFSCK -ne 0; then echo 'FSCK ECHOUE; recopy old FAT PORTABLE??'
+         ## IDX=`cat INDEX`;sudo dd if=microsd/$IDX/FAT of=/dev/$SP bs=1M
+         fi
+       fi
+  fi
+else  echo /m UNMOUNTED # essai MOUNT
+      sudo mount /dev/${SP}1 /m; MS=$?; echo "TEST MOUNT $MS !!"
+      if test $MS -eq 1;then echo 'MOUNT KO!!';fi #mount KO !!:: FAT KO ?
+fi
+# ----------------------- REGENERATION SILICIUM ----------------------------
+# Cycles dd selon perf de Cle USB:: King 6x432 ; Sand 1x332 ; Chin 2x432 
+while true; do PA=100; PAmpv=5; 
+CHKdd=`ps -ef|grep ' dd '|grep -v grep|wc -l` #test surface partiel en dd
+CHKmpv=`ps -ef|grep $PLAY|wc -l`;echo $CHKdd >>$F/CHKdd #lectur Video en cours?
+#selon puissance CPU et flots simultanes microsd, arreter dd pendant film mpv,
+# ET claf affichage pas fini !!!, ou ... lecture "pointille" de microsd PAmpv ??
+# au 1er !!! CHKmpv, retarder testSD de 6 sec, pour gagner sur cp en Cache
+# et decalage d autant pour mpv, pour test Hic debut ACE ??
+#if test -s mpvUP; then $S 6; >mpvUP; fi
+if test $CHKdd -eq 0 && test ! -s $F/clafUP; 
+then if test $CHKmpv -ne 2; then #echo '1er testSD'; 
+TAILL=`cat $F/Parted`;if test `expr length "$TAILL"` -lt 3; then break; 
+else $SD/testSD $TAILL $PA $SP  & # pourquoi &, sinon ca bloque, et pas en mpv?
+if test `grep medium $F/ddERROR|wc -w` -gt 0; then break; fi
+#Ste=$?; if test $Ste = 1; then echo ERRtestSD > $F/ERRtestSD; break; fi
+fi
+else echo  #pendant mpv, la boucle 2 sec n'est plus utile:: cycle 4x3x2 King
+for i in 1 2 3 4; do $SD/testSD `cat $F/Parted` $PAmpv $SP; done ; $S 1 ;
+for i in 1 2 3 ; do $SD/testSD `cat $F/Parted` $PAmpv $SP; done ; $S 1 
+$SD/testSD `cat $F/Parted` $PAmpv $SP; $SD/testSD `cat $F/Parted` $PAmpv $SP;
+fi # KO si un ";" suit le "&" precedent !!! ----------------------------
+else if test `grep medium $F/ddERROR|wc -w` -gt 0; then break; fi
+fi;$S 1; done
+echo '-----------------------FIN BOUCLE'; $S 1; done # boucle complete SL
